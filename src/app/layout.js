@@ -2,6 +2,9 @@ import localFont from "next/font/local";
 import { cookies } from "next/headers";
 import { redirect } from 'next/navigation';
 import { QueryClientProvider,QueryClient } from "@tanstack/react-query";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/app/theme.js"
+import {AppRouterCacheProvider} from "@mui/material-nextjs/v15-appRouter"
 import "./globals.css";
 import { TanstackProvider } from "./Components/provider/tanstackprovider";
 const geistSans = localFont({
@@ -29,7 +32,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TanstackProvider>
-        <>{children}</>
+        <AppRouterCacheProvider>
+       <ThemeProvider theme={theme}>
+       {children}
+       </ThemeProvider>
+        </AppRouterCacheProvider>
         </TanstackProvider>
       </body>
       </html>
