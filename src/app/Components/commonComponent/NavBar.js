@@ -5,7 +5,7 @@ import { TbNotification } from "react-icons/tb";
 function NavBar() {
   return (
     <div className=" flex justify-between p-2 items-center border-b-2 border-gray-300 md:border-0">
-        <nav className="flex justify-around items-center">
+        <nav className="flex md:ml-2 justify-around items-center">
         <Logo/>
         <SelectPage/>
         </nav>
