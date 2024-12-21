@@ -1,7 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Chrome, Safari, Edge, Opera */
+.bodyMain{
+  overflow-x: hidden;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  visibility: visible;
+}
+.preferenceList::-webkit-scrollbar {
+  width: 4px;   
+ 
+  appearance: auto;            /* width of the entire scrollbar */
+}
+.preferenceList::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.preferenceList::-webkit-scrollbar-thumb {
+  background: #c0c0c0; 
+}
 
+/* Handle on hover */
+.preferenceList::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

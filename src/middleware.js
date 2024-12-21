@@ -40,7 +40,7 @@ export async function middleware(request) {
 
 export const config = {
   matcher: [
-    // Match all pages except static files and API rou/((?!_next/static|_next/image|favicon.ico|api).*)',\\
+    // Match all pages except static files and API r   ou/((?!_next/static|_next/image|favicon.ico|api).*)',\\
    "/","/home/:path"
   ],
 };
