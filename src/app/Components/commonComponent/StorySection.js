@@ -9,23 +9,31 @@ function StorySection() {
     return (
         <>
             <Splide
-                className="relative bg-red-200 w-[60vw] ml-4"
+                className="relative flex items-center w-[100%] md:w-[60vw] md:ml-4"
                 options={{
                     perPage: 6,
+                    breakpoints:{
+                        640:{
+                            perPage:3
+                        },
+                        1024:{
+                            perPage:4
+                        }
+                    }
                 }}
                 hasTrack={false} aria-label="...">
-                <SplideTrack className="w-[60vw] h-[22vh] md:mt-4 ">
+                <SplideTrack className="w-[100%] overflow-visible md:w-[60vw] h-[22vh] md:mt-4">
                     {
                         new Array(10).fill(0).map((_, pos) =>
-                            <SplideSlide className="mx-2" key={pos}>
+                            <SplideSlide className="overflow-visible" key={pos}>
                                 <StoryCard/>
                             </SplideSlide>
                         )
                     }
                 </SplideTrack>
-                <div className="splide__arrows flex justify-between w-[100%] absolute top-[50%]">
-                    <button className="splide__arrow splide__arrow--prev">{"<"}</button>
-                    <button className="splide__arrow splide__arrow--next">{">"}</button>
+                <div className="splide__arrows  md:flex justify-between w-[100%] absolute top-[50%]">
+                    <button className="splide__arrow hidden md:block splide__arrow--prev">{"<"}</button>
+                    <button className="splide__arrow hidden md:block splide__arrow--next">{">"}</button>
                 </div>
             </Splide>
         </>

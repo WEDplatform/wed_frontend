@@ -4,7 +4,7 @@ import { StorySection } from "@/app/Components/commonComponent/StorySection"
 
 function page() {
   return (
-    <div className='flex md:flex-row flex-col'>
+    <div className='flex md:flex-row h-[100vh] flex-col'>
       <div className="md:hidden w-[100vw] ">
         <NavBar/>
       </div>
@@ -12,7 +12,7 @@ function page() {
        <NavBar/>
        <SideBarMain/>
       </div>
-      <div className='md:w-[80%] w-[100vw]'>
+      <div className='md:w-[80%] h-[100%] w-[100vw]'>
         <StorySection/>
       </div>
     </div>
