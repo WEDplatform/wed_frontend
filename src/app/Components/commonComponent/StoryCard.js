@@ -7,7 +7,7 @@ function StoryCard() {
         <div className='relative w-[100%] h-[100%]'>
             <Image src={Cat} objectFit='cover' className='bg-red-200 h-[100%]' alt="cat" fill={true}/>
         </div>
-        <span className='absolute top-[100%] text-center flex justify-center items-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 aspect-auto rounded-full w-[1.8rem] h-[1.8rem] md:w-[1.7rem] md:h-[1.7rem] text-white text-[1rem]'>
+        <span className='absolute top-[100%] text-center flex justify-center items-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 aspect-auto rounded-full w-[1.9rem] h-[1.9rem] md:w-[1.7rem] md:h-[1.7rem] text-white text-[1rem]'>
         <Image src={Cat} objectFit='cover' className='bg-red-200 h-[100%] rounded-full' alt="cat" fill={true}/>
         </span>
 
