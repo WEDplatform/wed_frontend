@@ -22,7 +22,7 @@ function StorySection() {
                     }
                 }}
                 hasTrack={false} aria-label="...">
-                <SplideTrack className="w-[100%] overflow-visible md:w-[60vw] h-[26vh] md:mt-4">
+                <SplideTrack className="w-[100%] overflow-visible md:w-[60vw] h-[20vh] md:h-[26vh] md:mt-4">
                     {
                         new Array(10).fill(0).map((_, pos) =>
                             <SplideSlide className="overflow-visible" key={pos}>
