@@ -1,5 +1,6 @@
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
 import { NavBar } from "@/app/Components/commonComponent/NavBar"
+import { StorySection } from "@/app/Components/commonComponent/StorySection"
 
 function page() {
   return (
@@ -11,7 +12,9 @@ function page() {
        <NavBar/>
        <SideBarMain/>
       </div>
-      <div className='md:w-[80%] w-[100vw]'>Main content</div>
+      <div className='md:w-[80%] w-[100vw]'>
+        <StorySection/>
+      </div>
     </div>
   )
 }
