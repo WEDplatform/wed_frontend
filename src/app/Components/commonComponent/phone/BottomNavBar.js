@@ -27,7 +27,7 @@ function BottomNavBar() {
             <span className="text-[0.8rem]">Profile</span>
             </div>
         </main>
-        <div className="absolute top-[-60%] left-1/2 transform -translate-x-1/2 translate-y-1/2">
+        <div className="absolute top-[-60%] left-1/2 transform border-2 border-white rounded-full -translate-x-1/2 translate-y-1/2">
           <FaRegPlayCircle className="text-6xl bg-[#9A2143] text-white rounded-full p-4" />
         </div>
         </div>
