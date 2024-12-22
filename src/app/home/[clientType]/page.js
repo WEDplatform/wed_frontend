@@ -12,7 +12,7 @@ function page() {
        <NavBar/>
        <SideBarMain/>
       </div>
-      <div className='md:w-[80%] h-[100%] w-[100vw]'>
+      <div className='md:w-[80%] flex flex-col items-center h-[100%] w-[100vw]'>
         <StorySection/>
       </div>
     </div>
