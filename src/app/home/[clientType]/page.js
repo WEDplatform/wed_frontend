@@ -5,7 +5,7 @@ import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMai
 import { NavBar } from "@/app/Components/commonComponent/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
-
+import { Posts } from "@/app/Components/commonComponent/Posts"
 function page() {
   return (
     <>
@@ -19,7 +19,7 @@ function page() {
       </div>
       <div className='md:w-[80%] flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
         <StorySection/>
-        
+        <Posts/>
       </div>
     </div>
     <BottomNavBar/>
