@@ -2,6 +2,7 @@ import React from 'react'
 import { NavigatorList } from './sidebarcontent'
 import Image from 'next/image'
 import GoogleLogo from "../../../../../public/google-icon.svg"
+import ICO from "@/app/favicon.ico"
 function SideBarMain() {
   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
@@ -18,7 +19,7 @@ function SideBarMain() {
             } 
         </div>
         <div className='flex items-center m-4'>
-            <Image className='mr-2' alt='profile' src={GoogleLogo} width={30} height={30} />
+            <Image className='mr-2' alt='profile' src={ICO} width={30} height={30} />
             <p>Profile</p>
         </div>
     </div>
