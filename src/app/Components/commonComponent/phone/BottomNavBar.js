@@ -20,7 +20,7 @@ function BottomNavBar() {
         <main className="w-[45%] flex justify-evenly ">
             <div className="flex flex-col items-center">
             <GoClock className="text-3xl" />
-            <span className="text-[0.8rem]">Clock</span>
+            <span className="text-[0.8rem]">Bookings</span>
             </div>
             <div className="flex flex-col items-center">
             <GoPerson className="text-3xl" />
