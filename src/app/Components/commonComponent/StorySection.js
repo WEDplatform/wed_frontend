@@ -7,19 +7,23 @@ function StorySection() {
  
   return (
     <>
-      <Splide  hasTrack={false} aria-label="...">
-  <SplideTrack className="w-[60vw]">
+      <Splide
+      options={{
+        perPage: 3,
+      }}
+      hasTrack={false} aria-label="...">
+  <SplideTrack className="w-[60vw] h-[20vh]">
   <SplideSlide>
-    <div className="w-[100%] h-[10vh] bg-red-200">Slide1</div>
+    <div className="w-[100%] h-[100%] bg-red-200">Slide1</div>
   </SplideSlide>
   <SplideSlide>
-    <div className="w-[100% h-[10vh] bg-red-300">Slide2</div>
+    <div className="w-[100%] h-[100%] bg-red-300">Slide2</div>
   </SplideSlide>
   <SplideSlide>
-    <div className="w-[100%] h-[10vh] bg-red-200">Slide3</div>
+    <div className="w-[100%] h-[100%] bg-red-200">Slide3</div>
   </SplideSlide>
   <SplideSlide>
-    <div className="w-[100% h-[10vh] bg-red-300">Slide4</div>
+    <div className="w-[100% h-[100%] bg-red-300">Slide4</div>
   </SplideSlide>
   </SplideTrack>
   <div className="splide__arrows">
