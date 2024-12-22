@@ -2,6 +2,7 @@ import { RiHome5Fill } from "react-icons/ri";
 import { RiSearch2Line } from "react-icons/ri";
 import { GoClock } from "react-icons/go";
 import { GoPerson } from "react-icons/go";
+import { FaRegPlayCircle } from "react-icons/fa";
 function BottomNavBar() {
   return (
     <div className="w-[100%] md:hidden block border-t-[1px] border-gray-300 fixed bottom-0">
@@ -26,6 +27,9 @@ function BottomNavBar() {
             <span className="text-[0.8rem]">Profile</span>
             </div>
         </main>
+        <div className="absolute top-[-60%] left-1/2 transform -translate-x-1/2 translate-y-1/2">
+          <FaRegPlayCircle className="text-6xl bg-[#9A2143] text-white rounded-full p-4" />
+        </div>
         </div>
     </div>
   )
