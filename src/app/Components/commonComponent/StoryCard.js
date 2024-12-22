@@ -4,7 +4,7 @@ import Image from 'next/image'
 function StoryCard() {
     return (
         <>
-            <div className='border-2  relative  rounded-md mx-2 md:mx-4 h-[14vh] md:h-[24vh]'>
+            <div className='border-2  relative  rounded-md mx-2 md:mx-4 h-[14vh] md:h-[20vh]'>
                 <div className='relative w-[100%] h-[100%]'>
                     <Image src={Cat} objectFit='cover' className='bg-red-200 h-[100%]' alt="cat" fill={true} />
                 </div>

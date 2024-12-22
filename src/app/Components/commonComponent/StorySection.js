@@ -9,7 +9,7 @@ function StorySection() {
     return (
         <>
             <Splide
-                className="relative flex items-center w-[95%] md:w-[60vw] md:ml-4"
+                className="relative flex items-center w-[95%] md:w-[50vw] md:ml-4"
                 options={{
                     perPage: 6,
                     breakpoints:{
@@ -22,7 +22,7 @@ function StorySection() {
                     }
                 }}
                 hasTrack={false} aria-label="...">
-                <SplideTrack className="w-[100%] overflow-visible md:w-[60vw] h-[18vh] md:h-[28vh] md:mt-4">
+                <SplideTrack className="w-[100%] overflow-visible md:w-[50vw] h-[18vh] md:h-[24vh] md:mt-4">
                     {
                         new Array(10).fill(0).map((_, pos) =>
                             <SplideSlide className="overflow-visible " key={pos}>
