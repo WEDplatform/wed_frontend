@@ -14,7 +14,7 @@ function StorySection() {
                     perPage: 6,
                     breakpoints:{
                         640:{
-                            perPage:3
+                            perPage:4
                         },
                         1024:{
                             perPage:4
