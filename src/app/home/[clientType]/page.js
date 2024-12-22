@@ -8,6 +8,7 @@ import { StorySection } from "@/app/Components/commonComponent/StorySection"
 
 function page() {
   return (
+    <>
     <div className='flex md:flex-row h-[100vh] flex-col'>
       <div className="md:hidden w-[100vw] ">
         <NavBar/>
@@ -18,9 +19,11 @@ function page() {
       </div>
       <div className='md:w-[80%] flex flex-col items-center relative bg-red-200 md:items-start h-[100%] w-[100vw]'>
         <StorySection/>
-        <BottomNavBar/>
+        
       </div>
     </div>
+    <BottomNavBar/>
+    </>
   )
 }
 
