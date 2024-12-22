@@ -3,6 +3,7 @@ export const metadata = {
 }
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
 import { NavBar } from "@/app/Components/commonComponent/NavBar"
+import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
 
 function page() {
@@ -15,8 +16,9 @@ function page() {
        <NavBar/>
        <SideBarMain/>
       </div>
-      <div className='md:w-[80%] flex flex-col items-center md:items-start h-[100%] w-[100vw]'>
+      <div className='md:w-[80%] flex flex-col items-center relative bg-red-200 md:items-start h-[100%] w-[100vw]'>
         <StorySection/>
+        <BottomNavBar/>
       </div>
     </div>
   )
