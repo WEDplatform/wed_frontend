@@ -1,38 +1,35 @@
 'use client'
 import React from "react";
-import { Splide, SplideSlide ,SplideTrack} from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
+import { StoryCard } from "./StoryCard";
 // import '@splidejs/react-splide/css';
 function StorySection() {
- 
-  return (
-    <>
-      <Splide
-      options={{
-        perPage: 3,
-      }}
-      hasTrack={false} aria-label="...">
-  <SplideTrack className="w-[60vw] h-[20vh]">
-  <SplideSlide>
-    <div className="w-[100%] h-[100%] bg-red-200">Slide1</div>
-  </SplideSlide>
-  <SplideSlide>
-    <div className="w-[100%] h-[100%] bg-red-300">Slide2</div>
-  </SplideSlide>
-  <SplideSlide>
-    <div className="w-[100%] h-[100%] bg-red-200">Slide3</div>
-  </SplideSlide>
-  <SplideSlide>
-    <div className="w-[100% h-[100%] bg-red-300">Slide4</div>
-  </SplideSlide>
-  </SplideTrack>
-  <div className="splide__arrows">
-    <button className="splide__arrow splide__arrow--prev">Prev</button>
-    <button className="splide__arrow splide__arrow--next">Next</button>
-  </div>
-</Splide>
-    </>
-  );
+
+    return (
+        <>
+            <Splide
+                className="relative bg-red-200 w-[60vw] ml-4"
+                options={{
+                    perPage: 6,
+                }}
+                hasTrack={false} aria-label="...">
+                <SplideTrack className="w-[60vw] h-[22vh] md:mt-4 ">
+                    {
+                        new Array(10).fill(0).map((_, pos) =>
+                            <SplideSlide className="mx-2" key={pos}>
+                                <StoryCard/>
+                            </SplideSlide>
+                        )
+                    }
+                </SplideTrack>
+                <div className="splide__arrows flex justify-between w-[100%] absolute top-[50%]">
+                    <button className="splide__arrow splide__arrow--prev">{"<"}</button>
+                    <button className="splide__arrow splide__arrow--next">{">"}</button>
+                </div>
+            </Splide>
+        </>
+    );
 }
 
 export { StorySection }
