@@ -17,7 +17,7 @@ function page() {
        <NavBar/>
        <SideBarMain/>
       </div>
-      <div className='md:w-[80%] flex flex-col items-center relative bg-red-200 md:items-start h-[100%] w-[100vw]'>
+      <div className='md:w-[80%] flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
         <StorySection/>
         
       </div>
