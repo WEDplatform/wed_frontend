@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Home",
+}
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
 import { NavBar } from "@/app/Components/commonComponent/NavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
