@@ -3,7 +3,8 @@ import Cat from "../../../../public/cat.jpg"
 import Image from 'next/image'
 function StoryCard() {
   return (
-    <div className='border-2 relative border-gray-300  rounded-md mx-2 md:mx-4 h-[18vh] md:h-[24vh]'>
+    <>
+    <div className='border-2  relative border-gray-300  rounded-md mx-2 md:mx-4 h-[18vh] md:h-[24vh]'>
         <div className='relative w-[100%] h-[100%]'>
             <Image src={Cat} objectFit='cover' className='bg-red-200 h-[100%]' alt="cat" fill={true}/>
         </div>
@@ -11,8 +12,10 @@ function StoryCard() {
         <Image src={Cat} objectFit='cover' className='bg-red-200 h-[100%] rounded-full' alt="cat" fill={true}/>
         </span>
 
-        <p></p>
+        
     </div>
+    <h1 className='text-center mt-2 mb-2 font-medium'>elysa</h1>
+    </>
   )
 }
 
