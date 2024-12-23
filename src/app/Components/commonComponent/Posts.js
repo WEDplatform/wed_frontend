@@ -14,7 +14,7 @@ function Posts() {
         <ImagePost/>
         <ImagePost/>
         <VideoPost/>
-        {/* <ImagePost/> */}
+        <ImagePost/>
     </div>
   )
 }
