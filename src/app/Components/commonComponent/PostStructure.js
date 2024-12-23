@@ -7,4 +7,13 @@ const ImagePost = () =>{
         </>
     )
 }
-export {ImagePost}
+const VideoPost =()=>{
+    return(
+        <>
+        <div className="aspect-[9/16] h-[50%] bg-red-400">
+            Video post 
+        </div>
+        </>
+    )
+}
+export {ImagePost,VideoPost}
