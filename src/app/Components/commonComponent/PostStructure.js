@@ -21,7 +21,7 @@ const ImagePost = () =>{
                     <BsThreeDots />
                 </nav>
             </div>
-            <div className="w-[100%] h-[100%] rounded-xl bg-red-200">
+            <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
                 Photo post
             </div>
             <div className="bg-white flex justify-between w-[100%] py-2">
