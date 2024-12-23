@@ -7,7 +7,9 @@ function Posts() {
         <ImagePost/>
         <ImagePost/>
         <ImagePost/>
-        {/* <VideoPost/> */}
+        <VideoPost/>
+        <VideoPost/>
+
     </div>
   )
 }
