@@ -22,7 +22,7 @@ const ImagePost = () =>{
                 </nav>
             </div>
             <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
-                Photo post
+                Image post
             </div>
             <div className="bg-white flex justify-between w-[100%] py-2">
                 <div className="w-[30%] text-2xl justify-evenly flex items-center">
