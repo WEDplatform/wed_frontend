@@ -4,6 +4,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
+
 const ImagePost = () =>{
     return(
         <>
