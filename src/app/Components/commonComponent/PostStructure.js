@@ -4,7 +4,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
-
+import { PostImageSlider } from "./PostImageSlider";
 const ImagePost = () =>{
     return(
         <>
@@ -23,7 +23,7 @@ const ImagePost = () =>{
                 </nav>
             </div>
             <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
-                Image post
+                <PostImageSlider/>
             </div>
             <div className="bg-white flex justify-between w-[100%] py-2">
                 <div className="w-[30%] text-2xl justify-evenly flex items-center">
