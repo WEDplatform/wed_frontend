@@ -7,9 +7,9 @@ function PostImageSlider() {
     return (
         <Splide aria-label="" hasTrack={false}>
             <SplideTrack className="w-[100%] h-[100%] rounded-xl">
-                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-200'>Slide 1</SplideSlide>
-                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-300'>Slide 2</SplideSlide>
-                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-400'>Slide 3</SplideSlide>
+                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[22vw] bg-red-300'>Slide 2</SplideSlide>
+                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[22vw] bg-red-200'>Slide 1</SplideSlide>
+                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[22vw] bg-red-400'>Slide 3</SplideSlide>
 
             </SplideTrack>
             <div className="splide__arrows  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2">
