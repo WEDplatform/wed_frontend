@@ -1,7 +1,9 @@
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { ImagePost,VideoPost } from "./PostStructure"
 import { StorySection } from "./StorySection"
+import { getImageUrl } from "@/app/apiFunctions/pexel"
 function Posts() {
+  getImageUrl("Wedding")
   //getVideoUrl("Wedding")
   return (
     <>

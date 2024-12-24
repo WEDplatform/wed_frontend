@@ -11,7 +11,16 @@ const nextConfig = {
         measurement_id:process.env.NEXT_MEASUREMENT_ID,
         backend_api:process.env.NEXT_PUBLIC_BACKEND_API,
         openapikey:process.env.API_KEY
-    }
+    },
+    images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'images.pexels.com', // The correct hostname for Pexels images
+            pathname: '/photos/**',       // Matches Pexels image paths
+          },
+        ],
+      },
 };
 
 export default nextConfig;
