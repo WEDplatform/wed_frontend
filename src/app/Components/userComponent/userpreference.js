@@ -107,7 +107,6 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                         </> : <>
                             <button disabled={isPending || userDetails.userPreference.length == 0} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
                                 updateUserPreference()
-
                             }}>
                                 {
                                     isPending ? "Updating preferences" : "Update preferences"
