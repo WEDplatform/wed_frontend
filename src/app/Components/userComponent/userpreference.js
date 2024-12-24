@@ -1,4 +1,4 @@
-import { signup } from "@/app/apiFunctions/user/signup";
+import { signup,updatePreference } from "@/app/apiFunctions/user/signup";
 import { axiosInstance } from "@/app/axios/axios";
 import { userPreferences } from "@/app/lib/constants"
 import { useQuery, useMutation } from "@tanstack/react-query";
@@ -10,7 +10,7 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
         mutationFn: signup
     })
     const {} = useMutation({
-        
+
     })
     let updateList = (title, value) => {
         let isInside = userDetails.userPreference.some((item) => {
