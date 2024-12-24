@@ -5,7 +5,9 @@ import { FaRegHeart } from "react-icons/fa";
 import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
-const ImagePost = () => {
+import { getImageUrl } from "@/app/apiFunctions/pexel";
+const ImagePost = async () => {
+    const imageResponse=await getImageUrl()
     return (
         <>
 
