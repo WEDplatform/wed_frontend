@@ -10,7 +10,7 @@ const getVideoUrl=async(query)=>{
 }
 const getImageUrl=async(query,page)=>{
     const res=await client.photos.search({query,per_page:3,page:page,orientation:'landscape'})
-    return res
+    return res.photos
     console.log(res.photos);
 }
 export {getVideoUrl,getImageUrl}
