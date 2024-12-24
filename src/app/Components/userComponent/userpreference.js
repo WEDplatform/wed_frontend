@@ -1,4 +1,4 @@
-import { signup,updatePreference } from "@/app/apiFunctions/user/signup";
+import { signup, updatePreference } from "@/app/apiFunctions/user/signup";
 import { axiosInstance } from "@/app/axios/axios";
 import { userPreferences } from "@/app/lib/constants"
 import { useQuery, useMutation } from "@tanstack/react-query";
@@ -9,8 +9,8 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
     const { mutate, data, isError, error, isPending } = useMutation({
         mutationFn: signup
     })
-    const { mutate:updatePref, data:prefData, isError:prefError, error:prefErr, isPending:prefPending } = useMutation({
-        mutationFn:updatePreference
+    const { mutate: updatePref, data: prefData, isError: prefError, error: prefErr, isPending: prefPending } = useMutation({
+        mutationFn: updatePreference
     })
     let updateList = (title, value) => {
         let isInside = userDetails.userPreference.some((item) => {
@@ -60,6 +60,11 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
             window.history.pushState(null, '', `?${params.toString()}`);
         }
     }
+    const updateUserPreference = async () => {
+        updatePref({
+            cred: userDetails
+        })
+    }
     return (
         <>
             <div className="preferenceList w-[100%] ml-1 overflow-y-auto overflow-x-hidden flex flex-col items-center md:px-0 h-[55vh]  md:h-[60vh]">
@@ -85,21 +90,33 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                 isError ? <div className="font-semibold text-sm text-gray-500">{error?.response?.data?.message}</div> : <></>
             }
             <div className="mt-1 md:mt-4 flex justify-between px-1">
-                <button className="p-2 border-2 rounded-lg border-[#C94C73] mr-1" onClick={() => { prev(); WindowHistoryStack(index - 1,true) }}>
+                <button className="p-2 border-2 rounded-lg border-[#C94C73] mr-1" onClick={() => { prev(); WindowHistoryStack(index - 1, true) }}>
                     Previous
                 </button>
-                <button disabled={isPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
-                    console.log(userDetails);
-
-                    mutate({
-                        cred: userDetails,
-                        router: router
-                    })
-                }}>
+                <div className="flex items-center">
+                    <button onClick={() => { router.push("/home/user") }} className="mr-2 text-[#C94C73] underline font-medium">Skip</button>
                     {
-                        isPending ? "Signin in" : "Next"
+                        prefData || prefErr ? <>
+                            <button disabled={isPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
+                                router.push("/home/user")
+
+
+                            }}>
+                                Continue
+                            </button>
+                        </> : <>
+                            <button disabled={isPending || userDetails.userPreference.length == 0} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
+                                updateUserPreference()
+
+
+                            }}>
+                                {
+                                    isPending ? "Updating preferences" : "Update preferences"
+                                }
+                            </button>
+                        </>
                     }
-                </button>
+                </div>
             </div>
         </>
     )

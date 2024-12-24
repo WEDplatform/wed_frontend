@@ -26,18 +26,23 @@ const signup=async({cred})=>{
         
     }
 }
-const updatePreference=async({cred,router})=>{
+const updatePreference=async({cred})=>{
     const refreshToken=await getCookies()
+    console.log(cred);
+    
     try {
         console.log(refreshToken);
         
-        // let resp=await axiosInstance.post('/user/updatePreferences',cred,{
-        //     headers: {
-        //         "wedoraCredentials":refreshToken
-        //     }
-        // })
-        // return resp
+        let resp=await axiosInstance.post('/user/updatePreferences',cred,{
+            headers: {
+                "wedoraCredentials":refreshToken
+            }
+        })
+        console.log(resp);
+        
+        return resp
     } catch (error) {
+        console.log(error);
         
     }
 }
