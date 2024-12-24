@@ -100,7 +100,6 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                             <button disabled={isPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
                                 router.push("/home/user")
 
-
                             }}>
                                 Continue
                             </button>
