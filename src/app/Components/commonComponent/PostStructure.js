@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
-import { getImageUrl } from "@/app/apiFunctions/pexel";
+import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 const ImagePost = async ({ pageIndex }) => {
     const imageResponse=await getImageUrl("Wedding",pageIndex)
     //console.log(imageResponse);
@@ -45,7 +45,8 @@ const ImagePost = async ({ pageIndex }) => {
         </>
     )
 }
-const VideoPost = () => {
+const VideoPost = async({pageIndex}) => {
+    const videoResponse=await getVideoUrl("Wedding",pageIndex)
     return (
         <>
             <div className="aspect-[9/16] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
@@ -61,8 +62,10 @@ const VideoPost = () => {
                         <BsThreeDots />
                     </nav>
                 </div>
-                <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
-                    Video post
+                <div className="w-[100%]  h-[100%] rounded-xl bg-gray-200">
+                  {/* {
+                    videoResponse ?<Image objectFit="cover" className="w-[100%] h-[100%]" fill={true}  src={videoResponse} alt="Image"/>:"Unable to preview video"
+                  } */}
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">

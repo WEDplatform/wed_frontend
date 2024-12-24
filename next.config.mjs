@@ -19,6 +19,11 @@ const nextConfig = {
             hostname: 'images.pexels.com', // The correct hostname for Pexels images
             pathname: '/photos/**',       // Matches Pexels image paths
           },
+          {
+            protocol: 'https',
+            hostname: 'images.pexels.com', // The correct hostname for Pexels images
+            pathname: '/videos/**',       // Matches Pexels image paths
+          },
         ],
       },
 };

@@ -11,7 +11,7 @@ function PostImageSlider({ imageResponse }) {
                 {
                     imageResponse?.map((item, index) =>
                         <SplideSlide key={index} className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-300'>
-                            <Image priority fill={true} src={item?.src?.landscape} alt='pics' objectFit='cover' />
+                            <Image priority style={{objectFit:'cover'}} fill={true} src={item?.src?.landscape} alt='pics' />
                         </SplideSlide>
                     )
                 }

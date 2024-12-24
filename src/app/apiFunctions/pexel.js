@@ -4,9 +4,10 @@ const client = createClient('XrJqjzjCzNMW0hNCFnWZq0nq7RWsQK8b7YvfviDhG6F3xBHZvys
 const query = 'Nature';
 
 
-const getVideoUrl=async(query)=>{
-    const res=await client.videos.search({query,per_page:1,orientation:'portrait'})
-    console.log(res);
+const getVideoUrl=async(query,page)=>{
+    //const res=await client.videos.search({query,per_page:1,orientation:'portrait',page:page})
+    //console.log(res.videos[0]?.video_pictures[0]?.picture);
+    return null
 }
 const getImageUrl=async(query,page)=>{
     const res=await client.photos.search({query,per_page:3,page:page,orientation:'landscape'})
