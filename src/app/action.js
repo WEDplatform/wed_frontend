@@ -17,6 +17,11 @@ export async function create(data) {
     maxAge:60*60
  })
 }
+export const getCookies = async () => {
+  const cookieStore = await cookies()
+  const refreshToken = cookieStore.get('refreshToken')?.value
+  return refreshToken
+}
 // export async function deleteCookie() {
   
 //    const cookieStore = await cookies()

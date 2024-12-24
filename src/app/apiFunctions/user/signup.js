@@ -1,4 +1,4 @@
-import { create } from "@/app/action";
+import { create, getCookies } from "@/app/action";
 import { axiosInstance } from "@/app/axios/axios";
 import { tryCatchWrapper } from "@/app/lib/functionResolver";
 import { redirect } from "next/dist/server/api-utils";
@@ -10,7 +10,9 @@ const signup=async({cred})=>{
             }
         })
     
-        // await create(response?.data)
+         await create(response?.data)
+         console.log(response?.data);
+         
         // if(response?.status==201){
         //     router.push("/home?clientType=user")
         // }
@@ -25,13 +27,16 @@ const signup=async({cred})=>{
     }
 }
 const updatePreference=async({cred,router})=>{
+    const refreshToken=await getCookies()
     try {
-        let resp=await axiosInstance.post('/user/updatePreferences',cred,{
-            headers: {
-                "wedoraCredentials":""
-            }
-        })
-        return resp
+        console.log(refreshToken);
+        
+        // let resp=await axiosInstance.post('/user/updatePreferences',cred,{
+        //     headers: {
+        //         "wedoraCredentials":refreshToken
+        //     }
+        // })
+        // return resp
     } catch (error) {
         
     }
