@@ -6,8 +6,8 @@ import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl } from "@/app/apiFunctions/pexel";
-const ImagePost = async () => {
-    const imageResponse=await getImageUrl()
+const ImagePost = async ({ pageIndex }) => {
+    const imageResponse=await getImageUrl("Wedding",pageIndex)
     return (
         <>
 
@@ -25,7 +25,9 @@ const ImagePost = async () => {
                     </nav>
                 </div>
                 <div className="w-[100%] h-[100%] rounded-xl ">
-                    <PostImageSlider />
+                    {
+                        imageResponse?.length>0?<PostImageSlider imageResponse={imageResponse} />:"Unable to preview image"
+                    }
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%] text-2xl justify-evenly flex items-center">

@@ -8,8 +8,9 @@ const getVideoUrl=async(query)=>{
     const res=await client.videos.search({query,per_page:1,orientation:'portrait'})
     console.log(res);
 }
-const getImageUrl=async(query)=>{
-    const res=await client.photos.search({query,per_page:3,page:2,orientation:'landscape'})
+const getImageUrl=async(query,page)=>{
+    const res=await client.photos.search({query,per_page:3,page:page,orientation:'landscape'})
+    return res
     console.log(res.photos);
 }
 export {getVideoUrl,getImageUrl}
