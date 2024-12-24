@@ -19,7 +19,7 @@ function UserLogin() {
   
   const router=useRouter()
   let [credError,setErr]=useState([])
-  const {mutate,error,isPending,data,isError}=useMutation({
+  const {mutate,error,isPending,data,isError,isSuccess}=useMutation({
     mutationFn:loginUser
   })  
     const placeholders = [
@@ -110,7 +110,7 @@ function UserLogin() {
         }</h2>
       <button 
       onClick={onSubmit}
-      disabled={isPending}
+      disabled={isPending || isSuccess || isError}
       className="md:w-[25vw] w-[85vw] text-white rounded-lg mt-10 md:mt-4 py-3 bg-[#C94C73]">
         {
           isPending?"Logging you in":"Login"

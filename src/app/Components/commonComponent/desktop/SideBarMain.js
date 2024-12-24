@@ -3,7 +3,12 @@ import { NavigatorList } from './sidebarcontent'
 import Image from 'next/image'
 import GoogleLogo from "../../../../../public/google-icon.svg"
 import ICO from "@/app/favicon.ico"
+import { logout } from '@/app/apiFunctions/logout'
+import { LogoutButton } from '../logoutButton'
 function SideBarMain() {
+  const logoutClient=async()=>{
+    await logout()
+  }
   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
         <div>
@@ -17,6 +22,7 @@ function SideBarMain() {
                 )
                }) 
             } 
+            <LogoutButton/>
         </div>
         <div className='flex items-center m-4'>
             <Image className='mr-2' alt='profile' src={ICO} width={30} height={30} />
