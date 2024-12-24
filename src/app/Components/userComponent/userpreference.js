@@ -9,8 +9,8 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
     const { mutate, data, isError, error, isPending } = useMutation({
         mutationFn: signup
     })
-    const {} = useMutation({
-
+    const { mutate:updatePref, data:prefData, isError:prefError, error:prefErr, isPending:prefPending } = useMutation({
+        mutationFn:updatePreference
     })
     let updateList = (title, value) => {
         let isInside = userDetails.userPreference.some((item) => {
