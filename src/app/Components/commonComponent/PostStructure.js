@@ -12,7 +12,6 @@ const ImagePost = async ({ pageIndex }) => {
     
     return (
         <>
-
             <div className="aspect-[4/3] row-span-2 border-2  rounded-xl md:col-span-3 w-[100%] ">
                 <div className="flex items-center justify-between gap-2  py-1 pl-2">
                     <main className="flex items-center gap-2">
