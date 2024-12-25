@@ -110,7 +110,7 @@ function UserLogin() {
         }</h2>
       <button 
       onClick={onSubmit}
-      disabled={isPending || isSuccess || isError}
+      disabled={isPending || isSuccess }
       className="md:w-[25vw] w-[85vw] text-white rounded-lg mt-10 md:mt-4 py-3 bg-[#C94C73]">
         {
           isPending?"Logging you in":"Login"
