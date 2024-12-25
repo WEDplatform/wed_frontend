@@ -72,7 +72,7 @@ const VideoPost = async({pageIndex}) => {
                         <TbLocation />
                         <MdSaveAlt />
                     </div>
-                    <div className="w-[40%] flex justify-end md:mr-0 mr-0 items-center">
+                    <div className="w-[40%] flex justify-end md:mr-0 mr-1 items-center">
                         <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
                     </div>
                 </div>
