@@ -37,7 +37,7 @@ const ImagePost = async ({ pageIndex }) => {
                         <MdSaveAlt />
                     </div>
                     <div className="w-[30%] flex justify-center items-center">
-                        <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
+                        <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
                     </div>
                 </div>
             </div>
