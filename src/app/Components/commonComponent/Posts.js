@@ -11,8 +11,8 @@ function Posts() {
   return (
     <>
       <div className="md:w-[95%] md:pt-2 hidden md:block  border-2 w-[100%] h-[90%] md:h-[73vh] md:ml-4">
-        <div className="w-[100%] h-[100%] flex">
-          <main className="w-[65%] preferenceList h-[100%] border-2 overflow-y-auto">
+        <div className="w-[100%] h-[100%] flex justify-between">
+          <main className="w-[64%] preferenceList h-[100%] border-2 overflow-y-auto">
             <ImagePost />
             <ImagePost />
           </main>
