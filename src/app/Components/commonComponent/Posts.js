@@ -29,7 +29,7 @@ function Posts() {
       </div>
       <div className="w-[100%] md:hidden mt-2">
         {
-          new Array(5).fill(0).map((_, pos) => pos % rnd === 0 ? <ImagePost key={pos} pageIndex={pos} /> : <VideoPost key={pos} pageIndex={pos} />)
+          new Array(5).fill(0).map((_, pos) => pos % rnd === 0 ? <ImagePost key={pos} pageIndex={pos+1} /> : <VideoPost key={pos} pageIndex={pos} />)
         }
       </div>
     </>
