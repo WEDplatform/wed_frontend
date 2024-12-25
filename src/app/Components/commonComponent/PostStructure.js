@@ -13,12 +13,12 @@ const ImagePost = async ({ pageIndex }) => {
     return (
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
-                <div className="flex items-center justify-between gap-2  py-1 pl-2">
+                <div className="flex items-center justify-between gap-2 py-1 pl-2">
                     <main className="flex items-center gap-2">
                         <Image alt="pic" src={ICO} width={40} height={40} />
-                        <span className="flex flex-col">
-                            <span className="font-semibold">{imageResponse[0]?.photographer || "Username"}</span>
-                            <span className="font-normal text-gray-600">Dubai (UAE)</span>
+                        <span className="flex flex-col ">
+                            <h1 className="font-semibold ">{imageResponse[0]?.photographer || "Username"}</h1>
+                            <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
                         </span>
                     </main>
                     <nav className="mr-3">
@@ -54,7 +54,7 @@ const VideoPost = async({pageIndex}) => {
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col">
                             <span className="font-semibold">Username</span>
-                            <span className="font-normal text-gray-600">Dubai (UAE)</span>
+                            <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
                         </span>
                     </main>
                     <nav className="mr-3">
