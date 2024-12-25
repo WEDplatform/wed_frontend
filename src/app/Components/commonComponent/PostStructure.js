@@ -36,7 +36,7 @@ const ImagePost = async ({ pageIndex }) => {
                         <TbLocation />
                         <MdSaveAlt />
                     </div>
-                    <div className="w-[30%] flex justify-end items-center mr-2">
+                    <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
                     </div>
                 </div>
