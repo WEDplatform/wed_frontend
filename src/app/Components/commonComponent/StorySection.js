@@ -11,7 +11,7 @@ function StorySection() {
     return (
         <>
             <Splide
-                className="relative flex items-center w-[100%] bg-red-400 md:w-[50vw]"
+                className="relative flex items-center w-[100%] md:w-[50vw]"
                 options={{
                     perPage: 6,
                     breakpoints:{
