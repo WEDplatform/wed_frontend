@@ -31,12 +31,12 @@ const ImagePost = async ({ pageIndex }) => {
                     } */}
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
-                    <div className="w-[30%] text-2xl justify-evenly flex items-center">
+                    <div className="w-[30%]  text-2xl justify-evenly flex items-center">
                         <FaRegHeart />
                         <TbLocation />
                         <MdSaveAlt />
                     </div>
-                    <div className="w-[30%] flex justify-center items-center">
+                    <div className="w-[30%] flex justify-end items-center mr-2">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
                     </div>
                 </div>
