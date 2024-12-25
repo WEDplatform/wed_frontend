@@ -12,6 +12,6 @@ const getVideoUrl=async(query,page)=>{
 const getImageUrl=async(query,page)=>{
     const res=await client.photos.search({query,per_page:3,page:page,orientation:'landscape'})
     return res.photos
-    console.log(res.photos);
+    //console.log(res.photos);
 }
 export {getVideoUrl,getImageUrl}

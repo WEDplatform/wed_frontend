@@ -26,9 +26,9 @@ const ImagePost = async ({ pageIndex }) => {
                     </nav>
                 </div>
                 <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
-                    {/* {
+                    {
                         imageResponse?.length>0?<PostImageSlider imageResponse={imageResponse} />:"Unable to preview image"
-                    } */}
+                    }
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
