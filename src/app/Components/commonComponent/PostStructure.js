@@ -8,7 +8,6 @@ import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 const ImagePost = async ({ pageIndex }) => {
     const imageResponse=await getImageUrl("Wedding",pageIndex)
-    //console.log(imageResponse);
     
     return (
         <>
