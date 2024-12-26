@@ -4,7 +4,7 @@ import { StorySection } from "./StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 function Posts() {
   let rnd = Math.floor((Math.random() * 10) + 1)
-  console.log(rnd);
+  //console.log(rnd);
   //getVideoUrl("Wedding")
   //getImageUrl("Wedding")
   //getVideoUrl("Wedding")
