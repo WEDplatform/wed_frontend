@@ -10,7 +10,6 @@ function page() {
   return (
     <>
       <div className='flex md:flex-row h-[85vh] md:h-[100vh] overflow-y-auto flex-col'>
-        
         <div className='w-[20%] hidden md:block border-r-2 border-gray-300 h-screen'>
           <NavBar />
           <SideBarMain />
