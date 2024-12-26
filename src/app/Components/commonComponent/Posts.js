@@ -7,7 +7,6 @@ function Posts() {
   //console.log(rnd);
   //getVideoUrl("Wedding")
   //getImageUrl("Wedding")
-  //getVideoUrl("Wedding")
   return (
     <>
       <div className="md:w-[95%] md:pt-2 hidden md:block  w-[100%] h-[90%] md:h-[73vh] md:ml-4">
