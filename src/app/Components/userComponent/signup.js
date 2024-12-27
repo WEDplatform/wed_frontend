@@ -54,8 +54,8 @@ const [pageTracker,updateTracker]=useState({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite:false,
-    nextArrow:"", //only empty string
-    prevArrow:""
+    nextArrow:null, //only empty string
+    prevArrow:null
   };
   let sliderRef = useRef(null);
   const next = () => {
