@@ -3,7 +3,7 @@ import { ImagePost, VideoPost } from "./PostStructure"
 import { StorySection } from "./StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImageSWR } from "./desktop/ImagePostSWR"
-async function Posts() {
+async function Posts({id_}) {
   let rnd = Math.floor((Math.random() * 10) + 1)
   // const imageResponse=await getImageUrl("Wedding",1)
   // console.log(imageResponse);

@@ -9,7 +9,7 @@ import { Posts } from "@/app/Components/commonComponent/Posts"
 function page() {
   return (
     <>
-      <div className='flex md:flex-row h-[85vh] md:h-[100vh] overflow-y-auto flex-col'>
+      <div id="mainPost" className='flex md:flex-row h-[85vh] md:h-[100vh] overflow-y-auto flex-col'>
         <div className='w-[20%] hidden md:block border-r-2 border-gray-300 h-screen'>
           <NavBar />
           <SideBarMain />
@@ -24,7 +24,7 @@ function page() {
           <div className="w-[100%] hidden md:block">
             <div className="w-[100%]  flex justify-center"><StorySection /></div>
           </div>
-          <Posts />
+          <Posts id_={"mainPost"}/>
         </div>
       </div>
       <BottomNavBar />
