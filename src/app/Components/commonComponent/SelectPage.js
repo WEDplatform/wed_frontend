@@ -41,7 +41,7 @@ export default function SelectPage() {
       >
         <Typography sx={{ paddingTop: 2,paddingX:4 }}>Favourites</Typography>
         <Typography sx={{ paddingBottom:2,paddingX:4 }}>Settings</Typography>
-
+        
         {/* <div className='px-6 py-2 rounded-md'>
             <p>Favorites</p>
             <p>Settings</p>
