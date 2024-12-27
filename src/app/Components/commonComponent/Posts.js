@@ -5,8 +5,8 @@ import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImageSWR } from "./desktop/ImagePostSWR"
 async function Posts() {
   let rnd = Math.floor((Math.random() * 10) + 1)
-  const imageResponse=await getImageUrl("Wedding",1)
-  console.log(imageResponse);
+  // const imageResponse=await getImageUrl("Wedding",1)
+  // console.log(imageResponse);
   
   return (
     <>
