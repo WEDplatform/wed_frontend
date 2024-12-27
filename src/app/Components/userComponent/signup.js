@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { Userdetailspage1 } from "./userdetails";
 import { Userlocation } from "./userlocation";
 import { Userpreference } from "./userpreference";
+import { SlickNav } from "./SlickNav";
 function UserSignUp({queryParams,index}) {
   const [userDetails, setDetails] = useState({
     username: "",
@@ -54,8 +55,8 @@ const [pageTracker,updateTracker]=useState({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite:false,
-    nextArrow:null, //only empty string
-    prevArrow:null
+    nextArrow:<SlickNav /> ,//only empty string
+    prevArrow:<SlickNav/>
   };
   let sliderRef = useRef(null);
   const next = () => {
