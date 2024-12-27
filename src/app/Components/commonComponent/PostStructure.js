@@ -7,7 +7,7 @@ import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 
-const ImagePost =  ({ pageIndex }) => {
+const ImagePost =  ({ images }) => {
      const imageResponse=null
     return (
         <>
@@ -25,9 +25,9 @@ const ImagePost =  ({ pageIndex }) => {
                     </nav>
                 </div>
                 <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
-                    {/* {
-                        imageResponse?.length>0?<PostImageSlider imageResponse={imageResponse} />:"Unable to preview image"
-                    } */}
+                    {
+                        images?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
+                    }
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
