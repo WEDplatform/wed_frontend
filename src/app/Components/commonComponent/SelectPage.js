@@ -4,6 +4,7 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { CgOptions } from "react-icons/cg";
+import { LogoutButton } from './logoutButton';
 
 export default function SelectPage() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -41,7 +42,7 @@ export default function SelectPage() {
       >
         <Typography sx={{ paddingTop: 2,paddingX:4 }}>Favourites</Typography>
         <Typography sx={{ paddingBottom:2,paddingX:4 }}>Settings</Typography>
-        
+        <Typography sx={{ paddingBottom:2,paddingX:4 }}><LogoutButton/></Typography>
         {/* <div className='px-6 py-2 rounded-md'>
             <p>Favorites</p>
             <p>Settings</p>

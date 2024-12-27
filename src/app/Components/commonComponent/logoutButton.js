@@ -3,7 +3,7 @@ import { logout } from "@/app/apiFunctions/logout"
 import { TbLogout2 } from "react-icons/tb"
 function LogoutButton() {
   return (
-     <button onClick={logout} className='flex ml-4 bg-[#C94C73] text-white py-2 px-4 rounded-lg mt-4 items-center'><TbLogout2 className='mr-2'/>Logout</button>
+     <button onClick={logout} className='flex md:ml-4 px-2 py-2 bg-[#C94C73] text-white md:py-2 md:px-4 rounded-lg md:mt-4 items-center'><TbLogout2 className='mr-2'/>Logout</button>
     
   )
 }
