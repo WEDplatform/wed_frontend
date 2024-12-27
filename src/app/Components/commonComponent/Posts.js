@@ -3,6 +3,7 @@ import { ImagePost, VideoPost } from "./PostStructure"
 import { StorySection } from "./StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImageSWR } from "./desktop/ImagePostSWR"
+import { PostSWR } from "./phone/PostSWR"
 async function Posts({id_}) {
   let rnd = Math.floor((Math.random() * 10) + 1)
   // const imageResponse=await getImageUrl("Wedding",1)
@@ -29,6 +30,7 @@ async function Posts({id_}) {
 
       </div>
       <div id="MobilePost" className="w-[100%] md:hidden mt-2">
+        <PostSWR id_={id_}/>
         {
           new Array(5).fill(0).map((_, pos) => pos % rnd === 0 ? <ImagePost key={pos} pageIndex={pos+1} /> : <VideoPost key={pos} pageIndex={pos} />)
         }
