@@ -2,6 +2,7 @@ import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { ImagePost, VideoPost } from "./PostStructure"
 import { StorySection } from "./StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
+import InfiniteScroll from "react-infinite-scroll-component"
 function Posts() {
   let rnd = Math.floor((Math.random() * 10) + 1)
   return (
