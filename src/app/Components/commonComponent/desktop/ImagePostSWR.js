@@ -6,29 +6,44 @@ import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 const ImageSWR = ({ data }) => {
     const [index, setIndex] = useState(1);
-    const [hasMoreTrack,setTrack]=useState(false);
+    const [hasMoreTrack,setTrack]=useState(true);
     const [imageData,setData]=useState([]);
     const fetchImageData = async () => {
+        if(imageData.length>=6) return
         console.log("called");
         
         try {
-            await getImageUrl("Wedding", index)
+            let image_data=await getImageUrl("Wedding", index)
+            setData((prev)=>[...prev,...image_data])
+            setIndex((prev)=>prev+1);
+            //console.log(image_data);
+            
         } catch (error) {
             console.log(error);
 
         }
     }
+    useEffect(()=>{
+        console.log(imageData);
+        
+        if(imageData.length>=6){
+            setTrack(false)
+        }
 
+    },[imageData])
+    useEffect(() => {
+        fetchImageData();
+      }, []);
     return (<>
-        <main id="ImagePost" className="w-[64%] preferenceList h-[100%] overflow-y-auto">
+        <main id="ImagePost" className="w-[64%] border-2 preferenceList max-h-[100%] overflow-y-auto">
 
             <InfiniteScroll
-                dataLength={2}
+                dataLength={imageData.length}
                 next={fetchImageData}
                 loader={<h1>Loading</h1>}
                 scrollableTarget="ImagePost"
-                hasMore={true}
-                scrollThreshold={1}
+                hasMore={hasMoreTrack}
+                scrollThreshold={0.9}
                 endMessage={
                     <p style={{ textAlign: 'center' }}>
                       <b>Yay! You have seen it all</b>
@@ -36,7 +51,7 @@ const ImageSWR = ({ data }) => {
                   }
             >
                 {
-                    new Array(2).fill(0).map((_, pos) => <ImagePost key={pos} pageIndex={pos + 1} />)
+                    imageData.map((item, pos) => <ImagePost key={pos} images={item}  />)
                 }
             </InfiniteScroll>
         </main>
