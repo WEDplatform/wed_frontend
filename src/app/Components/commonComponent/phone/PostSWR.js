@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImagePost } from "../PostStructure"
+import { TbLoader2 } from "react-icons/tb";
 const PostSWR = ({ id_ }) => {
     const [index, setIndex] = useState(1);
     const [hasMoreTrack, setTrack] = useState(true);
@@ -41,11 +42,13 @@ const PostSWR = ({ id_ }) => {
                 loader={<h1>Loading</h1>}
                 scrollableTarget={id_}
                 hasMore={hasMoreTrack}
-                scrollThreshold={1}
+                scrollThreshold={0.6}
                 endMessage={
-                    <p style={{ textAlign: 'center' }}>
-                        <b>Yay! You have seen it all</b>
-                    </p>
+                    <div style={{ textAlign: 'center',
+                       
+                     }}>
+                       Yay! you completed!!
+                    </div>
                 }
             >
                 {
