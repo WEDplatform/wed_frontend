@@ -43,7 +43,7 @@ const ImageSWR = ({ data }) => {
                 loader={<h1>Loading</h1>}
                 scrollableTarget="ImagePost"
                 hasMore={hasMoreTrack}
-                scrollThreshold={1}
+                scrollThreshold={0.9}
                 endMessage={
                     <p style={{ textAlign: 'center' }}>
                       <b>Yay! You have seen it all</b>
