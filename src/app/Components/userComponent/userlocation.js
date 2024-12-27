@@ -66,11 +66,11 @@ function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
     <div className='flex flex-wrap mt-2'>
         {
            famousCityList.map((item,pos)=>
-        <span key={pos} className={`mx-1 mt-1 mb-1 rounded-lg  ${userDetails['locationCity']===item?"bg-[#C94C73] text-white":"text-[#C94C73] bg-[#FFECEC]"} font-semibold text-[0.8rem] py-1 px-2`}>{item}</span>) 
+        <span key={pos} onClick={()=>{setDetails((prev)=>({...prev,locationCity:item}));setLocVal(item),setCityArr([])}} className={`mx-1 mt-1 mb-1 rounded-lg  ${userDetails['locationCity']===item?"bg-[#C94C73] text-white":"text-[#C94C73] bg-[#FFECEC]"} font-semibold text-[0.8rem] py-1 px-2`}>{item}</span>) 
         }
     </div>
     {
-      locVal.length>0 ? <>
+      locVal.length>0 && fetchedCity.length>0 ? <>
       <h2 className='text-[0.9rem] w-[97%] flex mt-4 font-semibold text-gray-500'>Cities founded {loading?<><Image className='ml-2' alt='loader' src={fadeLoader} width={20} height={20}/></>:<></>}</h2>
     <div className='flex flex-wrap mt-2 w-[97%]'>
         {
