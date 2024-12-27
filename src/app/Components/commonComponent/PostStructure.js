@@ -7,7 +7,7 @@ import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 const ImagePost = async ({ pageIndex }) => {
-    const imageResponse=await getImageUrl("Wedding",pageIndex)
+     const imageResponse=null
     return (
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
@@ -15,7 +15,7 @@ const ImagePost = async ({ pageIndex }) => {
                     <main className="flex items-center gap-2">
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col ">
-                            <h1 className="font-semibold ">{imageResponse[0]?.photographer || "Username"}</h1>
+                            <h1 className="font-semibold ">{ "Username"}</h1>
                             <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
                         </span>
                     </main>
@@ -24,9 +24,9 @@ const ImagePost = async ({ pageIndex }) => {
                     </nav>
                 </div>
                 <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
-                    {
+                    {/* {
                         imageResponse?.length>0?<PostImageSlider imageResponse={imageResponse} />:"Unable to preview image"
-                    }
+                    } */}
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
