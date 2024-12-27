@@ -134,6 +134,7 @@ function Userdetailspage1({
                     className="md:w-[25vw] w-[85vw] text-white rounded-lg mt-10 md:mt-5  py-3 bg-[#C94C73]"
                     >Set preferences</button>
                     :<button
+                    disabled={isError}
                     onClick={() => { handleSubmit() }}
                     className="md:w-[25vw] w-[85vw] text-white rounded-lg mt-10 md:mt-5  py-3 bg-[#C94C73]">
                     {
