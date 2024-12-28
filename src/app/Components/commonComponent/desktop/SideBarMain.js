@@ -11,13 +11,7 @@ import { useSearchParams } from 'next/navigation'
 function SideBarMain({tabParams}) {
   const router=useRouter()
   const srch=useSearchParams()
-  const changeURLtab = (val) =>{
-    const tabParam=new URLSearchParams(tabParams)
-    tabParam.set("tab",val)
-    window.history.replaceState(null,``,`?${tabParam.toString()}`)
-    
-    
-  }
+ 
   console.log(srch.get("tab"));
   
   return (
