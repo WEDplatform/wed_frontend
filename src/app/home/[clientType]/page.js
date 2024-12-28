@@ -32,7 +32,7 @@ async function page({params,searchParams}) {
           <Posts id_={"mainPost"}/>
         </div>
         <div className="hidden md:block w-[25%] h-[100%] border-2">
-            <div className="w-[100%] h-[100%]">
+            <div className="w-[100%] h-[100%] flex items-center justify-center">
             {
               searchprm.tab
             }
