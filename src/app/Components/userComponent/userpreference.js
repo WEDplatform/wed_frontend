@@ -92,7 +92,7 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                     Previous
                 </button>
                 <div className="flex items-center">
-                    <button onClick={() => { router.push("/home/user") }} className="mr-2 text-[#C94C73] underline font-medium">Skip</button>
+                    <button onClick={() => {router.push("/home/user") }} className="mr-2 text-[#C94C73] underline font-medium">Skip</button>
                     {
                         prefData || prefErr ? <>
                             <button disabled={prefPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
