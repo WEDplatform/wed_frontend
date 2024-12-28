@@ -6,8 +6,12 @@ import { NavBar } from "@/app/Components/commonComponent/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
-async function page({params}) {
+async function page({params,searchParams}) {
+  const clientParam=await params;
+  const searchprm=await searchParams
   console.log(await params);
+  console.log(await searchParams);
+  
   
   return (
     <>

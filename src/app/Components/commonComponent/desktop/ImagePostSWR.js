@@ -32,7 +32,7 @@ const ImageSWR = ({ data }) => {
 
     },[imageData])
     useEffect(() => {
-        fetchImageData();
+        //fetchImageData();
       }, []);
     return (<>
         <main id="ImagePost" className="w-[54%] border-2 preferenceList max-h-[100%] overflow-y-auto">
