@@ -35,7 +35,7 @@ const ImageSWR = ({ data }) => {
         fetchImageData();
       }, []);
     return (<>
-        <main id="ImagePost" className="w-[64%] border-2 preferenceList max-h-[100%] overflow-y-auto">
+        <main id="ImagePost" className="w-[54%] border-2 preferenceList max-h-[100%] overflow-y-auto">
 
             <InfiniteScroll
                 dataLength={imageData.length}

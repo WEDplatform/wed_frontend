@@ -19,7 +19,8 @@ async function Posts({id_}) {
             }
           </main> */}
           <ImageSWR />
-          <main id="VideoPost" className="w-[35%] preferenceList h-[100%] overflow-y-auto">
+          {/* <VideoPost/> */}
+          <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
             <VideoPost />
             <VideoPost />
 

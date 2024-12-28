@@ -10,7 +10,7 @@ function PostImageSlider({ imageResponse }) {
             <SplideTrack className="w-[100%] overflow-hidden h-[100%] rounded-xl">
                 {
                     imageResponse?.map((item, index) =>
-                        <SplideSlide key={index} className='md:w-[33vw] h-[74vw] md:h-[24.75vw] rounded-lg bg-red-300'>
+                        <SplideSlide key={index} className='md:w-[100%] h-[74vw] md:h-[20.5vw] rounded-lg bg-red-300'>
                             <Image priority style={{objectFit:'cover'}} fill={true} src={item?.src?.landscape} alt='pics' />
                         </SplideSlide>
                     )

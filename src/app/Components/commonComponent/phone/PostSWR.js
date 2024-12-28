@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
-import { ImagePost } from "../PostStructure"
+import { ImagePost, VideoPost } from "../PostStructure"
 import { TbLoader2 } from "react-icons/tb";
 const PostSWR = ({ id_ }) => {
     const [index, setIndex] = useState(1);
@@ -54,6 +54,7 @@ const PostSWR = ({ id_ }) => {
                 {
                     imageData.map((item, pos) => <ImagePost key={pos} images={item} />)
                 }
+                {/* <VideoPost/> */}
             </InfiniteScroll>
         </>
     )
