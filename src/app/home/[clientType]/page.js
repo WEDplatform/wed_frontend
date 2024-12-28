@@ -9,8 +9,8 @@ import { Posts } from "@/app/Components/commonComponent/Posts"
 async function page({params,searchParams}) {
   const clientParam=await params;
   const searchprm=await searchParams
-  console.log(await params);
-  console.log(await searchParams);
+  // console.log(await params);
+  // console.log(await searchParams);
   
   
   return (
