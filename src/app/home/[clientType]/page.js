@@ -6,7 +6,9 @@ import { NavBar } from "@/app/Components/commonComponent/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
-function page() {
+async function page({params}) {
+  console.log(await params);
+  
   return (
     <>
       <div id="mainPost" className='flex md:flex-row h-[85vh] md:h-[100vh] overflow-y-auto flex-col'>

@@ -1,3 +1,4 @@
+'use cient'
 import React from 'react'
 import { NavigatorList } from './sidebarcontent'
 import Image from 'next/image'
