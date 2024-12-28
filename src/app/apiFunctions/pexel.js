@@ -16,8 +16,8 @@ const getVideoUrl=async(query,page)=>{
     return null
 }
 const getImageUrl=async(query,page)=>{
-    const res=await client.photos.search({query,per_page:12,page:page,orientation:'landscape'})
-    let result=create2DArray(res.photos,4)
+    const res=await client.photos.search({query,per_page:1,page:1,orientation:'landscape'})
+    let result=create2DArray(res.photos,1)
     console.log(result);
     
     return result

@@ -13,7 +13,7 @@ const ImageSWR = ({ data }) => {
         console.log("called");
         
         try {
-            let image_data=await getImageUrl("Wedding", index)
+            let image_data=null
             setData((prev)=>[...prev,...image_data])
             setIndex((prev)=>prev+1);
             //console.log(image_data);
