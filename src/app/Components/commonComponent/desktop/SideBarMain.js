@@ -6,19 +6,21 @@ import GoogleLogo from "../../../../../public/google-icon.svg"
 import ICO from "@/app/favicon.ico"
 import { logout } from '@/app/apiFunctions/logout'
 import { LogoutButton } from '../logoutButton'
-function SideBarMain() {
-  const logoutClient=async()=>{
-    await logout()
+function SideBarMain({tabParams}) {
+  const changeURLtab = () =>{
+    
   }
+  console.log(tabParams);
+  
   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
         <div>
             {
                NavigatorList.map((item,pos)=>{
                 return (
-                  <div className='ml-4 py-2 flex items-center gap-2 ' key={pos}>
+                  <div className={`ml-4 py-2  flex items-center gap-2 ${item.tag.toLowerCase()==tabParams.tab?"text-[#9A2143] border-l-2 border-[#9A2143] pl-2":"text-gray-500 hover:text-[#C94C73]"}`} key={pos}>
                     <span className='text-[1.2rem]'>{item.icon}</span>
-                    <p className='font-medium text-gray-500 text-[1rem]'>{item.tag}</p>
+                    <p className='font-medium text-[1rem]'>{item.tag}</p>
                   </div>
                 )
                }) 
