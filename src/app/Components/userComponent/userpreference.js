@@ -85,7 +85,7 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                 </main>
             </div>
             {
-                prefError ? <div className="font-semibold text-sm text-gray-500">Your account aready there</div> : <></>
+                prefData?.status==401 ? <div className="font-semibold text-sm text-gray-500">Your account aready there login first</div> : <></>
             }
             <div className="mt-1 md:mt-4 flex justify-between px-1">
                 <button className="p-2 border-2 rounded-lg border-[#C94C73] mr-1" onClick={() => { prev(); WindowHistoryStack(index - 1, true) }}>
@@ -96,8 +96,9 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                     {
                         prefData || prefErr ? <>
                             <button disabled={prefPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
-                                router.push("/home/user")
-
+                                //router.push("/home/user")
+                                console.log(prefData);
+                                
                             }}>
                                 Continue
                             </button>
