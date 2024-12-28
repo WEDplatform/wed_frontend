@@ -42,13 +42,7 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
             setDetails((prev) => ({ ...prev, userPreference: [...userDetails.userPreference, { title, value: [value] }] }))
         }
     }
-    useEffect(() => {
-
-        if (error?.status == 409) {
-            router.push("/authPage/user")
-        }
-
-    }, [error])
+   
     const WindowHistoryStack = (pageIndex, replace = false) => {
         const params = new URLSearchParams(queryParams)
         params.set('compIndex', pageIndex)
@@ -65,6 +59,10 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
             cred: userDetails
         })
     }
+    useEffect(()=>{
+        console.log(prefErr);
+        
+    },[prefErr])
     return (
         <>
             <div className="preferenceList w-[100%] ml-1 overflow-y-auto overflow-x-hidden flex flex-col items-center md:px-0 h-[55vh]  md:h-[60vh]">
@@ -87,7 +85,7 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                 </main>
             </div>
             {
-                isError ? <div className="font-semibold text-sm text-gray-500">{error?.response?.data?.message}</div> : <></>
+                prefError ? <div className="font-semibold text-sm text-gray-500">Your account aready there</div> : <></>
             }
             <div className="mt-1 md:mt-4 flex justify-between px-1">
                 <button className="p-2 border-2 rounded-lg border-[#C94C73] mr-1" onClick={() => { prev(); WindowHistoryStack(index - 1, true) }}>
@@ -97,18 +95,18 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                     <button onClick={() => { router.push("/home/user") }} className="mr-2 text-[#C94C73] underline font-medium">Skip</button>
                     {
                         prefData || prefErr ? <>
-                            <button disabled={isPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
+                            <button disabled={prefPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
                                 router.push("/home/user")
 
                             }}>
                                 Continue
                             </button>
                         </> : <>
-                            <button disabled={isPending || userDetails.userPreference.length == 0} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
+                            <button disabled={ userDetails.userPreference.length == 0} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
                                 updateUserPreference()
                             }}>
                                 {
-                                    isPending ? "Updating preferences" : "Update preferences"
+                                    prefPending ? "Updating preferences" : "Update preferences"
                                 }
                             </button>
                         </>

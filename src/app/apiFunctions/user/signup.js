@@ -43,7 +43,7 @@ const updatePreference=async({cred})=>{
         return resp
     } catch (error) {
         console.log(error);
-        
+        return error
     }
 }
 export {signup,updatePreference}
