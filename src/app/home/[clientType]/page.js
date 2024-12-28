@@ -6,6 +6,7 @@ import { NavBar } from "@/app/Components/commonComponent/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
+import { Search } from "@/app/Components/commonComponent/desktop/Search"
 async function page({params,searchParams}) {
   const clientParam=await params;
   const searchprm=await searchParams
@@ -34,7 +35,11 @@ async function page({params,searchParams}) {
         <div className="hidden md:block w-[25%] h-[100%] border-2">
             <div className="w-[100%] h-[100%] flex items-center justify-center">
             {
-              searchprm.tab
+              searchprm.tab == "search" ? <Search/> : <>
+              {
+                searchprm.tab
+              }
+              </>
             }
             </div>
         </div>
