@@ -61,7 +61,6 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
     }
     useEffect(()=>{
         console.log(prefErr);
-        
     },[prefErr])
     return (
         <>
