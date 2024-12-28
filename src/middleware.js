@@ -19,7 +19,7 @@ export async function middleware(request) {
       }
     })
     rftResp=await rftResp.json()
-    const home = new URL(`/home/${encodeURIComponent(rftResp?.data?.typeClient)}`, process.env.NEXT_PUBLIC_FRNT);
+    const home = new URL(`/home/${encodeURIComponent(rftResp?.data?.typeClient)}?tab=home`, process.env.NEXT_PUBLIC_FRNT);
     if(!(home.pathname.includes(rftResp?.data?.typeClient))){
       return NextResponse.redirect(home); 
     }
