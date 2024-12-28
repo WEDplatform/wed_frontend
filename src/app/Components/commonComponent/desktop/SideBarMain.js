@@ -11,8 +11,7 @@ import { useSearchParams } from 'next/navigation'
 function SideBarMain({tabParams}) {
   const router=useRouter()
   const srch=useSearchParams()
- 
-  console.log(srch.get("tab"));
+
   
   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
