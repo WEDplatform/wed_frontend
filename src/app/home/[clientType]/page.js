@@ -32,7 +32,7 @@ async function page({params,searchParams}) {
           <Posts id_={"mainPost"}/>
         </div>
       </div>
-      <BottomNavBar />
+      <BottomNavBar tabParams={searchprm} />
     </>
   )
 }
