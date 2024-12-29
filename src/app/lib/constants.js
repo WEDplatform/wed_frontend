@@ -76,7 +76,7 @@ const searchSection=[
     value:["Mumbai","Delhi","Chennai","Pune","Ahemdabad","Gwalior","Madras","Varanasi"]
   },{
     title:"Wedding type",
-    value:[""]
+    value:["Destination","Beach","Ritual"]
   }
 ]
 export {userPreferences,vendorDetails_p1}
