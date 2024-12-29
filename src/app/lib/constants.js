@@ -79,4 +79,4 @@ const searchSection=[
     value:["Destination","Beach","Ritual"]
   }
 ]
-export {userPreferences,vendorDetails_p1}
+export {userPreferences,vendorDetails_p1,searchSection}

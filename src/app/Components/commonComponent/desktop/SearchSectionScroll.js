@@ -2,10 +2,10 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-function SearchSectionScroll() {
+function SearchSectionScroll({vals,title}) {
   return (
     <div className="w-[100%] mt-2">
-        <p className='text-sm text-gray-500'>Title</p>
+        <p className='text-sm text-gray-500'>{title}</p>
         <Splide
         options={{
             perPage:3
@@ -13,11 +13,11 @@ function SearchSectionScroll() {
         className="w-[100%] flex justify-center h-[18vh]" aria-label="" hasTrack={false}>
                     <SplideTrack className="w-[92%] overflow-hidden h-[100%]  rounded-xl">
                     {
-                new Array(10).fill(0).map((item,pos)=>
+                vals.map((item,pos)=>
                 <SplideSlide key={pos} className="flex justify-center">
                     <div className='w-[95%] h-[18vh] rounded-xl bg-white border-2'>
                         <div className='w-[100%] h-[65%] bg-gray-200'></div>
-                        <div className='w-[100%] h-[35%] text-sm text-gray-500 mt-1 ml-1'>Pagex</div>
+                        <div className='w-[100%] h-[35%] text-sm text-gray-500 mt-1 ml-1'>{item}</div>
 
                     </div>
                 </SplideSlide>
