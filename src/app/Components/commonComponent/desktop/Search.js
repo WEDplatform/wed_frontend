@@ -33,11 +33,15 @@ console.log(filteredQuery);
         <div className="relative">
         <RiSearch2Line className="absolute text-gray-500 top-2 left-3 text-[25px]"/>    
         <input value={searchQuery} onChange={(e)=>{filterQueries(e.target.value.toLowerCase())}} placeholder="Search keyword" type="text" className="w-[100%] text-sm text-gray-600 px-4 py-2 pl-10 bg-gray-200 rounded-lg outline-none  border-2 border-gray-300"/></div>
-        <div className="w-[100%] h-[90%] overflow-y-auto">
+        <div className="w-[100%] preferenceList h-[90%] overflow-y-auto">
             {
-                searchQuery != "" ? filterList.map((item,pos)=>
+                searchQuery != "" ? filterList.length>0?
+                filterList.map((item,pos)=>
                   <SearchSectionScroll key={pos} title={item.title} vals={item.value}/>
-              ) : searchSection.map((item,pos)=>
+              )
+                :
+                <div>Nothing found</div>
+                : searchSection.map((item,pos)=>
                 <SearchSectionScroll key={pos} title={item.title} vals={item.value}/>
             )
             }
