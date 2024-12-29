@@ -24,10 +24,12 @@ function SearchSectionScroll({vals,title}) {
                 )
             }
                     </SplideTrack>
-                    <div className="splide__arrows  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2">
+                    {
+                        vals.length> 3 && <div className="splide__arrows  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2">
                         <button className="splide__arrow  md:block splide__arrow--prev bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowLeft className="w-[100%] h-[100%] text-xl" /></button>
                         <button className="splide__arrow  md:block splide__arrow--next bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowRight className="w-[100%] h-[100%] text-xl" /></button>
                     </div>
+                    }
                 </Splide>
         <div >
             
