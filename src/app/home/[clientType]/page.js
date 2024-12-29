@@ -36,9 +36,9 @@ async function page({params,searchParams}) {
             <div className="w-[100%] h-[100%] flex items-center justify-center">
             {
               searchprm.tab == "search" ? <Search/> : <>
-              {
+              {/* {
                 searchprm.tab
-              }
+              } */}
               </>
             }
             </div>
