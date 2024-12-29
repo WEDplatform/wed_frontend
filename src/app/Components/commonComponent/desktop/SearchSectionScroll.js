@@ -10,7 +10,7 @@ function SearchSectionScroll({vals,title}) {
         options={{
             perPage:3
         }}
-        className="w-[100%] flex justify-center h-[18vh]" aria-label="" hasTrack={false}>
+        className="w-[100%] flex justify-center h-[18vh]" hasTrack={false}>
                     <SplideTrack className="w-[92%] overflow-hidden h-[100%]  rounded-xl">
                     {
                 vals.map((item,pos)=>
