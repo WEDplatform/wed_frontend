@@ -70,4 +70,13 @@ const vendorDetails_p1=[
     name:"password"
   }
 ]
+const searchSection=[
+  {
+    title:"Most searched cities",
+    value:["Mumbai","Delhi","Chennai","Pune","Ahemdabad","Gwalior","Madras","Varanasi"]
+  },{
+    title:"Wedding type",
+    value:[""]
+  }
+]
 export {userPreferences,vendorDetails_p1}
