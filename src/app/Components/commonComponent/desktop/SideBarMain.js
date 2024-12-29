@@ -19,7 +19,7 @@ function SideBarMain({tabParams}) {
             {
                NavigatorList.map((item,pos)=>{
                 return (
-                  <div onClick={()=>{router.replace(`/home/user?tab=${item.tag.toLowerCase()}`)}} className={`ml-4 py-2 pl-2 cursor-pointer flex items-center gap-2 ${item.tag.toLowerCase()==tabParams.tab?"text-[#9A2143] border-l-2 border-[#9A2143] ":"text-gray-500 hover:text-[#C94C73]"}`} key={pos}>
+                  <div onClick={()=>{router.replace(`/home/user?tab=${item.tag.toLowerCase()}`)}} className={`ml-4 py-2 pl-2 cursor-pointer flex items-center gap-2 ${item.tag.toLowerCase()==tabParams.tab?"text-[#9A2143] border-l-2 border-[#9A2143] bg-[#d3739217] ":"text-gray-500 hover:text-[#C94C73]"}`} key={pos}>
                     <span className='text-[1.2rem]'>{item.icon}</span>
                     <p className='font-medium text-[1rem]'>{item.tag}</p>
                   </div>
