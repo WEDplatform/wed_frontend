@@ -7,6 +7,7 @@ import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBa
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
+import { Profile } from "@/app/Components/commonComponent/Profile"
 async function page({params,searchParams}) {
   const clientParam=await params;
   const searchprm=await searchParams
@@ -36,6 +37,13 @@ async function page({params,searchParams}) {
             <div className="w-[100%] h-[100%] flex items-center justify-center">
             {
               searchprm.tab == "search" ? <Search/> : <>
+              {/* {
+                searchprm.tab
+              } */}
+              </>
+            }
+            {
+              searchprm.tab == "profile" ? <Profile/> : <>
               {/* {
                 searchprm.tab
               } */}
