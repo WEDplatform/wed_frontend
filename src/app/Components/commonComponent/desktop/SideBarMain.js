@@ -11,7 +11,8 @@ import { useSearchParams } from 'next/navigation'
 function SideBarMain({tabParams}) {
   const router=useRouter()
   const srch=useSearchParams()
-
+  console.log(srch);
+  
   
   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
@@ -28,7 +29,7 @@ function SideBarMain({tabParams}) {
             } 
             <LogoutButton/>
         </div>
-        <div className='flex items-center m-4'>
+        <div onClick={()=>{router.replace(`/home/${srch.clientType}?tab=profile`)}} className='flex cursor-pointer items-center m-4'>
             <Image className='mr-2' alt='profile' src={ICO} width={30} height={30} />
             <p>Profile</p>
         </div>
