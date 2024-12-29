@@ -13,7 +13,7 @@ const loginUser=async({data,router,client})=>{
         
         await create(resp?.data)
         if(resp.status==203){
-            router.push(`/home/${client}`)
+            router.push(`/home/${client}?tab=search`)
         }
         return resp
     } catch (error) {
