@@ -1,6 +1,11 @@
 function SearchSectionScroll() {
   return (
-    <div>SearchSectionScroll</div>
+    <div className="w-[100%]">
+        <p>Title</p>
+        <main>
+            
+        </main>
+    </div>
   )
 }
 
