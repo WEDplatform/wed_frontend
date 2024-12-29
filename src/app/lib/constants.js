@@ -70,13 +70,55 @@ const vendorDetails_p1=[
     name:"password"
   }
 ]
-const searchSection=[
+const searchSection = [
   {
-    title:"Most searched cities",
-    value:["Mumbai","Delhi","Chennai","Pune","Ahemdabad","Gwalior","Madras","Varanasi"]
-  },{
-    title:"Wedding type",
-    value:["Destination","Beach","Ritual"]
+    title: "Most searched cities",
+    value: ["Mumbai", "Delhi", "Chennai", "Pune", "Ahmedabad", "Gwalior", "Madras", "Varanasi"]
+  },
+  {
+    title: "Wedding type",
+    value: ["Destination", "Beach", "Ritual", "Traditional", "Modern", "Eco-Friendly"]
+  },
+  {
+    title: "Popular wedding venues",
+    value: ["Banquet Hall", "Resort", "Beachside", "Palace", "Garden", "Farmhouse", "Cruise", "Temple"]
+  },
+  {
+    title: "Top wedding themes",
+    value: ["Royal", "Vintage", "Fairy Tale", "Rustic", "Bohemian", "Minimalist", "Floral", "Seasonal"]
+  },
+  {
+    title: "Preferred wedding cuisines",
+    value: ["North Indian", "South Indian", "Mughlai", "Continental", "Chinese", "Italian", "Fusion", "Dessert Buffet"]
+  },
+  {
+    title: "Wedding decoration styles",
+    value: ["Floral", "LED Lights", "Traditional Drapes", "Balloon Art", "Themed Backdrops", "Rustic Chic", "Crystal Decor"]
+  },
+  {
+    title: "Bridal outfit styles",
+    value: ["Lehenga", "Saree", "Gown", "Anarkali", "Sharara", "Traditional Silk", "Fusion Attire"]
+  },
+  {
+    title: "Groom outfit styles",
+    value: ["Sherwani", "Tuxedo", "Kurta Pajama", "Achkan", "Suit", "Indo-Western", "Bandhgala"]
+  },
+  {
+    title: "Trending wedding accessories",
+    value: ["Jewelry Sets", "Mehendi Designs", "Footwear", "Turbans", "Clutches", "Brooches", "Kaleeras"]
+  },
+  {
+    title: "Wedding photography styles",
+    value: ["Candid", "Traditional", "Cinematic", "Pre-Wedding Shoot", "Drone Shots", "Vintage Filters", "Black & White"]
+  },
+  {
+    title: "Common wedding rituals",
+    value: ["Sangeet", "Mehendi", "Haldi", "Pheras", "Bidaai", "Reception", "Engagement Ceremony"]
+  },
+  {
+    title: "Popular honeymoon destinations",
+    value: ["Maldives", "Switzerland", "Bali", "Paris", "Kerala", "Himachal Pradesh", "Thailand", "Santorini"]
   }
-]
+];
+
 export {userPreferences,vendorDetails_p1,searchSection}
