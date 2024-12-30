@@ -14,7 +14,7 @@ async function page({params,searchParams}) {
   const searchprm=await searchParams
   // console.log(await params);
   let rsp=await profileFetch()
-  console.log(rsp);
+ // console.log(rsp);
   
   return (
     <>

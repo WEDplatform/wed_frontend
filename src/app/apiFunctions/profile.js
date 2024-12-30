@@ -11,7 +11,7 @@ import { cookies } from 'next/headers'
             }
         })
         profileResponse=await profileResponse.json()
-        console.log(profileResponse);
+        //console.log(profileResponse);
         return profileResponse
     } catch (error) {
         
