@@ -8,11 +8,13 @@ import { StorySection } from "@/app/Components/commonComponent/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { Profile } from "@/app/Components/commonComponent/Profile"
+import { profie } from "@/app/apiFunctions/profile"
 async function page({params,searchParams}) {
   const clientParam=await params;
   const searchprm=await searchParams
   // console.log(await params);
-  
+  let profile=await profie()
+  console.log(profile);
   
   return (
     <>
