@@ -14,7 +14,6 @@ function SideBarMain({tabParams,client}) {
   const srch=useSearchParams()
   //console.log(srch);
   
-  
   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
         <div>
