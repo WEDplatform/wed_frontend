@@ -120,5 +120,21 @@ const searchSection = [
     value: ["Maldives", "Switzerland", "Bali", "Paris", "Kerala", "Himachal Pradesh", "Thailand", "Santorini"]
   }
 ];
+const userProfileContent=[
+  {
+    title:"Username",
+    value:"Ujjwal"
+  },{
+    title:"Location",
+    value:"Mumbai"
+  },
+  {
+    title:"Number of events planned",
+    value:"0"
+  },{
+    title:"Upcoming events",
+    value:"Null"
+  }
+]
 
-export {userPreferences,vendorDetails_p1,searchSection}
+export {userPreferences,vendorDetails_p1,searchSection,userProfileContent}
