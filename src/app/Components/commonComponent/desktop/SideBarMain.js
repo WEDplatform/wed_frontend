@@ -8,6 +8,7 @@ import { logout } from '@/app/apiFunctions/logout'
 import { LogoutButton } from '../logoutButton'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 function SideBarMain({tabParams,client}) {
   const router=useRouter()
   const srch=useSearchParams()
@@ -29,10 +30,10 @@ function SideBarMain({tabParams,client}) {
             } 
             <LogoutButton/>
         </div>
-        <div onClick={()=>{router.replace(`/home/${client.clientType}?tab=profile`)}} className='flex cursor-pointer items-center m-4'>
+        <Link href={"/profile/user"}  className='flex cursor-pointer items-center m-4'>
             <Image className='mr-2' alt='profile' src={ICO} width={30} height={30} />
             <p>Profile</p>
-        </div>
+        </Link>
     </div>
   )
 }
