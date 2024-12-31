@@ -12,7 +12,7 @@ import Link from 'next/link'
 function SideBarMain({tabParams,client}) {
   const router=useRouter()
   const srch=useSearchParams()
-  console.log(srch);
+  //console.log(srch);
   
   
   return (
