@@ -9,6 +9,7 @@ import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 import { useRouter } from "next/navigation";
 const ImagePost =  ({ images }) => {
+
      const imageResponse=null
     return (
         <>
@@ -45,6 +46,7 @@ const ImagePost =  ({ images }) => {
     )
 }
 const VideoPost = async({pageIndex}) => {
+    const router = useRouter()
     const videoResponse=await getVideoUrl("Wedding",pageIndex)
     return (
         <>
