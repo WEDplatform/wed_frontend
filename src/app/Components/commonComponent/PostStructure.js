@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image"
 import ICO from "@/app/favicon.ico"
 import { BsThreeDots } from "react-icons/bs";
@@ -7,7 +6,6 @@ import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
-import { useRouter } from "next/navigation";
 const ImagePost =  ({ images }) => {
 
      const imageResponse=null
@@ -46,7 +44,7 @@ const ImagePost =  ({ images }) => {
     )
 }
 const VideoPost = async({pageIndex}) => {
-    const router = useRouter()
+    // const router = useRouter()
     const videoResponse=await getVideoUrl("Wedding",pageIndex)
     return (
         <>
