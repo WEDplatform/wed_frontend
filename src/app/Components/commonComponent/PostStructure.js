@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import ICO from "@/app/favicon.ico"
 import { BsThreeDots } from "react-icons/bs";
