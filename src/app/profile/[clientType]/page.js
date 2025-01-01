@@ -18,15 +18,23 @@ async function page({ params }) {
                 </div>
             </div>
             <div className="w-[79%] ">
-                <div className="h-[30vh] grid rounded-md grid-cols-2 grid-rows-3 shadow-xl shadow-gray-200">
+                <div className="h-[30vh] rounded-md shadow-xl shadow-gray-200">
                     {/* <div className="bg-red-300 flex flex-col justify-center pl-3">
                 <p>Username</p>
                 <h1>Ujjwal</h1>
             </div> */}
                     <p className="mt-2 ml-2 text-sm font-semibold text-gray-500">Your analytics</p>
+                    <main className="w-[100%] h-[80%] flex justify-center items-center">
+                        Nothing to display
+                    </main>
                 </div>
-                <div className="min-h-[30vh] bg-gray-300 mt-4">
-
+                <div className="min-h-[30vh] mt-6 shadow-xl shadow-gray-200">
+                    <div>
+                        <p className="mt-6 ml-2 text-sm font-semibold text-gray-500">Events hosted</p>
+                        <main className="w-[100%] h-[20vh] flex justify-center items-center">
+                            Nothing to display
+                        </main>
+                    </div>
                 </div>
             </div>
         </div>
