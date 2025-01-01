@@ -17,7 +17,7 @@ async function page({ params }) {
                     <MdCameraswitch className="absolute top-[75%] bg-white md:w-[1.6vw] w-[7vw] h-[7vw] rounded-full border-2 border-gray-600 md:h-[1.6vw] p-1 right-[5%]" />
                 </div>
             </div>
-            <div className="w-[79%] ">
+            <div className="md:w-[79%] w-[100%] mt-4 md:mt-0 ">
                 <div className="h-[30vh] rounded-md shadow-xl shadow-gray-200">
                     {/* <div className="bg-red-300 flex flex-col justify-center pl-3">
                 <p>Username</p>
