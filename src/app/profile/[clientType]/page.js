@@ -9,10 +9,10 @@ async function page({params}) {
         </div>
         <div className="w-[79%] ">
             <div className="h-[30vh] grid grid-cols-2 grid-rows-3 bg-red-200">
-            <div className="bg-red-300 flex flex-col justify-center pl-3">
+            {/* <div className="bg-red-300 flex flex-col justify-center pl-3">
                 <p>Username</p>
                 <h1>Ujjwal</h1>
-            </div>
+            </div> */}
             </div>
             <div className="min-h-[30vh] bg-gray-300 mt-4">
 
