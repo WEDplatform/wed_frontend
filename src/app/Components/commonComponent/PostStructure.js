@@ -56,7 +56,7 @@ const VideoPost = async({pageIndex}) => {
                             <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
                         </span>
                     </main>
-                    <nav className="mr-3">
+                    <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
                 </div>
