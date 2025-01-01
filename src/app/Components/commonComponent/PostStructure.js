@@ -7,7 +7,7 @@ import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
-
+import { useRouter } from "next/navigation";
 const ImagePost =  ({ images }) => {
      const imageResponse=null
     return (
