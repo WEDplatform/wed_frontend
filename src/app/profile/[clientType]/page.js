@@ -10,7 +10,7 @@ async function page({ params }) {
 
     return (
         <div className="w-[80%] mt-5 flex justify-between mx-auto">
-            <div className="w-[20%] shadow-xl shadow-gray-200 flex justify-center aspect-square bg-white">
+            <div className="w-[20%] shadow-xl h-[30vh] items-center shadow-gray-200 flex justify-center aspect-square bg-white">
                 <div className="w-[10vw] h-[10vw] bg-gray-200 relative rounded-full">
                     <input type="file" className="hidden" />
                     <Image alt="profilePic" style={{ objectFit: "cover" }} src={profilePic} />
