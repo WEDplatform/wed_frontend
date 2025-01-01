@@ -9,12 +9,12 @@ async function page({ params }) {
     console.log(clientType);
 
     return (
-        <div className="w-[80%] mt-5 flex justify-between mx-auto">
-            <div className="w-[20%] shadow-xl h-[30vh] items-center shadow-gray-200 flex justify-center aspect-square bg-white">
-                <div className="w-[10vw] h-[10vw] bg-gray-200 relative rounded-full">
+        <div className="md:w-[80%] w-[90%] mt-5 flex md:flex-row flex-col justify-between mx-auto">
+            <div className="md:w-[20%] md:shadow-xl h-[30vw] items-center md:shadow-gray-200 flex justify-center aspect-square ">
+                <div className="md:w-[10vw] md:h-[10vw] w-[30vw] h-[30vw] relative rounded-full">
                     <input type="file" className="hidden" />
                     <Image alt="profilePic" style={{ objectFit: "cover" }} src={profilePic} />
-                    <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
+                    <MdCameraswitch className="absolute top-[75%] bg-white md:w-[1.6vw] w-[7vw] h-[7vw] rounded-full border-2 border-gray-600 md:h-[1.6vw] p-1 right-[5%]" />
                 </div>
             </div>
             <div className="w-[79%] ">
