@@ -1,3 +1,6 @@
+import { TbWorld } from "react-icons/tb";
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
 const userPreferences= [
     {
       title: "Types of Weddings",
@@ -137,4 +140,15 @@ const userProfileContent=[
   }
 ]
 
-export {userPreferences,vendorDetails_p1,searchSection,userProfileContent}
+const vendorSocialHandle=[
+  {
+    icon:<TbWorld/>
+  },
+  {
+    icon:<BsInstagram/>
+  },
+  {
+    icon:<FaFacebookF/>
+  }
+]
+export {userPreferences,vendorDetails_p1,searchSection,userProfileContent,vendorSocialHandle}
