@@ -6,6 +6,7 @@ import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
+import { VendorDetails } from "../vendorComponent/VendorDetails";
 const ImagePost =  ({ images }) => {
 
      const imageResponse=null
@@ -51,9 +52,9 @@ const VideoPost = async({pageIndex}) => {
             <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
                 <div className="flex items-center justify-between gap-2  py-1 pl-2">
                     
+                    <VendorDetails/>
 
 
-                    
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
