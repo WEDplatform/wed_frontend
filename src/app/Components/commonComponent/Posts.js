@@ -21,8 +21,9 @@ async function Posts({id_}) {
           <ImageSWR />
           {/* <VideoPost/> */}
           <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
-            <VideoPost />
-            <VideoPost />
+            {
+              new Array(2).fill(0).map((_, pos) =><VideoPost key={pos} vid={pos+1} />)
+            }
 
           </main>
         </div>
