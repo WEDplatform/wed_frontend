@@ -3,11 +3,11 @@ import React from 'react'
 import Image from 'next/image'
 import ICO from "@/app/favicon.ico"
 import { useRouter } from 'next/navigation'
-function VendorDetails() {
+function VendorDetails({vid}) {
     const router = useRouter()
     return (
         <>
-            <main onClick={() => { router.push("/home/user?tab=profile") }} className="flex items-center cursor-pointer gap-2">
+            <main onClick={() => { router.push("/home/user?tab=profile&vid="+vid+"") }} className="flex items-center cursor-pointer gap-2">
                 <Image alt="pic" src={ICO} width={40} height={40} />
                 <span className="flex flex-col">
                     <span className="font-semibold">Username</span>
