@@ -16,4 +16,4 @@ function VendorDetails() {
     )
 }
 
-export default VendorDetails
+export { VendorDetails }
