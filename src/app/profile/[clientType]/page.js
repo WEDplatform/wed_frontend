@@ -3,10 +3,14 @@ import { MdCameraswitch } from "react-icons/md";
 import { MdNotificationsActive } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
 import Image from "next/image"
+import { LoginStat } from "@/app/Components/commonComponent/loginStats/LoginStat";
+import { profileFetch } from "@/app/apiFunctions/profile";
 
 async function page({ params }) {
+    const prf=await profileFetch()
+    console.log(prf?.data?.loginCounts);
+    
     let { clientType } = await params
-    console.log(clientType);
 
     return (
         <div className="md:w-[80%] w-[90%] mt-5 flex md:flex-row flex-col justify-between mx-auto">
@@ -18,14 +22,14 @@ async function page({ params }) {
                 </div>
             </div>
             <div className="md:w-[79%] w-[100%] mt-4 md:mt-0 ">
-                <div className="h-[30vh] rounded-md shadow-xl shadow-gray-200">
+                <div className="h-[40vh] rounded-md shadow-xl shadow-gray-200">
                     {/* <div className="bg-red-300 flex flex-col justify-center pl-3">
                 <p>Username</p>
                 <h1>Ujjwal</h1>
             </div> */}
                     <p className="mt-2 ml-2 text-sm font-semibold text-gray-500">Your analytics</p>
-                    <main className="w-[100%] h-[80%] flex justify-center items-center">
-                        Nothing to display
+                    <main className="w-[100%] h-[80%] mt-4 flex justify-center items-center">
+                        <LoginStat lgs={prf?.data?.loginCounts}/>
                     </main>
                 </div>
                 <div className="min-h-[30vh] mt-6 shadow-xl shadow-gray-200">
