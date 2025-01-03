@@ -9,7 +9,6 @@ import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBa
 async function page({ params }) {
     const prf=await profileFetch()
     //console.log(prf?.data?.loginCounts);
-    
     let { clientType } = await params
 
     return (
