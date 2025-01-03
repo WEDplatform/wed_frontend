@@ -65,7 +65,7 @@ export function LoginStat({ lgs }) {
             }}
             data={formattedData}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="loginDate" />
+                <XAxis padding={{ left: 4, right: 4 }} dataKey="loginDate" />
                 <YAxis />
                 <Tooltip/>
                 <Legend/>
