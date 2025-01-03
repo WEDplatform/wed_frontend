@@ -68,7 +68,7 @@ export function LoginStat({ lgs }) {
                 <YAxis />
                 <Tooltip/>
                 <Legend/>
-                <Line type="monotone" dataKey="loginCount" stroke="#8884d8" />
+                <Line type="monotone" dataKey="loginCount" stroke="#9A2143" />
             </LineChart>
         </ResponsiveContainer>
 
