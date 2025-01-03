@@ -51,7 +51,7 @@ export function LoginStat({ lgs }) {
     ];
     
     // Transform data
-    const formattedData = lgs.map(item => ({
+    const formattedData = lgs?.map(item => ({
         loginDate: new Date(item.dateLogin).toLocaleDateString(), // Format date
         loginCount: item.loginCount
     }));
@@ -67,6 +67,7 @@ export function LoginStat({ lgs }) {
                 <XAxis dataKey="loginDate" />
                 <YAxis />
                 <Tooltip/>
+                <Legend/>
                 <Line type="monotone" dataKey="loginCount" stroke="#8884d8" />
             </LineChart>
         </ResponsiveContainer>

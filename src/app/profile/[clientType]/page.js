@@ -8,7 +8,7 @@ import { profileFetch } from "@/app/apiFunctions/profile";
 
 async function page({ params }) {
     const prf=await profileFetch()
-    console.log(prf?.data?.loginCounts);
+    //console.log(prf?.data?.loginCounts);
     
     let { clientType } = await params
 
