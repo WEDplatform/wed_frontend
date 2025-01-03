@@ -8,7 +8,7 @@ async function Posts({id_}) {
   let rnd = Math.floor((Math.random() * 10) + 1)
   const imageResponse=await getImageUrl("Wedding",1)
   console.log(imageResponse);
-  
+  const videoData=await getVideoUrl()
   return (
     <>
       <div className="md:w-[95%] md:pt-2 hidden md:block  w-[100%] h-[90%] md:h-[73vh] md:ml-4">
@@ -22,7 +22,9 @@ async function Posts({id_}) {
           {/* <VideoPost/> */}
           <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
             {
-              new Array(2).fill(0).map((_, pos) =><VideoPost key={pos} pageIndex={pos+1} vid={pos+1} />)
+              videoData?.map((item,pos)=>
+              <VideoPost key={pos} videoItem={item}/>
+              )
             }
 
           </main>

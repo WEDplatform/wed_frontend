@@ -44,25 +44,25 @@ const ImagePost =  ({ images }) => {
         </>
     )
 }
-const VideoPost = async({pageIndex,vid}) => {
+const VideoPost = async({videoItem}) => {
     // const router = useRouter()
-    const videoResponse=await getVideoUrl("Wedding",pageIndex)
+    //const videoResponse=await getVideoUrl("Wedding",pageIndex)
     return (
         <>
             <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
                 <div className="flex items-center justify-between gap-2  py-1 pl-2">
                     
-                    <VendorDetails vid={vid}/>
+                    <VendorDetails user={videoItem?.user} vid={videoItem?.id}/>
 
 
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
                 </div>
-                <div className="w-[100%]  h-[100%] rounded-xl bg-gray-200">
-                  {/* {
-                    videoResponse ?<Image objectFit="cover" className="w-[100%] h-[100%]" fill={true}  src={videoResponse} alt="Image"/>:"Unable to preview video"
-                  } */}
+                <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
+                  {
+                    videoItem?.id ?<Image style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
+                  }
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">
