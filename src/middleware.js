@@ -19,12 +19,14 @@ export async function middleware(request) {
       }
     })
     rftResp=await rftResp.json()
-    const home = new URL(`/home/${encodeURIComponent(rftResp?.data?.typeClient)}?tab=home`, process.env.NEXT_PUBLIC_FRNT);
+    if(request.nextUrl.pathname=="/"){
+      const home = new URL(`/home/${encodeURIComponent(rftResp?.data?.typeClient)}?tab=home`, process.env.NEXT_PUBLIC_FRNT);
     if(!(home.pathname.includes(rftResp?.data?.typeClient))){
       return NextResponse.redirect(home); 
     }
     if (request.nextUrl.pathname !== home.pathname) {
       return NextResponse.redirect(home);
+    }
     }
  
     
@@ -41,6 +43,6 @@ export async function middleware(request) {
 export const config = {
   matcher: [
     // Match all pages except static files and API r   ou/((?!_next/static|_next/image|favicon.ico|api).*)',\\
-   "/","/home/:path",
+   "/","/home/:path","/profile/:path"
   ],
 };
