@@ -15,7 +15,7 @@ async function page({ params }) {
 
     return (
         <>
-        <div className="md:w-[80%] h-[110vh] md:h-[100vh] w-[90%] mt-5 flex md:flex-row flex-col md:justify-between mx-auto">
+        <div className="md:w-[80%] h-[100vh] md:h-[100vh] w-[90%] mt-5 flex md:flex-row flex-col md:justify-between mx-auto">
             <div className="md:w-[20%] md:shadow-xl  h-[30vw] md:h-[31vh] items-center md:shadow-gray-200 flex justify-center aspect-square ">
                 <div className="md:w-[10vw] md:h-[10vw] w-[30vw] h-[30vw]  relative rounded-full">
                     <input type="file" className="hidden" />
@@ -24,13 +24,13 @@ async function page({ params }) {
                 </div>
             </div>
             <div className="md:w-[79%] w-[100%] mt-4 md:mt-0">
-                <div className="h-[40vh] rounded-md shadow-xl shadow-gray-200">
+                <div className="md:h-[40vh] h-[30vh] rounded-md shadow-xl shadow-gray-200">
                     {/* <div className="bg-red-300 flex flex-col justify-center pl-3">
                 <p>Username</p>
                 <h1>Ujjwal</h1>
             </div> */}
                     <p className="mt-2 ml-2 text-sm font-semibold text-gray-500">Your analytics</p>
-                    <main className="w-[100%] h-[80%] mt-4 pr-4 flex justify-center items-center">
+                    <main className="w-[100%] h-[80%] md:h-[80%] mt-4 pr-4 flex justify-center items-center">
                         <LoginStat lgs={prf?.data?.loginCounts}/>
                     </main>
                 </div>
