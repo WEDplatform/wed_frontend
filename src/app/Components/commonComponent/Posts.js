@@ -6,8 +6,8 @@ import { ImageSWR } from "./desktop/ImagePostSWR"
 import { PostSWR } from "./phone/PostSWR"
 async function Posts({id_}) {
   let rnd = Math.floor((Math.random() * 10) + 1)
-  // const imageResponse=await getImageUrl("Wedding",1)
-  // console.log(imageResponse);
+  const imageResponse=await getImageUrl("Wedding",1)
+  console.log(imageResponse);
   
   return (
     <>

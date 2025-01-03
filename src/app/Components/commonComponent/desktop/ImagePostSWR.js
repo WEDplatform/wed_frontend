@@ -13,7 +13,7 @@ const ImageSWR = ({ data }) => {
         console.log("called");
         
         try {
-            let image_data=null
+            let image_data=await getImageUrl("Wedding",1)
             setData((prev)=>[...prev,...image_data])
             setIndex((prev)=>prev+1);
             //console.log(image_data);
@@ -32,7 +32,7 @@ const ImageSWR = ({ data }) => {
 
     },[imageData])
     useEffect(() => {
-        //fetchImageData();
+        fetchImageData();
       }, []);
     return (<>
         <main id="ImagePost" className="w-[54%] border-2 preferenceList max-h-[100%] overflow-y-auto">

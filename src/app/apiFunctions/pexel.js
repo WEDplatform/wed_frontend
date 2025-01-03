@@ -10,14 +10,16 @@ const create2DArray = (arr, n) => {
     return result;
 };
 
-const getVideoUrl=async(query,page)=>{
-    //const res=await client.videos.search({query,per_page:1,orientation:'portrait',page:page})
-    //console.log(res.videos[0]?.video_pictures[0]?.picture);
-    return null
+const getVideoUrl=async(query,page=1)=>{
+    const videoResponse=await fetch(`https://pixabay.com/api/videos/?key=48012297-063120112f8bc477731969d55&q=${query}&per_page=2&page=${page}`)
+    videoResponse=await videoResponse.json()
+    console.log(videoResponse);
+    
 }
-const getImageUrl=async(query,page)=>{
-    const res=await client.photos.search({query,per_page:1,page:1,orientation:'landscape'})
-    let result=create2DArray(res.photos,1)
+
+const getImageUrl=async(query="wedding",page)=>{
+    const res=await client.photos.search({query,per_page:12,page:page,orientation:'landscape'})
+    let result=create2DArray(res.photos,4)
     console.log(result);
     
     return result
