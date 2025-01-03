@@ -57,10 +57,11 @@ export function LoginStat({ lgs }) {
     }));
     return (
         <>
-       <ResponsiveContainer className="bg-red-300" width="95%" height="100%">
+       <ResponsiveContainer className="" width="98%" height="100%">
             <LineChart
             margin={{
                 top: 5,
+                left:0
             }}
             data={formattedData}>
                 <CartesianGrid strokeDasharray="3 3" />
