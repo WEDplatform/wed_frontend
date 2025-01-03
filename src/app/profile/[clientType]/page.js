@@ -6,7 +6,6 @@ import Image from "next/image"
 import { LoginStat } from "@/app/Components/commonComponent/loginStats/LoginStat";
 import { profileFetch } from "@/app/apiFunctions/profile";
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar";
-
 async function page({ params }) {
     const prf=await profileFetch()
     //console.log(prf?.data?.loginCounts);
