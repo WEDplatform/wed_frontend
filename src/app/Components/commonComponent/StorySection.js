@@ -14,6 +14,7 @@ function StorySection() {
                 className="relative flex items-center w-[100%] md:w-[50vw]"
                 options={{
                     perPage: 6,
+                    pagination:false,
                     breakpoints:{
                         640:{
                             perPage:4

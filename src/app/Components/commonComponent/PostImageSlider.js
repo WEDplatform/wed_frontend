@@ -6,20 +6,19 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 function PostImageSlider({ imageResponse }) {
     return (
-        <Splide aria-label="" hasTrack={false}>
+        <Splide aria-label="" options={{
+            pagination:true
+        }}
+         hasTrack={false}>
             <SplideTrack className="w-[100%] overflow-hidden h-[100%] rounded-xl">
                 {
                     imageResponse?.map((item, index) =>
-                        <SplideSlide key={index} className='md:w-[100%] h-[74vw] md:h-[20.5vw] rounded-lg bg-red-300'>
+                        <SplideSlide key={index} className='md:w-[100%] h-[74vw] md:h-[20.5vw] rounded-lg '>
                             <Image priority style={{objectFit:'cover'}} fill={true} src={item?.src?.landscape} alt='pics' />
                         </SplideSlide>
                     )
                 }
-                {/* <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-300'>
-                    <Image priority fill={true} src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt='pics' objectFit='cover' />
-                </SplideSlide> */}
-                {/* <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-200'>Slide 1</SplideSlide>
-                <SplideSlide className='md:w-[35vw] h-[74vw] md:h-[26vw] bg-red-400'>Slide 3</SplideSlide> */}
+                
             </SplideTrack>
             <div className="splide__arrows  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2">
                 <button className="splide__arrow hidden md:block splide__arrow--prev bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowLeft className="w-[100%] h-[100%] text-xl" /></button>

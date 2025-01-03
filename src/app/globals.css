@@ -11,6 +11,34 @@ input::-webkit-inner-spin-button {
   margin: 0;
   visibility: visible;
 }
+.splide__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  position: absolute;
+  top: 101%;
+  
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.splide__pagination__page {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #9A2143;
+}
+
+
+
+
 .preferenceList::-webkit-scrollbar {
   width: 4px;   
  

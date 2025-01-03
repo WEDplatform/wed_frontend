@@ -25,7 +25,7 @@ const ImagePost =  ({ images }) => {
                         <BsThreeDots />
                     </nav>
                 </div>
-                <div className="w-[100%] h-[100%] rounded-xl bg-gray-200">
+                <div className="w-[100%] h-[100%] rounded-xl ">
                     {
                         images?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
                     }
