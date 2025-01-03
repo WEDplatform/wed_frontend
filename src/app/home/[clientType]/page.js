@@ -54,7 +54,7 @@ async function page({params,searchParams}) {
             </div>
         </div>
       </div>
-      <BottomNavBar tabParams={searchprm} />
+      {/* <BottomNavBar tabParams={searchprm} /> */}
     </>
   )
 }
