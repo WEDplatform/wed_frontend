@@ -4,7 +4,9 @@ import { MdCameraswitch } from "react-icons/md";
 import { MdNotificationsActive } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { BackButton, FollowButton } from "./FollowButton";
+import { BackButton, FollowButton, VendorBackButton } from "./FollowButton";
+import { vendorSocialHandle } from "@/app/lib/constants";
+import { LuDot } from "react-icons/lu";
 function Profile() {
   return (
     <div className="w-[90%] md:overflow-y-auto h-[100vh]  md:h-[95%] flex flex-col items-center">
@@ -30,6 +32,18 @@ function Profile() {
             <span className="font-semibold text-gray-700">250 </span>Followers
           </div>
         </div>
+        <p className="flex justify-center mt-6 ">
+          {
+            vendorSocialHandle.map((item,pos)=>
+            <span className="text-[20px] text-gray-500 flex" key={pos}>{item.icon}
+            {
+              pos<2 && <LuDot className="text-[#9A2143]"/>
+            }
+            </span>
+            )
+          }
+        </p>
+        <VendorBackButton/>
     </div>
   )
 }

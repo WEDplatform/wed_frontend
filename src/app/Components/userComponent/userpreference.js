@@ -95,7 +95,7 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                     {
                         prefData || prefErr ? <>
                             <button disabled={prefPending} className="p-2 border-2 rounded-lg border-[#C94C73] ml-1" onClick={() => {
-                                //router.push("/home/user")
+                                router.push("/home/user?tab=search")
                                 console.log(prefData);
                                 
                             }}>
