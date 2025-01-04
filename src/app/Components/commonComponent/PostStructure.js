@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import ICO from "@/app/favicon.ico"
 import { BsThreeDots } from "react-icons/bs";
@@ -7,6 +8,8 @@ import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "./PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 import { VendorDetails } from "../vendorComponent/VendorDetails";
+import { useState } from "react";
+import { VideoModal } from "./VideoModal.js/VideoModal";
 const ImagePost =  ({ images }) => {
 
      const imageResponse=null
@@ -44,9 +47,8 @@ const ImagePost =  ({ images }) => {
         </>
     )
 }
-const VideoPost = async({videoItem}) => {
-    // const router = useRouter()
-    //const videoResponse=await getVideoUrl("Wedding",pageIndex)
+const VideoPost = ({videoItem}) => {
+    const [open,setOpen]=useState(false)
     return (
         <>
             <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
@@ -61,8 +63,9 @@ const VideoPost = async({videoItem}) => {
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?.id ?<Image style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
+                    videoItem?.id ?<Image onClick={()=>{setOpen(true)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
                   }
+                  <VideoModal VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">

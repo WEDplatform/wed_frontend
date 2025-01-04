@@ -5,10 +5,11 @@ import { FaArrowLeft } from "react-icons/fa";
 function SearchSectionScroll({vals,title}) {
   return (
     <div className="w-[100%] mt-2">
-        <p className='text-sm text-gray-500'>{title}</p>
+        <p className='text-sm text-gray-500 mt-2'>{title}</p>
         <Splide
         options={{
-            perPage:3
+            perPage:3,
+            pagination:false
         }}
         className="w-[100%] flex justify-center h-[18vh]" hasTrack={false}>
                     <SplideTrack className="w-[92%] overflow-hidden h-[100%]  rounded-xl">
