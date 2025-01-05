@@ -37,6 +37,7 @@ export  function VideoModal({VideoModalOpen,setVideoModal}) {
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
           <div className='w-[60vw] flex relative h-[80vh] bg-white'>
             <div className='w-[40%] bg-red-200 h-[100%]'>
+              <VideoPlayer/>
             </div>
             <div className='w-[60%] h-[100%]'>
             Content
