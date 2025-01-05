@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-
+import { VideoPlayer } from './VideoPlayer';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -37,7 +37,6 @@ export  function VideoModal({VideoModalOpen,setVideoModal}) {
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
           <div className='w-[60vw] flex relative h-[80vh] bg-white'>
             <div className='w-[40%] bg-red-200 h-[100%]'>
-              VideoMap
             </div>
             <div className='w-[60%] h-[100%]'>
             Content
