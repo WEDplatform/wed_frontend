@@ -1,9 +1,12 @@
+'use client'
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { VideoPlayer } from './VideoPlayer';
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 const style = {
@@ -12,13 +15,13 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: "50vw",
-  height:"30vh",
+  height: "30vh",
   bgcolor: 'background.paper',
   boxShadow: 24,
-  
+
 };
 
-export  function VideoModal({VideoModalOpen,setVideoModal,videoPostLength}) {
+export function VideoModal({ VideoModalOpen, setVideoModal, videoPostLength }) {
   const [open, setOpen] = React.useState(VideoModalOpen);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -37,15 +40,29 @@ export  function VideoModal({VideoModalOpen,setVideoModal,videoPostLength}) {
           
         </Box> */}
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
-          <div className='w-[60vw] flex relative h-[80vh] bg-white'>
-            <div className='w-[40%] bg-red-200 h-[100%]'>
-              <VideoPlayer videoPostLength={videoPostLength} />
+          <Splide aria-label="" hasTrack={false} options={{ pagination: false,perPage:1 }}>
+            <SplideTrack className="w-[60vw]">
+              {
+                Array(3).fill(0).map((_, index) => (
+                  <SplideSlide className="w-[100%]" key={index}>
+                    <div className='flex relative h-[80vh] bg-white'>
+                      <div className='w-[40%] bg-black h-[100%]'>
+                        <VideoPlayer videoPostLength={videoPostLength} />
+                      </div>
+                      <div className='w-[60%] h-[100%]'>
+                        {index}
+                      </div>
+                      <button onClick={() => { setVideoModal(false) }} className=' bg-white px-2 absolute -top-6 -right-6'>x</button>
+                    </div>
+                  </SplideSlide>
+                ))
+              }
+            </SplideTrack>
+            <div className="splide__arrows  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2">
+              <button className="splide__arrow hidden md:block splide__arrow--prev bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowLeft className="w-[100%] h-[100%] text-xl" /></button>
+              <button className="splide__arrow hidden md:block splide__arrow--next bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowRight className="w-[100%] h-[100%] text-xl" /></button>
             </div>
-            <div className='w-[60%] h-[100%]'>
-            Content
-            </div>
-            <button onClick={()=>{setVideoModal(false)}} className=' bg-white px-2 absolute -top-6 -right-6'>x</button>
-          </div>
+          </Splide>
         </div>
       </Modal>
     </div>
