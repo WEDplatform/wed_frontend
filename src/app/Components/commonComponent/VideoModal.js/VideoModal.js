@@ -35,8 +35,13 @@ export  function VideoModal({VideoModalOpen,setVideoModal}) {
           
         </Box> */}
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
-          <div className='w-[60vw] relative h-[80vh] bg-white'>
-            Video
+          <div className='w-[60vw] flex relative h-[80vh] bg-white'>
+            <div className='w-[40%] bg-red-200 h-[100%]'>
+              VideoMap
+            </div>
+            <div className='w-[60%] h-[100%]'>
+            Content
+            </div>
             <button onClick={()=>{setVideoModal(false)}} className=' bg-white px-2 absolute -top-6 -right-6'>x</button>
           </div>
         </div>

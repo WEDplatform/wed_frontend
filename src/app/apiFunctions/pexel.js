@@ -11,11 +11,11 @@ const create2DArray = (arr, n) => {
     return result;
 };
 
-const getVideoUrl=async(query="forest",page=1)=>{
-    const videoResponse=await axios(`https://pixabay.com/api/videos/?key=48012297-063120112f8bc477731969d55&q=${encodeURIComponent(query)}&pretty=true`)
+const getVideoUrl=async(query="wedding",page=1)=>{
+    const videoResponse=await axios(`https://pixabay.com/api/videos/?key=48012297-063120112f8bc477731969d55&q=${encodeURIComponent(query)}&pretty=true&min_height=1920&min_width=1024`)
     //const vrsp=await videoResponse.json()
     const videoData=videoResponse?.data?.hits.filter((item,pos)=>pos==2 || pos == 4)
-    //console.log(videoData);
+    console.log(videoData[0]);
     return videoData
     
 }
