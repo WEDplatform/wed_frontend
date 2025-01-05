@@ -16,7 +16,7 @@ const style = {
   
 };
 
-export  function VideoModal({VideoModalOpen,setVideoModal}) {
+export  function VideoModal({VideoModalOpen,setVideoModal,videoPostLength}) {
   const [open, setOpen] = React.useState(VideoModalOpen);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -37,7 +37,7 @@ export  function VideoModal({VideoModalOpen,setVideoModal}) {
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
           <div className='w-[60vw] flex relative h-[80vh] bg-white'>
             <div className='w-[40%] bg-red-200 h-[100%]'>
-              <VideoPlayer/>
+              <VideoPlayer videoPostLength={videoPostLength} />
             </div>
             <div className='w-[60%] h-[100%]'>
             Content

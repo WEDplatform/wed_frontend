@@ -47,7 +47,7 @@ const ImagePost =  ({ images }) => {
         </>
     )
 }
-const VideoPost = ({videoItem}) => {
+const VideoPost = ({videoPostLength,videoItem}) => {
     const [open,setOpen]=useState(false)
     return (
         <>
@@ -65,7 +65,7 @@ const VideoPost = ({videoItem}) => {
                   {
                     videoItem?.id ?<Image onClick={()=>{setOpen(true)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
                   }
-                  <VideoModal VideoModalOpen={open} setVideoModal={setOpen}/>
+                  <VideoModal videoPostLength={videoPostLength} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">
