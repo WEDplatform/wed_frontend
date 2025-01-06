@@ -42,17 +42,21 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
           
         </Box> */}
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
-          <Splide aria-label="" hasTrack={false} options={{ pagination: false,perPage:1 }}>
-            <SplideTrack className="w-[60vw] relative">
+          <Splide aria-label="" hasTrack={false} options={{ pagination: false,perPage:1,width:"100%",height:"100%"
+            
+           }}>
+            <SplideTrack className="md:w-[60vw] w-[90vw] relative">
 
               {
                 postCollection.map((item, index) => (
                   <SplideSlide className="w-[100%]" key={index}>
-                    <div className='flex relative h-[80vh] bg-white'>
-                      <div className='w-[40%] bg-black h-[100%]'>
+                    <div className='flex relative h-[90vh] md:h-[80vh] bg-white'>
+                      <div className='md:w-[40%] w-[100%] relative bg-black h-[100%]'>
                         <VideoPlayer PostUrl={item?.videos?.large} />
+                        <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
+
                       </div>
-                      <div className='w-[60%] h-[100%] relative'>
+                      <div className='w-[60%] hidden md:block h-[100%] relative'>
                       <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
                         {index}
                       </div>

@@ -4,15 +4,19 @@ import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImagePost, VideoPost } from "../PostStructure"
 import { TbLoader2 } from "react-icons/tb";
+import { getVideoUrl } from "@/app/apiFunctions/pexel"
 const PostSWR = ({ id_ }) => {
     const [index, setIndex] = useState(1);
     const [hasMoreTrack, setTrack] = useState(true);
     const [imageData, setData] = useState([]);
+    const [videoData, setVideoData] = useState([]);
     const fetchImageData = async () => {
         if (imageData.length >= 6) return
         console.log("called");
 
         try {
+            let video = await getVideoUrl("Wedding", 1)
+            setVideoData(video)
             let image_data = await getImageUrl("Wedding", index)
             setData((prev) => [...prev, ...image_data])
             setIndex((prev) => prev + 1);
@@ -54,7 +58,11 @@ const PostSWR = ({ id_ }) => {
                 {
                     imageData.map((item, pos) => <ImagePost key={pos} images={item} />)
                 }
-                {/* <VideoPost/> */}
+                {
+                    videoData?.map((item, pos) =>
+                        <VideoPost videoPostLength={videoData || null} key={pos} videoItem={item} />
+                    )
+                }
             </InfiniteScroll>
         </>
     )

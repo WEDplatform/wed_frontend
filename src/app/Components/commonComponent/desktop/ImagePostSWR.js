@@ -4,15 +4,21 @@ import { ImagePost } from "../PostStructure"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
+import { getVideoUrl } from "@/app/apiFunctions/pexel"
+
 const ImageSWR = ({ data }) => {
+
     const [index, setIndex] = useState(1);
     const [hasMoreTrack,setTrack]=useState(true);
     const [imageData,setData]=useState([]);
+    const [VideoData, setVideoData] = useState([]);
     const fetchImageData = async () => {
         if(imageData.length>=6) return
         console.log("called");
         
         try {
+            let video=await getVideoUrl("Wedding",1)
+            setVideoData(video)
             let image_data=await getImageUrl("Wedding",1)
             setData((prev)=>[...prev,...image_data])
             setIndex((prev)=>prev+1);
@@ -53,6 +59,7 @@ const ImageSWR = ({ data }) => {
                 {
                     imageData.map((item, pos) => <ImagePost key={pos} images={item}  />)
                 }
+                
             </InfiniteScroll>
         </main>
     </>)
