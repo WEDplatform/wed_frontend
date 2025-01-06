@@ -58,7 +58,6 @@ const VideoPost = ({videoPostLength,videoItem}) => {
                     
                     <VendorDetails user={videoItem?.user} vid={videoItem?.id}/>
 
-
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
