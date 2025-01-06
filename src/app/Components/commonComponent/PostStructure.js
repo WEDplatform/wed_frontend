@@ -11,6 +11,7 @@ import { VendorDetails } from "../vendorComponent/VendorDetails";
 import { useState } from "react";
 import { VideoModal } from "./VideoModal.js/VideoModal";
 import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 const ImagePost =  ({ images }) => {
 
      const imageResponse=null
@@ -49,6 +50,9 @@ const ImagePost =  ({ images }) => {
     )
 }
 const VideoPost = ({videoPostLength,videoItem}) => {
+    const params=useParams()
+    console.log(params?.clientType);
+    
     const router=useRouter()
     const [open,setOpen]=useState(false)
     return (
@@ -63,7 +67,7 @@ const VideoPost = ({videoPostLength,videoItem}) => {
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?.id ?<Image onClick={()=>{setOpen(true)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
+                    videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=viewPost&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
                   }
                   <VideoModal postCollection={videoPostLength} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div>

@@ -6,9 +6,9 @@ const VideoPlayer = ({PostUrl}) => {
       <ReactPlayer
         width="100%"
         height="100%"
-        url={PostUrl}
+        url={PostUrl?.url}
         controls={true}
-        light={true}
+        light={PostUrl?.thumbnail}
        
       />
     </>

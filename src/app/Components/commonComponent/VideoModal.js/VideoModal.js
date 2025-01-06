@@ -8,6 +8,7 @@ import { VideoPlayer } from './VideoPlayer';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { useRouter } from 'next/navigation';
 import '@splidejs/react-splide/css/core';
 const style = {
   position: 'absolute',
@@ -22,6 +23,7 @@ const style = {
 };
 
 export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
+  const router = useRouter();
   const [open, setOpen] = React.useState(VideoModalOpen);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -48,10 +50,10 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
                   <SplideSlide className="w-[100%]" key={index}>
                     <div className='flex relative h-[80vh] bg-white'>
                       <div className='w-[40%] bg-black h-[100%]'>
-                        <VideoPlayer PostUrl={item?.videos?.large?.url} />
+                        <VideoPlayer PostUrl={item?.videos?.large} />
                       </div>
                       <div className='w-[60%] h-[100%] relative'>
-                      <button onClick={() => { setVideoModal(false) }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
+                      <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
                         {index}
                       </div>
                     </div>
