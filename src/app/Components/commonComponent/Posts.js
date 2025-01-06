@@ -23,7 +23,7 @@ async function Posts({id_}) {
           <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
             {
               videoData?.map((item,pos)=>
-              <VideoPost videoPostLength={videoData.length} key={pos} videoItem={item}/>
+              <VideoPost videoPostLength={videoData || null} key={pos} videoItem={item}/>
               )
             }
 

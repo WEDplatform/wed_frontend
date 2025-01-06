@@ -21,7 +21,7 @@ const style = {
 
 };
 
-export function VideoModal({ VideoModalOpen, setVideoModal, videoPostLength }) {
+export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
   const [open, setOpen] = React.useState(VideoModalOpen);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -44,11 +44,11 @@ export function VideoModal({ VideoModalOpen, setVideoModal, videoPostLength }) {
             <SplideTrack className="w-[60vw] relative">
 
               {
-                Array(3).fill(0).map((_, index) => (
+                postCollection.map((item, index) => (
                   <SplideSlide className="w-[100%]" key={index}>
                     <div className='flex relative h-[80vh] bg-white'>
                       <div className='w-[40%] bg-black h-[100%]'>
-                        <VideoPlayer videoPostLength={videoPostLength} />
+                        <VideoPlayer PostUrl={item?.videos?.large?.url} />
                       </div>
                       <div className='w-[60%] h-[100%] relative'>
                       <button onClick={() => { setVideoModal(false) }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
