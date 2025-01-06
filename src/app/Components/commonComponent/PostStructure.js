@@ -54,7 +54,7 @@ const VideoPost = ({videoPostLength,videoItem}) => {
     return (
         <>
             <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
-                <div className="flex items-center justify-between gap-2  py-1 pl-2">
+                <div className="flex items-center justify-between gap-2 py-1 pl-2">
                     
                     <VendorDetails user={videoItem?.user} vid={videoItem?.id}/>
                     <nav className="mr-3 ml-2">
