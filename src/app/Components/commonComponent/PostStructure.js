@@ -70,7 +70,7 @@ const VideoPost = ({videoPostLength,videoItem}) => {
                     videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=viewPost&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
                   }
                   <VideoModal postCollection={videoPostLength} VideoModalOpen={open} setVideoModal={setOpen}/>
-                </div>
+                </div> 
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">
                         <FaRegHeart />
