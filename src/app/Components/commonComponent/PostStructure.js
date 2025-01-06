@@ -57,7 +57,6 @@ const VideoPost = ({videoPostLength,videoItem}) => {
                 <div className="flex items-center justify-between gap-2  py-1 pl-2">
                     
                     <VendorDetails user={videoItem?.user} vid={videoItem?.id}/>
-
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
