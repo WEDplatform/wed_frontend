@@ -61,7 +61,6 @@ const VideoPost = ({videoPostLength,videoItem}) => {
 
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
-                        
                     </nav>
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
