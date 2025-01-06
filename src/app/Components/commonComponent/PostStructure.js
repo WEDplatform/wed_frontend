@@ -10,6 +10,7 @@ import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
 import { VendorDetails } from "../vendorComponent/VendorDetails";
 import { useState } from "react";
 import { VideoModal } from "./VideoModal.js/VideoModal";
+import { useRouter } from "next/navigation";
 const ImagePost =  ({ images }) => {
 
      const imageResponse=null
@@ -48,6 +49,7 @@ const ImagePost =  ({ images }) => {
     )
 }
 const VideoPost = ({videoPostLength,videoItem}) => {
+    const router=useRouter()
     const [open,setOpen]=useState(false)
     return (
         <>

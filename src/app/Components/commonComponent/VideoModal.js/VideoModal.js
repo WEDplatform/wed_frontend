@@ -41,7 +41,8 @@ export function VideoModal({ VideoModalOpen, setVideoModal, videoPostLength }) {
         </Box> */}
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
           <Splide aria-label="" hasTrack={false} options={{ pagination: false,perPage:1 }}>
-            <SplideTrack className="w-[60vw]">
+            <SplideTrack className="w-[60vw] relative">
+
               {
                 Array(3).fill(0).map((_, index) => (
                   <SplideSlide className="w-[100%]" key={index}>
@@ -49,16 +50,16 @@ export function VideoModal({ VideoModalOpen, setVideoModal, videoPostLength }) {
                       <div className='w-[40%] bg-black h-[100%]'>
                         <VideoPlayer videoPostLength={videoPostLength} />
                       </div>
-                      <div className='w-[60%] h-[100%]'>
+                      <div className='w-[60%] h-[100%] relative'>
+                      <button onClick={() => { setVideoModal(false) }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
                         {index}
                       </div>
-                      <button onClick={() => { setVideoModal(false) }} className=' bg-white px-2 absolute -top-6 -right-6'>x</button>
                     </div>
                   </SplideSlide>
                 ))
               }
             </SplideTrack>
-            <div className="splide__arrows  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2">
+            <div className="splide__arrows  md:flex justify-between w-[110%] left-[-5%]  px-0 absolute top-[50%] transform -translate-y-1/2">
               <button className="splide__arrow hidden md:block splide__arrow--prev bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowLeft className="w-[100%] h-[100%] text-xl" /></button>
               <button className="splide__arrow hidden md:block splide__arrow--next bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowRight className="w-[100%] h-[100%] text-xl" /></button>
             </div>
