@@ -66,7 +66,7 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
                         <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
 
                       </div>
-                      <div className='w-[60%] bg-[#f6fadb] hidden md:block h-[100%] relative'>
+                      <div className='w-[60%] bg-[#f4e9ef] hidden md:block h-[100%] relative'>
                       <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
                         <VendorDescription/>
                       </div>
