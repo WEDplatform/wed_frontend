@@ -42,14 +42,23 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
           
         </Box> */}
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
-          <Splide aria-label="" className='md:w-[60vw] w-[90vw] bg-red-400' hasTrack={false} options={{ pagination: false,perPage:1
-            
+          <Splide aria-label="" className='md:w-[60vw] h-[90vh] md:h-[80vh] w-[90vw] ' hasTrack={false} options={{ pagination: false,perPage:1,
+            breakpoints:{
+              640:{
+                direction:"ttb",
+                heightRatio:2
+              },
+              1024:{
+                direction:"ltr",
+                heightRatio:1
+              }
+            }
            }}>
-            <SplideTrack className="md:w-[60vw] w-[90vw] relative">
+            <SplideTrack className="md:w-[60vw] h-[90vh] md:h-[80vh] w-[90vw] relative">
 
               {
                 postCollection.map((item, index) => (
-                  <SplideSlide className="w-[100%]" key={index}>
+                  <SplideSlide className="w-[100%] h-[90vh] md:h-[80vh]" key={index}>
                     <div className='flex relative h-[90vh] md:h-[80vh] bg-white'>
                       <div className='md:w-[40%] w-[100%] relative bg-black h-[100%]'>
                         <VideoPlayer PostUrl={item?.videos?.large} />
