@@ -5,6 +5,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa6";
 import { HiOutlineSave } from "react-icons/hi";
 import { IoShareSocial } from "react-icons/io5";
+import { VendorButton } from "./VendorButton";
 function VendorDescription() {
     return (
         <div className="w-[100%] h-[100%] flex flex-col items-center">
@@ -41,8 +42,8 @@ function VendorDescription() {
                     No reviews yet
                 </div>
             </main>
-            <div className="w-[95%] flex justify-between">
-
+            <div className="w-[95%] flex mt-3 justify-between">
+                    <VendorButton/>
             </div>
         </div>
     )
