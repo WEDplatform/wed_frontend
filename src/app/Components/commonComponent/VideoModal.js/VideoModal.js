@@ -42,7 +42,7 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
           
         </Box> */}
         <div className='w-[100%] relative h-[100%] flex items-center justify-center'>
-          <Splide aria-label="" className='w-[100%] bg-red-400' hasTrack={false} options={{ pagination: false,perPage:1,width:"100%",height:"100%"
+          <Splide aria-label="" className='md:w-[60vw] w-[90vw] bg-red-400' hasTrack={false} options={{ pagination: false,perPage:1
             
            }}>
             <SplideTrack className="md:w-[60vw] w-[90vw] relative">
