@@ -10,6 +10,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { useRouter } from 'next/navigation';
 import '@splidejs/react-splide/css/core';
+import { VendorDescription } from './VendorDescription';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -65,9 +66,9 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
                         <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
 
                       </div>
-                      <div className='w-[60%] hidden md:block h-[100%] relative'>
+                      <div className='w-[60%] bg-[#f6fadb] hidden md:block h-[100%] relative'>
                       <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
-                        {index}
+                        <VendorDescription/>
                       </div>
                     </div>
                   </SplideSlide>
