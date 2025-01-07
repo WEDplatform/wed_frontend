@@ -10,7 +10,10 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { useRouter } from 'next/navigation';
 import '@splidejs/react-splide/css/core';
+import { BackButton } from '../FollowButton';
 import { VendorDescription } from './VendorDescription';
+import { IoMdArrowRoundBack } from "react-icons/io";
+
 const style = {
   position: 'absolute',
   top: '50%',
@@ -63,11 +66,11 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
                     <div className='flex relative h-[90vh] md:h-[80vh] bg-white'>
                       <div className='md:w-[40%] w-[100%] relative bg-black h-[100%]'>
                         <VideoPlayer PostUrl={item?.videos?.large} />
-                        <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
+                        <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'><IoMdArrowRoundBack/></button>
 
                       </div>
                       <div className='w-[60%] bg-[#f4e9ef] hidden md:block h-[100%] relative'>
-                      <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'>x</button>
+                      <button onClick={() => { setVideoModal(false);router.back() }} className='border-2 border-[#9A2143] rounded-md text-[#9A2143] py-1 px-2 absolute top-3 left-3'><IoMdArrowRoundBack/></button>
                         <VendorDescription/>
                       </div>
                     </div>
