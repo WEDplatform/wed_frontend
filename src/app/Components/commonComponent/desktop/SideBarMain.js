@@ -34,5 +34,4 @@ function SideBarMain({tabParams,client}) {
     </div>
   )
 }
-
 export { SideBarMain }
