@@ -12,9 +12,9 @@ function BottomNavBar() {
   const path=usePathname()
   const router=useRouter()
   const tab=searchParams.get("tab")
-  console.log(path);
+ // console.log(path);
 const user = path.split('/').pop(); // Extracts 'user'
-console.log(user); // Output: user
+//console.log(user); // Output: user
 
   return (
     <div className="w-[100%] md:hidden block border-t-[1px] border-gray-300 fixed bottom-0">
