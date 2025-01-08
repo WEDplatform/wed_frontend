@@ -30,7 +30,6 @@ async function Posts({id_}) {
           </main>
         </div>
 
-
       </div>
       <div id="MobilePost" className="w-[100%] md:hidden mt-2">
         <PostSWR id_={id_}/>
