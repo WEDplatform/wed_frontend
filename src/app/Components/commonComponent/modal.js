@@ -9,7 +9,6 @@ function Modal({ children }) {
               <div className="bg-white md:px-4 md:pb-4 p-4 sm:p-6 ">
                 {children}
               </div>
-
             </div>
           </div>
         </div>
