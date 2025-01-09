@@ -10,7 +10,6 @@ function Modal({ children }) {
 
             <div className="relative transform overflow-hidden rounded-lg  text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
               <div className="bg-white md:px-4 md:pb-4 p-4 sm:p-6 ">
-                
                 {children}
               </div>
 
