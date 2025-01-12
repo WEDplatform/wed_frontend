@@ -39,7 +39,6 @@ export default function SelectPage() {
         <Typography sx={{ paddingTop: 2,paddingX:4 }}>Favourites</Typography>
         <Typography sx={{ paddingBottom:2,paddingX:4 }}>Settings</Typography>
         <Typography sx={{ paddingBottom:2,paddingX:4 }}><LogoutButton/></Typography>
-        
       </Popover>
     </div>
   );
