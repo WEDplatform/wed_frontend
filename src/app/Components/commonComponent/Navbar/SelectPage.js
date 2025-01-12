@@ -16,7 +16,6 @@ export default function SelectPage() {
   };
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-
   return (
     <div className='ml-1'>
       <span className='text-[#C94C73] cursor-pointer' onClick={handleClick}>
