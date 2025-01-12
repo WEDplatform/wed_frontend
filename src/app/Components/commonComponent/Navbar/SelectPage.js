@@ -23,7 +23,6 @@ export default function SelectPage() {
         <CgOptions/>
       </span>
       <Popover
-        
         id={id}
         open={open}
         anchorEl={anchorEl}
