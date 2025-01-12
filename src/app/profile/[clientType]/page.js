@@ -23,7 +23,6 @@ async function page({ params }) {
             </div>
             <div className="md:w-[79%] w-[100%] mt-4 md:mt-0">
                 <div className="md:h-[40vh] h-[30vh] rounded-md shadow-xl shadow-gray-200">
-                    
                     <p className="mt-2 ml-2 text-sm font-semibold text-gray-500">Your analytics</p>
                     <main className="w-[100%] h-[80%] md:h-[80%] mt-4 pr-4 flex justify-center items-center">
                         <LoginStat lgs={prf?.data?.loginCounts}/>
