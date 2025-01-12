@@ -70,7 +70,7 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
 
                       </div>
                       <div className='w-[60%] bg-[#f4e9ef] hidden md:block h-[100%] relative'>
-                      <button onClick={() => { setVideoModal(false);router.back() }} className='border-2 border-[#9A2143] rounded-md text-[#9A2143] py-1 px-2 absolute top-3 left-3'><IoMdArrowRoundBack/></button>
+                      <button onClick={() => { setVideoModal(false);router.back() }} className=' rounded-md text-[#9A2143] py-1 px-2 absolute top-3 left-3'><IoMdArrowRoundBack/></button>
                         <VendorDescription/>
                       </div>
                     </div>
