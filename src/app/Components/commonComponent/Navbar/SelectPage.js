@@ -8,7 +8,6 @@ import { LogoutButton } from '../logoutButton';
 
 export default function SelectPage() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
