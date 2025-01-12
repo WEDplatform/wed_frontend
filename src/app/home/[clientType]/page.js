@@ -2,7 +2,7 @@ export const metadata = {
   title: "Home",
 }
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
-import { NavBar } from "@/app/Components/commonComponent/NavBar"
+import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
