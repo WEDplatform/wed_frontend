@@ -5,7 +5,7 @@ import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMai
 import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
 import { StorySection } from "@/app/Components/commonComponent/stories/StorySection"
-import { Posts } from "@/app/Components/commonComponent/Posts"
+import { Posts } from "@/app/Components/commonComponent/Posts/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { Profile } from "@/app/Components/commonComponent/Profile"
 import { profileFetch } from "@/app/apiFunctions/profile"

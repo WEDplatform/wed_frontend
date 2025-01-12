@@ -1,9 +1,9 @@
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
-import { ImagePost, VideoPost } from "./PostStructure"
-import { StorySection } from "./stories/StorySection"
+import { ImagePost, VideoPost } from "../PostStructure"
+import { StorySection } from "../stories/StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
-import { ImageSWR } from "./desktop/ImagePostSWR"
-import { PostSWR } from "./phone/PostSWR"
+import { ImageSWR } from "../desktop/ImagePostSWR"
+import { PostSWR } from "../phone/PostSWR"
 async function Posts({id_}) {
   let rnd = Math.floor((Math.random() * 10) + 1)
   const imageResponse=await getImageUrl("Wedding",1)
