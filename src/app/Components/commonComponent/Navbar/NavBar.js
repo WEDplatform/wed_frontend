@@ -1,5 +1,5 @@
 import Logo from "@/app/Components/logo"
-import SelectPage from "../SelectPage";
+import SelectPage from "./SelectPage";
 import { FiBell } from "react-icons/fi";
 import { TbNotification } from "react-icons/tb";
 function NavBar() {
