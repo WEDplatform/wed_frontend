@@ -8,10 +8,7 @@ function SignUp({usertype,compIndex}) {
   //console.log(compIndex);
   
   const searchParams = useSearchParams()
-  
-  
   const [vendorDetails,setvendorDetails]=useState(vnd)
-  
   return (
     <>
     {
