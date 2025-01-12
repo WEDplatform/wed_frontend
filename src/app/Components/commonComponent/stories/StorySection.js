@@ -2,7 +2,7 @@
 import React from "react";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
-import { StoryCard } from "./StoryCard";
+import { StoryCard } from "../StoryCard";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 // import '@splidejs/react-splide/css';

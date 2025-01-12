@@ -4,7 +4,7 @@ export const metadata = {
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
 import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar"
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar"
-import { StorySection } from "@/app/Components/commonComponent/StorySection"
+import { StorySection } from "@/app/Components/commonComponent/stories/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { Profile } from "@/app/Components/commonComponent/Profile"
