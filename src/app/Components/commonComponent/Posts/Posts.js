@@ -1,5 +1,5 @@
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
-import { ImagePost, VideoPost } from "../PostStructure"
+import { ImagePost, VideoPost } from "./PostStructure"
 import { StorySection } from "../stories/StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImageSWR } from "../desktop/ImagePostSWR"

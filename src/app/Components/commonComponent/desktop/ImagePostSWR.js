@@ -1,6 +1,6 @@
 'use client'
 import { useInView } from "react-intersection-observer"
-import { ImagePost } from "../PostStructure"
+import { ImagePost } from "../Posts/PostStructure"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"

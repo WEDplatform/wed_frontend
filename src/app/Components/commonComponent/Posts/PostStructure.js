@@ -5,11 +5,11 @@ import { BsThreeDots } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
-import { PostImageSlider } from "./PostImageSlider";
+import { PostImageSlider } from "../PostImageSlider";
 import { getImageUrl,getVideoUrl } from "@/app/apiFunctions/pexel";
-import { VendorDetails } from "../vendorComponent/VendorDetails";
+import { VendorDetails } from "../../vendorComponent/VendorDetails";
 import { useState } from "react";
-import { VideoModal } from "./VideoModal.js/VideoModal";
+import { VideoModal } from "../VideoModal.js/VideoModal";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 const ImagePost =  ({ images }) => {
