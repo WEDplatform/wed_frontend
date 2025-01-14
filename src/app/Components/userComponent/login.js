@@ -53,8 +53,6 @@ function UserLogin() {
     setCredentials((prev)=>({...prev,[e.target.name]:(e.target.value).trim()}))
   };
   const onSubmit = (e) => {
-    
-    
     setErr([])
    let validatedSchema=loginSchema.safeParse(userCredentials)
    console.log(validatedSchema);
