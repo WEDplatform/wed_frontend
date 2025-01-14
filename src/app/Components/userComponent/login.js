@@ -13,16 +13,14 @@ import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 function UserLogin() {
   const searchParams = useSearchParams()
- 
   const searchKey = searchParams.get('usertype')
-  
   const router=useRouter()
   let [credError,setErr]=useState([])
   const {mutate,error,isPending,data,isError,isSuccess}=useMutation({
     mutationFn:loginUser
   })  
     const placeholders = [
-        "Enter Username or",
+        "Enter Username or", 
         "Enter email"
       ];
       const passplaceholders = [
