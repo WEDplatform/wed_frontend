@@ -68,8 +68,6 @@ function UserLogin() {
     router:router,
     client:searchKey
    })
-   
-   
   };
   return (
     <div className="md:mt-10 mt-4 flex flex-col">
