@@ -34,7 +34,6 @@ function UserLogin() {
     })
     useEffect(()=>{
       // console.log(error);
-      
       if(error?.status==401){
         router.push("/home")
       }
