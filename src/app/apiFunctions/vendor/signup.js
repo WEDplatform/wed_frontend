@@ -10,7 +10,7 @@ const signup=async({cred,router})=>{
         await create(response?.data)
         console.log(response);
         if(response?.status==201){
-            router.push("/home?clientType=vendor")
+            router.push("/home/vendor?clientType=vendor")
         }
         
         
