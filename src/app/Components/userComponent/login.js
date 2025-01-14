@@ -15,7 +15,6 @@ function UserLogin() {
   const searchParams = useSearchParams()
  
   const searchKey = searchParams.get('usertype')
- 
   
   const router=useRouter()
   let [credError,setErr]=useState([])
