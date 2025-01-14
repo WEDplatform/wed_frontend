@@ -42,7 +42,6 @@ function UserLogin() {
            //console.log(userDetails);
            let data=await logViaGoogle()
            console.log(data);
-           
            //setCredentials((prev)=>({...prev,userid:data.email,isGoogleAuthenticated:true}))
            mutate({
             cred:{userid:data.email},
