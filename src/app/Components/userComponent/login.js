@@ -32,12 +32,7 @@ function UserLogin() {
         password:"",
         isGoogleAuthenticated:false
     })
-    // useEffect(()=>{
-    //   // console.log(error);
-    //   if(error?.status==401){
-    //     router.push("/home")
-    //   }
-    // },[error])
+
    const loginViaGoole=async()=>{
            //console.log(userDetails);
            let data=await logViaGoogle()
