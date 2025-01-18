@@ -6,11 +6,9 @@ import NativeSelect from '@mui/material/NativeSelect';
 
   function SelectPreviewStatus() {
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel variant="standard" htmlFor="uncontrolled-native">
-          Age
-        </InputLabel>
+    <>
+      <div className='bg-red-200'>
+        
         <NativeSelect
           defaultValue={30}
           inputProps={{
@@ -22,8 +20,8 @@ import NativeSelect from '@mui/material/NativeSelect';
           <option value={20}>Twenty</option>
           <option value={30}>Thirty</option>
         </NativeSelect>
-      </FormControl>
-    </Box>
+      </div>
+    </>
   );
 }
 export {SelectPreviewStatus}
