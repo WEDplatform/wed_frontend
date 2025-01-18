@@ -57,6 +57,7 @@ export function LoginStat({ lgs }) {
     }));
     return (
         <>
+        <p>Recent</p>
        <ResponsiveContainer className="" width="98%" height="100%">
             <LineChart
             margin={{
