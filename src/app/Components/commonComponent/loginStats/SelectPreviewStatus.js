@@ -8,7 +8,6 @@ import NativeSelect from '@mui/material/NativeSelect';
   return (
     <>
       <div className='bg-red-200'>
-        
         <NativeSelect
           defaultValue={30}
           inputProps={{
