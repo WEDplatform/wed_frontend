@@ -1,5 +1,6 @@
 'use client'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { SelectPreviewStatus } from './SelectPreviewStatus';
 export function LoginStat({ lgs }) {
     const data = [
         {
@@ -57,7 +58,7 @@ export function LoginStat({ lgs }) {
     }));
     return (
         <>
-        <p className='w-[100%] text-right'><button className='mr-5'>Recent</button></p>
+        <SelectPreviewStatus/>
        <ResponsiveContainer className="" width="98%" height="100%">
             <LineChart
             margin={{
