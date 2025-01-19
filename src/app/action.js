@@ -25,23 +25,7 @@ export const getCookies = async () => {
 
     
 
-// async function checkAuth() {
-//     'use server'
-//     const cookieStore = await cookies()
-//     const refreshToken = cookieStore.get('refreshToken')?.value;
-//     const accessToken = cookieStore.get('accessToken')?.value;
-//     if(!accessToken){
-//         let res=await generateToken(refreshToken)
-//         cookieStore.set({
-//          name:"accessToken",
-//          value:accessResponse?.data?.accessToken,
-//          httpOnly:true,
-//          secure:true,
-//          sameSite:"none",
-//          maxAge:60*60
-//      })
-//         console.log(res);
-        
+
 //     }
 //     let accessResponse=await generateToken(refreshToken)
     
