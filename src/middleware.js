@@ -25,7 +25,6 @@ export async function middleware(request) {
       return NextResponse.redirect(home);
     }
     }
-    
   } catch (error) {
     cookieStore.delete('refreshToken')
     console.log(error);
