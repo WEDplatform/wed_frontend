@@ -39,7 +39,7 @@ function UserLogin() {
            console.log(data);
            //setCredentials((prev)=>({...prev,userid:data.email,isGoogleAuthenticated:true}))
            mutate({
-            cred:{userid:data.email},
+            data:{userid:data.email},
             router:router,
             client:searchKey
            })
