@@ -34,7 +34,6 @@ export async function middleware(request) {
   }
   return NextResponse.next();
 }
-
 export const config = {
   matcher: [
     // Match all pages except static files and API r   ou/((?!_next/static|_next/image|favicon.ico|api).*)',\\
