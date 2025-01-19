@@ -22,16 +22,3 @@ export const getCookies = async () => {
   const refreshToken = cookieStore.get('refreshToken')?.value
   return refreshToken
 }
-
-    
-
-
-//     }
-//     let accessResponse=await generateToken(refreshToken)
-    
-//     console.log(accessResponse);
-    
-
-// }
-
-// export {checkAuth}
