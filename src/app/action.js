@@ -24,17 +24,7 @@ export const getCookies = async () => {
 }
 
     
-//     try{
-//         let resp = await axiosInstance.post("/user/generateToken", {
-//             refreshToken: refreshToken
-//         })
-//        return resp
-//     }
-//     catch(error){
-//         console.log(error);
-//     }
-    
-// }
+
 // async function checkAuth() {
 //     'use server'
 //     const cookieStore = await cookies()
