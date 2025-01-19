@@ -22,14 +22,7 @@ export const getCookies = async () => {
   const refreshToken = cookieStore.get('refreshToken')?.value
   return refreshToken
 }
-// export async function deleteCookie() {
-  
-//    const cookieStore = await cookies()
-//    cookieStore.delete('refreshToken')
-//    cookieStore.delete('accessToken')
-// }
 
-// const generateToken=async(refreshToken)=>{
     
 //     try{
 //         let resp = await axiosInstance.post("/user/generateToken", {
