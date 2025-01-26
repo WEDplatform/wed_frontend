@@ -17,7 +17,7 @@ const PostSWR = ({ id_ }) => {
         try {
             let video = await getVideoUrl("Wedding", 1)
             setVideoData(video)
-            let image_data = await getImageUrl("Wedding", index)
+            let image_data = await getImageUrl("indian wedding", index)
             setData((prev) => [...prev, ...image_data])
             setIndex((prev) => prev + 1);
             //console.log(image_data);

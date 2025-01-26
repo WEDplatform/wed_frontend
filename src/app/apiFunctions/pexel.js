@@ -20,8 +20,10 @@ const getVideoUrl=async(query="forest",page=1)=>{
     
 }
 
-const getImageUrl=async(query="wedding",page)=>{
+const getImageUrl=async(query="indian wedding",page)=>{
     const res=await client.photos.search({query,per_page:12,page:page,orientation:'landscape'})
+    console.log(res.photos);
+    
     let result=create2DArray(res.photos,4)
     //console.log(result);
     

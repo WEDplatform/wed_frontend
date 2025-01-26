@@ -19,7 +19,7 @@ const ImageSWR = ({ data }) => {
         try {
             let video=await getVideoUrl("Wedding",1)
             setVideoData(video)
-            let image_data=await getImageUrl("Wedding",1)
+            let image_data=await getImageUrl("indian wedding",1)
             setData((prev)=>[...prev,...image_data])
             setIndex((prev)=>prev+1);
             //console.log(image_data);
