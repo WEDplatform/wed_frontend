@@ -49,7 +49,6 @@ const ImagePost =  ({ images }) => {
 const VideoPost = ({videoContent,videoItem}) => {
     const params=useParams()
     // console.log(params?.clientType);
-    console.log(videoContent);
     
     const router=useRouter()
     const [open,setOpen]=useState(false)
@@ -64,7 +63,7 @@ const VideoPost = ({videoContent,videoItem}) => {
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=viewPost&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.videos?.large?.thumbnail} alt="Image"/>:"Unable to preview video"
+                    videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=viewPost&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.videos?.large?.thumbnail} alt="Image"/>:"Unable to preview video"
                   }
 
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
