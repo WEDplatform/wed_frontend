@@ -20,11 +20,10 @@ const PostSWR = ({ id_ }) => {
             let image_data = await getImageUrl("indian wedding", index)
             setData((prev) => [...prev, ...image_data])
             setIndex((prev) => prev + 1);
-            //console.log(image_data);
+            console.log(image_data);
 
         } catch (error) {
             console.log(error);
-
         }
     }
     useEffect(() => {
