@@ -15,7 +15,7 @@ const ImageSWR = ({ data }) => {
     const [VideoData, setVideoData] = useState([]);
     const [postsTracker,setTracker]=useState({
         postData:[],
-        pageIndex:1
+        pageIndex:0
     })
     const fetchVendorPosts=async()=>{
         let postsResponse=await fetchPosts(postsTracker.pageIndex)
@@ -27,7 +27,7 @@ const ImageSWR = ({ data }) => {
         }else{
             setTracker((prevState) => ({
                 ...prevState,
-                postData: postsResponse?.pics, // Append new data to the existing array
+                postData: [...prevState.postData, ...postsResponse?.pics], // Append new data to the existing array
                 pageIndex: prevState.pageIndex + 1,           // Increment the pageIndex
             }));
         }
@@ -49,7 +49,7 @@ const ImageSWR = ({ data }) => {
                 loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
                 scrollableTarget="ImagePost"
                 hasMore={hasMoreTrack}
-                scrollThreshold={0.6}
+                scrollThreshold={0.9}
                 endMessage={
                     <p style={{ textAlign: 'center',width:"100%" }}>
                       <b>Yay! You have seen it all</b>
