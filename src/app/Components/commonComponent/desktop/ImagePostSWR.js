@@ -21,42 +21,18 @@ const ImageSWR = ({ data }) => {
         let postsResponse=await fetchPosts(postsTracker.pageIndex)
         console.log(postsResponse);
         
-        if(postsResponse?.length==64){
+        if(!postsResponse?.hasMore){
             setTrack(false);
             return
         }else{
             setTracker((prevState) => ({
                 ...prevState,
-                postData: postsResponse, // Append new data to the existing array
+                postData: postsResponse?.pics, // Append new data to the existing array
                 pageIndex: prevState.pageIndex + 1,           // Increment the pageIndex
             }));
         }
     }
-    const fetchImageData = async () => {
-        if(imageData.length>=6) return
-       // console.log("called");
-        
-        try {
-            let video=await getVideoUrl("Wedding",1)
-            setVideoData(video)
-            let image_data=await getImageUrl("indian wedding",1)
-            setData((prev)=>[...prev,...image_data])
-            setIndex((prev)=>prev+1);
-            //console.log(image_data);
-            
-        } catch (error) {
-           // console.log(error);
 
-        }
-    }
-    // useEffect(()=>{
-    //     console.log(imageData);
-        
-    //     if(imageData.length>=6){
-    //         setTrack(false)
-    //     }
-
-    // },[imageData])
     useEffect(()=>{
         console.log(postsTracker);
         
