@@ -6,7 +6,6 @@ import { ImageSWR } from "../desktop/ImagePostSWR"
 import { PostSWR } from "../phone/PostSWR"
 import { VideoSWR } from "../desktop/ReelPostSWR"
 async function Posts({id_}) {
-  const videoData=await getVideoUrl()
   
   return (
     <>
