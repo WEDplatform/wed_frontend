@@ -19,15 +19,9 @@ const getVideoUrl=async(query="forest",page=1)=>{
     return videoData
     
 }
-
 const getImageUrl=async(query="indian wedding",page)=>{
-    const res=await client.photos.search({query,per_page:12,page:page,orientation:'landscape'})
-    console.log(res);
-    
+    const res=await client.photos.search({query,per_page:12,page:page,orientation:'landscape'})    
     let result=create2DArray(res.photos,4)
-    //console.log(result);
-    
     return result
-    //console.log(res.photos);
 }
 export {getVideoUrl,getImageUrl}
