@@ -27,6 +27,8 @@ const style = {
 };
 
 export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
+  console.log(postCollection);
+  
   const router = useRouter();
   const [open, setOpen] = React.useState(VideoModalOpen);
   const handleOpen = () => setOpen(true);
@@ -61,7 +63,7 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
             <SplideTrack className="md:w-[60vw] w-[90vw] relative">
 
               {
-                postCollection.map((item, index) => (
+                postCollection?.map((item, index) => (
                   <SplideSlide className="w-[100%]" key={index}>
                     <div className='flex relative h-[90vh] md:h-[80vh] bg-white'>
                       <div className='md:w-[40%] w-[100%] relative bg-black h-[100%]'>
@@ -71,7 +73,7 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
                       </div>
                       <div className='w-[60%] bg-[#f4e9ef] hidden md:block h-[100%] relative'>
                       <button onClick={() => { setVideoModal(false);router.back() }} className=' rounded-md text-[#9A2143] py-1 px-2 absolute top-3 left-3'><IoMdArrowRoundBack/></button>
-                        <VendorDescription/>
+                        <VendorDescription description={item}/>
                       </div>
                     </div>
                   </SplideSlide>

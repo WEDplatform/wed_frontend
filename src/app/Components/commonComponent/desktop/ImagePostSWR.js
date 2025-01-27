@@ -1,5 +1,4 @@
 'use client'
-import { useInView } from "react-intersection-observer"
 import { ImagePost } from "../Posts/PostStructure"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { useEffect, useState } from "react"
@@ -8,10 +7,7 @@ import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts"
 
 const ImageSWR = ({ data }) => {
-
-    const [index, setIndex] = useState(1);
     const [hasMoreTrack,setTrack]=useState(true);
-    const [imageData,setData]=useState([]);
     const [VideoData, setVideoData] = useState([]);
     const [postsTracker,setTracker]=useState({
         postData:[],
@@ -32,11 +28,6 @@ const ImageSWR = ({ data }) => {
             }));
         }
     }
-
-    useEffect(()=>{
-        console.log(postsTracker);
-        
-    },[postsTracker])
     useEffect(() => {
         fetchVendorPosts()
         // fetchImageData();
@@ -59,7 +50,6 @@ const ImageSWR = ({ data }) => {
                 {
                     postsTracker?.postData?.map((item, pos) => <ImagePost key={pos} images={item}  />)
                 }
-                
             </InfiniteScroll>
         </main>
     </>)

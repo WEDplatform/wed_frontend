@@ -46,9 +46,10 @@ const ImagePost =  ({ images }) => {
         </>
     )
 }
-const VideoPost = ({videoPostLength,videoItem}) => {
+const VideoPost = ({videoContent,videoItem}) => {
     const params=useParams()
-    console.log(params?.clientType);
+    // console.log(params?.clientType);
+    console.log(videoContent);
     
     const router=useRouter()
     const [open,setOpen]=useState(false)
@@ -56,16 +57,17 @@ const VideoPost = ({videoPostLength,videoItem}) => {
         <>
             <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
                 <div className="flex items-center justify-between gap-2 py-1 pl-2">
-                    <VendorDetails user={videoItem?.user} vid={videoItem?.id}/>
+                    <VendorDetails user={videoItem?.vendorName} vid={videoItem?.id}/>
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=viewPost&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.userImageURL} alt="Image"/>:"Unable to preview video"
+                    videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=viewPost&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority layout="fill" src={videoItem?.videos?.large?.thumbnail} alt="Image"/>:"Unable to preview video"
                   }
-                  <VideoModal postCollection={videoPostLength} VideoModalOpen={open} setVideoModal={setOpen}/>
+
+                  <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">
@@ -74,7 +76,7 @@ const VideoPost = ({videoPostLength,videoItem}) => {
                         <MdSaveAlt />
                     </div>
                     <div className="w-[40%] flex justify-end md:mr-0 mr-1 items-center">
-                        <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
+                        <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">{videoItem?.views} reviews</p>
                     </div>
                 </div>
             </div>

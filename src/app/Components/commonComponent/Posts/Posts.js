@@ -4,9 +4,10 @@ import { StorySection } from "../stories/StorySection"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { ImageSWR } from "../desktop/ImagePostSWR"
 import { PostSWR } from "../phone/PostSWR"
+import { VideoSWR } from "../desktop/ReelPostSWR"
 async function Posts({id_}) {
-  let rnd = Math.floor((Math.random() * 10) + 1)
   const videoData=await getVideoUrl()
+  
   return (
     <>
       <div className="md:w-[95%] md:pt-2 hidden md:block  w-[100%] h-[90%] md:h-[73vh] md:ml-4">
@@ -18,16 +19,18 @@ async function Posts({id_}) {
           </main> */}
           <ImageSWR />
           {/* <VideoPost/> */}
-          <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
+          {/* <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
             {
               videoData?.map((item,pos)=>
               <VideoPost videoPostLength={videoData || null} key={pos} videoItem={item}/>
               )
             }
 
-          </main>
+          </main> */}
+          <VideoSWR/>
         </div>
       </div>
+      {/* below code segment for mobile posts and reels */}
       <div id="MobilePost" className="w-[100%] md:hidden mt-2">
         <PostSWR id_={id_}/>
         {/* {
