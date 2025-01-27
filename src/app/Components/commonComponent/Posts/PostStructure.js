@@ -12,7 +12,6 @@ import { VideoModal } from "../VideoModal.js/VideoModal";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 const ImagePost =  ({ images }) => {
-
     return (
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
@@ -20,7 +19,7 @@ const ImagePost =  ({ images }) => {
                     <main className="flex items-center gap-2">
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col ">
-                            <h1 className="font-semibold ">{ "Username"}</h1>
+                            <h1 className="font-semibold ">{ images?.vendorName}</h1>
                             <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
                         </span>
                     </main>
@@ -30,7 +29,7 @@ const ImagePost =  ({ images }) => {
                 </div>
                 <div className="w-[100%] h-[100%] rounded-xl ">
                     {
-                        images?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
+                        images?.imageData?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
                     }
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">

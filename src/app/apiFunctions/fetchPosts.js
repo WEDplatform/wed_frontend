@@ -1,10 +1,11 @@
 import { axiosInstance } from "../axios/axios";
 
-export const fetchPosts=async()=>{
+export const fetchPosts=async(index)=>{
     try {
-        let resp=await axiosInstance.get('/cmn/getPosts?searchIndex=0')
+        let resp=await axiosInstance.get(`/cmn/getPosts?searchIndex=${index}`)
+        //console.log(resp?.data?.data);
         
-        return resp
+        return resp?.data?.data
     } catch (error) {
         console.log(error);
         
