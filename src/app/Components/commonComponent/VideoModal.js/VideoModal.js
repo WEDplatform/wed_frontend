@@ -27,7 +27,6 @@ const style = {
 };
 
 export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
-  console.log(postCollection);
   
   const router = useRouter();
   const [open, setOpen] = React.useState(VideoModalOpen);
