@@ -9,13 +9,13 @@ import { Posts } from "@/app/Components/commonComponent/Posts/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { Profile } from "@/app/Components/commonComponent/Profile"
 import { profileFetch } from "@/app/apiFunctions/profile"
-async function page({params,searchParams}) {
-  const clientParam=await params;
-  const searchprm=await searchParams
+async function page({ params, searchParams }) {
+  const clientParam = await params;
+  const searchprm = await searchParams
   ///console.log(searchprm);
-  let rsp=await profileFetch()
- // console.log(rsp);
-  
+  let rsp = await profileFetch()
+  // console.log(rsp);
+
   return (
     <>
       <div id="mainPost" className='flex md:flex-row w-[100%] h-[85vh] md:h-[100vh] overflow-y-auto flex-col'>
@@ -24,45 +24,38 @@ async function page({params,searchParams}) {
           <SideBarMain client={clientParam} tabParams={searchprm} />
         </div> */}
         <div className="md:hidden w-[100vw] ">
-            <NavBar />
-            <div className="w-[100%] block md:hidden">
-              <div className="w-[100%]  flex justify-center"><StorySection /></div>
-            </div>
+          <NavBar />
+          <div className="w-[100%] block md:hidden">
+            <div className="w-[100%]  flex justify-center"><StorySection /></div>
+          </div>
         </div>
-        <div className='md:w-[68%]  flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
+        {
+          searchprm?.tab == "home" ? <div className='md:w-[68%]  flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
             <div className="w-[100%] hidden md:block">
               <div className="w-[100%]  flex justify-center"><StorySection /></div>
             </div>
-            <Posts id_={"mainPost"}/>
-        </div>
-        {/* {
-          searchprm?.tab=="home" || searchprm?.tab=="search" || searchprm?.tab=="viewPost" || searchprm?.tab=="profile" ? <>
-          
-          
-          </> : <>
-          <div className="md:w-[55%] flex flex-col items-center relative md:items-start h-[100%] w-[100vw]">
-
-          </div>
-          </>
-        } */}
-        <div className="hidden md:block w-[32%] h-[100%] border-2">
-            <div className="w-[100%] h-[100%] flex items-center justify-center">
-            {
-              searchprm.tab == "search" ? <Search/> : <>
-              {/* {
-                searchprm.tab
-              } */}
-              </>
-            }
-            {
-              searchprm.tab == "profile" ? <Profile/> : <>
-              {/* {
-                searchprm.tab
-              } */}
-              </>
-            }
+            <Posts id_={"mainPost"} />
+          </div> :
+            <div className='md:w-[68%]  flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
+              {/* <div className="w-[100%] hidden md:block">
+        <div className="w-[100%]  flex justify-center"><StorySection /></div>
+      </div>
+      <Posts id_={"mainPost"}/> */}
             </div>
-        </div>
+        }
+       
+        {/* <div className="hidden md:block w-[32%] h-[100%] border-2">
+            <div className="w-[100%] h-[100%] flex items-center justify-center">
+            
+            </div>
+        </div> */}
+        {
+          searchprm?.tab == "search" && <div className="hidden md:block w-[32%] h-[100%] border-2">
+            <div className="w-[100%] h-[100%] flex items-center justify-center">
+              <Search />
+            </div>
+          </div>
+        }
       </div>
     </>
   )
