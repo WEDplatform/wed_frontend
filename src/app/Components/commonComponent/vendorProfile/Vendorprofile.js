@@ -11,9 +11,30 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa6";
 import { useMutation } from "@tanstack/react-query";
 import { SelectPostPage } from "./VendorPostDisplay";
-const VendorProfile = () => {
+import { fetchProfileData } from "@/app/apiFunctions/vendor/fetchProfile";
+import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { LuLoaderCircle } from "react-icons/lu";
+const VendorProfile = ({vendorName}) => {
+    let prm=useSearchParams();
+    let {mutate,data,error,isError,isPending,isSuccess} = useMutation({
+        mutationFn:fetchProfileData
+    })
+    useEffect(()=>{
+        mutate(prm.get('vendorName'))
+    },[])
     return (
-        <main className="w-[80vw] h-[100vh] overflow-x-hidden overflow-y-auto">
+        <>
+        {
+            isPending && <div className="w-[80vw] h-[100vh] flex items-center justify-center">
+                <LuLoaderCircle className="animate-spin text-[30px]" />
+            </div>
+        }
+        {
+            isError && <div>Error occured</div>
+        }
+        {
+            isSuccess && <main id="vendorProfile" className="w-[80vw] h-[100vh] overflow-x-hidden overflow-y-auto">
             <div className="w-[80%] mx-auto mt-[4vh]  items-center flex justify-between">
                 <div className="w-[100%] flex items-center ">
                     <div className="w-[10vw] h-[10vw]  relative  rounded-full">
@@ -22,9 +43,9 @@ const VendorProfile = () => {
                         <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
                     </div>
                     <span className="font-semibold flex flex-col ml-3">
-                        <span>Vendors la eve</span>
-                        <span className="font-normal text-gray-500">Vendors la eve</span>
-                        <span className="font-normal text-gray-500">IIT BHU near Hyderabd gate</span>
+                        <span>{data.businessName}</span>
+                        <span className="font-normal text-gray-500">{data.businessEmail}</span>
+                        <span className="font-normal text-gray-500">{data.address}</span>
                     </span>
                 </div>
                 <div className="flex items-center">
@@ -57,8 +78,10 @@ const VendorProfile = () => {
                         <span className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</span>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
-            <SelectPostPage/>
+            <SelectPostPage vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
         </main>
+        }
+        </>
     )
 }
 export { VendorProfile }
