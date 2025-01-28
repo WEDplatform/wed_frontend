@@ -10,6 +10,7 @@ import { FaStar } from "react-icons/fa6";
 import { AiOutlineLike } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa6";
 import { useMutation } from "@tanstack/react-query";
+import { SelectPostPage } from "./VendorPostDisplay";
 const VendorProfile = () => {
     return (
         <main className="w-[80vw] h-[100vh] overflow-x-hidden overflow-y-auto">
@@ -56,6 +57,7 @@ const VendorProfile = () => {
                         <span className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</span>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
+            <SelectPostPage/>
         </main>
     )
 }

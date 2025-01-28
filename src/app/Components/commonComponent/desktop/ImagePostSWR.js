@@ -14,7 +14,7 @@ const ImageSWR = ({ data }) => {
         pageIndex:0
     })
     const fetchVendorPosts=async()=>{
-        let postsResponse=await fetchPosts(postsTracker.pageIndex)
+        let postsResponse=await fetchPosts(postsTracker.pageIndex,3)
         console.log(postsResponse);
         
         if(!postsResponse?.hasMore){

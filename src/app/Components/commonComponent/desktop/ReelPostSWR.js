@@ -10,7 +10,7 @@ const VideoSWR=()=>{
     })
     const [hasMoreTrack,setTrack]=useState(true);
     const fetchVendorReels=async()=>{
-            let postsResponse=await fetchReels(reelTracker.pageIndex)
+            let postsResponse=await fetchReels(reelTracker.pageIndex,3)
             //console.log(postsResponse);
             
             if(!postsResponse?.hasMore){
