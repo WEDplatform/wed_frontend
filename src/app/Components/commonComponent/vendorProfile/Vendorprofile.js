@@ -1,6 +1,6 @@
 const VendorProfile=()=>{
     return(
-        <main className="w-[100%] bg-red-200">
+        <main className="w-[80vw] ">
             vendor profile
         </main>   
     )
