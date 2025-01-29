@@ -3,6 +3,7 @@ import { VendorPostsGrid } from "./VendorPostsGrid";
 import { fetchReels } from "@/app/apiFunctions/fetchPosts";
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts";
 import { fetchVendorMediaPosts, fetchVendorMediaReels } from "./fetchVendorPosts";
+import { VendorReelGrid } from "./VendorReelDisplay";
 const SelectPostPage=({id,vendorName})=>{
     let [postIndex,setIndex]=useState('post')
     let [vendorMediaData,setData]=useState({
@@ -55,6 +56,9 @@ const SelectPostPage=({id,vendorName})=>{
         </div>
         {
             postIndex=='post' && <VendorPostsGrid id={id} vendorMediaData={vendorMediaData} fetchVendorPosts={fetchVendorPosts} setData={setData}/>
+        }
+        {
+            postIndex=='reels' && <VendorReelGrid id={id} vendorMediaData={vendorMediaData} fetchVendorReels={fetchVendorReels} setData={setData} />
         }
         </>
         
