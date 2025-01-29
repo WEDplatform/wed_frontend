@@ -16,7 +16,7 @@ export default async function HomePageLayout({ children, params, searchParams })
           <NavBar />
           <SideBarMain client={navParams}  />
      </div>
-    <main className="w-[80%] md:w-[80%] ">
+    <main className="w-[100%] md:w-[80%] ">
       {children}
     </main>
     
