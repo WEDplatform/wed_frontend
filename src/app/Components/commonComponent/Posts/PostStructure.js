@@ -17,7 +17,7 @@ const ImagePost =  ({ images }) => {
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
                 <div className="flex items-center justify-between gap-2 py-1 pl-2">
-                    <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?.id}&vendorName=${images?.vendorName}`)}} className="flex cursor-pointer items-center gap-2">
+                    <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&vendorName=${images?.vendorName}`)}} className="flex cursor-pointer items-center gap-2">
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col ">
                             <h1 className="font-semibold ">{ images?.vendorName}</h1>

@@ -10,7 +10,8 @@ const nextConfig = {
         app_id:process.env.NEXT_APP_ID,
         measurement_id:process.env.NEXT_MEASUREMENT_ID,
         backend_api:process.env.NEXT_PUBLIC_BACKEND_API,
-        openapikey:process.env.API_KEY
+        openapikey:process.env.API_KEY,
+        frnt:process.env.NEXT_PUBLIC_FRNT
     },
     images: {
         remotePatterns: [

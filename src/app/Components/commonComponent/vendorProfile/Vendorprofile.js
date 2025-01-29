@@ -12,14 +12,16 @@ import { FaRegHeart } from "react-icons/fa6";
 import { useMutation } from "@tanstack/react-query";
 import { SelectPostPage } from "./VendorPostDisplay";
 import { fetchProfileData } from "@/app/apiFunctions/vendor/fetchProfile";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { LuLoaderCircle } from "react-icons/lu";
+import { VendorShare } from "./VendorShare";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();
     let {mutate,data,error,isError,isPending,isSuccess} = useMutation({
         mutationFn:fetchProfileData
     })
+    let [shareModal,setModa]=useState(false);
     useEffect(()=>{
         mutate(prm.get('vendorName'))
     },[])
@@ -75,9 +77,10 @@ const VendorProfile = ({vendorName}) => {
             </p>
             <main className="w-[80%] mx-auto bg-gray-100 flex justify-evenly mt-5 px-3 rounded-lg py-3">
                         <span className="flex items-center"> <AiOutlineLike className="mr-2  text-[20px]"/> Like</span>
-                        <span className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</span>
+                        <button onClick={()=>{setModa(!shareModal)}} className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</button>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
+            <VendorShare showModal={shareModal} setModal={setModa} />
             <div className="w-[80%] mt-3  mx-auto">
                 <p className="text-sm font-medium text-gray-500">Available cities</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
