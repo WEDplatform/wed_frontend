@@ -53,7 +53,7 @@ const VendorProfile = ({vendorName}) => {
                     <button className="bg-[#9A2143] border-2 border-[#9A2143] text-white px-3 rounded-lg text-sm py-2 ml-2">Follow</button>
                 </div>
             </div>
-
+           
             <div className="flex w-[80%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
                 <div className="w-[50%] border-r-2 border-[#9A2143] text-center py-1 font-light text-gray-500">
                     <span className="font-semibold text-gray-700">200 </span>Following
@@ -78,6 +78,26 @@ const VendorProfile = ({vendorName}) => {
                         <span className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</span>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
+            <div className="w-[80%] mt-3  mx-auto">
+                <p className="text-sm font-medium text-gray-500">Available cities</p>
+                <div className="flex flex-wrap gap-2 text-sm mt-1">
+                    {
+                        data.citiesActive.map((item,pos)=>
+                            <span key={pos} className="text-[#9A2143] bg-[#ecdce1b2]  px-2 py-1 rounded-md">{item}</span> 
+                        )
+                    }
+                </div>
+            </div>
+            <div className="w-[80%] mt-3  mx-auto">
+                <p className="text-sm font-medium text-gray-500">Services offered</p>
+                <div className="flex flex-wrap gap-2 text-sm mt-1">
+                    {
+                        data.servicesProvided.map((item,pos)=>
+                            <span key={pos} className="text-[#9A2143] bg-[#ecdce1b2]  px-2 py-1 rounded-md">{item}</span> 
+                        )
+                    }
+                </div>
+            </div>
             <SelectPostPage vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
         </main>
         }
