@@ -4,7 +4,7 @@ const VendorPostsGrid=({fetchVendorPosts,vendorMediaData,setData,id})=>{
     return(
         <>
         <InfiniteScroll
-        className="w-[80%] mx-auto grid grid-cols-3 gap-1 mt-1"
+        className="md:w-[80%] w-[100%] mx-auto grid grid-cols-3 gap-1 mt-1"
         dataLength={vendorMediaData?.postsData?.length}
         next={fetchVendorPosts}
         loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}

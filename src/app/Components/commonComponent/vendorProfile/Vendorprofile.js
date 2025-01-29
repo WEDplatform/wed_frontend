@@ -36,27 +36,27 @@ const VendorProfile = ({vendorName}) => {
             isError && <div>Error occured</div>
         }
         {
-            isSuccess && <main id="vendorProfile" className="w-[80vw] h-[100vh] overflow-x-hidden overflow-y-auto">
-            <div className="w-[80%] mx-auto mt-[4vh]  items-center flex justify-between">
-                <div className="w-[100%] flex items-center ">
-                    <div className="w-[10vw] h-[10vw]  relative  rounded-full">
+            isSuccess && <main id="vendorProfile" className="md:w-[80vw] w-[100%] h-[100vh] overflow-x-hidden overflow-y-auto">
+            <div className="w-[80%] mx-auto mt-[4vh]  items-center flex md:flex-row flex-col justify-between">
+                <div className="w-[100%] flex md:flex-row flex-col items-center ">
+                    <div className="md:w-[10vw] md:h-[10vw] w-[30vw] h-[30vw]  relative  rounded-full">
                         <input type="file" className="hidden" />
                         <Image alt="profilePic" style={{ objectFit: "cover" }} src={profile} />
                         <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
                     </div>
-                    <span className="font-semibold flex flex-col ml-3">
+                    <span className="font-semibold  mt-2 md:mt-0 flex flex-col ml-3">
                         <span>{data.businessName}</span>
                         <span className="font-normal text-gray-500">{data.businessEmail}</span>
                         <span className="font-normal text-gray-500">{data.address}</span>
                     </span>
                 </div>
-                <div className="flex items-center">
-                    <button className="border-2 border-[#9A2143] text-[#9A2143] px-3 text-sm py-2 rounded-lg">Message</button>
-                    <button className="bg-[#9A2143] border-2 border-[#9A2143] text-white px-3 rounded-lg text-sm py-2 ml-2">Follow</button>
+                <div className="flex mt-3 md:mt-0 w-[100%]  items-center">
+                    <button className="border-2 border-[#9A2143] text-[#9A2143] w-[50%] px-3 text-sm py-2 rounded-lg">Message</button>
+                    <button className="bg-[#9A2143] border-2 border-[#9A2143] w-[50%] text-white px-3 rounded-lg text-sm py-2 ml-2">Follow</button>
                 </div>
             </div>
            
-            <div className="flex w-[80%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
+            <div className="flex md:w-[80%] w-[95%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
                 <div className="w-[50%] border-r-2 border-[#9A2143] text-center py-1 font-light text-gray-500">
                     <span className="font-semibold text-gray-700">200 </span>Following
                 </div>
@@ -75,13 +75,13 @@ const VendorProfile = ({vendorName}) => {
                         )
                       }
             </p>
-            <main className="w-[80%] mx-auto bg-gray-100 flex justify-evenly mt-5 px-3 rounded-lg py-3">
+            <main className="md:w-[80%] w-[95%] mx-auto bg-gray-100 flex justify-evenly mt-5 px-3 rounded-lg py-3">
                         <span className="flex items-center"> <AiOutlineLike className="mr-2  text-[20px]"/> Like</span>
                         <button onClick={()=>{setModa(!shareModal)}} className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</button>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
             <VendorShare showModal={shareModal} setModal={setModa} />
-            <div className="w-[80%] mt-3  mx-auto">
+            <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
                 <p className="text-sm font-medium text-gray-500">Available cities</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
                     {
@@ -91,7 +91,7 @@ const VendorProfile = ({vendorName}) => {
                     }
                 </div>
             </div>
-            <div className="w-[80%] mt-3  mx-auto">
+            <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
                 <p className="text-sm font-medium text-gray-500">Services offered</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
                     {

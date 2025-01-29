@@ -9,7 +9,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '30vw',
+  
   height: '25vh',
   bgcolor: 'white',
   border: '2px solid #000',
@@ -38,7 +38,7 @@ export  function VendorShare({showModal,setModal}) {
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
         </Box> */}
-        <div  className='bg-white py-2 flex fex-col items-center justify-center' style={style}>
+        <div  className='bg-white py-2 flex md:w-[25vw] w-[95%] fex-col items-center justify-center' style={style}>
             <div className='w-[95%]'>
             <p className='w-[100%] relative bg-red-200'><button onClick={()=>{setModal(false)}} className='absolute right-0'>x</button></p>
             <p>Copy link</p>

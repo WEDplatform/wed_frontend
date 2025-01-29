@@ -4,7 +4,7 @@ const VendorReelGrid=({id,vendorMediaData,fetchVendorReels,setData})=>{
     return(<>
     <InfiniteScroll
     dataLength={vendorMediaData?.reelData}
-    className="w-[80%] mx-auto grid grid-cols-3 gap-1 mt-1"
+    className="md:w-[80%] w-[100%%] mx-auto grid grid-cols-3 gap-1 mt-1"
     next={fetchVendorReels}
     loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
     scrollThreshold={0.9}
