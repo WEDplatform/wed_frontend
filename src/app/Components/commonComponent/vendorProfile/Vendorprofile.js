@@ -28,7 +28,7 @@ const VendorProfile = ({vendorName}) => {
     return (
         <>
         {
-            isPending && <div className="w-[80vw] h-[100vh] flex items-center justify-center">
+            isPending && <div className="md:w-[80vw] w-[100%] h-[100vh] flex items-center justify-center">
                 <LuLoaderCircle className="animate-spin text-[30px]" />
             </div>
         }
