@@ -15,7 +15,6 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
 export  function VendorShare({showModal,setModal}) {
   const [open, setOpen] = React.useState(showModal);
   const handleOpen = () => setOpen(true);
