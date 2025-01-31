@@ -17,7 +17,6 @@ function page() {
         </Suspense>
     </main>
     </div>
-
   )
 }
 
