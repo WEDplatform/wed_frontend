@@ -39,7 +39,6 @@ const PostSWR = ({ id_ }) => {
             }
             return arr;
           }
-          
         let picResponse=await fetchPosts(mobileMedia.index,2);
         let reelResponse=await fetchReels(mobileMedia.index,1);
         let pseudoArray=[...picResponse?.pics,...reelResponse?.reels];
