@@ -28,14 +28,7 @@ export  function VendorShare({showModal,setModal}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        {/* <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
-        </Box> */}
+        
         <div  className='bg-white py-2 flex md:w-[25vw] w-[95%] fex-col items-center justify-center' style={style}>
             <div className='w-[95%]'>
             <p className='w-[100%] relative bg-red-200'><button onClick={()=>{setModal(false)}} className='absolute right-0'>x</button></p>
