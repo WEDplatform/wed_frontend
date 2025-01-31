@@ -61,7 +61,6 @@ const SelectPostPage=({id,vendorName})=>{
             postIndex=='reels' && <VendorReelGrid id={id} vendorMediaData={vendorMediaData} fetchVendorReels={fetchVendorReels} setData={setData} />
         }
         </>
-        
     )
 }
 export {SelectPostPage}
