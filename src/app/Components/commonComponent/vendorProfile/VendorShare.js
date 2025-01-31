@@ -28,7 +28,6 @@ export  function VendorShare({showModal,setModal}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        
         <div  className='bg-white py-2 flex md:w-[25vw] w-[95%] fex-col items-center justify-center' style={style}>
             <div className='w-[95%]'>
             <p className='w-[100%] relative bg-red-200'><button onClick={()=>{setModal(false)}} className='absolute right-0'>x</button></p>
