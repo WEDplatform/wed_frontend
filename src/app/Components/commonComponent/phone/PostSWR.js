@@ -44,7 +44,6 @@ const PostSWR = ({ id_ }) => {
         let reelResponse=await fetchReels(mobileMedia.index,1);
         let pseudoArray=[...picResponse?.pics,...reelResponse?.reels];
         //console.log(shuffleArray(pseudoArray));
-  
         setMedia((prev)=>({
             index:prev.index+1,
             media:[...prev.media,...shuffleArray(pseudoArray)]
