@@ -5,7 +5,6 @@ import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts"
-
 const ImageSWR = ({ data }) => {
     const [hasMoreTrack,setTrack]=useState(true);
     const [VideoData, setVideoData] = useState([]);
