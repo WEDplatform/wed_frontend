@@ -21,7 +21,6 @@ const loginUser=async({data,router,client})=>{
         throw error
         
     }
-    
-    
+       
 }
 export {loginUser}
