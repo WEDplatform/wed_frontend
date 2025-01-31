@@ -11,11 +11,6 @@ async function Posts({id_}) {
     <>
       <div className="md:w-[95%] md:pt-2 hidden md:block  w-[100%] h-[90%] md:h-[73vh] md:ml-4">
         <div className="w-[100%] h-[100%] flex justify-between">
-          {/* <main id="ImagePost" className="w-[64%] preferenceList h-[100%] overflow-y-auto">
-          {
-              new Array(2).fill(0).map((_, pos) =><ImagePost key={pos} pageIndex={pos+1} />)
-            }
-          </main> */}
           <ImageSWR />
           {/* <VideoPost/> */}
           {/* <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
