@@ -45,9 +45,7 @@ export  function VendorShare({showModal,setModal}) {
             </div>
             </div>
             </div>
-           
         </div>
-       
       </Modal>
     </div>
   );
