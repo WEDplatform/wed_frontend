@@ -16,8 +16,7 @@ const signup=async({cred})=>{
         return response
     } catch (error) {
         console.log(error);
-        throw error
-        
+        throw error       
     }
 }
 const updatePreference=async({cred})=>{
