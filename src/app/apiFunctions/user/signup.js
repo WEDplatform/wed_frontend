@@ -13,8 +13,7 @@ const signup=async({cred})=>{
          await create(response?.data)
 
         console.log(response);
-        
-        
+      
         return response
     } catch (error) {
         console.log(error);
