@@ -8,8 +8,7 @@ const signup=async({cred})=>{
             headers: {
                 "Content-Type": "application/json"
             }
-        })
-    
+        })  
          await create(response?.data)
 
         console.log(response);
