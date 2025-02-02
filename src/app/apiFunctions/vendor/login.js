@@ -18,8 +18,7 @@ const loginUser=async({data,router})=>{
     } catch (error) {
         console.log(error);
         throw error     
-    }
-    
+    }    
     
 }
 export {loginUser}
