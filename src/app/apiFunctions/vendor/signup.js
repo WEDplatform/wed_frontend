@@ -11,8 +11,7 @@ const signup=async({cred,router})=>{
         console.log(response);
         if(response?.status==201){
             router.push("/home/vendor?clientType=vendor")
-        }        
-        
+        }         
         return response
     } catch (error) {
         
