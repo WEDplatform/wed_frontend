@@ -6,7 +6,6 @@ const fetchProfileData=async(vendorName)=>{
         return data?.data?.data
     } catch (error) {
         console.log(error);
-        
     }
 }
 export {fetchProfileData}
