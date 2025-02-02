@@ -11,11 +11,7 @@ const signup=async({cred})=>{
         })
     
          await create(response?.data)
-         console.log(response?.data);
-         
-        // if(response?.status==201){
-        //     router.push("/home?clientType=user")
-        // }
+
         console.log(response);
         
         
