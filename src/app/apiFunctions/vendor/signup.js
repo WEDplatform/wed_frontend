@@ -13,8 +13,7 @@ const signup=async({cred,router})=>{
             router.push("/home/vendor?clientType=vendor")
         }         
         return response
-    } catch (error) {
-        
+    } catch (error) {        
         if(error.status==409){
             router.push("/login?usertype=vendor")
         }
