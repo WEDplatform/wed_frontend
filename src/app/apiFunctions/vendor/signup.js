@@ -17,8 +17,7 @@ const signup=async({cred,router})=>{
         if(error.status==409){
             router.push("/login?usertype=vendor")
         }
-        throw error
-        
+       throw error        
     }
 }
 export {signup}
