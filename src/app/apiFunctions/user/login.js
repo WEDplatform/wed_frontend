@@ -8,8 +8,7 @@ const loginUser=async({data,router,client})=>{
                     "Content-Type": "application/json"
                 }
             }
-        )
-        console.log(resp);       
+        )      
         await create(resp?.data)
         if(resp.status==203){
             router.push(`/home/${client}?tab=home`)
