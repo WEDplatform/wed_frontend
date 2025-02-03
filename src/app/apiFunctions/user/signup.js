@@ -17,7 +17,6 @@ const signup=async({cred})=>{
 const updatePreference=async({cred})=>{
     const refreshToken=await getCookies()
     console.log(cred);
-    
     try {
         console.log(refreshToken);
         
