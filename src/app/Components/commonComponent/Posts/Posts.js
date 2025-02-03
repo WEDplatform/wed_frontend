@@ -34,5 +34,4 @@ async function Posts({id_}) {
     </>
   )
 }
-
 export { Posts }
