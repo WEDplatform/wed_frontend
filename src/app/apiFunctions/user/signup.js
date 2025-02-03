@@ -1,7 +1,6 @@
 import { create, getCookies } from "@/app/action";
 import { axiosInstance } from "@/app/axios/axios";
 import { tryCatchWrapper } from "@/app/lib/functionResolver";
-import { redirect } from "next/dist/server/api-utils";
 const signup=async({cred})=>{
     try {
         let response = await axiosInstance.post('/user/signup', cred, {
