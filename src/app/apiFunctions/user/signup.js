@@ -23,8 +23,7 @@ const updatePreference=async({cred})=>{
                 "wedoraCredentials":refreshToken
             }
         })
-        console.log(resp);
-        
+
         return resp
     } catch (error) {
         console.log(error);
