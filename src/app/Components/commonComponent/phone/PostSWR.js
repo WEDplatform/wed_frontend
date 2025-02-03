@@ -18,7 +18,7 @@ const PostSWR = ({ id_ }) => {
     })
     const fetchImageData = async () => {
         if (imageData.length >= 6) return
-        console.log("called");
+     
         try {
             let video = await getVideoUrl("Wedding", 1)
             setVideoData(video)
