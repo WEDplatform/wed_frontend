@@ -7,8 +7,7 @@ const signup=async({cred,router})=>{
                 "Content-Type": "application/json"
             }
         })
-        await create(response?.data)
-     
+        await create(response?.data)  
         if(response?.status==201){
             router.push("/home/vendor?clientType=vendor")
         }         
