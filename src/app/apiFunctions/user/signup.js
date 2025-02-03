@@ -19,7 +19,6 @@ const updatePreference=async({cred})=>{
     console.log(cred);
     try {
         console.log(refreshToken);
-        
         let resp=await axiosInstance.post('/user/updatePreferences',cred,{
             headers: {
                 "wedoraCredentials":refreshToken
