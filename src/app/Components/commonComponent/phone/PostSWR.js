@@ -17,8 +17,7 @@ const PostSWR = ({ id_ }) => {
         media:[]
     })
     const fetchImageData = async () => {
-        if (imageData.length >= 6) return
-     
+        if (imageData.length >= 6) return 
         try {
             let video = await getVideoUrl("Wedding", 1)
             setVideoData(video)
