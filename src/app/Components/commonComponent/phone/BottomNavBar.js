@@ -43,5 +43,4 @@ const user = path.split('/').pop();
     </div>
   )
 }
-
 export { BottomNavBar }
