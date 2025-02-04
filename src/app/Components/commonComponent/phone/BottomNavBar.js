@@ -14,7 +14,6 @@ function BottomNavBar() {
   const tab=searchParams.get("tab")
  // console.log(path);
 const user = path.split('/').pop(); // Extracts 'user'
-//console.log(user); // Output: user
   return (
     <div className="w-[100%] md:hidden block border-t-[1px] border-gray-300 fixed bottom-0">
         <div className="w-[100%] flex relative justify-between  h-[100%] bg-white py-4">
