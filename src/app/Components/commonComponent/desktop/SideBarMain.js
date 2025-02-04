@@ -9,7 +9,7 @@ import { LogoutButton } from '../logoutButton'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-function SideBarMain({tabParams,client}) {
+function SideBarMain({tabParams}) {
    const router=useRouter()
    const srch=useSearchParams()
    tabParams={tab:srch.get('tab')}
