@@ -22,7 +22,6 @@ function VendorBackButton(){
         <button className=" border-2 border-[#9A2143] text-[#9A2143]  w-[100%] px-3 rounded-lg text-sm py-2">Message</button>
         </div>
         </>
-        // <IoMdArrowRoundBack onClick={()=>{router.back()}}/>
     )
 }
 export { FollowButton,BackButton,VendorBackButton}
