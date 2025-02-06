@@ -16,7 +16,6 @@ export default async function HomePageLayout({ children, params, searchParams })
     <main className="w-[100%] md:w-[80%] ">
       {children}
     </main>
-    
     </main>
     <BottomNavBar />
     </>
