@@ -7,7 +7,6 @@ export default async function HomePageLayout({ children, params, searchParams })
   const navParams = await params
   const tbparams=await searchParams
   //console.log(tbparams);
-  
   return <>
     <>
     <main className="w-[100%] flex">
