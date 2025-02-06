@@ -166,5 +166,4 @@ function Userdetailspage1({
         </>
     )
 }
-
 export { Userdetailspage1 }
