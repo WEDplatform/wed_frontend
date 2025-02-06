@@ -13,5 +13,4 @@ function Authinput({details,setDetails,placeholder,type,name,onChange}) {
     </> 
   )
 }
-
 export { Authinput }
