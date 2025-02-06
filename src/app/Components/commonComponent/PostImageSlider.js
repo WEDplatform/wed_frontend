@@ -29,5 +29,4 @@ function PostImageSlider({ imageResponse }) {
         </Splide>
     )
 }
-
 export { PostImageSlider }
