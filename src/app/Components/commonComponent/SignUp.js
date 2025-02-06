@@ -15,5 +15,4 @@ function SignUp({usertype,compIndex}) {
     </>
   )
 }
-
 export default SignUp
