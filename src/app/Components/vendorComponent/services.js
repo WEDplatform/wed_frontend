@@ -11,7 +11,6 @@ const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
             
             setServicesList(filteredList);
         }
-        
     }
     return (
         <>
