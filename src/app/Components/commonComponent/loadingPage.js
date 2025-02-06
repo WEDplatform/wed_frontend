@@ -7,5 +7,4 @@ function LoadingPage() {
     </div>
   )
 }
-
 export { LoadingPage }
