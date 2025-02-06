@@ -9,7 +9,6 @@ export default async function HomePageLayout({ children, params, searchParams })
   //console.log(tbparams);
   
   return <>
-    
     <>
     <main className="w-[100%] flex">
     <div className='w-[20%] hidden md:block border-r-2 border-gray-300 h-screen'>
