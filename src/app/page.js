@@ -1,4 +1,4 @@
-// app/page.js
+
 export default async function HomePage() {
   return (
     <div>
