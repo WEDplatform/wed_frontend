@@ -5,5 +5,4 @@ const theme = createTheme({
     fontFamily: 'var(--font-roboto)',
   },
 });
-
 export default theme;
