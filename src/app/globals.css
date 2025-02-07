@@ -17,8 +17,7 @@ input::-webkit-inner-spin-button {
   gap: 3px;
   margin-top: 16px;
   position: absolute;
-  top: 101%;
-  
+  top: 101%; 
   left: 50%;
   transform: translateX(-50%);
 }
