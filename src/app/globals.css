@@ -21,7 +21,6 @@ input::-webkit-inner-spin-button {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .splide__pagination__page {
   width: 5px;
   height: 5px;
