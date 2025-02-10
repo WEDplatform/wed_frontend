@@ -29,7 +29,6 @@ const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
                         } */}
                     </div>
                     <div>
-           
             {
               services==""?<>
               <div className="flex flex-wrap gap-2 preferenceList mt-4 md:h-[40vh] overflow-y-auto h-[40vh]">
