@@ -42,7 +42,6 @@ const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
                                     <span onClick={()=>{setvendorDetails({...vendorDetails,servicesProvided:[...vendorDetails?.servicesProvided,val]})}} className={`border-2 border-[#C94C73] py-1 ${vendorDetails?.servicesProvided?.includes(val) ?"bg-[#C94C73] text-white":" text-[#C94C73] bg-[#FFECEC]"}  text-sm font-medium  cursor-pointer px-2 rounded-md`} key={pos}>{val}</span>
                                 )
                             }
-                            
                         </div>
                     </main>
                     )
