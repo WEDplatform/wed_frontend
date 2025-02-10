@@ -14,7 +14,6 @@ const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
         <>
             {
                 open && <Modal>
-
                     <h1 className="w-[100%] flex justify-between">Select your services<span onClick={() => { setOpen(false) }} className="border-2 border-[#C94C73]  text-[#C94C73] cursor-pointer px-2 rounded-md">x</span></h1>
                     <div className="relative">
                         <input
