@@ -29,4 +29,5 @@ const loginSchema=z.union([
         isGoogleAuthenticated:z.literal(true),
     })
 ])
+
 export {userschema,loginSchema}
