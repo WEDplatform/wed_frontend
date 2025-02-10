@@ -8,7 +8,6 @@ const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
         if(val!==""){
             //
             let filteredList=userPreferences.filter((item)=>item?.value.filter((item2)=>item2.toLowerCase().includes(val.toLowerCase())).length>0);
-            
             setServicesList(filteredList);
         }
     }
