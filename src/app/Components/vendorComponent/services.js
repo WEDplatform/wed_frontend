@@ -74,7 +74,7 @@ const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
               </button>
             </div>
           }
-                </Modal>
+            </Modal>
             }
         </>
     )
