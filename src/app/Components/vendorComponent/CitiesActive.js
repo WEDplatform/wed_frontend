@@ -64,8 +64,7 @@ function CitiesActive({open,setOpen,vendorDetails,setvendorDetails}) {
               </button>
             </div>
           }
-          <div className="w-[100%]">
-            
+          <div className="w-[100%]">           
           </div>
           </Modal>
         )
