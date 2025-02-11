@@ -34,7 +34,6 @@ function CitiesActive({open,setOpen,vendorDetails,setvendorDetails}) {
           />
           {
             isPending &&<Image src={spinner} alt="loading" width={20} height={20} className="absolute top-[55%] right-0 transform -translate-x-1/2 -translate-y-1/2" />
-
           }
           </div>
           <div>
