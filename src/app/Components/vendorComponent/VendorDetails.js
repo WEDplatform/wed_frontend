@@ -17,5 +17,4 @@ function VendorDetails({vid,user}) {
         </>
     )
 }
-
 export { VendorDetails }
