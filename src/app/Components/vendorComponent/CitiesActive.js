@@ -13,8 +13,7 @@ function CitiesActive({open,setOpen,vendorDetails,setvendorDetails}) {
   const debounce=useDebouncedCallback(async(val)=>{
     if(val.length>3){
       mutate(val)
-    }
-    
+    }  
   },1000)
   useEffect(()=>{
     console.log(data); 
