@@ -32,7 +32,6 @@ function UserLogin() {
         password:"",
         isGoogleAuthenticated:false
     })
-
    const loginViaGoole=async()=>{
            //console.log(userDetails);
            let data=await logViaGoogle()
