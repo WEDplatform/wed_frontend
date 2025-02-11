@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-
 function Linkbutton({linkText="/authPage/user",linkTag,color="bg-[#C94C73]",client}) {
   return (
     <Link replace={linkTag == "/signup" && client=="user"}  href={{
