@@ -70,7 +70,6 @@ function CitiesActive({open,setOpen,vendorDetails,setvendorDetails}) {
           </Modal>
         )
       }
-
     </>
   )
 }
