@@ -55,8 +55,7 @@ function UserLogin() {
     setErr(validatedSchema?.error?.errors)
     return
    }
-   console.log(userCredentials);
-   
+   console.log(userCredentials);  
    mutate({
     data:userCredentials,
     router:router,
