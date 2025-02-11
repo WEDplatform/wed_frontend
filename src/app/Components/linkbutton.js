@@ -4,8 +4,7 @@ import React from 'react'
 function Linkbutton({linkText="/authPage/user",linkTag,color="bg-[#C94C73]",client}) {
   return (
     <Link replace={linkTag == "/signup" && client=="user"}  href={{
-      pathname:linkTag,
-      
+      pathname:linkTag,    
       target:"_blank",
       query: client == "user" ?
       linkTag=="/signup"?{usertype:"user",compIndex:"1"}:{usertype:"user"}
