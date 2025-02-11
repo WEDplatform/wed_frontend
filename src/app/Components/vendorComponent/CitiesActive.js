@@ -57,7 +57,6 @@ function CitiesActive({open,setOpen,vendorDetails,setvendorDetails}) {
               </>
             }
           </div>
-
           {
             vendorDetails?.citiesActive?.length>0 && <div className="w-[100%] flex justify-end">
               <button onClick={()=>{setOpen(false)}} className="bg-[#C94C73] px-4 py-1 text-white font-medium rounded-md mr-3">
