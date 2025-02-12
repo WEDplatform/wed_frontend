@@ -36,7 +36,6 @@ export function PlaceholdersAndVanishInput({
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [placeholders]);
-
   const canvasRef = useRef(null);
   const newDataRef = useRef([]);
   const inputRef = useRef(null);
