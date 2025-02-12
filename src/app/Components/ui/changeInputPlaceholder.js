@@ -29,7 +29,6 @@ export function PlaceholdersAndVanishInput({
   useEffect(() => {
     startAnimation();
     document.addEventListener("visibilitychange", handleVisibilityChange);
-
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
