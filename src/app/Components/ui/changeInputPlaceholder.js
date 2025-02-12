@@ -12,7 +12,6 @@ export function PlaceholdersAndVanishInput({
   valInp
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
-
   const intervalRef = useRef(null);
   const startAnimation = () => {
     intervalRef.current = setInterval(() => {
