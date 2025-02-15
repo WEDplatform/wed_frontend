@@ -41,7 +41,6 @@ export function PlaceholdersAndVanishInput({
   const inputRef = useRef(null);
   const [value, setValue] = useState("");
   const [animating, setAnimating] = useState(false);
-
   const draw = useCallback(() => {
     if (!inputRef.current) return;
     const canvas = canvasRef.current;
