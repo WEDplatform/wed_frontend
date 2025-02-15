@@ -47,7 +47,6 @@ export function PlaceholdersAndVanishInput({
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-
     canvas.width = 800;
     canvas.height = 800;
     ctx.clearRect(0, 0, 800, 800);
