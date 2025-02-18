@@ -29,8 +29,8 @@ const VideoSWR=()=>{
     },[])
     return(
         <>
-        <main id="VideoPost" className="w-[45%] preferenceList h-[100%] overflow-y-auto">
-        <InfiniteScroll
+        <main id="VideoPost" className="w-[45%] border-2 preferenceList h-[100%] overflow-y-auto">
+        {/* <InfiniteScroll
                 dataLength={reelTracker?.reelData?.length}
                 next={fetchVendorReels}
                 loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
@@ -46,7 +46,7 @@ const VideoSWR=()=>{
                 {
                     reelTracker?.reelData?.map((item, pos) => <VideoPost key={pos} videoItem={item} videoContent={reelTracker?.reelData || []}/>)
                 }
-            </InfiniteScroll>
+            </InfiniteScroll> */}
 
           </main>
         </>
