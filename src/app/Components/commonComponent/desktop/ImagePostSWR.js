@@ -32,7 +32,7 @@ const ImageSWR = ({ data }) => {
       }, []);
     return (<>
         <main id="ImagePost" className="w-[54%] preferenceList border-2 max-h-[100%] overflow-y-auto">
-            {/* <InfiniteScroll
+            <InfiniteScroll
                 dataLength={postsTracker?.postData?.length}
                 next={fetchVendorPosts}
                 loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
@@ -48,7 +48,7 @@ const ImageSWR = ({ data }) => {
                 {
                     postsTracker?.postData?.map((item, pos) => <ImagePost key={pos} images={item}  />)
                 }
-            </InfiniteScroll> */}
+            </InfiniteScroll>
         </main>
     </>)
 }

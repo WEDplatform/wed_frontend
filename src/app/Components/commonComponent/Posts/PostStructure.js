@@ -20,8 +20,8 @@ const ImagePost =  ({ images }) => {
                     <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&vendorName=${images?.vendorName}`)}} className="flex cursor-pointer items-center gap-2">
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col ">
-                            <h1 className="font-semibold ">{ images?.vendorName}</h1>
-                            <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
+                            <h1 className="font-semibold ">{ images?.name}</h1>
+                            <span className="font-normal text-[12px] text-gray-600">D{images?.address[0]}</span>
                         </span>
                     </main>
                     <nav className="mr-3">
@@ -30,7 +30,7 @@ const ImagePost =  ({ images }) => {
                 </div>
                 <div className="w-[100%] h-[100%] rounded-xl ">
                     {
-                        images?.imageData?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
+                        images?.images?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
                     }
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">

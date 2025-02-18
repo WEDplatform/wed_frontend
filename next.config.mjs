@@ -29,13 +29,13 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'cdn.pixabay.com', // The correct hostname for Pexels images
             pathname: '/**',  
-               }     // Matches Pexels image paths
+               }  ,   // Matches Pexels image paths
           // },
-          // {
-          //   protocol: 'https',
-          //   hostname: 'cdn.pixabay.com', // The correct hostname for Pexels images
-          //   pathname: '/video/**',       // Matches Pexels image paths
-          // },
+          {
+            protocol: 'https',
+            hostname: 'image.wedmegood.com', // The correct hostname for Pexels images
+            pathname: '/resized/**',       // Matches Pexels image paths
+          },
         ],
       },
 };

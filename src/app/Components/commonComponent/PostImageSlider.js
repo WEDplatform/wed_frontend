@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 function PostImageSlider({ imageResponse }) {
-    let imageSet = imageResponse?.imageData?.slice(0, 6)
+    let imageSet = imageResponse?.images?.slice(0, 6)
     return (
         <Splide aria-label="" options={{
             pagination: true
@@ -16,7 +16,7 @@ function PostImageSlider({ imageResponse }) {
                     imageSet?.map((item, index) =>
                         <SplideSlide key={index} className='md:w-[100%] h-[74vw] md:h-[20.5vw] rounded-lg '>
                             {
-                                index < 6 && <Image priority style={{ objectFit: 'cover' }} fill={true} src={item?.src?.landscape} alt='pics' />
+                                index < 6 && <Image priority style={{ objectFit: 'cover' }} fill={true} src={item} alt='pics' />
                             }
                         </SplideSlide>
                     )
