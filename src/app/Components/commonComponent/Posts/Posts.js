@@ -18,7 +18,6 @@ async function Posts({id_}) {
               <VideoPost videoPostLength={videoData || null} key={pos} videoItem={item}/>
               )
             }
-
           </main> */}
           <VideoSWR/>
         </div>
