@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 function PostImageSlider({ imageResponse }) {
-    let imageSet = imageResponse?.images?.slice(0, 6)
+    let imageSet = imageResponse?.images?.slice(0, 6) || imageResponse?.couplecover?.slice(0, 6)
     return (
         <Splide aria-label="" options={{
             pagination: true

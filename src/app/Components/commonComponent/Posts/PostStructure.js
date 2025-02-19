@@ -47,6 +47,41 @@ const ImagePost =  ({ images }) => {
         </>
     )
 }
+const CouplePost=({images})=>{
+    return(
+        <>
+            <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
+                <div className="flex items-center justify-between gap-2 py-1 pl-2">
+                    <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&coupleName=${images?.coupleName}`)}} className="flex cursor-pointer items-center gap-2">
+                        {/* <Image alt="pic" src={ICO} width={40} height={40} /> */}
+                        <span className="flex flex-col ">
+                            <h1 className="font-semibold ">{ images?.coupleName}</h1>
+                            {/* <span className="font-normal text-[12px] text-gray-600">{images?.address[0]}</span> */}
+                        </span>
+                    </main>
+                    <nav className="mr-3">
+                        <BsThreeDots />
+                    </nav>
+                </div>
+                <div className="w-[100%] h-[100%] rounded-xl ">
+                    {
+                        images?.couplecover?.length>0?<PostImageSlider imageResponse={images} />:"Unable to preview image"
+                    }
+                </div>
+                <div className="bg-white flex justify-between w-[100%] py-2">
+                    <div className="w-[30%]  text-2xl justify-evenly flex items-center">
+                        <FaRegHeart />
+                        <TbLocation />
+                        <MdSaveAlt />
+                    </div>
+                    <div className="w-[30%] flex justify-end items-center mr-4">
+                        <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
 const VideoPost = ({videoContent,videoItem}) => {
     const params=useParams()
     // console.log(params?.clientType);
@@ -83,4 +118,4 @@ const VideoPost = ({videoContent,videoItem}) => {
         </>
     )
 }
-export { ImagePost, VideoPost }
+export { ImagePost, VideoPost,CouplePost }
