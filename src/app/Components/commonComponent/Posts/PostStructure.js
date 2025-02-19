@@ -21,7 +21,7 @@ const ImagePost =  ({ images }) => {
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col ">
                             <h1 className="font-semibold ">{ images?.name}</h1>
-                            <span className="font-normal text-[12px] text-gray-600">D{images?.address[0]}</span>
+                            <span className="font-normal text-[12px] text-gray-600">{images?.address[0]}</span>
                         </span>
                     </main>
                     <nav className="mr-3">
