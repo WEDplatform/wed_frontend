@@ -53,7 +53,6 @@ const PostSWR = ({ id_ }) => {
     }
     useEffect(()=>{
         console.log(mobileMedia);
-        
     },[mobileMedia])
     useEffect(() => {
         fetchVendorMedia()
