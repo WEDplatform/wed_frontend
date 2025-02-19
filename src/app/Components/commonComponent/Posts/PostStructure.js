@@ -48,14 +48,24 @@ const ImagePost =  ({ images }) => {
     )
 }
 const CouplePost=({images})=>{
+    const formatWeddingText = (text) => {
+        if(text.includes("&")){
+            return text.replace(" & ", " weds ");  
+        }
+        // Return original text if "&" is not found
+        if(text.includes("and")){
+            return text.replace(" and ", " weds ");  
+        }
+        return text;
+    };
     return(
         <>
-            <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
-                <div className="flex items-center justify-between gap-2 py-1 pl-2">
+            <div className="aspect-[4/3] my-1 w-[100%] ">
+                <div className="flex items-center justify-between gap-2 py-1">
                     <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&coupleName=${images?.coupleName}`)}} className="flex cursor-pointer items-center gap-2">
                         {/* <Image alt="pic" src={ICO} width={40} height={40} /> */}
-                        <span className="flex flex-col ">
-                            <h1 className="font-semibold ">{ images?.coupleName}</h1>
+                        <span className="flex flex-col  ">
+                            <h1 className="font-semibold text-[12px] bg-[#FFECEC] rounded-md  text-[#C94C73] p-2  ">{ formatWeddingText(images?.coupleName)}</h1>
                             {/* <span className="font-normal text-[12px] text-gray-600">{images?.address[0]}</span> */}
                         </span>
                     </main>

@@ -2,18 +2,21 @@
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
-import { ImagePost, VideoPost } from "../Posts/PostStructure"
+import { CouplePost, ImagePost, VideoPost } from "../Posts/PostStructure"
 import { TbLoader2 } from "react-icons/tb";
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchVendorMediaPosts } from "../vendorProfile/fetchVendorPosts"
 import { fetchPosts, fetchReels } from "@/app/apiFunctions/fetchPosts"
+import { fetchCouple } from "@/app/apiFunctions/couple/fetchCouples"
 const PostSWR = ({ id_ }) => {
     const [index, setIndex] = useState(1);
     const [hasMoreTrack, setTrack] = useState(true);
+    const [hasMoreCouple,setHasMoreCouple]=useState(true)
     const [imageData, setData] = useState([]);
     const [videoData, setVideoData] = useState([]);
     let [mobileMedia,setMedia]=useState({
         index:0,
+        coupleIndex:0,
         media:[]
     })
     const fetchImageData = async () => {
@@ -38,8 +41,9 @@ const PostSWR = ({ id_ }) => {
             return arr;
           }
         let picResponse=await fetchPosts(mobileMedia.index,2);
-        let reelResponse=await fetchReels(mobileMedia.index,1);
-        let pseudoArray=[...picResponse?.pics,...reelResponse?.reels];
+        let coupleResponse=await fetchCouple(mobileMedia.coupleIndex,2)
+        //let reelResponse=await fetchReels(mobileMedia.index,1);
+        let pseudoArray=[...picResponse?.pics,...coupleResponse?.cposts];
         //console.log(shuffleArray(pseudoArray));
         setMedia((prev)=>({
             index:prev.index+1,
@@ -80,7 +84,7 @@ const PostSWR = ({ id_ }) => {
                 } */}
                 {
                     mobileMedia?.media?.map((item,pos)=>
-                    item.p_type=='reel' ? <VideoPost videoItem={item} key={pos}/> : <ImagePost key={pos} images={item}/>
+                    item.p_type=='couple' ? <CouplePost images={item} key={pos}/> : <ImagePost key={pos} images={item}/>
                     )
                 }
             </InfiniteScroll>

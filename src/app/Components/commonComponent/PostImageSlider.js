@@ -11,7 +11,7 @@ function PostImageSlider({ imageResponse }) {
             pagination: true
         }}
             hasTrack={false}>
-            <SplideTrack className="w-[100%] overflow-hidden h-[100%] rounded-xl">
+            <SplideTrack className="w-[100%] overflow-hidden h-[100%]">
                 {
                     imageSet?.map((item, index) =>
                         <SplideSlide key={index} className='md:w-[100%] h-[74vw] md:h-[20.5vw] rounded-lg '>

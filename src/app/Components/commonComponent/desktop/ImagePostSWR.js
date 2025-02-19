@@ -51,7 +51,7 @@ console.log(postsTracker.postData);
 
       },[postsTracker])
     return (<>
-        <main id="ImagePost" className="w-[54%] preferenceList border-2 max-h-[100%] overflow-y-auto">
+        <main id="ImagePost" className="w-[54%] preferenceList max-h-[100%] overflow-y-auto">
             <InfiniteScroll
                 dataLength={postsTracker?.postData?.length}
                 next={fetchVendorPosts}
