@@ -48,6 +48,10 @@ const ImagePost =  ({ images }) => {
     )
 }
 const CouplePost=({images})=>{
+    const params=useParams()
+    // console.log(params?.clientType);
+    
+    const router=useRouter()
     const formatWeddingText = (text) => {
         if(text.includes("&")){
             return text.replace(" & ", " weds ");  
@@ -62,7 +66,7 @@ const CouplePost=({images})=>{
         <>
             <div className="aspect-[4/3] my-1 w-[100%] ">
                 <div className="flex items-center justify-between gap-2 py-1">
-                    <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&coupleName=${images?.coupleName}`)}} className="flex cursor-pointer items-center gap-2">
+                    <main  onClick={()=>{router.push(`/home/user?tab=coupleProfile&cpid=${images?._id}&coupleName=${encodeURIComponent(images?.coupleName)}`)}} className="flex cursor-pointer items-center gap-2">
                         {/* <Image alt="pic" src={ICO} width={40} height={40} /> */}
                         <span className="flex flex-col  ">
                             <h1 className="font-semibold text-[12px] bg-[#FFECEC] rounded-md  text-[#C94C73] p-2  ">{ formatWeddingText(images?.coupleName)}</h1>

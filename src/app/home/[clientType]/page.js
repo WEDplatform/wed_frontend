@@ -10,6 +10,7 @@ import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { Profile } from "@/app/Components/commonComponent/Profile"
 import { profileFetch } from "@/app/apiFunctions/profile"
 import { VendorProfile } from "@/app/Components/commonComponent/vendorProfile/Vendorprofile"
+import { CoupleProfile } from "@/app/Components/commonComponent/CoupleProfile/CoupleProfile"
 async function page({ params, searchParams }) {
   const clientParam = await params;
   const searchprm = await searchParams
@@ -55,6 +56,11 @@ async function page({ params, searchParams }) {
             <div className="w-[100%] h-[100%] flex items-center justify-center">
               <Search />
             </div>
+          </div>
+        }
+        {
+          searchprm?.tab=='coupleProfile' && <div className="w-[100%]">
+            <CoupleProfile/>
           </div>
         }
       </div>
