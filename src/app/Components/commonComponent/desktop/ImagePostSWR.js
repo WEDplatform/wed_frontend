@@ -5,24 +5,33 @@ import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts"
+import { fetchCouple } from "@/app/apiFunctions/couple/fetchCouples"
 const ImageSWR = ({ data }) => {
-    const [hasMoreTrack,setTrack]=useState(true);
+    const [hasMoreTrack,setTrack]=useState(true); // for posts only
+    const [hasMoreCouple,setMoreCouple]=useState(true);
     const [VideoData, setVideoData] = useState([]);
     const [postsTracker,setTracker]=useState({
         postData:[],
-        pageIndex:0
+        pageIndex:0,
+        coupleData:[],
+        coupleIndex:0
     })
     const fetchVendorPosts=async()=>{
+        let pseudoData=[]
         let postsResponse=await fetchPosts(postsTracker.pageIndex,3)
-        console.log(postsResponse);
-        if(!postsResponse?.hasMore){
+        let coupleDataResponse=await fetchCouple(postsTracker.coupleIndex,3)
+        pseudoData=[...postsResponse.pics,...coupleDataResponse.cposts]
+        console.log(pseudoData);
+        
+        if(!postsResponse?.hasMore || !coupleDataResponse.hasMore){
             setTrack(false);
             return
         }else{
             setTracker((prevState) => ({
                 ...prevState,
                 postData: [...prevState.postData, ...postsResponse?.pics], // Append new data to the existing array
-                pageIndex: prevState.pageIndex + 1,           // Increment the pageIndex
+                pageIndex: prevState.pageIndex + 1,
+                coupleIndex:prevState.coupleIndex+1           // Increment the pageIndex
             }));
         }
     }
