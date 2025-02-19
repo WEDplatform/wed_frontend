@@ -47,6 +47,7 @@ const PostSWR = ({ id_ }) => {
         //console.log(shuffleArray(pseudoArray));
         setMedia((prev)=>({
             index:prev.index+1,
+            coupleIndex:prev.coupleIndex+1,
             media:[...prev.media,...shuffleArray(pseudoArray)]
         }))
     }
