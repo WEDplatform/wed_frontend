@@ -36,7 +36,7 @@ const VendorProfile = ({vendorName}) => {
         {
             isError && <div>Error occured</div>
         }
-        {/* {
+        {
             isSuccess && <main id="vendorProfile" className="md:w-[80vw] w-[100%] h-[100vh] overflow-x-hidden overflow-y-auto">
             <div className="w-[80%] mx-auto mt-[4vh]  items-center flex md:flex-row flex-col justify-between">
                 <div className="w-[100%] flex md:flex-row flex-col items-center ">
@@ -46,9 +46,9 @@ const VendorProfile = ({vendorName}) => {
                         <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
                     </div>
                     <span className="font-semibold  mt-2 md:mt-0 flex flex-col ml-3">
-                        <span>{data.businessName}</span>
-                        <span className="font-normal text-gray-500">{data.businessEmail}</span>
-                        <span className="font-normal text-gray-500">{data.address}</span>
+                        <span>{data.name}</span>
+                        <span className="font-normal text-gray-500">{data.address[0]}</span>
+                        <span className="font-normal text-gray-500">{data.address[1]}</span>
                     </span>
                 </div>
                 <div className="flex mt-3 md:mt-0 w-[100%]  items-center">
@@ -82,7 +82,7 @@ const VendorProfile = ({vendorName}) => {
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
             <VendorShare showModal={shareModal} setModal={setModa} />
-            <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
+            {/* <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
                 <p className="text-sm font-medium text-gray-500">Available cities</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
                     {
@@ -91,20 +91,20 @@ const VendorProfile = ({vendorName}) => {
                         )
                     }
                 </div>
-            </div>
+            </div> */}
             <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
                 <p className="text-sm font-medium text-gray-500">Services offered</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
                     {
-                        data.servicesProvided.map((item,pos)=>
+                        data.tags.map((item,pos)=>
                             <span key={pos} className="text-[#9A2143] bg-[#ecdce1b2]  px-2 py-1 rounded-md">{item}</span> 
                         )
                     }
                 </div>
             </div>
-            <SelectPostPage vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
+            <SelectPostPage dataSet={data?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
         </main>
-        } */}
+        }
         </>
     )
 }

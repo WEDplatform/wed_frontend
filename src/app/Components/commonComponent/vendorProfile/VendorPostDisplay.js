@@ -4,10 +4,10 @@ import { fetchReels } from "@/app/apiFunctions/fetchPosts";
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts";
 import { fetchVendorMediaPosts, fetchVendorMediaReels } from "./fetchVendorPosts";
 import { VendorReelGrid } from "./VendorReelDisplay";
-const SelectPostPage=({id,vendorName})=>{
+const SelectPostPage=({id,vendorName,dataSet})=>{
     let [postIndex,setIndex]=useState('post')
     let [vendorMediaData,setData]=useState({
-        postsData:[],
+        postsData:[...dataSet],
         reelData:[],
         postIndex:0,
         reelIndex:0,
@@ -30,24 +30,24 @@ const SelectPostPage=({id,vendorName})=>{
         }
     }
     const fetchVendorReels=async()=>{
-        let postsResponse=await fetchVendorMediaReels(vendorMediaData.reelIndex,6,vendorName)
-        console.log(postsResponse);
+        // let postsResponse=await fetchVendorMediaReels(vendorMediaData.reelIndex,6,vendorName)
+        // console.log(postsResponse);
         
-        if(!postsResponse?.hasMore){
-            setData((prev)=>({...prev,hasMoreReel:false}));
-            return
-        }else{
-            setData((prevState) => ({
-                ...prevState,
-                reelData: [...prevState.reelData, ...postsResponse?.reels], // Append new data to the existing array
-                reelIndex: prevState.reelIndex + 1,           // Increment the pageIndex
-            }));
-        }
+        // if(!postsResponse?.hasMore){
+        //     setData((prev)=>({...prev,hasMoreReel:false}));
+        //     return
+        // }else{
+        //     setData((prevState) => ({
+        //         ...prevState,
+        //         reelData: [...prevState.reelData, ...postsResponse?.reels], // Append new data to the existing array
+        //         reelIndex: prevState.reelIndex + 1,           // Increment the pageIndex
+        //     }));
+        // }
     }
-    useEffect(()=>{
-        fetchVendorPosts()
-        fetchVendorReels()
-    },[])
+    // useEffect(()=>{
+    //     fetchVendorPosts()
+    //     fetchVendorReels()
+    // },[])
     return (
         <>
         <div className="md:w-[80%] w-[100%] mx-auto flex justify-center mt-6 ">
