@@ -91,6 +91,5 @@ const PostSWR = ({ id_ }) => {
             </InfiniteScroll>
         </>
     )
-
 }
 export { PostSWR }
