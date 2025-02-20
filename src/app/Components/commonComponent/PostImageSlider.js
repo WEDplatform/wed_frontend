@@ -16,7 +16,7 @@ function PostImageSlider({ imageResponse }) {
                     imageSet?.map((item, index) =>
                         <SplideSlide key={index} className='md:w-[100%] h-[74vw] md:h-[20.5vw] rounded-lg '>
                             {
-                                index < 6 && <Image priority style={{ objectFit: 'cover' }} fill={true} src={item} alt='pics' />
+                                index < 6 && <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  priority style={{ objectFit: 'cover' }} fill={true} src={item} alt='pics' />
                             }
                         </SplideSlide>
                     )

@@ -59,7 +59,7 @@ async function page({ params, searchParams }) {
           </div>
         }
         {
-          searchprm?.tab=='coupleProfile' && <div className="w-[100%]">
+          searchprm?.tab=='coupleProfile' && <div className="w-[100%] flex justify-center items-center">
             <CoupleProfile/>
           </div>
         }
