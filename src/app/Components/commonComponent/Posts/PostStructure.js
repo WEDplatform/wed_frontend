@@ -23,6 +23,10 @@ const ImagePost =  ({ images }) => {
         mutationKey:['likePost'],
         mutationFn:likePost
     })
+    const payload={
+        postId:images?._id,
+        likeType:'post'
+    }
     return (
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
@@ -46,7 +50,7 @@ const ImagePost =  ({ images }) => {
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
                         {
-                            !isLiked ? <button onClick={()=>{setLiked(!isLiked);mutate([isLiked,images])}}><FaRegHeart  /></button> : <button onClick={()=>{setLiked(!isLiked);mutate([isLiked,images])}}><FaHeart className="text-[#C94C73]"/></button>
+                            !isLiked ? <button onClick={()=>{setLiked(true);mutate({...payload,isLiked:true})}}><FaRegHeart  /></button> : <button onClick={()=>{setLiked(false);mutate({...payload,isLiked:false})}}><FaHeart className="text-[#C94C73]"/></button>
                         }
                         <TbLocation className=" cursor-not-allowed" />
                         <MdSaveAlt className=" cursor-not-allowed" />
