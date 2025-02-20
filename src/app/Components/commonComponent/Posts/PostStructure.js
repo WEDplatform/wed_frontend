@@ -3,6 +3,7 @@ import Image from "next/image"
 import ICO from "@/app/favicon.ico"
 import { BsThreeDots } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { TbLocation } from "react-icons/tb";
 import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "../PostImageSlider";
@@ -11,8 +12,17 @@ import { useState } from "react";
 import { VideoModal } from "../VideoModal.js/VideoModal";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
+import { useQuery,useQueryClient,useMutation } from "@tanstack/react-query";
+import { likePost } from "@/app/apiFunctions/likepost";
 const ImagePost =  ({ images }) => {
+    let controller = new AbortController();
+
+    const [isLiked,setLiked]=useState(false)
     const router=useRouter()
+    const {mutate,data}=useMutation({
+        mutationKey:['likePost'],
+        mutationFn:likePost
+    })
     return (
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
@@ -35,9 +45,11 @@ const ImagePost =  ({ images }) => {
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
-                        <FaRegHeart />
-                        <TbLocation />
-                        <MdSaveAlt />
+                        {
+                            !isLiked ? <button onClick={()=>{setLiked(!isLiked);mutate([isLiked,images])}}><FaRegHeart  /></button> : <button onClick={()=>{setLiked(!isLiked);mutate([isLiked,images])}}><FaHeart className="text-[#C94C73]"/></button>
+                        }
+                        <TbLocation className=" cursor-not-allowed" />
+                        <MdSaveAlt className=" cursor-not-allowed" />
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
@@ -48,6 +60,7 @@ const ImagePost =  ({ images }) => {
     )
 }
 const CouplePost=({images})=>{
+    const [isLiked,setLiked]=useState(false)
     const params=useParams()
     // console.log(params?.clientType);
     
@@ -85,8 +98,8 @@ const CouplePost=({images})=>{
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
                         <FaRegHeart />
-                        <TbLocation />
-                        <MdSaveAlt />
+                        <TbLocation className=" cursor-not-allowed"/>
+                        <MdSaveAlt className=" cursor-not-allowed"/>
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
