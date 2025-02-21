@@ -20,7 +20,7 @@ const VendorPostsGrid=({fetchVendorPosts,vendorMediaData,setData,id})=>{
           {
             vendorMediaData?.postsData?.map((item,pos)=>
               <div key={pos} className=" relative h-[30vh]">
-              <Image style={{objectFit:'cover'}} alt="pics" fill={true} src={`${item}`}  />
+              <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  style={{objectFit:'cover'}} alt="pics" fill={true} src={`${item}`}  />
 
               </div>
             )
