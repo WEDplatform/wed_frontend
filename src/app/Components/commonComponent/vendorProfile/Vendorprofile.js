@@ -103,6 +103,7 @@ const VendorProfile = ({vendorName}) => {
                 </div>
             </div>
             <SelectPostPage dataSet={data?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
+            <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
         </main>
         }
         </>
