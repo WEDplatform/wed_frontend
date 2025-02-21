@@ -28,7 +28,6 @@ const VendorProfile = ({vendorName}) => {
         mutate(prm.get('vendorName'))
     },[])
     return (
-        
         <>
         {
             isPending && <div className="md:w-[80vw] w-[100%] h-[100vh] flex items-center justify-center">
