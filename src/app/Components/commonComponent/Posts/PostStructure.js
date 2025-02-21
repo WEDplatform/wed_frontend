@@ -17,7 +17,7 @@ import { likePost } from "@/app/apiFunctions/likepost";
 const ImagePost =  ({ images }) => {
     let controller = new AbortController();
 
-    const [isLiked,setLiked]=useState(false)
+    const [isLiked,setLiked]=useState(images?.isLikedByUser )
     const router=useRouter()
     const {mutate,data}=useMutation({
         mutationKey:['likePost'],
@@ -50,7 +50,10 @@ const ImagePost =  ({ images }) => {
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
                         {
-                            !isLiked ? <button onClick={()=>{setLiked(true);mutate({...payload,isLiked:true})}}><FaRegHeart  /></button> : <button onClick={()=>{setLiked(false);mutate({...payload,isLiked:false})}}><FaHeart className="text-[#C94C73]"/></button>
+                            isLiked  ?
+                            <button onClick={()=>{setLiked(false);mutate({...payload,isLiked:false})}}><FaHeart className="text-[#C94C73]"/></button> :
+                             <button onClick={()=>{setLiked(true);mutate({...payload,isLiked:true})}}><FaRegHeart  /></button>
+                             
                         }
                         <TbLocation className=" cursor-not-allowed" />
                         <MdSaveAlt className=" cursor-not-allowed" />
@@ -64,10 +67,17 @@ const ImagePost =  ({ images }) => {
     )
 }
 const CouplePost=({images})=>{
-    const [isLiked,setLiked]=useState(false)
+    const [isLiked,setLiked]=useState(images?.isLikedByUser )
     const params=useParams()
     // console.log(params?.clientType);
-    
+    const payload={
+        postId:images?._id,
+        likeType:'couple'
+    }
+    const {mutate,data}=useMutation({
+        mutationKey:['likeCouplePost'],
+        mutationFn:likePost
+    })
     const router=useRouter()
     const formatWeddingText = (text) => {
         if(text.includes("&")){
@@ -101,7 +111,12 @@ const CouplePost=({images})=>{
                 </div>
                 <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[30%]  text-2xl justify-evenly flex items-center">
-                        <FaRegHeart />
+                    {
+                            isLiked  ?
+                            <button onClick={()=>{setLiked(false);mutate({...payload,isLiked:false})}}><FaHeart className="text-[#C94C73]"/></button> :
+                             <button onClick={()=>{setLiked(true);mutate({...payload,isLiked:true})}}><FaRegHeart  /></button>
+                             
+                        }
                         <TbLocation className=" cursor-not-allowed"/>
                         <MdSaveAlt className=" cursor-not-allowed"/>
                     </div>
