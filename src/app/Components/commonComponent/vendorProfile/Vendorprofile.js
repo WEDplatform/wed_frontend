@@ -16,6 +16,8 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { LuLoaderCircle } from "react-icons/lu";
 import { VendorShare } from "./VendorShare";
+import { Review } from "./Review";
+import { BiSolidLike } from "react-icons/bi";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();
     let {mutate,data,error,isError,isPending,isSuccess} = useMutation({
@@ -77,7 +79,7 @@ const VendorProfile = ({vendorName}) => {
                       }
             </p>
             <main className="md:w-[80%] w-[95%] mx-auto bg-gray-100 flex justify-evenly mt-5 px-3 rounded-lg py-3">
-                        <span className="flex items-center"> <AiOutlineLike className="mr-2  text-[20px]"/> Like</span>
+                        <span className="flex items-center"> {data?.isLikedByUser?<BiSolidLike className="mr-2  text-[20px] text-[#9A2143]"/>:<AiOutlineLike className="mr-2  text-[20px]"/>}{data?.isLikedByUser?<span className="text-[#9A2143]">Liked</span>:<>Like</>} </span>
                         <button onClick={()=>{setModa(!shareModal)}} className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</button>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
@@ -104,6 +106,13 @@ const VendorProfile = ({vendorName}) => {
             </div>
             <SelectPostPage dataSet={data?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
             <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
+            <div className="w-[80%] mx-auto">
+                {
+                    data?.review?.map((item,pos)=>
+                        <Review reviewData={item} key={pos}/>
+                    )
+                }
+            </div>
         </main>
         }
         </>
