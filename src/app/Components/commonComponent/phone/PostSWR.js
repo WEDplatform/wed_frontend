@@ -43,7 +43,7 @@ const PostSWR = ({ id_ }) => {
         let picResponse=await fetchPosts(mobileMedia.index,2);
         let coupleResponse=await fetchCouple(mobileMedia.coupleIndex,2)
         //let reelResponse=await fetchReels(mobileMedia.index,1);
-        let pseudoArray=[...picResponse?.pics,...coupleResponse?.cposts];
+        let pseudoArray=[...picResponse.pics,...coupleResponse?.cposts];
         //console.log(shuffleArray(pseudoArray));
         setMedia((prev)=>({
             index:prev.index+1,
