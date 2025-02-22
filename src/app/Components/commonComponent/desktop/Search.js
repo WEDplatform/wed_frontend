@@ -6,6 +6,7 @@ import { useState } from "react";
 function Search() {
   const [searchQuery,setQuery]=useState("");
   const [filterList,setFiterList]=useState([]);
+  const [selectFilter,setFilter]=useState([]);
   const filterQueries = (query) =>{
     setQuery(query)
     if(query=="") {
@@ -37,12 +38,12 @@ console.log(filteredQuery);
             {
                 searchQuery != "" ? filterList.length>0?
                 filterList.map((item,pos)=>
-                  <SearchSectionScroll key={pos} title={item.title} vals={item.value}/>
+                  <SearchSectionScroll selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
               )
                 :
                 <div>Nothing found</div>
                 : searchSection.map((item,pos)=>
-                <SearchSectionScroll key={pos} title={item.title} vals={item.value}/>
+                <SearchSectionScroll selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
             )
             }
         </div>

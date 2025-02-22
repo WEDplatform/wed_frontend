@@ -16,7 +16,7 @@ function SearchSectionScroll({ vals, title }) {
                     {
                         vals.map((item, pos) =>
                             <SplideSlide key={pos} className="flex justify-center">
-                                <div className='w-[95%] h-[18vh] rounded-xl bg-white border-2'>
+                                <div className='w-[95%] cursor-pointer h-[18vh] rounded-xl bg-white border-2'>
                                     <div className='w-[100%] h-[65%] bg-gray-200'></div>
                                     <div className='w-[100%] h-[35%] text-sm text-gray-500 mt-1 ml-1'>{item}</div>
 
