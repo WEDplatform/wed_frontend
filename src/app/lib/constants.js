@@ -179,7 +179,14 @@ const searchSection = [
   },
   {
     title: "Common wedding rituals",
-    value: ["Sangeet", "Mehendi", "Haldi", "Pheras", "Bidaai", "Reception", "Engagement Ceremony"]
+    value: [
+      "Sangeet",       // Mentioned by vendors like **Chaos Starts Here (DJ)**, **Naman Verma Photography**
+      "Mehendi",       // Explicitly covered by **A1 Artist- Mehendi Designer**, **Jaipuri Mehendi Art**, **Rahul Mehandi Art**
+      "Haldi",         // Referenced by **Green Leaf Foods** (catering) and **WeddingNama** (photography)
+      "Pheras",        // Highlighted by **Pandit Ji Arya Samaj**, **Vaidik Pandit**, and **Rajneesh Srivastava Photography**
+      "Reception",     // Listed in services by **ITC Gardenia**, **Rambagh Palace**, and **Eventmakers**
+      "Engagement"     // Covered by **Mix and Match Events**, **Event Designer**, and **The Wedding Files**
+    ]
   },
   {
     title: "Popular honeymoon destinations",
