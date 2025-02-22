@@ -111,7 +111,20 @@ const searchSection = [
   },
   {
     title: "Top wedding themes",
-    value: ["Royal", "Vintage", "Fairy Tale", "Rustic", "Bohemian", "Minimalist", "Floral", "Seasonal"]
+    value: [
+      "Royal",
+      "Palace",
+      "Cultural",
+      "Ritual",
+      "Rustic",
+      "Garden",
+      "Modern Minimalist",
+      "Bollywood Glam",
+      "Floral Extravaganza",
+      "Indo-Western Fusion",
+      "Adventure",
+      "Outdoor"
+    ]
   },
   {
     title: "Preferred wedding cuisines",
