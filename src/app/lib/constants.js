@@ -106,10 +106,6 @@ const searchSection = [
     ]
   },
   {
-    title: "Popular wedding venues",
-    value: ["Banquet Hall", "Resort", "Beachside", "Palace", "Garden", "Farmhouse", "Cruise", "Temple"]
-  },
-  {
     title: "Top wedding themes", // modified
     value: [
       "Royal",
