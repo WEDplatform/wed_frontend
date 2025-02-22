@@ -141,7 +141,15 @@ const searchSection = [
   },
   {
     title: "Wedding decoration styles",
-    value: ["Floral", "LED Lights", "Traditional Drapes", "Balloon Art", "Themed Backdrops", "Rustic Chic", "Crystal Decor"]
+    value: [
+      "Floral Decor",          // Explicitly mentioned by **Bhadra Wedding Decor**, **Turiya Celebrations - Decor**, **Event Designer**
+      "LED Lights",            // Highlighted by **KrishnChandra Events**, **Event Designer**, **Turiya Celebrations - Decor**
+      "Traditional Drapes",    // Referenced by **Turiya Celebrations - Decor** (decorative draping) and **Bhadra Wedding Decor** (Rajasthani/Punjabi themes)
+      "Themed Backdrops",      // Implied by **Pixel Stream Studios** (unconventional themes/props) and **Bhadra Wedding Decor** (Bollywood themes)
+      "Rustic Chic",           // Mentioned by **Bhadra Wedding Decor** (rustic themes) and **Land Of Love** (outdoor setups)
+      "Mandap & Stage Decor",  // Explicitly listed by **Event Designer**, **Turiya Celebrations - Decor**, **The Royal Events Co.**
+      "Luxury Crystal"         // Implied by **Wedifys** (luxury weddings) and **ITC Gardenia** (opulent setups)
+    ]
   },
   {
     title: "Bridal outfit styles", // modified
