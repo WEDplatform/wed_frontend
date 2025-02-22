@@ -158,11 +158,27 @@ const searchSection = [
   },
   {
     title: "Groom outfit styles",
-    value: ["Sherwani", "Tuxedo", "Kurta Pajama", "Achkan", "Suit", "Indo-Western", "Bandhgala"]
+    value: [
+      "Sherwani",          // Listed by **KORA by Nilesh Mitesh**, **Royal Attire**, **KJ by Kushal Jain**, **Umang Mehta**
+      "Tuxedo/Suit",       // Offered by **KORA by Nilesh Mitesh**, **KJ by Kushal Jain**, **Prima Czar**
+      "Kurta Pajama",      // Highlighted by **Royal Attire**, **KJ by Kushal Jain**, **Umang Mehta**
+      "Achkan",            // Specialized by **KJ by Kushal Jain**
+      "Indo-Western",      // Explicitly mentioned by **Umang Mehta**, **Prima Czar**, **The Jaipur Story**
+      "Bandhgala",         // Offered by **KJ by Kushal Jain**, **Umang Mehta**
+      "Waistcoats/Nehru Jackets" // Listed by **KORA by Nilesh Mitesh**, **Umang Mehta**
+    ]
   },
   {
     title: "Trending wedding accessories",
-    value: ["Jewelry Sets", "Mehendi Designs", "Footwear", "Turbans", "Clutches", "Brooches", "Kaleeras"]
+    value: [
+      "Jewelry Sets",       // Highlighted by **Shailja Diamond Jewellery**, **Amrapali**, **Raniwala Jewellers Castle**
+      "Mehendi Designs",    // Explicitly covered by **A1 Artist- Mehendi Designer**, **Rahul Mehandi Art**, **Jaipuri Mehendi Art**
+      "Clutches & Bags",    // Offered by **Kafi Pyar**, **Babe Pote Di Hatti** (customized clutches and bridal bags)
+      "Floral Jewelry",     // Specialized by **Anchal**, **Urbalaa** (floral jewelry for sangeet/haldi)
+      "Turbans (Safa)",     // Mentioned by **Royal Attire**, **KJ by Kushal Jain** (groom pagri/safa)
+      "Customized Sherwanis", // Listed by **KORA by Nilesh Mitesh**, **Umang Mehta** (tailored groom wear)
+      "Bridal Lehenga Dupattas" // Implied by bridal wear vendors like **Bridal Couture**, **Modi's Boutique**
+    ]
   },
   {
     title: "Wedding photography styles", // modified
