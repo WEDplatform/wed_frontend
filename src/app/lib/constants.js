@@ -145,7 +145,16 @@ const searchSection = [
   },
   {
     title: "Bridal outfit styles",
-    value: ["Lehenga", "Saree", "Gown", "Anarkali", "Sharara", "Traditional Silk", "Fusion Attire"]
+    value: [
+      "Bridal Lehengas",
+      "Light Lehengas",
+      "Indo-Western Gowns",
+      "Heavy Anarkalis",
+      "Custom Sherwanis",
+      "Trousseau Sarees",
+      "Floral Jewelry",
+      "Cocktail Gowns"
+    ]
   },
   {
     title: "Groom outfit styles",
