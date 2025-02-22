@@ -178,7 +178,7 @@ const searchSection = [
     ]
   },
   {
-    title: "Common wedding rituals",
+    title: "Common wedding rituals", // modified
     value: [
       "Sangeet",       // Mentioned by vendors like **Chaos Starts Here (DJ)**, **Naman Verma Photography**
       "Mehendi",       // Explicitly covered by **A1 Artist- Mehendi Designer**, **Jaipuri Mehendi Art**, **Rahul Mehandi Art**
