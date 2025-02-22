@@ -85,7 +85,25 @@ const searchSection = [
   },
   {
     title: "Wedding type",
-    value: ["Destination", "Beach", "Ritual", "Traditional", "Modern", "Eco-Friendly"]
+    value: [
+      "Destination",
+      "Traditional",
+      "Ritual",
+      "Modern",
+      "Contemporary",
+      "Beach",
+      "Royal",
+      "Heritage",
+      "Eco-Friendly",
+      "Sustainable",
+      "Cultural",
+      "Themed",
+      "Intimate",
+      "Small",
+      "Luxury",
+      "Adventure",
+      "Outdoor"
+    ]
   },
   {
     title: "Popular wedding venues",
