@@ -76,7 +76,12 @@ const vendorDetails_p1=[
 const searchSection = [
   {
     title: "Most searched cities",
-    value: ["Mumbai", "Delhi", "Chennai", "Pune", "Ahmedabad", "Gwalior", "Madras", "Varanasi"]
+    value: [
+      "Delhi NCR", "Lucknow", "Kolkata", "Nashik", "Bangalore", "Udaipur", "Hyderabad", "Mumbai",
+      "Jaipur", "Ranchi", "Ahmedabad", "Gurgaon", "Chennai", "Puri", "Vadodara", "Pune", "Jodhpur",
+      "Goa", "Surat", "Phagwara", "Ernakulam", "Kochi", "Trivandrum", "Chandigarh"
+  ]
+  
   },
   {
     title: "Wedding type",
