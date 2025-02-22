@@ -32,7 +32,7 @@ async function page({ params, searchParams }) {
           </div>
         </div>
         {
-          searchprm?.tab == "home" ? <div className='md:w-[68%]  flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
+          searchprm?.tab == "home" || searchprm?.tab == "search" ? <div className='md:w-[68%]  flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
             <div className="w-[100%] hidden md:block">
               <div className="w-[100%]  flex justify-center"><StorySection /></div>
             </div>
