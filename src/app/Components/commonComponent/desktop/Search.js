@@ -29,7 +29,7 @@ console.log(filteredQuery);
     
   }
   return (
-    <div className="w-[90%] h-[95%]">
+    <div className="w-[90%] relative h-[95%]">
         <p className="text-sm text-gray-500">Search</p>
         <div className="relative">
         <RiSearch2Line className="absolute text-gray-500 top-2 left-3 text-[25px]"/>    
@@ -46,6 +46,10 @@ console.log(filteredQuery);
                 <SearchSectionScroll selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
             )
             }
+        </div>
+        <div className="absolute bottom-0 w-[100%]">
+          <button onClick={()=>{console.log(selectFilter);
+          }} className="w-[100%] bg-[#9A2143] text-white px-3 rounded-lg text-sm py-1">Apply filter</button>
         </div>
     </div>
   )
