@@ -75,7 +75,7 @@ const vendorDetails_p1=[
 ]
 const searchSection = [
   {
-    title: "Most searched cities",
+    title: "Most searched cities",  // modified
     value: [
       "Delhi NCR", "Lucknow", "Kolkata", "Nashik", "Bangalore", "Udaipur", "Hyderabad", "Mumbai",
       "Jaipur", "Ranchi", "Ahmedabad", "Gurgaon", "Chennai", "Puri", "Vadodara", "Pune", "Jodhpur",
@@ -84,7 +84,7 @@ const searchSection = [
   
   },
   {
-    title: "Wedding type",
+    title: "Wedding type", // modified
     value: [
       "Destination",
       "Traditional",
@@ -110,7 +110,7 @@ const searchSection = [
     value: ["Banquet Hall", "Resort", "Beachside", "Palace", "Garden", "Farmhouse", "Cruise", "Temple"]
   },
   {
-    title: "Top wedding themes",
+    title: "Top wedding themes", // modified
     value: [
       "Royal",
       "Palace",
@@ -127,7 +127,7 @@ const searchSection = [
     ]
   },
   {
-    title: "Preferred wedding cuisines",
+    title: "Preferred wedding cuisines",  // modified
     value: [
       "North Indian",
       "South Indian",
@@ -144,7 +144,7 @@ const searchSection = [
     value: ["Floral", "LED Lights", "Traditional Drapes", "Balloon Art", "Themed Backdrops", "Rustic Chic", "Crystal Decor"]
   },
   {
-    title: "Bridal outfit styles",
+    title: "Bridal outfit styles", // modified
     value: [
       "Bridal Lehengas",
       "Light Lehengas",
@@ -165,8 +165,17 @@ const searchSection = [
     value: ["Jewelry Sets", "Mehendi Designs", "Footwear", "Turbans", "Clutches", "Brooches", "Kaleeras"]
   },
   {
-    title: "Wedding photography styles",
-    value: ["Candid", "Traditional", "Cinematic", "Pre-Wedding Shoot", "Drone Shots", "Vintage Filters", "Black & White"]
+    title: "Wedding photography styles", // modified
+    value: [
+      "Candid Photography",
+      "Cinematic Films",
+      "Drone Shots",
+      "4K Videography",
+      "Pre-Wedding Shoots",
+      "Traditional Portraits",
+      "Documentary Style",
+      "Conceptual/Themed" // No split here (intentional compound term)
+    ]
   },
   {
     title: "Common wedding rituals",
