@@ -128,7 +128,16 @@ const searchSection = [
   },
   {
     title: "Preferred wedding cuisines",
-    value: ["North Indian", "South Indian", "Mughlai", "Continental", "Chinese", "Italian", "Fusion", "Dessert Buffet"]
+    value: [
+      "North Indian",
+      "South Indian",
+      "Chinese",
+      "Italian",
+      "Japanese",
+      "Lebanese",
+      "Fusion (Indian + Continental)",
+      "Dessert Buffets"
+    ]
   },
   {
     title: "Wedding decoration styles",
