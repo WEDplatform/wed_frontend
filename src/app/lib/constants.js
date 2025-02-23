@@ -207,10 +207,6 @@ const searchSection = [
       "Reception",     // Listed in services by **ITC Gardenia**, **Rambagh Palace**, and **Eventmakers**
       "Engagement"     // Covered by **Mix and Match Events**, **Event Designer**, and **The Wedding Files**
     ]
-  },
-  {
-    title: "Popular honeymoon destinations",
-    value: ["Maldives", "Switzerland", "Bali", "Paris", "Kerala", "Himachal Pradesh", "Thailand", "Santorini"]
   }
 ];
 const userProfileContent=[
