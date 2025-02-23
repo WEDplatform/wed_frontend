@@ -47,9 +47,10 @@ console.log(filteredQuery);
             )
             }
         </div>
-        <div className="absolute bottom-0 w-[100%]">
-          <button onClick={()=>{console.log(selectFilter);
-          }} className="w-[100%] bg-[#9A2143] text-white px-3 rounded-lg text-sm py-1">Apply filter</button>
+        <div className={`absolute flex bottom-0 w-[100%] ${selectFilter.length==0 && "hidden"}`}>
+          <button onClick={()=>{setFilter([])}} disabled={selectFilter.length==0} className={`w-[100%] ml-2 bg-white border-[#9A2143] border-2 text-[#9A2143] px-3 rounded-lg text-sm py-1 ${selectFilter.length==0 && "cursor-not-allowed"}`}>Clear All</button>
+          <button disabled={selectFilter.length==0} onClick={()=>{console.log(selectFilter);
+          }} className="w-[100%] ml-2 bg-[#9A2143] text-white px-3 rounded-lg text-sm py-1">Apply filter</button>
         </div>
     </div>
   )
