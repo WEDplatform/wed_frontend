@@ -21,7 +21,6 @@ function Search() {
     ),
   }))
   .filter((item) => item.value.length > 0); // Remove items with no matching values
-
 console.log(filteredQuery);
 
     if(filteredQuery.length==0) return
