@@ -2,7 +2,9 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import { useRouter, useSearchParams } from "next/navigation";
 function SearchSectionScroll({ vals, title, selectedFilter, setFilter }) {
+    const router=useRouter();
     const setFilterHandler = (val) => {
         if(selectedFilter.includes(val)) {
             setFilter(selectedFilter.filter((item) => item != val))
@@ -10,6 +12,7 @@ function SearchSectionScroll({ vals, title, selectedFilter, setFilter }) {
             setFilter([...selectedFilter,val])
         }
     }
+    
     return (
         <div className="w-[100%] mt-2">
             <p className='text-sm text-gray-500 mt-2'>{title}</p>
