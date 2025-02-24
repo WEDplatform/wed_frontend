@@ -3,7 +3,9 @@ import { RiSearch2Line } from "react-icons/ri";
 import { SearchSectionScroll } from "./SearchSectionScroll";
 import { searchSection } from "@/app/lib/constants";
 import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 function Search() {
+  const router=useRouter()
   const [searchQuery,setQuery]=useState("");
   const [filterList,setFiterList]=useState([]);
   const [selectFilter,setFilter]=useState([]);
@@ -22,10 +24,22 @@ function Search() {
   }))
   .filter((item) => item.value.length > 0); // Remove items with no matching values
 
+  
+  // const params = new URLSearchParams();
+  //           filteredQuery.forEach(f => params.append("filter", f));
+  //           router.push(`?${params.toString()}`, { scroll: false });
     if(filteredQuery.length==0) return
     setFiterList(filteredQuery)
     
   }
+  const applyFilter=()=>{
+    console.log(selectFilter);
+    
+    const params = new URLSearchParams();
+    params.set("filter", selectFilter.join(","));; // Keep multiple filters
+    params.set("tab", "search"); 
+    router.push(`?${params.toString()}`, { scroll: false });
+}
   return (
     <div className="w-[90%] relative h-[95%]">
         <p className="text-sm text-gray-500">Search</p>
@@ -47,8 +61,7 @@ function Search() {
         </div>
         <div className={`absolute flex bottom-0 w-[100%] ${selectFilter.length==0 && "hidden"}`}>
           <button onClick={()=>{setFilter([])}} disabled={selectFilter.length==0} className={`w-[100%] ml-2 bg-white border-[#9A2143] border-2 text-[#9A2143] px-3 rounded-lg text-sm py-1 ${selectFilter.length==0 && "cursor-not-allowed"}`}>Clear All</button>
-          <button disabled={selectFilter.length==0} onClick={()=>{console.log(selectFilter);
-          }} className="w-[100%] ml-2 bg-[#9A2143] text-white px-3 rounded-lg text-sm py-1">Apply filter</button>
+          <button disabled={selectFilter.length==0} onClick={applyFilter} className="w-[100%] ml-2 bg-[#9A2143] text-white px-3 rounded-lg text-sm py-1">Apply filter</button>
         </div>
     </div>
   )
