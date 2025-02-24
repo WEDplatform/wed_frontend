@@ -2,8 +2,12 @@ import { getCookies } from "../action";
 import { axiosInstance } from "../axios/axios";
 
 export const fetchPosts=async(index,per_page,filter=[])=>{
+    console.log(filter);
+    
     try {
-        let resp=await axiosInstance.get(`/cmn/getPosts?searchIndex=${index}&per_page=${per_page}&searchStatus=${filter?.length>0}`,{
+        let resp=await axiosInstance.post(`/cmn/getPosts?searchIndex=${index}&per_page=${per_page}&searchStatus=${filter?.length>0}`,
+           filter,
+            {
             headers:{
                 'wedoraCredentials':await getCookies()
             }
