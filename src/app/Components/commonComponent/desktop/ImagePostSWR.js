@@ -6,7 +6,10 @@ import InfiniteScroll from "react-infinite-scroll-component"
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts"
 import { fetchCouple } from "@/app/apiFunctions/couple/fetchCouples"
+import { useSearchParams } from "next/navigation"
 const ImageSWR = ({ data }) => {
+    const searchParam=useSearchParams();
+    const [filters, setFilters] = useState([]);   
     const [hasMoreTrack,setTrack]=useState(true); // for posts only
     const [hasMoreCouple,setMoreCouple]=useState(true);
     const [VideoData, setVideoData] = useState([]);
@@ -25,10 +28,11 @@ const ImageSWR = ({ data }) => {
             return arr;
           }
         let pseudoData=[]
-        let postsResponse=await fetchPosts(postsTracker.pageIndex,3)
+        let postsResponse=await fetchPosts(postsTracker.pageIndex,3,filters)
+        console.log(postsResponse);
+        
         let coupleDataResponse=await fetchCouple(postsTracker.coupleIndex,3)
         pseudoData=shuffleArray([...postsResponse?.pics,...coupleDataResponse?.cposts])
-        console.log(pseudoData);
         
         if(!postsResponse?.hasMore || !coupleDataResponse.hasMore){
             setTrack(false);
@@ -36,7 +40,7 @@ const ImageSWR = ({ data }) => {
         }else{
             setTracker((prevState) => ({
                 ...prevState,
-                postData: [...prevState.postData,...pseudoData], // Append new data to the existing array
+                postData: filters?.length==0 ? [...prevState.postData,...pseudoData]: [...postsResponse?.pics], // Append new data to the existing array
                 pageIndex: prevState.pageIndex + 1,
                 coupleIndex:prevState.coupleIndex+1           // Increment the pageIndex
             }));
@@ -45,11 +49,20 @@ const ImageSWR = ({ data }) => {
     useEffect(() => {
         fetchVendorPosts()
         // fetchImageData();
-      }, []);
+      }, [filters]);
       useEffect(()=>{
 console.log(postsTracker.postData);
 
       },[postsTracker])
+      useEffect(()=>{
+        const filterValues = searchParam.getAll("filter");
+        if(filterValues){
+            setFilters(filterValues)
+        } // Gets all filter query params as an array
+       console.log(filterValues);
+       
+        // fetchVendorPosts(filterValues)
+      },[searchParam])
     return (<>
         <main id="ImagePost" className="w-[54%] preferenceList max-h-[100%] overflow-y-auto">
             <InfiniteScroll
