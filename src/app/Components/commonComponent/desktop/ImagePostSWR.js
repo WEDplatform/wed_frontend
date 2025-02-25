@@ -29,7 +29,6 @@ const ImageSWR = ({ data }) => {
           }
         let pseudoData=[]
         let postsResponse=await fetchPosts(postsTracker.pageIndex,3,filters)
-        console.log(postsResponse);
         
         let coupleDataResponse=await fetchCouple(postsTracker.coupleIndex,3)
         pseudoData=shuffleArray([...postsResponse?.pics,...coupleDataResponse?.cposts])
