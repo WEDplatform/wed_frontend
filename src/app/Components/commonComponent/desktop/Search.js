@@ -37,8 +37,15 @@ function Search() {
     
     const params = new URLSearchParams();
     params.set("filter", selectFilter.join(","));; // Keep multiple filters
-    params.set("tab", "search"); 
+    params.set("tab", "home"); 
     router.push(`?${params.toString()}`, { scroll: false });
+}
+const clearFilter=()=>{
+  setFilter([])
+  const params = new URLSearchParams();
+  params.set("filter", "");; // Keep multiple filters
+  params.set("tab", "home"); 
+  router.push(`?${params.toString()}`, { scroll: false });
 }
   return (
     <div className="w-[95%]  mt-3 relative h-[95%]">
@@ -60,7 +67,7 @@ function Search() {
             }
         </div>
         <div className={`absolute flex bottom-0 w-[100%] ${selectFilter.length==0 && "hidden"}`}>
-          <button onClick={()=>{setFilter([])}} disabled={selectFilter.length==0} className={`w-[100%] ml-2 bg-white border-[#9A2143] border-2 text-[#9A2143] px-3 rounded-lg text-sm py-1 ${selectFilter.length==0 && "cursor-not-allowed"}`}>Clear All</button>
+          <button onClick={clearFilter} disabled={selectFilter.length==0} className={`w-[100%] ml-2 bg-white border-[#9A2143] border-2 text-[#9A2143] px-3 rounded-lg text-sm py-1 ${selectFilter.length==0 && "cursor-not-allowed"}`}>Clear All</button>
           <button disabled={selectFilter.length==0} onClick={applyFilter} className="w-[100%] ml-2 bg-[#9A2143] text-white px-3 rounded-lg text-sm py-1">Apply filter</button>
         </div>
     </div>
