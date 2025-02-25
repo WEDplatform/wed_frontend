@@ -17,9 +17,7 @@ async function Posts({id_}) {
       {/* below code segment for mobile posts and reels */}
       <div id="MobilePost" className="w-[100%] md:hidden mt-2">
         <PostSWR id_={id_}/>
-        {/* {
-          new Array(5).fill(0).map((_, pos) => pos % rnd === 0 ? <ImagePost key={pos} pageIndex={pos+1} /> : <VideoPost key={pos} pageIndex={pos} />)
-        } */}
+        
       </div>
     </>
   )
