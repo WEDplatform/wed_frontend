@@ -52,7 +52,6 @@ const ImageSWR = ({ data }) => {
       }, [filters]);
       useEffect(()=>{
 console.log(postsTracker.postData);
-
       },[postsTracker])
       useEffect(()=>{
         const filterValues = searchParam.getAll("filter");
