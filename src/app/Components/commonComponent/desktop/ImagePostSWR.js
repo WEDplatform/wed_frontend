@@ -7,6 +7,9 @@ import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts"
 import { fetchCouple } from "@/app/apiFunctions/couple/fetchCouples"
 import { useSearchParams } from "next/navigation"
+import { useMutation } from "@tanstack/react-query"
+import { LuLoaderCircle } from "react-icons/lu";
+
 const ImageSWR = ({ data }) => {
     const searchParam=useSearchParams();
     const [filters, setFilters] = useState([]);   
@@ -20,7 +23,8 @@ const ImageSWR = ({ data }) => {
         coupleIndex:0
     })
    
-    const fetchVendorPosts=async()=>{
+    const fetchVendorPosts=async(SearchFilter=[])=>{
+        SearchFilter=filters
         function shuffleArray(arr=[]) {
             for (let i = arr.length - 1; i > 0; i--) {
               const j = Math.floor(Math.random() * (i + 1));
@@ -29,7 +33,7 @@ const ImageSWR = ({ data }) => {
             return arr;
           }
         let pseudoData=[]
-        let postsResponse=await fetchPosts(postsTracker.pageIndex,3,filters)
+        let postsResponse=await fetchPosts(postsTracker.pageIndex,3,SearchFilter)
         let coupleDataResponse=await fetchCouple(postsTracker.coupleIndex,3)
         pseudoData=shuffleArray([...postsResponse?.pics,...coupleDataResponse?.cposts])
         console.log(pseudoData);
@@ -40,23 +44,46 @@ const ImageSWR = ({ data }) => {
         }else{
             setTracker((prevState) => ({
                 ...prevState,
-                postData: filters?.length==0 ? [...prevState.postData,...pseudoData]: [...postsResponse?.pics], // Append new data to the existing array
+                postData: [...prevState.postData,...pseudoData], // Append new data to the existing array
                 pageIndex: prevState.pageIndex + 1,
                 coupleIndex:prevState.coupleIndex+1           // Increment the pageIndex
             }));
         }
+        return pseudoData
     }
+    const {mutate:postMutate,data:postData,isPending:postPending,isSuccess:postSuccess,isError:ispostError,error:postError}=useMutation({
+        mutationFn:fetchVendorPosts
+       })
     useEffect(() => {
-        fetchVendorPosts()
+        postMutate(filters);
+        setTracker((prev)=>({
+            ...prev,
+            postData:[],
+            pageIndex:0,
+            coupleIndex:0
+        }))
         // fetchImageData();
       }, [filters]);
       useEffect(()=>{
         const filterValues = searchParam.getAll("filter");
+        if(filterValues.length>0){
+            setFilters(filterValues);
+        }
+        setTracker((prev)=>({
+            ...prev,
+            pageIndex:0,
+            coupleIndex:0
+        }))
+        console.log(filterValues);
+        
         // fetchVendorPosts(filterValues)
       },[searchParam])
     return (<>
         <main id="ImagePost" className="w-[54%] preferenceList max-h-[100%] overflow-y-auto">
-            <InfiniteScroll
+            {
+                postPending && <h1 className="w-[100%] text-center"><LuLoaderCircle className="animate-spin mx-auto text-[30px]" /></h1>
+            }{
+                postSuccess && <InfiniteScroll
                 dataLength={postsTracker?.postData?.length}
                 next={fetchVendorPosts}
                 loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
@@ -79,6 +106,7 @@ const ImageSWR = ({ data }) => {
                       
                 }
             </InfiniteScroll>
+            }
         </main>
     </>)
 }
