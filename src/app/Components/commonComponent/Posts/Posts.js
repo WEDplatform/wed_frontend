@@ -17,7 +17,6 @@ async function Posts({id_}) {
       {/* below code segment for mobile posts and reels */}
       <div id="MobilePost" className="w-[100%] md:hidden mt-2">
         <PostSWR id_={id_}/>
-        
       </div>
     </>
   )
