@@ -33,7 +33,6 @@ function Search() {
     
   }
   const applyFilter=()=>{
-    console.log(selectFilter);
     
     const params = new URLSearchParams();
     params.set("filter", selectFilter.join(","));; // Keep multiple filters
