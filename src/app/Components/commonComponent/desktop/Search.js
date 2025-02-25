@@ -41,7 +41,7 @@ function Search() {
     router.push(`?${params.toString()}`, { scroll: false });
 }
   return (
-    <div className="w-[90%] relative h-[95%]">
+    <div className="w-[95%]  mt-3 relative h-[95%]">
         <p className="text-sm text-gray-500">Search</p>
         <div className="relative">
         <RiSearch2Line className="absolute text-gray-500 top-2 left-3 text-[25px]"/>    
