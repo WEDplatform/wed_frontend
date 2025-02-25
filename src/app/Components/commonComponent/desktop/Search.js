@@ -38,17 +38,18 @@ function Search() {
     const params = new URLSearchParams();
     params.set("filter", selectFilter.join(","));; // Keep multiple filters
     params.set("tab", "home"); 
+    
     router.push(`?${params.toString()}`, { scroll: false });
 }
 const clearFilter=()=>{
   setFilter([])
   const params = new URLSearchParams();
-  params.set("filter", "");; // Keep multiple filters
+  params.set("filter", "");
   params.set("tab", "home"); 
   router.push(`?${params.toString()}`, { scroll: false });
 }
   return (
-    <div className="w-[95%]  mt-3 relative h-[95%]">
+    <div className="w-[90%] mx-auto  mt-3 relative h-[95%]">
         <p className="text-sm text-gray-500">Search</p>
         <div className="relative">
         <RiSearch2Line className="absolute text-gray-500 top-2 left-3 text-[25px]"/>    
