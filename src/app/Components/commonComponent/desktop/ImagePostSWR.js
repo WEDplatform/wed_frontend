@@ -71,6 +71,7 @@ const ImageSWR = ({ data }) => {
         }
         setTracker((prev)=>({
             ...prev,
+            postData:[],
             pageIndex:0,
             coupleIndex:0
         }))
