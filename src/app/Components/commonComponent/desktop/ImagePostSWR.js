@@ -19,19 +19,19 @@ const ImageSWR = ({ data }) => {
         coupleData:[],
         coupleIndex:0
     })
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
+        }
+        return arr;
+      }
     const fetchVendorPosts=async()=>{
-        function shuffleArray(arr) {
-            for (let i = arr.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
-            }
-            return arr;
-          }
         let pseudoData=[]
         let postsResponse=await fetchPosts(postsTracker.pageIndex,3,filters)
-        
         let coupleDataResponse=await fetchCouple(postsTracker.coupleIndex,3)
         pseudoData=shuffleArray([...postsResponse?.pics,...coupleDataResponse?.cposts])
+        console.log(pseudoData);
         
         if(!postsResponse?.hasMore || !coupleDataResponse.hasMore){
             setTrack(false);
@@ -49,13 +49,8 @@ const ImageSWR = ({ data }) => {
         fetchVendorPosts()
         // fetchImageData();
       }, [filters]);
-
       useEffect(()=>{
         const filterValues = searchParam.getAll("filter");
-        if(filterValues){
-            setFilters(filterValues)
-        } // Gets all filter query params as an array
-       console.log(filterValues);
        
         // fetchVendorPosts(filterValues)
       },[searchParam])
