@@ -51,7 +51,6 @@ const ImageSWR = ({ data }) => {
       }, [filters]);
       useEffect(()=>{
         const filterValues = searchParam.getAll("filter");
-       
         // fetchVendorPosts(filterValues)
       },[searchParam])
     return (<>
