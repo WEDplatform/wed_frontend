@@ -33,11 +33,9 @@ function Search() {
     
   }
   const applyFilter=()=>{
-    
     const params = new URLSearchParams();
     params.set("filter", selectFilter.join(","));; // Keep multiple filters
     params.set("tab", "home"); 
-    
     router.push(`?${params.toString()}`, { scroll: false });
 }
 const clearFilter=()=>{
