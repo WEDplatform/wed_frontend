@@ -6,9 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilter }) {
     const router=useRouter();
     const setFilterHandler = (val) => {
-        if(selectedFilter.length==0){
-            clearFilter()
-        }
+       
         if(selectedFilter.includes(val)) {
             const f1=selectedFilter.filter((item) => item != val)
             if(f1.length==0){
@@ -43,9 +41,9 @@ function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilte
                     }
                 </SplideTrack>
                 {
-                    <div className={`splide__arrows ${vals.length <= 3 ? " invisible" : " visible"}  md:flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2`}>
-                        <button className="splide__arrow  md:block splide__arrow--prev bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowLeft className="w-[100%] h-[100%] text-xl" /></button>
-                        <button className="splide__arrow  md:block splide__arrow--next bg-white aspect-square rounded-full border-2 p-2 w-[2vw] h-[2vw]"><FaArrowRight className="w-[100%] h-[100%] text-xl" /></button>
+                    <div className={`splide__arrows ${vals.length <= 3 ? " invisible" : " visible"}  flex justify-between w-[100%] px-0 absolute top-[50%] transform -translate-y-1/2`}>
+                        <button className="splide__arrow  md:block splide__arrow--prev bg-white aspect-square rounded-full border-2 md:p-2  md:w-[2vw] w-[3.5vw] md:h-[2vw] h-[3.5vw]"><FaArrowLeft className="w-[100%] h-[100%] md:text-xl text-[20px]" /></button>
+                        <button className="splide__arrow   md:block splide__arrow--next bg-white aspect-square rounded-full border-2 md:p-2  md:w-[2vw] w-[3.5vw] md:h-[2vw] h-[3.5vw]"><FaArrowRight className="w-[100%] h-[100%] md:text-xl text-[20px]" /></button>
                     </div>
                 }
             </Splide>
