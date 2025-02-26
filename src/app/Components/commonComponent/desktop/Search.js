@@ -69,5 +69,4 @@ const clearFilter=()=>{
     </div>
   )
 }
-
 export {Search}
