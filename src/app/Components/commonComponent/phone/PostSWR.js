@@ -65,9 +65,6 @@ const PostSWR = ({ id_ }) => {
         }else{
             setFilters([]);
         }
-        // if(searchParam.get('tab')=='search'){
-        //     postMutate(filterValues);
-        // }
         setMedia((prev)=>({
             ...prev,
             media:[],
