@@ -93,7 +93,7 @@ const ImageSWR = ({ data }) => {
                  <InfiniteScroll
                 dataLength={postsTracker?.postData?.length}
                 next={postMutate}
-                loader={<Loader/>}
+                loader={ispostError ? <p>Nothing found</p> : <Loader/>}
                 scrollableTarget="ImagePost"
                 hasMore={hasMoreTrack}
                 scrollThreshold={0.9}
