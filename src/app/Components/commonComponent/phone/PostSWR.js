@@ -72,8 +72,7 @@ const PostSWR = ({ id_ }) => {
             coupleIndex:0
         }))
         console.log(filterValues);
-        
-        // fetchVendorPosts(filterValues)
+
       },[searchParam])
    
     return (
