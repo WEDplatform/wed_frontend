@@ -8,31 +8,25 @@ import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchVendorMediaPosts } from "../vendorProfile/fetchVendorPosts"
 import { fetchPosts, fetchReels } from "@/app/apiFunctions/fetchPosts"
 import { fetchCouple } from "@/app/apiFunctions/couple/fetchCouples"
+import { useSearchParams } from "next/navigation"
+import { useMutation } from "@tanstack/react-query"
+import { Loader } from "../Loader"
 const PostSWR = ({ id_ }) => {
+    const searchParam=useSearchParams();
     const [index, setIndex] = useState(1);
     const [hasMoreTrack, setTrack] = useState(true);
     const [hasMoreCouple,setHasMoreCouple]=useState(true)
     const [imageData, setData] = useState([]);
     const [videoData, setVideoData] = useState([]);
+    const [filters, setFilters] = useState([]);   
+
     let [mobileMedia,setMedia]=useState({
         index:0,
         coupleIndex:0,
         media:[]
     })
-    const fetchImageData = async () => {
-        if (imageData.length >= 6) return 
-        try {
-            let video = await getVideoUrl("Wedding", 1)
-            setVideoData(video)
-            let image_data = await getImageUrl("indian wedding", index)
-            setData((prev) => [...prev, ...image_data])
-            setIndex((prev) => prev + 1);
 
-        } catch (error) {
-            console.log(error);
-        }
-    }
-    let fetchVendorMedia=async()=>{
+    let fetchVendorMedia=async(SearchFilter=filters)=>{
         function shuffleArray(arr) {
             for (let i = arr.length - 1; i > 0; i--) {
               const j = Math.floor(Math.random() * (i + 1));
@@ -40,7 +34,7 @@ const PostSWR = ({ id_ }) => {
             }
             return arr;
           }
-        let picResponse=await fetchPosts(mobileMedia.index,2);
+        let picResponse=await fetchPosts(mobileMedia.index,2,filters);
         let coupleResponse=await fetchCouple(mobileMedia.coupleIndex,2)
         //let reelResponse=await fetchReels(mobileMedia.index,1);
         let pseudoArray=[...picResponse?.pics,...coupleResponse?.cposts];
@@ -51,18 +45,47 @@ const PostSWR = ({ id_ }) => {
             media:[...prev.media,...shuffleArray(pseudoArray)]
         }))
     }
-    useEffect(()=>{
-        console.log(mobileMedia);
-    },[mobileMedia])
-    useEffect(() => {
-        fetchVendorMedia()
-    }, []);
+    const {mutate:postMutate,data:postData,isPending:postPending,isSuccess:postSuccess,isError:ispostError,error:postError}=useMutation({
+        mutationFn:fetchVendorMedia
+       })
+       useEffect(() => {
+        postMutate(filters);
+        setMedia((prev)=>({
+            ...prev,
+            media:[],
+            index:0,
+            coupleIndex:0
+        }))
+        // fetchImageData();
+      }, [filters]);
+      useEffect(()=>{
+        const filterValues = searchParam.getAll("filter");
+        if(filterValues.length>0){
+            setFilters(filterValues);
+           
+        }else{
+            setFilters([]);
+        }
+        // if(searchParam.get('tab')=='search'){
+        //     postMutate(filterValues);
+        // }
+        setMedia((prev)=>({
+            ...prev,
+            media:[],
+            index:0,
+            coupleIndex:0
+        }))
+        console.log(filterValues);
+        
+        // fetchVendorPosts(filterValues)
+      },[searchParam])
+   
     return (
         <>
             <InfiniteScroll
                 dataLength={mobileMedia?.media?.length}
-                next={fetchVendorMedia}
-                loader={<h1>Loading</h1>}
+                next={postMutate}
+                loader={ispostError ? <p>Nothing found</p> : <Loader/>}
                 scrollableTarget={id_}
                 hasMore={hasMoreTrack}
                 scrollThreshold={0.9}
