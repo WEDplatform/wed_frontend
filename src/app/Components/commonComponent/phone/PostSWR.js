@@ -72,7 +72,6 @@ const PostSWR = ({ id_ }) => {
             coupleIndex:0
         }))
         console.log(filterValues);
-
       },[searchParam])
    
     return (
