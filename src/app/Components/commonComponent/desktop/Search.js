@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 function Search() {
   const router=useRouter()
+  const searchParam=useSearchParams()
   const [searchQuery,setQuery]=useState("");
   const [filterList,setFiterList]=useState([]);
   const [selectFilter,setFilter]=useState([]);
@@ -35,14 +36,14 @@ function Search() {
   const applyFilter=()=>{
     const params = new URLSearchParams();
     params.set("filter", selectFilter.join(","));; // Keep multiple filters
-    params.set("tab", "home"); 
+    params.set("tab", searchParam.get('tab')); 
     router.push(`?${params.toString()}`, { scroll: false });
 }
 const clearFilter=()=>{
   setFilter([])
   const params = new URLSearchParams();
   params.set("filter", "");
-  params.set("tab", "home"); 
+  params.set("tab", searchParam.get('tab')); 
   router.push(`?${params.toString()}`, { scroll: false });
 }
   return (
