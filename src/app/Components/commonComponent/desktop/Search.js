@@ -29,7 +29,6 @@ function Search() {
   //           router.push(`?${params.toString()}`, { scroll: false });
     if(filteredQuery.length==0) return
     setFiterList(filteredQuery)
-    
   }
   const applyFilter=()=>{
     const params = new URLSearchParams();
