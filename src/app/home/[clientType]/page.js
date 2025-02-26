@@ -39,7 +39,9 @@ async function page({ params, searchParams }) {
               </div>
               <Posts id_={"mainPost"} />
             </div>
-            <div className="w-[32%]"><Search/></div>
+            {
+              searchprm?.tab == "search" && <div className="w-[32%]"><Search/></div>
+            }
           </div> :
             <div className='md:w-[68%]  flex flex-col items-center relative md:items-start h-[100%] w-[100vw]'>
             </div>
