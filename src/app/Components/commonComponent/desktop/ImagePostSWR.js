@@ -8,8 +8,7 @@ import { fetchPosts } from "@/app/apiFunctions/fetchPosts"
 import { fetchCouple } from "@/app/apiFunctions/couple/fetchCouples"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
-import { LuLoaderCircle } from "react-icons/lu";
-
+import { Loader } from "../Loader"
 const ImageSWR = ({ data }) => {
     const searchParam=useSearchParams();
     const [filters, setFilters] = useState([]);   
@@ -68,7 +67,13 @@ const ImageSWR = ({ data }) => {
         const filterValues = searchParam.getAll("filter");
         if(filterValues.length>0){
             setFilters(filterValues);
+           
+        }else{
+            setFilters([]);
         }
+        // if(searchParam.get('tab')=='search'){
+        //     postMutate(filterValues);
+        // }
         setTracker((prev)=>({
             ...prev,
             postData:[],
@@ -81,13 +86,14 @@ const ImageSWR = ({ data }) => {
       },[searchParam])
     return (<>
         <main id="ImagePost" className="w-[54%] preferenceList max-h-[100%] overflow-y-auto">
-            {
+            {/* {
                 postPending && <h1 className="w-[100%] text-center"><LuLoaderCircle className="animate-spin mx-auto text-[30px]" /></h1>
-            }{
-                postSuccess && <InfiniteScroll
+            } */}
+            {
+                 <InfiniteScroll
                 dataLength={postsTracker?.postData?.length}
-                next={fetchVendorPosts}
-                loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
+                next={postMutate}
+                loader={<Loader/>}
                 scrollableTarget="ImagePost"
                 hasMore={hasMoreTrack}
                 scrollThreshold={0.9}
