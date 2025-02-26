@@ -56,12 +56,12 @@ const clearFilter=()=>{
             {
                 searchQuery != "" ? filterList.length>0?
                 filterList.map((item,pos)=>
-                  <SearchSectionScroll selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
+                  <SearchSectionScroll clearFilter={clearFilter} selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
               )
                 :
                 <div>Nothing found</div>
                 : searchSection.map((item,pos)=>
-                <SearchSectionScroll selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
+                <SearchSectionScroll clearFilter={clearFilter} selectedFilter={selectFilter} setFilter={setFilter} key={pos} title={item.title} vals={item.value}/>
             )
             }
         </div>
