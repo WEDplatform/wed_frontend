@@ -73,7 +73,6 @@ const PostSWR = ({ id_ }) => {
         }))
         console.log(filterValues);
       },[searchParam])
-   
     return (
         <>
             <InfiniteScroll
