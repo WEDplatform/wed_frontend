@@ -24,7 +24,6 @@ function Search() {
     ),
   }))
   .filter((item) => item.value.length > 0); // Remove items with no matching values
-
   
   // const params = new URLSearchParams();
   //           filteredQuery.forEach(f => params.append("filter", f));
