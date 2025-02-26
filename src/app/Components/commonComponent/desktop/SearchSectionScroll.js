@@ -3,11 +3,18 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { useRouter, useSearchParams } from "next/navigation";
-function SearchSectionScroll({ vals, title, selectedFilter, setFilter }) {
+function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilter }) {
     const router=useRouter();
     const setFilterHandler = (val) => {
+        if(selectedFilter.length==0){
+            clearFilter()
+        }
         if(selectedFilter.includes(val)) {
-            setFilter(selectedFilter.filter((item) => item != val))
+            const f1=selectedFilter.filter((item) => item != val)
+            if(f1.length==0){
+                clearFilter()
+            }
+            setFilter(f1)
         }else{
             setFilter([...selectedFilter,val])
         }
