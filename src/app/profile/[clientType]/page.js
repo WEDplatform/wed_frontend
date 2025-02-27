@@ -11,7 +11,6 @@ async function page({ params }) {
     const prf = await profileFetch()
     const {userProfile}=prf?.data
     let { clientType } = await params
-
     return (
         <>
             <div className="md:w-[80%]   w-[95%] mt-5 flex md:flex-col flex-col  mx-auto">
