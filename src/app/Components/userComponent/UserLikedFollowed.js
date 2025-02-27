@@ -10,7 +10,6 @@ const VendorLiked=({dt,isFollowed})=>{
             <p className="absolute top-2 right-2 border-2 border-white text-white px-2 rounded-lg ">{dt?.isLikedBy?.length} Likes</p>
             {
                 isFollowed && <p className="absolute top-2 left-2 border-2 border-white text-white px-2 rounded-lg ">Following</p>
-
             }
         </div>
     )
