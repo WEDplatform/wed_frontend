@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image"
-
 const VendorLiked=({dt,isFollowed})=>{
     return(
         <div className=" w-[100%] relative h-[30vh] bg-gray-200">
