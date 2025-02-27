@@ -18,15 +18,26 @@ import { LuLoaderCircle } from "react-icons/lu";
 import { VendorShare } from "./VendorShare";
 import { Review } from "./Review";
 import { BiSolidLike } from "react-icons/bi";
+import { followVendor } from "@/app/apiFunctions/user/followVendor";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();
-    let {mutate,data,error,isError,isPending,isSuccess} = useMutation({
+    let {mutate,data:profileData,error,isError,isPending,isSuccess} = useMutation({
         mutationFn:fetchProfileData
     })
+    let {mutate:followVendorMutate,data:followVendorData,isPending:followVendorPending,isError:followVendorError,isSuccess:followVendorSuccess} = useMutation({
+        mutationFn:followVendor
+    })
+    
     let [shareModal,setModa]=useState(false);
     useEffect(()=>{
         mutate(prm.get('vendorName'))
     },[])
+     let [isUserfollowing,setFollowing]=useState(profileData?.isFollowed);
+     useEffect(() => {
+        if (profileData) {
+            setFollowing(profileData.isFollowed); // ✅ Update state when profileData is available
+        }
+    }, [profileData]);
     return (
         <>
         {
@@ -47,23 +58,23 @@ const VendorProfile = ({vendorName}) => {
                         <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
                     </div>
                     <span className="font-semibold  mt-2 md:mt-0 flex flex-col ml-3">
-                        <span>{data.name}</span>
-                        <span className="font-normal text-gray-500">{data.address[0]}</span>
-                        <span className="font-normal text-gray-500">{data.address[1]}</span>
+                        <span>{profileData.name}</span>
+                        <span className="font-normal text-gray-500">{profileData.address[0]}</span>
+                        <span className="font-normal text-gray-500">{profileData.address[1]}</span>
                     </span>
                 </div>
                 <div className="flex mt-3 md:mt-0 w-[100%]  items-center">
                     <button className="border-2 border-[#9A2143] text-[#9A2143] w-[50%] px-3 text-sm py-2 rounded-lg">Message</button>
-                    <button className="bg-[#9A2143] border-2 border-[#9A2143] w-[50%] text-white px-3 rounded-lg text-sm py-2 ml-2">Follow</button>
+                    <button disabled={!isSuccess} onClick={()=>{followVendorMutate({name:profileData?.name,followStatus:!isUserfollowing});setFollowing(!isUserfollowing)}} className="bg-[#9A2143] border-2 border-[#9A2143] w-[50%] text-white px-3 rounded-lg text-sm py-2 ml-2">{isUserfollowing?"Following":"Follow"}</button>
                 </div>
             </div>
            
             <div className="flex md:w-[80%] w-[95%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
                 <div className="w-[50%] border-r-2 border-[#9A2143] flex justify-center items-center text-center py-1 font-light text-gray-500">
-                    <span className="font-semibold  text-gray-700">{data?.rating} </span><FaStar className="ml-2"/>
+                    <span className="font-semibold  text-gray-700">{profileData?.rating} </span><FaStar className="ml-2"/>
                 </div>
                 <div className="w-[50%] text-center py-1 font-light text-gray-500">
-                    <span className="font-semibold text-gray-700">{data?.review?.length} </span>reviews
+                    <span className="font-semibold text-gray-700">{profileData?.review?.length} </span>reviews
                 </div>
             </div>
             <p className="flex justify-center mt-6 ">
@@ -78,7 +89,7 @@ const VendorProfile = ({vendorName}) => {
                       }
             </p>
             <main className="md:w-[80%] w-[95%] mx-auto bg-gray-100 flex justify-evenly mt-5 px-3 rounded-lg py-3">
-                        <span className="flex items-center"> {data?.isLikedByUser?<BiSolidLike className="mr-2  text-[20px] text-[#9A2143]"/>:<AiOutlineLike className="mr-2  text-[20px]"/>}{data?.isLikedByUser?<span className="text-[#9A2143]">Liked</span>:<>Like</>} </span>
+                        <span className="flex items-center"> {profileData?.isLikedByUser?<BiSolidLike className="mr-2  text-[20px] text-[#9A2143]"/>:<AiOutlineLike className="mr-2  text-[20px]"/>}{profileData?.isLikedByUser?<span className="text-[#9A2143]">Liked</span>:<>Like</>} </span>
                         <button onClick={()=>{setModa(!shareModal)}} className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/> Share</button>
                         <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/> Save</span>
             </main>
@@ -97,17 +108,17 @@ const VendorProfile = ({vendorName}) => {
                 <p className="text-sm font-medium text-gray-500">Services offered</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
                     {
-                        data.tags.map((item,pos)=>
+                        profileData.tags.map((item,pos)=>
                             <span key={pos} className="text-[#9A2143] bg-[#ecdce1b2]  px-2 py-1 rounded-md">{item}</span> 
                         )
                     }
                 </div>
             </div>
-            <SelectPostPage dataSet={data?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
+            <SelectPostPage dataSet={profileData?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
             <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
             <div className="w-[80%] mx-auto">
                 {
-                    data?.review?.map((item,pos)=>
+                    profileData?.review?.map((item,pos)=>
                         <Review reviewData={item} key={pos}/>
                     )
                 }
