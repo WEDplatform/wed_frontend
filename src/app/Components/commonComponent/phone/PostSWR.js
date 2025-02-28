@@ -19,7 +19,6 @@ const PostSWR = ({ id_ }) => {
     const [imageData, setData] = useState([]);
     const [videoData, setVideoData] = useState([]);
     const [filters, setFilters] = useState([]);   
-
     let [mobileMedia,setMedia]=useState({
         index:0,
         coupleIndex:0,
