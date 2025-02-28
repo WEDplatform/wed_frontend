@@ -89,14 +89,7 @@ const PostSWR = ({ id_ }) => {
                     </div>
                 }
             >
-                {/* {
-                    imageData.map((item, pos) => <ImagePost key={pos} images={item} />)
-                }
-                {
-                    videoData?.map((item, pos) =>
-                        <VideoPost videoPostLength={videoData || null} key={pos} videoItem={item} />
-                    )
-                } */}
+               
                 {
                     mobileMedia?.media?.map((item,pos)=>
                     item.p_type=='couple' ? <CouplePost images={item} key={pos}/> : <ImagePost key={pos} images={item}/>
