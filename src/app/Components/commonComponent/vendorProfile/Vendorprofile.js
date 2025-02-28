@@ -27,7 +27,6 @@ const VendorProfile = ({vendorName}) => {
     let {mutate:followVendorMutate,data:followVendorData,isPending:followVendorPending,isError:followVendorError,isSuccess:followVendorSuccess} = useMutation({
         mutationFn:followVendor
     })
-    
     let [shareModal,setModa]=useState(false);
     useEffect(()=>{
         mutate(prm.get('vendorName'))
