@@ -116,5 +116,4 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
         </>
     )
 }
-
 export { Userpreference }
