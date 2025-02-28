@@ -13,5 +13,4 @@ function VendorInput({details,setDetails,placeholder,type,name,onChange}) {
       </> 
     )
   }
-  
   export { VendorInput }
