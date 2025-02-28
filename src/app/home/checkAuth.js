@@ -4,7 +4,6 @@ export default async function checkAuth() {
     const cookieStore = await cookies()
     const refreshToken = cookieStore.get('refreshToken')?.value;
     
-    
     try {
         let rftResp=await fetch(`${process.env.backend_api}/cmn/checkClientAuth`,{
             cache:"no-cache",
