@@ -6,5 +6,4 @@ function Loading() {
     <LoadingPage/>
   )
 }
-
 export default Loading
