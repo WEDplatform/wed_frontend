@@ -53,7 +53,6 @@ async function page({ params, searchParams }) {
         }
         {/* <div className="hidden md:block w-[32%] h-[100%] border-2">
             <div className="w-[100%] h-[100%] flex items-center justify-center">
-            
             </div>
         </div> */}
        
