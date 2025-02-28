@@ -89,7 +89,6 @@ const PostSWR = ({ id_ }) => {
                     </div>
                 }
             >
-               
                 {
                     mobileMedia?.media?.map((item,pos)=>
                     item.p_type=='couple' ? <CouplePost images={item} key={pos}/> : <ImagePost key={pos} images={item}/>
