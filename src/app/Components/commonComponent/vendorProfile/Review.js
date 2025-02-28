@@ -1,6 +1,5 @@
 import { CgProfile } from "react-icons/cg";
 import { FaStar } from "react-icons/fa6";
-
 const Review=({reviewData})=>{
     return(
         <>
