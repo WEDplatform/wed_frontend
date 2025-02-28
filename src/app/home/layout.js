@@ -5,7 +5,6 @@ import Logo from "@/app/Components/logo"
 import checkAuth from "./checkAuth";
 import Link from "next/link";
 export  async function AuthenticatedContent({ children }) {
-  
     let res=await checkAuth()// Perform your authentication logic here
     return <>{
         res===1?children:<>
