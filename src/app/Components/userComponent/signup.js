@@ -22,7 +22,6 @@ const inputFieldHandle = (e) => {
   setDetails(prev=>({...prev,[e.target.name]:e.target.value}))
 }
 let [error,setError]=useState([]);
-
 const [pageTracker,updateTracker]=useState({
   currentIndex:1,
   propertyList:[
