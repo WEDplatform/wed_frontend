@@ -17,7 +17,6 @@ export  async function AuthenticatedContent({ children }) {
     }</>;
   }
 export default async function Layout({ children,params }) {
-
   
   return (
     <Suspense fallback={<LoadingPage />}>
