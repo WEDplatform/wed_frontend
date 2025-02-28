@@ -68,7 +68,6 @@ const VendorProfile = ({vendorName}) => {
                     <button disabled={!isSuccess} onClick={()=>{followVendorMutate({name:profileData?.name,followStatus:!isUserfollowing});setFollowing(!isUserfollowing)}} className="bg-[#9A2143] border-2 border-[#9A2143] w-[50%] text-white px-3 rounded-lg text-sm py-2 ml-2">{isUserfollowing?"Following":"Follow"}</button>
                 </div>
             </div>
-           
             <div className="flex md:w-[80%] w-[95%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
                 <div className="w-[50%] border-r-2 border-[#9A2143] flex justify-center items-center text-center py-1 font-light text-gray-500">
                     <span className="font-semibold  text-gray-700">{profileData?.rating} </span><FaStar className="ml-2"/>
