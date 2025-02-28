@@ -23,7 +23,6 @@ export const metadata = {
 };
 const queryClient = new QueryClient()
 export default function RootLayout({ children }) {
- 
   return (
     <html lang="en">
       <body
