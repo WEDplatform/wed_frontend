@@ -58,7 +58,7 @@ const ImagePost =  ({ images }) => {
                              
                         }
                         <TbLocation className=" cursor-not-allowed" />
-                        <CiBookmarkCheck className=" cursor-not-allowed" />
+                        <FaRegBookmark className=" cursor-not-allowed" />
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
