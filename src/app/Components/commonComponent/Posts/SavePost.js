@@ -3,6 +3,7 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { FaRegBookmark } from "react-icons/fa6";
+
  function Save() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -19,7 +20,7 @@ import { FaRegBookmark } from "react-icons/fa6";
 
   return (
     <div>
-      <button aria-describedby={id} className='bg-red-200 ' onClick={handleClick}><FaRegBookmark/></button>
+      <span onClick={handleClick}><FaRegBookmark/></span>
       <Popover
         id={id}
         open={open}
@@ -30,7 +31,7 @@ import { FaRegBookmark } from "react-icons/fa6";
           horizontal: 'left',
         }}
       >
-        <Typography sx={{ p: 2 }}>Save as vendor</Typography>
+        <Typography sx={{ p: 2 }}>Save as </Typography>
       </Popover>
     </div>
   );
