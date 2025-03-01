@@ -15,9 +15,11 @@ import { useParams } from "next/navigation";
 import { useMutation } from "@tanstack/react-query";
 import { likePost } from "@/app/apiFunctions/likepost";
 import { FaRegBookmark } from "react-icons/fa6";
+import { FaBookmark } from "react-icons/fa6";
 const ImagePost =  ({ images }) => {
     let controller = new AbortController();
     const [isLiked,setLiked]=useState(images?.isLikedByUser )
+    const [isSaved,setSave]=useState(false);
     const router=useRouter()
     const {mutate,data}=useMutation({
         mutationKey:['likePost'],
@@ -56,7 +58,11 @@ const ImagePost =  ({ images }) => {
                              
                         }
                         <TbLocation className=" cursor-not-allowed" />
-                        <FaRegBookmark className=" cursor-not-allowed" />
+                        {
+                            isSaved ?  <FaBookmark  className=" cursor-not-allowed" /> : <FaRegBookmark  className=" cursor-not-allowed" />
+
+
+                        }
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
