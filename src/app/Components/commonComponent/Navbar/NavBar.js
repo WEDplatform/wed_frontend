@@ -16,5 +16,4 @@ function NavBar() {
     </div>
   )
 }
-
 export { NavBar }
