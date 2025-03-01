@@ -15,6 +15,7 @@ import { useParams } from "next/navigation";
 import { useQuery,useQueryClient,useMutation } from "@tanstack/react-query";
 import { likePost } from "@/app/apiFunctions/likepost";
 import { CiBookmarkCheck } from "react-icons/ci";
+import { FaRegBookmark } from "react-icons/fa6";
 const ImagePost =  ({ images }) => {
     let controller = new AbortController();
 
