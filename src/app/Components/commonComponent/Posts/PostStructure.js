@@ -17,7 +17,6 @@ import { likePost } from "@/app/apiFunctions/likepost";
 import { FaRegBookmark } from "react-icons/fa6";
 const ImagePost =  ({ images }) => {
     let controller = new AbortController();
-
     const [isLiked,setLiked]=useState(images?.isLikedByUser )
     const router=useRouter()
     const {mutate,data}=useMutation({
