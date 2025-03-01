@@ -60,7 +60,6 @@ const ImagePost =  ({ images }) => {
                         <TbLocation className=" cursor-not-allowed" />
                         {
                             isSaved ?  <FaBookmark  className=" cursor-not-allowed" /> : <FaRegBookmark  className=" cursor-not-allowed" />
-
                         }
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
