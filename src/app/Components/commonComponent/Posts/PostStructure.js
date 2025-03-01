@@ -61,7 +61,6 @@ const ImagePost =  ({ images }) => {
                         {
                             isSaved ?  <FaBookmark  className=" cursor-not-allowed" /> : <FaRegBookmark  className=" cursor-not-allowed" />
 
-
                         }
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
