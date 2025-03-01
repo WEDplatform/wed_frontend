@@ -12,7 +12,7 @@ import { useState } from "react";
 import { VideoModal } from "../VideoModal.js/VideoModal";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
-import { useQuery,useQueryClient,useMutation } from "@tanstack/react-query";
+import { useQueryClient,useMutation } from "@tanstack/react-query";
 import { likePost } from "@/app/apiFunctions/likepost";
 import { FaRegBookmark } from "react-icons/fa6";
 const ImagePost =  ({ images }) => {
