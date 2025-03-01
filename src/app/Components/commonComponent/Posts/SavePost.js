@@ -2,8 +2,8 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
-export default function BasicPopover() {
+import { FaRegBookmark } from "react-icons/fa6";
+ function Save() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -19,9 +19,7 @@ export default function BasicPopover() {
 
   return (
     <div>
-      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-        Open Popover
-      </Button>
+      <button><FaRegBookmark/></button>
       <Popover
         id={id}
         open={open}
@@ -32,8 +30,9 @@ export default function BasicPopover() {
           horizontal: 'left',
         }}
       >
-        <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
+        <Typography sx={{ p: 2 }}>Save as vendor</Typography>
       </Popover>
     </div>
   );
 }
+export {Save}
