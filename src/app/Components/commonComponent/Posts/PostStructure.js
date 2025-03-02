@@ -30,6 +30,10 @@ const ImagePost =  ({ images }) => {
         postId:images?._id,
         likeType:'post'
     }
+    const savePayLoad={
+        postId:images?._id,
+        type:"post"
+    }
     return (
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
@@ -60,7 +64,7 @@ const ImagePost =  ({ images }) => {
                         }
                         <TbLocation onClick={()=>{setSave(!isSaved)}} className=" cursor-not-allowed" />
                        
-                        <Save save={isSaved} setSave={setSave}/>
+                        <Save savePayLoad={savePayLoad}/>
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>

@@ -16,3 +16,4 @@ const savePost=async(data)=>{
         
     }
 }
+export {savePost}
