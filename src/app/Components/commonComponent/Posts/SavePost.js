@@ -11,7 +11,6 @@ import { FaRegBookmark } from "react-icons/fa6";
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
