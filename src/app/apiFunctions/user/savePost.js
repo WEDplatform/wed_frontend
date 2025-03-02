@@ -10,6 +10,7 @@ const savePost=async(data)=>{
         }
            })
     } catch (error) {
+        console.log(error);
         
     }
 }
