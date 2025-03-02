@@ -3,12 +3,14 @@ const { axiosInstance } = require("@/app/axios/axios")
 
 const savePost=async(data)=>{
     try {
-        await axiosInstance.post('/user/savePost',data,
+        let response=await axiosInstance.post('/user/savePost',data,
            {
             headers: {
                 "wedoraCredentials":await getCookies()
         }
            })
+           console.log(response);
+           
     } catch (error) {
         console.log(error);
         
