@@ -27,7 +27,7 @@ import { FaBookmark } from "react-icons/fa6";
   return (
     <div>
       <span onClick={(e)=>{savePost(e)}}>{
-        isSaved ? <FaBookmark className='text-[#C94C73] text-2xl'/>:<FaRegBookmark className='text-[#C94C73] text-2xl'/>
+        isSaved ? <FaBookmark className='text-[#C94C73] text-2xl'/>:<FaRegBookmark className=' text-2xl'/>
         }</span>
       {
          <Popover
