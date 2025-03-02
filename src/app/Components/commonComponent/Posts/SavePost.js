@@ -3,7 +3,6 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { FaRegBookmark } from "react-icons/fa6";
-
  function Save() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -31,7 +30,9 @@ import { FaRegBookmark } from "react-icons/fa6";
           horizontal: 'left',
         }}
       >
-        <Typography sx={{ p: 2 }}>Save as </Typography>
+        <Typography sx={{ p: 1,px:2 }}>Save as an Idea</Typography>
+        <Typography sx={{ p: 1,px:2 }}>Save as a Vendor</Typography>
+
       </Popover>
     </div>
   );

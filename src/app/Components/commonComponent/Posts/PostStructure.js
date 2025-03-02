@@ -59,9 +59,7 @@ const ImagePost =  ({ images }) => {
                              
                         }
                         <TbLocation onClick={()=>{setSave(!isSaved)}} className=" cursor-not-allowed" />
-                        {
-                            isSaved ?  <FaBookmark  className=" cursor-not-allowed" /> : <FaRegBookmark  className=" cursor-not-allowed" />
-                        }
+                       
                         <Save save={isSaved} setSave={setSave}/>
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
