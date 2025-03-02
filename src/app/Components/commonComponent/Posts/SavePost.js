@@ -13,7 +13,6 @@ import { FaRegBookmark } from "react-icons/fa6";
   };
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-
   return (
     <div>
       <span onClick={handleClick}><FaRegBookmark/></span>
