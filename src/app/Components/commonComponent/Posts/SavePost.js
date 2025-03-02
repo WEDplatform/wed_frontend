@@ -28,7 +28,6 @@ import { FaRegBookmark } from "react-icons/fa6";
       >
         <Typography sx={{ p: 1,px:2 }}>Save as an Idea</Typography>
         <Typography sx={{ p: 1,px:2 }}>Save as a Vendor</Typography>
-
       </Popover>
     </div>
   );
