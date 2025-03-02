@@ -26,8 +26,8 @@ import { FaRegBookmark } from "react-icons/fa6";
           horizontal: 'left',
         }}
       >
-        <Typography sx={{ p: 1,px:2 }}>Save as an Idea</Typography>
-        <Typography sx={{ p: 1,px:2 }}>Save as a Vendor</Typography>
+        <Typography className='cursor-pointer hover:bg-gray-200' sx={{ p: 1,px:2 }}>Save as an Idea</Typography>
+        <Typography className='cursor-pointer hover:bg-gray-200' sx={{ p: 1,px:2 }}>Save as a Vendor</Typography>
       </Popover>
     </div>
   );
