@@ -5,8 +5,9 @@ import Button from '@mui/material/Button';
 import { FaRegBookmark } from "react-icons/fa6";
 import { useState } from 'react';
 import { FaBookmark } from "react-icons/fa6";
- function Save() {
-  let [isSaved,setSave]=useState(false)
+import { saveUserPost } from '@/app/apiFunctions/user/savePost';
+ function Save({savePayLoad,isSavedByUser}) {
+  let [isSaved,setSave]=useState(isSavedByUser)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -17,12 +18,20 @@ import { FaBookmark } from "react-icons/fa6";
   };
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-  let savePost=(e)=>{
+  let savePost=async(e)=>{
     if(!isSaved){
       handleClick(e)
     }else{
+      savePayLoad={...savePayLoad,saveType:"post",status_type:false}
+      await saveUserPost(savePayLoad)
       setSave(false)
     }
+  }
+  const savePostApi=async(saveType="vendor")=>{ // be careful with value ofsave type here,backend ony handles these two
+    setSave(true);
+    savePayLoad={...savePayLoad,saveType:saveType,status_type:true}
+    await saveUserPost(savePayLoad)
+    handleClose()
   }
   return (
     <div>
@@ -40,8 +49,8 @@ import { FaBookmark } from "react-icons/fa6";
           horizontal: 'left',
         }}
       >
-        <Typography onClick={()=>{setSave(true);handleClose()}} className='cursor-pointer hover:bg-gray-200' sx={{ p: 1,px:2 }}>Save as an Idea</Typography>
-        <Typography onClick={()=>{setSave(true);handleClose()}} className='cursor-pointer hover:bg-gray-200' sx={{ p: 1,px:2 }}>Save as a Vendor</Typography>
+        <Typography onClick={()=>{savePostApi("idea")}} className='cursor-pointer hover:bg-gray-200' sx={{ p: 1,px:2 }}>Save as an Idea</Typography>
+        <Typography onClick={()=>{savePostApi("vendor")}} className='cursor-pointer hover:bg-gray-200' sx={{ p: 1,px:2 }}>Save as a Vendor</Typography>
       </Popover> 
       }
     </div>
