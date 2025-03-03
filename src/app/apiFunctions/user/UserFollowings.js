@@ -1,8 +1,8 @@
 'use client'
-import { CoupleLiked, VendorLiked } from "@/app/Components/userComponent/UserLikedFollowed";
+import { CoupleLiked, VendorIdea, VendorLiked, VendorSaved } from "@/app/Components/userComponent/UserLikedFollowed";
 import { useState } from "react"
 const UserFollowStat=({userData})=>{
-    console.log(userData);
+    // console.log(userData);
     
     const [userView,setView]=useState('likes')
     return(
@@ -33,6 +33,26 @@ const UserFollowStat=({userData})=>{
                 {
                     userData[2]?.items.map((item,pos)=>
                     <VendorLiked isFollowed={true} key={pos} dt={item}/>
+                    )
+                }
+                
+            </div>
+        }
+        {
+            userView =="ideas" && <div className="grid mt-3 md:w-[80%] w-[90%] pb-[12vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+                {
+                    userData[4]?.items.map((item,pos)=>
+                    <VendorIdea isFollowed={true} key={pos} dt={item}/>
+                    )
+                }
+                
+            </div>
+        }
+        {
+            userView =="saved" && <div className="grid mt-3 md:w-[80%] w-[90%] pb-[12vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+                {
+                    userData[3]?.items.map((item,pos)=>
+                    <VendorSaved isFollowed={true} key={pos} dt={item}/>
                     )
                 }
                 
