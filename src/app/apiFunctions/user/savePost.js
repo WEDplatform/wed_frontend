@@ -1,7 +1,7 @@
 const { getCookies } = require("@/app/action")
 const { axiosInstance } = require("@/app/axios/axios")
 
-const savePost=async(data)=>{
+const saveUserPost=async(data)=>{
     try {
         let response=await axiosInstance.post('/user/savePost',data,
            {
@@ -9,11 +9,11 @@ const savePost=async(data)=>{
                 "wedoraCredentials":await getCookies()
         }
            })
-           console.log(response);
+           console.log(response.data);
            
     } catch (error) {
         console.log(error);
         
     }
 }
-export {savePost}
+export {saveUserPost}
