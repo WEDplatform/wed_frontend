@@ -44,7 +44,7 @@ const clearFilter=()=>{
   router.push(`?${params.toString()}`, { scroll: false });
 }
   return (
-    <div className="md:w-[90%] z-10 flex flex-col items-center bg-white w-[100%] md:relative absolute top-0 left-0 mx-auto  mt-3 h-[100%] md:h-[95%]">
+    <div className="md:w-[90%] z-10 flex flex-col items-center bg-white w-[100%] md:relative absolute top-0 left-0 mx-auto  mt-3 h-[99%] md:h-[95%]">
         <p className="text-sm md:w-[100%] w-[90%] text-gray-500">Search</p>
         <div className="relative mx-auto md:w-[100%]  w-[90%]">
         <RiSearch2Line className="absolute text-gray-500 top-2 left-3 text-[25px]"/>    
