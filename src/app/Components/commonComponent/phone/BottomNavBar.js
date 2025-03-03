@@ -14,7 +14,7 @@ function BottomNavBar() {
   const tab=searchParams.get("tab")
 const user = path.split('/').pop(); 
   return (
-    <div className="w-[100%] md:hidden block border-t-[1px] h-[12vh] border-gray-300 fixed bottom-0">
+    <div className="w-[100%] z-5 md:hidden block border-t-[1px] h-[12vh] border-gray-300 fixed bottom-0">
         <div className="w-[100%] flex relative justify-between  h-[100%] bg-white py-4">
         <main className="w-[45%] flex justify-evenly ">
             <div onClick={()=>{router.push(`/home/user?tab=home`)}} className={`flex  flex-col ${tab=="home" ?"text-[#9A2143] ":""} items-center`}>
