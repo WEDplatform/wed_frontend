@@ -64,7 +64,7 @@ const ImagePost =  ({ images }) => {
                         }
                         <TbLocation onClick={()=>{setSave(!isSaved)}} className=" cursor-not-allowed" />
                        
-                        <Save savePayLoad={savePayLoad}/>
+                        <Save isSavedByUser={images?.isSavedByUser} savePayLoad={savePayLoad}/>
                     </div>
                     <div className="w-[30%] flex justify-end items-center mr-4">
                         <p className="text-[12px] bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">2490 reviews</p>
