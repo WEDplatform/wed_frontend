@@ -10,7 +10,7 @@ import { UserFollowStat } from "@/app/apiFunctions/user/UserFollowings";
 async function page({ params }) {
     const prf = await profileFetch()
     const {userProfile}=prf?.data
-    console.log(prf.data);
+    // console.log(prf.data);
     
     let { clientType } = await params
     return (
