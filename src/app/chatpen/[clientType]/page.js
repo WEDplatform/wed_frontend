@@ -1,4 +1,7 @@
-async function page(params) {
+async function page(props) {
+    const params=await props.params
+    console.log(params);
+    
     return(
         <>
         chats
