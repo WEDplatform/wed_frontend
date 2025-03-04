@@ -1,5 +1,4 @@
 import { FiBell } from "react-icons/fi";
-
 const SideWindow=()=>{
     return(
         <div className="md:w-[30%] w-[100%] border-2 h-[100%]">
