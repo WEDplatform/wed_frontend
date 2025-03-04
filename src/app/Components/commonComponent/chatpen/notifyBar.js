@@ -1,7 +1,7 @@
 const NotifyBar=()=>{
     return(
         <div>
-
+            
         </div>
     )
 }
