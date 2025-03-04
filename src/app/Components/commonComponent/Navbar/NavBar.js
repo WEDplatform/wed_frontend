@@ -2,6 +2,7 @@ import Logo from "@/app/Components/logo"
 import SelectPage from "./SelectPage";
 import { FiBell } from "react-icons/fi";
 import { TbNotification } from "react-icons/tb";
+import Link from "next/link";
 function NavBar() {
   return (
     <div className="flex justify-between p-2 py-4 items-center md:border-0">
@@ -9,9 +10,9 @@ function NavBar() {
         <Logo/>
         <SelectPage/>
         </nav>
-        <div className="text-[20px] font-bold flex md:hidden">
-            <FiBell className="mr-2"/>
-            <TbNotification className="mr-4"/>
+        <div className="text-[20px] font-bold flex ">
+            <Link href="/chatpen/user"><FiBell className="mr-2"/></Link>
+            <Link href="/chatpen/user"><TbNotification className="mr-4"/></Link>
         </div>
     </div>
   )
