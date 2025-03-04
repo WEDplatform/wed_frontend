@@ -8,4 +8,8 @@ async function page(props) {
         </main>
     )
 }
+export const metadata={
+    title:"Chatpen",
+    description:"chats"
+}
 export default page
