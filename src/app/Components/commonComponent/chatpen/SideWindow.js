@@ -7,7 +7,7 @@ const SideWindow=()=>{
             <div className="px-4 py-3 flex justify-between">
                 <span>Chats</span>
                 <span>
-                    <TbNotification/>
+                    <FiBell/>
                 </span>
             </div>
         </div>
