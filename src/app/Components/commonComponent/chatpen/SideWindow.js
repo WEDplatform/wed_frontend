@@ -3,3 +3,4 @@ const SideWindow=()=>{
         <div></div>
     )
 }
+export {SideWindow}
