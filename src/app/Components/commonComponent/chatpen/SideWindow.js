@@ -1,4 +1,3 @@
-import { TbNotification } from "react-icons/tb";
 import { FiBell } from "react-icons/fi";
 
 const SideWindow=()=>{
