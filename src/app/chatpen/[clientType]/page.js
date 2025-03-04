@@ -4,7 +4,7 @@ async function page(props) {
     const params=await props.params
     return(
         <main className="w-[100%] flex h-[100vh]">
-            <SideWindow/>
+            <SideWindow user={params.clientType}/>
         </main>
     )
 }
