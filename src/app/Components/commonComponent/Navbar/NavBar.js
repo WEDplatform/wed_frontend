@@ -11,8 +11,8 @@ function NavBar() {
         <SelectPage/>
         </nav>
         <div className="text-[20px] font-bold flex ">
-            <Link href="/chatpen/user"><FiBell className="mr-2"/></Link>
-            <Link href="/chatpen/user"><TbNotification className="mr-4"/></Link>
+            <Link href="/chatpen/user?cs=0"><FiBell className="mr-2"/></Link>
+            <Link href="/chatpen/user?cs=0"><TbNotification className="mr-4"/></Link>
         </div>
     </div>
   )
