@@ -32,7 +32,7 @@ const ChatSection=()=>{
                 </div>
                 <div className="w-[100%] flex justify-center items-center h-[10%]">
                     <div className="w-[70%] relative flex items-center justify-center border-b-2 border-[#C94C73] ">
-                        <input value={message} onChange={(e)=>{modifyPayload(e.target.value)}} autoFocus type="text" placeholder="type here..." className="w-[100%]  px-4 py-3 outline-none border-none "/>
+                        <input value={message} onChange={(e)=>{modifyPayload(e.target.value)}} autoFocus type="text" placeholder="type here..." className="w-[100%] text-md px-4 py-3 tracking-wider text-md outline-none border-none "/>
                     {
                         message && <MdSend className=" absolute text-[#C94C73] right-2 top-3 text-[25px]"/>
 
