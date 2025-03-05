@@ -33,6 +33,7 @@
     "react-slick": "^0.30.3",
     "recharts": "^2.15.0",
     "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.8.1",
     "tailwind-merge": "^2.5.5",
     "use-debounce": "^10.0.4",
     "video.js": "^8.21.0",
