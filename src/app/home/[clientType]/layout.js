@@ -3,12 +3,14 @@ import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar";
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain";
 export default async function HomePageLayout({ children,params, searchParams }) {
   const navParams = await params
+  console.log(navParams);
+  
   const tbparams=await searchParams
   return <>
     <>
     <main className="w-[100%] flex">
     <div className='w-[20%] hidden md:block border-r-2 border-gray-300 h-screen'>
-          <NavBar />
+          <NavBar user={navParams.clientType} />
           <SideBarMain client={navParams}  />
      </div>
     <main className="w-[100%] md:w-[80%] ">
