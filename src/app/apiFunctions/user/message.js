@@ -1,12 +1,12 @@
 import { axiosInstance } from "@/app/axios/axios";
 import { getCookies } from "@/app/action";
 const message=async(vendorData)=>{
-    const refreshToken= getCookies()
+    const refreshToken=await getCookies()
     try {
-        const response=axiosInstance.post(`/user/handleUserMessage`,vendorData,{headers:{'wedoraCredentials':refreshToken}})
-        console.log(response.data);
+        const response=await axiosInstance.post(`/user/handleUserMessage`,vendorData,{headers:{'wedoraCredentials':refreshToken}})
+        console.log(response);
         
-        return response?.data
+        return response
     } catch (error) {
         console.log(error);
         
