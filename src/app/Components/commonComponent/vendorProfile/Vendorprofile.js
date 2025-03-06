@@ -19,6 +19,7 @@ import { VendorShare } from "./VendorShare";
 import { Review } from "./Review";
 import { BiSolidLike } from "react-icons/bi";
 import { followVendor } from "@/app/apiFunctions/user/followVendor";
+import { message } from "@/app/apiFunctions/user/message";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();
     let {mutate,data:profileData,error,isError,isPending,isSuccess} = useMutation({
@@ -26,6 +27,9 @@ const VendorProfile = ({vendorName}) => {
     })
     let {mutate:followVendorMutate,data:followVendorData,isPending:followVendorPending,isError:followVendorError,isSuccess:followVendorSuccess} = useMutation({
         mutationFn:followVendor
+    })
+    let {mutate:messVendorMutate,data:messVendorData,isPending:messVendorPending,isError:messVendorError,isSuccess:messVendorSuccess} = useMutation({
+        mutationFn:message
     })
     let [shareModal,setModa]=useState(false);
     useEffect(()=>{
@@ -37,6 +41,10 @@ const VendorProfile = ({vendorName}) => {
             setFollowing(profileData.isFollowed); // ✅ Update state when profileData is available
         }
     }, [profileData]);
+    const messageVendor=()=>
+    {
+        messVendorMutate({vendorName:profileData.name})
+    }
     return (
         <>
         {
@@ -63,7 +71,7 @@ const VendorProfile = ({vendorName}) => {
                     </span>
                 </div>
                 <div className="flex mt-3 md:mt-0 w-[100%]  items-center">
-                    <button className="border-2 border-[#9A2143] text-[#9A2143] w-[50%] px-3 text-sm py-2 rounded-lg">Message</button>
+                    <button onClick={messageVendor} className="border-2 border-[#9A2143] text-[#9A2143] w-[50%] px-3 text-sm py-2 rounded-lg">{messVendorPending?"Preparing" : messVendorError?"Try later":"Message"}</button>
                     <button disabled={!isSuccess} onClick={()=>{followVendorMutate({name:profileData?.name,followStatus:!isUserfollowing});setFollowing(!isUserfollowing)}} className="bg-[#9A2143] border-2 border-[#9A2143] w-[50%] text-white px-3 rounded-lg text-sm py-2 ml-2">{isUserfollowing?"Following":"Follow"}</button>
                 </div>
             </div>
