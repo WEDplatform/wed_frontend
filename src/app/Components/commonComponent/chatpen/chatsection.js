@@ -34,7 +34,7 @@ const ChatSection=()=>{
                 <Image src={profpic} width={50} height={50} alt="profilePicture" className="rounded-full mr-2"/>
                 <h1>wedora events</h1>   
                 </div>
-                <Chatspace messageList={messages} setMessages={setMessages} uid={searchParam.get('uid')}/>
+                <Chatspace s={searchParam.get('s')} r={searchParam.get('r')} messageList={messages} setMessages={setMessages} uid={searchParam.get('uid')}/>
                 {/* <div className="w-[100%] flex justify-center items-center h-[10%]">
                     <div className="w-[70%] relative flex items-center justify-center border-b-2 border-[#C94C73] ">
                         <input value={message} onChange={(e)=>{modifyPayload(e.target.value)}} autoFocus type="text" placeholder="type here..." className="w-[100%] text-md px-4 py-3 tracking-wider text-md outline-none border-none "/>
