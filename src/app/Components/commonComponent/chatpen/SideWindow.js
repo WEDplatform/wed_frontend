@@ -6,9 +6,9 @@ import { useMutation } from "@tanstack/react-query";
 import { getSbscribers } from "@/app/apiFunctions/getSbscribers";
 import { useEffect,useState } from "react";
 import { LuLoaderCircle } from "react-icons/lu";
+import { useSearchParams } from "next/navigation";
 const SideWindow = ({ user }) => {
-
-    
+    const searchParams = useSearchParams();
     const { mutate: getSubMutate, data: getSubData, isPending: getSubPending, isError: getSubError } = useMutation({
         mutationFn: getSbscribers
     })
@@ -32,13 +32,13 @@ const SideWindow = ({ user }) => {
                 user == 'user' && getSubData ? <div className="mt-2 w-[100%] overflow-auto">
                     {
                         getSubData?.data?.map((item, pos) =>
-                            <NotifyBar orgName={item.roomName} uid={item.subscriber.uuid} user={user} key={pos} />
+                            <NotifyBar senderId={item.senderId} recieverId={item.recieverId} orgName={item.roomName} uid={item.subscriber.uuid} user={user} key={pos} />
                         )
                     }
                 </div> : <div className="mt-2 w-[100%] overflow-auto">
                     {
                         getSubData?.data?.subscribers.map((item, pos) =>
-                            <NotifyBar orgName={item.userName} uid={item.uuid} user={user} key={pos} />
+                            <NotifyBar senderId={getSubData?.data?.vendorId} recieverId={item.userId} orgName={item.userName} uid={item.uuid} user={user} key={pos} />
                         )
                     }
                 </div>
