@@ -7,21 +7,8 @@ import { getSbscribers } from "@/app/apiFunctions/getSbscribers";
 import { useEffect,useState } from "react";
 import { LuLoaderCircle } from "react-icons/lu";
 const SideWindow = ({ user }) => {
-   
-    const vendors = [
-        {
-            name: "Rajneesh phtography"
-        },
-        {
-            name: "Altora pics"
-        },
-        {
-            name: "The cuisines"
-        },
-        {
-            name: "Wedora"
-        }
-    ]
+
+    
     const { mutate: getSubMutate, data: getSubData, isPending: getSubPending, isError: getSubError } = useMutation({
         mutationFn: getSbscribers
     })
@@ -48,7 +35,13 @@ const SideWindow = ({ user }) => {
                             <NotifyBar orgName={item.roomName} uid={item.subscriber.uuid} user={user} key={pos} />
                         )
                     }
-                </div> : <></>
+                </div> : <div className="mt-2 w-[100%] overflow-auto">
+                    {
+                        getSubData?.data?.subscribers.map((item, pos) =>
+                            <NotifyBar orgName={item.userName} uid={item.uuid} user={user} key={pos} />
+                        )
+                    }
+                </div>
             }
           
         </div>
