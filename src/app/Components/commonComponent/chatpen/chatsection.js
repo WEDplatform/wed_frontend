@@ -26,7 +26,7 @@ const ChatSection=()=>{
        
       ]);
     const cleanupChat=()=>{
-        
+        //
     }
     return(
         <div className="w-[100%] h-[100vh] flex justify-center items-center">
