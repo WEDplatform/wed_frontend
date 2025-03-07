@@ -20,10 +20,49 @@ const formatMessages = (messageData) => {
     }));
 
     return {
-        chatDate: `${formattedDate},`, // Adding comma at the end as per requirement
+        chatDate: `${formattedDate}`, // Adding comma at the end as per requirement
         messages: formattedPayloads
     };
 };
+export function formatMessageData(pseudoPayload) {
+    // Get current date and format it to a readable string
+    const now = new Date();
+    const formattedDate = now.toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+
+    // Get formatted time (e.g., "5:46 PM")
+    const formattedTime = now.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+    });
+
+    // Construct the message object
+    return {
+         // Example: "Friday, March 7, 2025"
+        messages: 
+            {
+                text: pseudoPayload.text,
+                sender: pseudoPayload.sender,
+                receiver: pseudoPayload.receiver,
+                sentAt: formattedTime  // Example: "5:46 PM"
+            }
+        
+    };
+}
+
+// Example usage
+let pseudoPayload = {
+    text: "Hi kundans",
+    sender: "67c8a1b8166df9be2214ebcd",
+    receiver: "67c8a1c9166df9be2214ece2"
+};
+
+console.log(formatMessageData(pseudoPayload));
 
 // Example Usage:
 const messageData = {
