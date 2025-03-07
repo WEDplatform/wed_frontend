@@ -20,8 +20,10 @@ import { Review } from "./Review";
 import { BiSolidLike } from "react-icons/bi";
 import { followVendor } from "@/app/apiFunctions/user/followVendor";
 import { message } from "@/app/apiFunctions/user/message";
+import { useRouter } from "next/navigation";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();
+    let router=useRouter();
     let {mutate,data:profileData,error,isError,isPending,isSuccess} = useMutation({
         mutationFn:fetchProfileData
     })
@@ -47,6 +49,11 @@ const VendorProfile = ({vendorName}) => {
     {
         messVendorMutate({vendorName:profileData.name,vendorId:profileData._id})
     }
+    useEffect(()=>{
+        if(messVendorSuccess){
+            router.push(`/chatpen/user?cs=0`)
+        }
+    },[messVendorSuccess])
     return (
         <>
         {
