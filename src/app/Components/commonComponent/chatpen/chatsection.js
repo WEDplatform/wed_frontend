@@ -6,7 +6,6 @@ import profpic from "../../../../../public/profPic.png"
 import { IoReturnDownBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { Chatspace } from "./chatspace";
-
 const ChatSection=()=>{
     const searchParam=useSearchParams();
     const router=useRouter();
