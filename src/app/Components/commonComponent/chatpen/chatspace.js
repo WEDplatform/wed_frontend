@@ -4,7 +4,7 @@ import { io } from "socket.io-client"
 import { MdSend } from "react-icons/md";
 import { socket } from "./socket";
 import { useMutation } from "@tanstack/react-query";
-import { getMessages } from "@/app/apiFunctions/getMessages";
+import { formatMessageData, getMessages } from "@/app/apiFunctions/getMessages";
 const Chatspace = ({uid,messageList,setMessages,s,r}) => {
     //console.log(messageList);
     
@@ -42,7 +42,7 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
     
         const handleMessageReceive = (payload) => {
             console.log("📩 Received message:", payload);
-            setMessages((prevMessages) => [...prevMessages, payload]);
+            setMessages((prevMessages) => [...prevMessages, formatMessageData(payload)]);
         };
     
         socket.on("connect", handleConnect);
@@ -71,6 +71,8 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         console.log(socket.connected);
        
         let pseudoPayload={text:message,sender:s,receiver:r}
+        console.log(formatMessageData(pseudoPayload));
+        
         let packet={
             roomID:uid,
             payload:pseudoPayload
@@ -92,20 +94,24 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
                 !isSocketCon ? <p>connecting</p> :
                 <>
                 {
-                    getMessagesData?.flatMap((messages, index) => 
-                        messages?.messages?.map((message, pos) => 
-                            <MessageBubble 
-                                message={message.text} 
-                                isSender={message.sender === s} 
-                                key={`${index}-${pos}`} 
-                            />
-                        )
-                    )
-                }{
+    getMessagesData?.flatMap((chat, index) => [
+        <p key={`date-${index}`}  className="w-[100%] text-sm text-gray-700 text-center">{chat.chatDate}</p>, // Display chat date
+        ...chat.messages.map((message, pos) => (
+            <MessageBubble 
+                message={message.text} 
+                sentAt={message.sentAt}
+                isSender={message.sender === s} 
+                key={`msg-${index}-${pos}`} 
+            />
+        ))
+    ]) || []
+}
+{
                     messageList?.map((message, index) => 
                         <MessageBubble 
-                            message={message.text} 
-                            isSender={message.sender === s} 
+                            message={message?.messages.text} 
+                            isSender={message?.messages.sender === s} 
+                            sentAt={message?.messages.sentAt}
                             key={`${index}`} 
                         />
                     )
