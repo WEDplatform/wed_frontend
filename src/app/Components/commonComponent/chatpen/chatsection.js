@@ -28,7 +28,7 @@ const ChatSection=()=>{
     const cleanupChat=()=>{
         //router back push and set messages to empty array
         setMessages([])
-        
+        router.back()
     }
     return(
         <div className="w-[100%] h-[100vh] flex justify-center items-center">
