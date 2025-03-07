@@ -41,9 +41,7 @@ const ChatSection=()=>{
                 <h1>wedora events</h1>   
                 </div>
                 <Chatspace s={searchParam.get('s')} r={searchParam.get('r')} messageList={messages} setMessages={setMessages} uid={searchParam.get('uid')}/>
-                {/* <div className="w-[100%] flex justify-center items-center h-[10%]">
-                    
-                </div> */}
+              
             </div>
         }
         </div>
