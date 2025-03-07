@@ -15,9 +15,7 @@ const ChatSection=()=>{
     useEffect(()=>{
         console.log(searchParam.get('cs'))
     },[searchParam])
-    const modifyPayload=async(mess)=>{
-        setMessage(mess)
-    }
+    
    
     const [messages, setMessages] = useState([
        
