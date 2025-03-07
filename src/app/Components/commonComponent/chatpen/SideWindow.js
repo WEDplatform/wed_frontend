@@ -28,8 +28,11 @@ const SideWindow = ({ user }) => {
                     <LuLoaderCircle className="animate-spin text-[30px]" />
                 </div>
             }
+            {
+                getSubData?.data.length==0 && <div className="md:w-[100%] w-[100%] py-4 flex items-center justify-center">Ooops ! you haven't messaged anyone yet</div>
+            }
               {
-                user == 'user' && getSubData ? <div className="mt-2 w-[100%] overflow-auto">
+                user == 'user' && getSubData  ? <div className="mt-2 w-[100%] overflow-auto">
                     {
                         getSubData?.data?.map((item, pos) =>
                             <NotifyBar senderId={item.senderId} recieverId={item.recieverId} orgName={item.roomName} uid={item.subscriber.uuid} user={user} key={pos} />
