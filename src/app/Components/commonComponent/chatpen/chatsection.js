@@ -29,7 +29,7 @@ const ChatSection=()=>{
             <p className=" text-center text-sm ">Your personal chat arena</p>:
             <div className="w-[100%] h-[100%]">
                 <div className="flex items-center py-3 px-5 h-[10%] ">
-                <IoReturnDownBack onClick={cleanupChat} className="text-[#C94C73] mr-2 text-[25px] "/>
+                <IoReturnDownBack onClick={cleanupChat} className="text-[#C94C73] cursor-pointer mr-2 text-[25px] "/>
                 <Image src={profpic} width={50} height={50} alt="profilePicture" className="rounded-full mr-2"/>
                 <h1>wedora events</h1>   
                 </div>
