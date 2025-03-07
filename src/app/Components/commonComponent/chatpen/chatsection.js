@@ -41,7 +41,6 @@ const ChatSection=()=>{
                 <h1>wedora events</h1>   
                 </div>
                 <Chatspace s={searchParam.get('s')} r={searchParam.get('r')} messageList={messages} setMessages={setMessages} uid={searchParam.get('uid')}/>
-              
             </div>
         }
         </div>
