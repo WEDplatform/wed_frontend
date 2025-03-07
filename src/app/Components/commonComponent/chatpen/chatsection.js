@@ -10,7 +10,6 @@ import { useMutation } from "@tanstack/react-query";
 import { getMessages } from "@/app/apiFunctions/getMessages";
 const ChatSection=()=>{
     const searchParam=useSearchParams();
-    const [message,setMessage]=useState("");
     const router=useRouter();
     useEffect(()=>{
         console.log(searchParam.get('cs'))
