@@ -18,8 +18,7 @@ const ChatSection=()=>{
     const modifyPayload=async(mess)=>{
         setMessage(mess)
     }
-    const sendMessage=async()=>{
-    }
+   
     const [messages, setMessages] = useState([
        
       ]);
