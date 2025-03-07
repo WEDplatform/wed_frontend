@@ -16,8 +16,7 @@ const ChatSection=()=>{
     },[searchParam])
     
    
-    const [messages, setMessages] = useState([
-      ]);
+    const [messages, setMessages] = useState([ ]);
     const cleanupChat=()=>{
         //router back push and set messages to empty array
         setMessages([])
