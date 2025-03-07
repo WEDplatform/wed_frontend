@@ -20,7 +20,6 @@ const ChatSection=()=>{
     }
     const sendMessage=async()=>{
         setMessages((prevMessages) => [...prevMessages, { text: message, time: "10:01 AM", sender: "me" }]);
-
     }
     const [messages, setMessages] = useState([
        
