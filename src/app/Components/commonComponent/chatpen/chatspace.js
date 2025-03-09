@@ -46,7 +46,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         socket.on("connect", handleConnect);
         socket.on("disconnect", handleDisconnect);
         socket.on("recieveMessage", handleMessageReceive);
-    
         return () => {
             console.log("🔻 Cleaning up socket connection...");
             socket.off("connect", handleConnect);
