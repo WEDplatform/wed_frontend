@@ -28,7 +28,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             setPid(socket.id);
             setCon(true);
         };
-    
         const handleDisconnect = () => {
             console.log("❌ Disconnected:", socket.id);
             setPid('');
