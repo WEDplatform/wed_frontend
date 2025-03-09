@@ -13,7 +13,6 @@ const saveUserPost=async(data)=>{
            
     } catch (error) {
         console.log(error);
-        
     }
 }
 export {saveUserPost}
