@@ -55,7 +55,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         console.log(socket.connected);
         let pseudoPayload={text:message,sender:s,receiver:r}
         console.log(formatMessageData(pseudoPayload));
-        
         let packet={
             roomID:uid,
             payload:pseudoPayload
