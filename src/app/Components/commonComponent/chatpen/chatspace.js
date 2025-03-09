@@ -56,7 +56,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         };
     }, [uid]);
     // const [messages, setMessages] = useState([
-    //     { text: "Hello! How are you?", time: "10:02 AM", sender: "me" },
     //   ]);
     const modifyPayload = async (mess) => {
         setMessage(mess)
