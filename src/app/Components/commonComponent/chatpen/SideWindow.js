@@ -46,7 +46,6 @@ const SideWindow = ({ user }) => {
                     }
                 </div>
             }
-          
         </div>
     )
 }
