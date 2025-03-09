@@ -98,7 +98,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
                     )
                 }
                 </>
-
             }
         </div>
         <div className="w-[100%] flex justify-center items-center h-[10%]">
