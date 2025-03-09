@@ -18,7 +18,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
     }, [message]);
     useEffect(() => {
         console.log("🔹 Initial socket connection status:", socket.connected); // ✅ Check before connecting
-    
         if (!socket.connected) {
             socket.connect();
             console.log("✅ Attempting to connect socket...");
