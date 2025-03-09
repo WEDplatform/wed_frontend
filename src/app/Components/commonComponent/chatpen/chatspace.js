@@ -11,7 +11,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
     const [isSocketCon, setCon] = useState(false);
     const [pid,setPid]=useState('')
     const [message, setMessage] = useState("");
-    
     useEffect(() => {
         if (chatRef.current) {
             chatRef.current.scrollTop = chatRef.current.scrollHeight;
