@@ -68,7 +68,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
     useEffect(()=>{
         getMessagesMutate(uid)
     },[uid])
-    
     return (
        <>
         <div ref={chatRef} className="w-[100%] preferenceList h-[80%] px-5 overflow-auto">
