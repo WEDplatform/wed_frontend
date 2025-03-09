@@ -98,7 +98,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
                     )
                 }
                 </>
-                
 
             }
         </div>
