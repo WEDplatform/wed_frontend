@@ -55,7 +55,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             socket.disconnect(); // ✅ Proper cleanup
         };
     }, [uid]);
-    // const [messages, setMessages] = useState([
     const modifyPayload = async (mess) => {
         setMessage(mess)
     }
