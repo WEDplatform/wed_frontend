@@ -16,7 +16,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             chatRef.current.scrollTop = chatRef.current.scrollHeight;
         }
     }, [message]);
-
     useEffect(() => {
         console.log("🔹 Initial socket connection status:", socket.connected); // ✅ Check before connecting
     
