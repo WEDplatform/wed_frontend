@@ -56,7 +56,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         };
     }, [uid]);
     // const [messages, setMessages] = useState([
-    //     { text: "Hey there!", time: "10:01 AM", sender: "user" },
     //     { text: "Hello! How are you?", time: "10:02 AM", sender: "me" },
     //     { text: "I'm good. What about you?", time: "10:03 AM", sender: "user" },
     //   ]);
