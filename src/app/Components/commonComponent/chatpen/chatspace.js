@@ -56,7 +56,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         };
     }, [uid]);
     // const [messages, setMessages] = useState([
-    //   ]);
     const modifyPayload = async (mess) => {
         setMessage(mess)
     }
