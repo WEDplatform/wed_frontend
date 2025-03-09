@@ -39,7 +39,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             setPid('');
             setCon(false);
         };
-    
         const handleMessageReceive = (payload) => {
             console.log("📩 Received message:", payload);
             setMessages((prevMessages) => [...prevMessages, formatMessageData(payload)]);
