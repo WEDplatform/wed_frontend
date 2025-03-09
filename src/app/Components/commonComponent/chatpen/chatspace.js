@@ -22,7 +22,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             socket.connect();
             console.log("✅ Attempting to connect socket...");
         }
-    
         const handleConnect = () => {
             console.log("✅ Connected with ID:", socket.id);
             socket.emit("join_room", uid);
