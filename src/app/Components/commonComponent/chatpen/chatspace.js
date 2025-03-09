@@ -43,7 +43,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             console.log("📩 Received message:", payload);
             setMessages((prevMessages) => [...prevMessages, formatMessageData(payload)]);
         };
-    
         socket.on("connect", handleConnect);
         socket.on("disconnect", handleDisconnect);
         socket.on("recieveMessage", handleMessageReceive);
