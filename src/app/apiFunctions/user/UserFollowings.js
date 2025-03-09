@@ -2,7 +2,6 @@
 import { CoupleLiked, VendorIdea, VendorLiked, VendorSaved } from "@/app/Components/userComponent/UserLikedFollowed";
 import { useState } from "react"
 const UserFollowStat=({userData})=>{
-    
     const [userView,setView]=useState('likes')
     return(
         <>
