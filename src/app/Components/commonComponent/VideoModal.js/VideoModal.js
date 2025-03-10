@@ -60,7 +60,6 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
             }
            }}>
             <SplideTrack className="md:w-[60vw] w-[90vw] relative">
-
               {
                 postCollection?.map((item, index) => (
                   <SplideSlide className="w-[100%]" key={index}>
