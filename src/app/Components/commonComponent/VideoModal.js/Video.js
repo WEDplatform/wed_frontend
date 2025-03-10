@@ -41,5 +41,4 @@ export const VideoJS = (props) => {
     </div>
   );
 }
-
 export default VideoJS;
