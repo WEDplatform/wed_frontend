@@ -48,5 +48,4 @@ function VendorDescription({description}) {
         </div>
     )
 }
-
 export { VendorDescription }
