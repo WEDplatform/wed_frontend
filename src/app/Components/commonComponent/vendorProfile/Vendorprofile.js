@@ -44,7 +44,6 @@ const VendorProfile = ({vendorName}) => {
         }
     }, [profileData]);
     console.log(profileData);
-    
     const messageVendor=()=>
     {
         messVendorMutate({vendorName:profileData.name,vendorId:profileData._id})
