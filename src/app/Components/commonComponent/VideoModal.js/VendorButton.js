@@ -6,5 +6,4 @@ function VendorButton() {
     </>
   )
 }
-
 export { VendorButton }
