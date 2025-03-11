@@ -6,7 +6,7 @@ async function page(props) {
     return(
         <main className="w-[100%] flex h-[100vh]">
             <SideWindow user={params.clientType}/>
-            <ChatSection/>
+            <ChatSection user={params.clientType}/>
         </main>
     )
 }
