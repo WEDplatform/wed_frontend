@@ -15,6 +15,10 @@ const SideWindow = ({ user }) => {
     useEffect(() => {
         getSubMutate(user)
     }, [user])
+    useEffect(() => {
+        console.log(getSubData);
+        
+    },[getSubData])
     return (
         <div className="md:w-[30%] bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">
             <div className=" py-3 w-[90%] border-b-2 flex justify-between items-center">
@@ -35,7 +39,7 @@ const SideWindow = ({ user }) => {
                 user == 'user' && getSubData  ? <div className="mt-2 w-[100%] overflow-auto">
                     {
                         getSubData?.data?.map((item, pos) =>
-                            <NotifyBar senderId={item.senderId} recieverId={item.recieverId} orgName={item.roomName} uid={item.subscriber.uuid} user={user} key={pos} />
+                            <NotifyBar senderId={item.senderId} recieverId={item.recieverId} orgName={item.roomName} lastMessage={item.subscriber?.lastMessage} uid={item.subscriber.uuid} user={user} key={pos} />
                         )
                     }
                 </div> : <div className="mt-2 w-[100%] overflow-auto">
