@@ -39,13 +39,13 @@ const SideWindow = ({ user }) => {
                 user == 'user' && getSubData  ? <div className="mt-2 w-[100%] overflow-auto">
                     {
                         getSubData?.data?.map((item, pos) =>
-                            <NotifyBar senderId={item.senderId} recieverId={item.recieverId} orgName={item.roomName} lastMessage={item.subscriber?.lastMessage} uid={item.subscriber.uuid} user={user} key={pos} />
+                            <NotifyBar senderId={item.senderId} recieverId={item.recieverId} num={item.numberofUnseenMess} orgName={item.roomName} lastMessage={item.subscriber?.lastMessage} uid={item.subscriber.uuid} user={user} key={pos} />
                         )
                     }
                 </div> : <div className="mt-2 w-[100%] overflow-auto">
                     {
-                        getSubData?.data?.subscribers.map((item, pos) =>
-                            <NotifyBar senderId={getSubData?.data?.vendorId} recieverId={item.userId} orgName={item.userName} uid={item.uuid} user={user} key={pos} />
+                        getSubData?.data?.map((item, pos) =>
+                            <NotifyBar num={item.numberofUnseenMess} senderId={getSubData?.data?.vendorId} recieverId={item.userId} orgName={item.userName} uid={item.uuid} user={user} key={pos} />
                         )
                     }
                 </div>
