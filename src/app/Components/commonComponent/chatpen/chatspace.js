@@ -24,12 +24,13 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         }
         const handleConnect = () => {
             console.log("✅ Connected with ID:", socket.id);
-            socket.emit("join_room", uid);
+            socket.emit("join_room", uid,s);
             setPid(socket.id);
             setCon(true);
         };
         const handleDisconnect = () => {
             console.log("❌ Disconnected:", socket.id);
+            socket.emit("leave_room", uid,s);
             setPid('');
             setCon(false);
         };
@@ -42,6 +43,7 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         socket.on("recieveMessage", handleMessageReceive);
         return () => {
             console.log("🔻 Cleaning up socket connection...");
+            socket.emit("leave_room", uid,s);
             socket.off("connect", handleConnect);
             socket.off("disconnect", handleDisconnect);
             socket.off("recieveMessage", handleMessageReceive);
@@ -59,7 +61,7 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
             roomID:uid,
             payload:pseudoPayload
         }
-        socket.emit("sendMessage", packet);
+        socket.emit("sendMessage", packet,uid);
         setMessage('')
     }
     const {mutate:getMessagesMutate,data:getMessagesData,isPending:getMessagesPending,isError:getMessagesError,isSuccess:getMessagesSuccess}=useMutation({
