@@ -46,7 +46,7 @@ const VendorProfile = ({vendorName}) => {
     console.log(profileData);
     const messageVendor=()=>
     {
-        messVendorMutate({vendorName:profileData.name,vendorId:profileData._id})
+        messVendorMutate({vendorName:profileData.name,vendorId:profileData.vid})
     }
     useEffect(()=>{
         if(messVendorSuccess){
