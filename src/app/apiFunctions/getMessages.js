@@ -69,7 +69,6 @@ const messageData = {
         }
     ]
 };
-
 console.log(formatMessages(messageData));
 export const getMessages=async(roomId)=>{
     try {
