@@ -37,7 +37,6 @@ export function formatMessageData(pseudoPayload) {
         minute: "2-digit",
         hour12: true
     });
-
     // Construct the message object
     return {
          // Example: "Friday, March 7, 2025"
