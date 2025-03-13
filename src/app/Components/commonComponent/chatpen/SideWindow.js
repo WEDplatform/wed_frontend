@@ -17,7 +17,6 @@ const SideWindow = ({ user }) => {
     }, [user])
     useEffect(() => {
         console.log(getSubData);
-        
     },[getSubData])
     return (
         <div className="md:w-[30%] bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">
