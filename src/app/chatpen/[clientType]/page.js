@@ -1,6 +1,5 @@
 import { ChatSection } from "@/app/Components/commonComponent/chatpen/chatsection"
 import { SideWindow } from "@/app/Components/commonComponent/chatpen/SideWindow"
-
 async function page(props) {
     const params=await props.params
     return(
