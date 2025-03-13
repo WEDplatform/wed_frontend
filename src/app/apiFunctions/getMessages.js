@@ -17,7 +17,6 @@ const formatMessages = (messageData) => {
             hour12: true
         }).replace(/^0/, '') // Remove leading zero in hour (if present)
     }));
-
     return {
         chatDate: `${formattedDate}`, // Adding comma at the end as per requirement
         messages: formattedPayloads
