@@ -46,8 +46,7 @@ export function formatMessageData(pseudoPayload) {
                 sender: pseudoPayload.sender,
                 receiver: pseudoPayload.receiver,
                 sentAt: formattedTime  // Example: "5:46 PM"
-            }
-        
+            } 
     };
 }
 
