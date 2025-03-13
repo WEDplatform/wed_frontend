@@ -49,7 +49,6 @@ export function formatMessageData(pseudoPayload) {
             } 
     };
 }
-
 // Example usage
 let pseudoPayload = {
     text: "Hi kundans",
