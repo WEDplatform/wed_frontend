@@ -45,7 +45,7 @@ const SideWindow = ({ user }) => {
                 </div> : <div className="mt-2 w-[100%] overflow-auto">
                     {
                         getSubData?.data?.map((item, pos) =>
-                            <NotifyBar num={item.numberofUnseenMess} senderId={getSubData?.data?.vendorId} recieverId={item.userId} orgName={item.userName} uid={item.uuid} user={user} key={pos} />
+                            <NotifyBar num={item.numberofUnseenMess} senderId={getSubData?.data?.vendorId} recieverId={item.userId} lastMessage={item?.lastMessage} orgName={item.userName} uid={item.uuid} user={user} key={pos} />
                         )
                     }
                 </div>
