@@ -15,5 +15,4 @@ const getSbscribers = async (user) => {
         console.log(error);
     }
 };
-
 export  {getSbscribers}
