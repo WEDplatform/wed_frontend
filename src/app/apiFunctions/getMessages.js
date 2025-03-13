@@ -31,7 +31,6 @@ export function formatMessageData(pseudoPayload) {
         month: "long",
         day: "numeric"
     });
-
     // Get formatted time (e.g., "5:46 PM")
     const formattedTime = now.toLocaleTimeString("en-US", {
         hour: "2-digit",
