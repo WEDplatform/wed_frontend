@@ -1,5 +1,4 @@
 import { LuLoaderCircle } from "react-icons/lu";
-
 const Loader=()=>{
     return(
         <>
