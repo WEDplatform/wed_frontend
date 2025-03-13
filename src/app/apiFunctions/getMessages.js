@@ -56,7 +56,6 @@ let pseudoPayload = {
     receiver: "67c8a1c9166df9be2214ece2"
 };
 console.log(formatMessageData(pseudoPayload));
-
 // Example Usage:
 const messageData = {
     chatDate: "2025-03-05T18:30:00.000Z",
