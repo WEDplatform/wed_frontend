@@ -55,7 +55,6 @@ let pseudoPayload = {
     sender: "67c8a1b8166df9be2214ebcd",
     receiver: "67c8a1c9166df9be2214ece2"
 };
-
 console.log(formatMessageData(pseudoPayload));
 
 // Example Usage:
