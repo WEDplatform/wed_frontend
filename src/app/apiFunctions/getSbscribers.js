@@ -9,7 +9,6 @@ const getSbscribers = async (user) => {
             },
         });
         console.log(response.data);
-        
         return response.data;
     } catch (error) {
         console.log(error);
