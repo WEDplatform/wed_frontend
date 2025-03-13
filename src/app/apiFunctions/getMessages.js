@@ -7,7 +7,6 @@ const formatMessages = (messageData) => {
         day: "numeric",
         year: "numeric"
     });
-
     const formattedPayloads = messageData.payloads.map((msg) => ({
         text: msg.text,
         sender: msg.sender,
