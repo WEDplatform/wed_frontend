@@ -81,6 +81,5 @@ export const getMessages=async(roomId)=>{
         console.log(messData);
         return messData;
     } catch (error) {
-        
     }
 }
