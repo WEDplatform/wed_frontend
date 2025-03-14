@@ -32,7 +32,6 @@ function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilte
                             <div onClick={() => setFilterHandler(item)} className={`w-[95%] overflow-hidden cursor-pointer h-[18vh] rounded-xl  border-2 ${selectedFilter.includes(item) ? "border-[#9A2143] rounded-xl bg-[#FFECEC] " : "border-gray-200 bg-white"}`}>
                                     <div className='w-[100%] h-[65%] bg-gray-200'></div>
                                     <div className={`w-[100%] h-[35%] text-sm  mt-1 ml-1 text-wrap ${selectedFilter.includes(item) ? "text-[#9A2143]" : "text-gray-500"}`}>{item}</div>
-
                                 </div>
                             </SplideSlide>
                         )
