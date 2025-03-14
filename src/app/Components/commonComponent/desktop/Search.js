@@ -35,6 +35,7 @@ function Search() {
     params.set("filter", selectFilter.join(","));; // Keep multiple filters
     params.set("tab", "home"); 
     router.push(`?${params.toString()}`, { scroll: false });
+}
 const clearFilter=()=>{
   setFilter([])
   const params = new URLSearchParams();
