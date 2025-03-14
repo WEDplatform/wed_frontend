@@ -35,8 +35,7 @@ const ImageSWR = ({ data }) => {
         let postsResponse=await fetchPosts(postsTracker.pageIndex,3,SearchFilter)
         let coupleDataResponse=await fetchCouple(postsTracker.coupleIndex,3)
         pseudoData=shuffleArray([...postsResponse?.pics,...coupleDataResponse?.cposts])
-        console.log(pseudoData);
-        
+        console.log(pseudoData);    
         if(!postsResponse?.hasMore || !coupleDataResponse.hasMore){
             setTrack(false);
             return
