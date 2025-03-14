@@ -83,7 +83,6 @@ const PostSWR = ({ id_ }) => {
                 scrollThreshold={0.9}
                 endMessage={
                     <div style={{ textAlign: 'center',
-                       
                      }}>
                        Yay! you completed!!
                     </div>
