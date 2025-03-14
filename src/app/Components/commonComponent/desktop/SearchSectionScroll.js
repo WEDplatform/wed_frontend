@@ -6,7 +6,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilter }) {
     const router=useRouter();
     const setFilterHandler = (val) => {
-       
         if(selectedFilter.includes(val)) {
             const f1=selectedFilter.filter((item) => item != val)
             if(f1.length==0){
