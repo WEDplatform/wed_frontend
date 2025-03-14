@@ -44,50 +44,7 @@ const UserFollowStat = ({ userData }) => {
                 }
 
             </div>
-            {/* {
-            userView=="likes" && <div className="grid mt-3 md:w-[80%] w-[90%] pb-[13vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
-                {
-                    userData[0]?.items.map((item,pos)=>
-                    <VendorLiked isFollowed={false} key={pos} dt={item}/>
-                    )
-                }
-                {
-                    userData[1]?.items.map((item,pos)=>
-                    <CoupleLiked key={pos} dt={item}/>
-                    )
-                }
-            </div>
-        }
-        {
-            userView =="follows" && <div className="grid mt-3 md:w-[80%] w-[90%] pb-[12vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
-                {
-                    userData[2]?.items.map((item,pos)=>
-                    <VendorLiked isFollowed={true} key={pos} dt={item}/>
-                    )
-                }
-                
-            </div>
-        }
-        {
-            userView =="ideas" && <div className="grid mt-3 md:w-[80%] w-[90%] pb-[12vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
-                {
-                    userData[4]?.items.map((item,pos)=>
-                    <VendorIdea isFollowed={true} key={pos} dt={item}/>
-                    )
-                }
-                
-            </div>
-        }
-        {
-            userView =="saved" && <div className="grid mt-3 md:w-[80%] w-[90%] pb-[12vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
-                {
-                    userData[3]?.items.map((item,pos)=>
-                    <VendorSaved isFollowed={true} key={pos} dt={item}/>
-                    )
-                }
-                
-            </div>
-        } */}
+          
         </>
     )
 }
