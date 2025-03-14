@@ -80,8 +80,7 @@ const ImageSWR = ({ data }) => {
             pageIndex:0,
             coupleIndex:0
         }))
-        console.log(filterValues);
-        
+        console.log(filterValues);      
         // fetchVendorPosts(filterValues)
       },[searchParam])
     return (<>
