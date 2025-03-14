@@ -81,7 +81,6 @@ const ImageSWR = ({ data }) => {
             coupleIndex:0
         }))
         console.log(filterValues);      
-        // fetchVendorPosts(filterValues)
       },[searchParam])
     return (<>
         <main id="ImagePost" className="w-[54%] preferenceList max-h-[100%] overflow-y-auto">
