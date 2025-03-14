@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/app/apiFunctions/pexel"
 import { CouplePost, ImagePost, VideoPost } from "../Posts/PostStructure"
-import { TbLoader2 } from "react-icons/tb";
 import { getVideoUrl } from "@/app/apiFunctions/pexel"
 import { fetchVendorMediaPosts } from "../vendorProfile/fetchVendorPosts"
 import { fetchPosts, fetchReels } from "@/app/apiFunctions/fetchPosts"
