@@ -45,7 +45,6 @@ function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilte
                 }
             </Splide>
             <div >
-
             </div>
         </div>
     )
