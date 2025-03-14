@@ -65,8 +65,7 @@ const ImageSWR = ({ data }) => {
       useEffect(()=>{
         const filterValues = searchParam.getAll("filter");
         if(filterValues.length>0){
-            setFilters(filterValues);
-           
+            setFilters(filterValues);      
         }else{
             setFilters([]);
         }
