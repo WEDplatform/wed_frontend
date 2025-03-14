@@ -16,7 +16,6 @@ function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilte
             setFilter([...selectedFilter,val])
         }
     }
-    
     return (
         <div className="w-[100%] mt-2">
             <p className='text-sm text-gray-500 mt-2'>{title}</p>
