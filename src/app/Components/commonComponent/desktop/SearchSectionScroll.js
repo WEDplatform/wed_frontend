@@ -49,5 +49,4 @@ function SearchSectionScroll({ vals, title, selectedFilter, setFilter,clearFilte
         </div>
     )
 }
-
 export { SearchSectionScroll }
