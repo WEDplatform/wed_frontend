@@ -42,7 +42,6 @@ const UserFollowStat = ({ userData }) => {
                         }
                     })
                 }
-
             </div>
         </>
     )
