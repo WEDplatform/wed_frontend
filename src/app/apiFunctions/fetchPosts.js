@@ -13,8 +13,7 @@ export const fetchPosts=async(index,per_page,filter=[])=>{
         resp?.data?.data?.pics.map((i,p)=>i.p_type='post')
         return resp?.data?.data
     } catch (error) {
-        console.log(error);
-        
+        console.log(error) 
     }
 }
 export const fetchReels=async(index,per_page)=>{
