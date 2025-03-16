@@ -1,6 +1,5 @@
 import { getCookies } from "../action";
 import { axiosInstance } from "../axios/axios";
-
 export const fetchPosts=async(index,per_page,filter=[])=>{
     try {
         let resp=await axiosInstance.post(`/cmn/getPosts?searchIndex=${index}&per_page=${per_page}&searchStatus=${filter?.length>0}`,
