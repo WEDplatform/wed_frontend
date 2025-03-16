@@ -20,7 +20,6 @@ export const fetchReels=async(index,per_page)=>{
         resp?.data?.data?.reels.map((i,p)=>i.p_type='reel')
         //console.log(resp?.data?.data);
         return resp?.data?.data
-    } catch (error) {
-        
+    } catch (error) {        
     }
 }
