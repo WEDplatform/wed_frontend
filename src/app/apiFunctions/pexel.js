@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { createClient } from 'pexels';
-
 const client = createClient('XrJqjzjCzNMW0hNCFnWZq0nq7RWsQK8b7YvfviDhG6F3xBHZvysPLEKw');
 const query = 'Nature';
 const create2DArray = (arr, n) => {
