@@ -13,7 +13,6 @@ import { cookies } from 'next/headers'
         //console.log(profileResponse);
         return profileResponse
     } catch (error) {
-        
     }
 } 
 export {profileFetch} 
