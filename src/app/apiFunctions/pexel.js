@@ -14,8 +14,7 @@ const getVideoUrl=async(query="forest",page=1)=>{
     const videoResponse=await axios(`https://pixabay.com/api/videos/?key=48012297-063120112f8bc477731969d55&q=${encodeURIComponent(query)}&pretty=true`)
     const videoData=videoResponse?.data?.hits.filter((item,pos)=>pos==2 || pos == 4)
     //console.log(videoData[0]);
-    return videoData
-    
+    return videoData   
 }
 const getImageUrl=async(query="indian wedding",page)=>{
     const res=await client.photos.search({query,per_page:12,page:page,orientation:'landscape'})    
