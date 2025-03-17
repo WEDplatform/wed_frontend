@@ -22,7 +22,6 @@ export async function logout() {
    } catch (error) {
         if(refreshToken){
             cookieStore.delete('refreshToken')
-            
         }
    }
 }
