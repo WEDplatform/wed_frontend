@@ -2,7 +2,6 @@ import { cookies } from 'next/headers'
 
  const profileFetch = async () =>{
     const cookieStore = await cookies()  
-
     try {
         let profileResponse=await fetch(`${process.env.backend_api}/cmn/profile`,{
             method:'GET',
