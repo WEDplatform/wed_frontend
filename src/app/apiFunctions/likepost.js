@@ -7,7 +7,6 @@ const likePost=async(dt)=>{
      if (controller) {
         controller.abort();
     }
-
     // Create a new controller for the new request
     controller = new AbortController();
     try {
