@@ -10,7 +10,6 @@ const create2DArray = (arr, n) => {
     }
     return result;
 };
-
 const getVideoUrl=async(query="forest",page=1)=>{
     const videoResponse=await axios(`https://pixabay.com/api/videos/?key=48012297-063120112f8bc477731969d55&q=${encodeURIComponent(query)}&pretty=true`)
     const videoData=videoResponse?.data?.hits.filter((item,pos)=>pos==2 || pos == 4)
