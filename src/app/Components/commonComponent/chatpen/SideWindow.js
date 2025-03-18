@@ -7,6 +7,7 @@ import { getSbscribers } from "@/app/apiFunctions/getSbscribers";
 import { useEffect,useState } from "react";
 import { LuLoaderCircle } from "react-icons/lu";
 import { useSearchParams } from "next/navigation";
+import { IoChevronBackOutline } from "react-icons/io5";
 const SideWindow = ({ user }) => {
     const searchParams = useSearchParams();
     const { mutate: getSubMutate, data: getSubData, isPending: getSubPending, isError: getSubError } = useMutation({
@@ -19,8 +20,9 @@ const SideWindow = ({ user }) => {
         console.log(getSubData);
     },[getSubData])
     return (
-        <div className="md:w-[30%] bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">
+        <div className="md:w-[30%] bg-white md:bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">
             <div className=" py-3 w-[90%] border-b-2 flex justify-between items-center">
+                <IoChevronBackOutline/>
                 <span className="text-xl font-semibold text-[#C94C73]">Chats</span>
                 <span className="text-xl">
                     <FiBell />
