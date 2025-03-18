@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers'
-
  const profileFetch = async () =>{
     const cookieStore = await cookies()  
     try {
