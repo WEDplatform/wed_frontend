@@ -1,6 +1,5 @@
 'use client'
 import { FiBell } from "react-icons/fi";
-import profpic from "../../../../../public/profPic.png"
 import { NotifyBar } from "./notifyBar";
 import { useMutation } from "@tanstack/react-query";
 import { getSbscribers } from "@/app/apiFunctions/getSbscribers";
