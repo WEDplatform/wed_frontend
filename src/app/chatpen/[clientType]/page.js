@@ -1,6 +1,7 @@
 import { ChatSection } from "@/app/Components/commonComponent/chatpen/chatsection"
 import { SideWindow } from "@/app/Components/commonComponent/chatpen/SideWindow"
-async function page(props) {
+async function page(props,searchParam) {
+    const src=await searchParam
     const params=await props.params
     return(
         <main className="w-[100%] flex h-[100vh]">
