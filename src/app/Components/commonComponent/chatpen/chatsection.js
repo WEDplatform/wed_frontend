@@ -18,8 +18,10 @@ const ChatSection=({user})=>{
         setMessages([])
         router.back()
     }
-    return(
-        <div className="w-[100%] h-[100vh] flex justify-center items-center">
+    return( 
+        <>
+        <div className="w-[100%] hidden md:block">
+        <div className="w-[100%]  h-[100vh] flex justify-center items-center">
         {
             searchParam.get('cs')=='0'?
             <p className=" text-center text-sm ">Your personal chat arena</p>:
@@ -33,6 +35,8 @@ const ChatSection=({user})=>{
             </div>
         }
         </div>
+        </div>
+        </>
     )
 }
 export {ChatSection}
