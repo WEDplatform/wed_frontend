@@ -20,7 +20,7 @@ const SideWindow = ({ user }) => {
         console.log(getSubData);
     },[getSubData])
     return (
-        <div className="md:w-[30%] bg-white md:bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">
+        <div className="md:w-[30%] md:bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">
             <div className=" py-3 w-[90%] border-b-2 flex justify-between items-center">
                 <IoChevronBackOutline/>
                 <span className="text-xl font-semibold text-[#C94C73]">Chats</span>
