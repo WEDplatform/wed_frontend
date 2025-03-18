@@ -14,7 +14,7 @@ import { CoupleProfile } from "@/app/Components/commonComponent/CoupleProfile/Co
 async function page({ params, searchParams }) {
   const clientParam = await params;
   const searchprm = await searchParams
-  ///console.log(searchprm);
+  console.log(clientParam);
   let rsp = await profileFetch()
   // console.log(rsp);
 
