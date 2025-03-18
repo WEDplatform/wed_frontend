@@ -26,7 +26,7 @@ async function page({ params, searchParams }) {
           <SideBarMain client={clientParam} tabParams={searchprm} />
         </div> */}
         <div className="md:hidden w-[100vw] ">
-          <NavBar />
+          <NavBar user={clientParam.clientType} />
           <div className="w-[100%] block md:hidden">
             <div className="w-[100%]  flex justify-center"><StorySection /></div>
           </div>
