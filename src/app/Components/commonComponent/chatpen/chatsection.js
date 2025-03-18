@@ -38,7 +38,14 @@ const ChatSection=({user})=>{
         </div>
         {
             searchParam.get('cs')=='1' && <div className="md:hidden absolute top-0 left-0 block w-[100%] h-[100%] bg-white">
-            text spaces here
+            <div className="w-[100%] h-[100%]">
+                <div className="flex items-center py-3 px-5 h-[10%] ">
+                <IoReturnDownBack onClick={cleanupChat} className="text-[#C94C73] cursor-pointer mr-2 text-[25px] "/>
+                <Image src={profpic} width={50} height={50} alt="profilePicture" className="rounded-full mr-2"/>
+                <h1>wedora events</h1>   
+                </div>
+                <Chatspace s={searchParam.get('s')} r={searchParam.get('r')} messageList={messages} setMessages={setMessages} uid={searchParam.get('uid')}/>
+            </div>
             </div>
         }
         </>
