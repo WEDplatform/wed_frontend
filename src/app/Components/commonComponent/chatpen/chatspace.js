@@ -78,7 +78,7 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
                 <>
                 {
     getMessagesData?.flatMap((chat, index) => [
-        <p key={`date-${index}`}  className="w-[100%] text-sm text-gray-700 text-center">{chat.chatDate}</p>, // Display chat date
+        <p key={`date-${index}`}  className="w-[100%] text-sm text-gray-700 mt-2 text-center">{chat.chatDate}</p>, // Display chat date
         ...chat.messages.map((message, pos) => (
             <MessageBubble 
                 message={message.text} 
