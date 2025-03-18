@@ -23,7 +23,7 @@ const ChatSection=({user})=>{
     return( 
         <>
         {
-            window.innerWidth >768 && <div className="w-[100%] hidden md:block">
+             window.innerWidth>768&&<div className="w-[100%] hidden md:block">
             <div className="w-[100%]  h-[100vh] flex justify-center items-center">
             {
                 searchParam.get('cs')=='0'?
@@ -41,7 +41,7 @@ const ChatSection=({user})=>{
             </div>
         }
         {
-             window.innerWidth <768 &&<div className="md:hidden absolute top-0 left-0 block w-[100%] h-[100%] bg-white">
+          searchParam.get('cs')=='1'&& window.innerWidth<=768&&   <div className="md:hidden absolute top-0 left-0 block w-[100%] h-[100%] bg-white">
             {
                 searchParam.get('cs')=='1' && <div className="w-[100%] h-[100%]">
                 <div className="flex items-center py-3 px-5 h-[10%] ">
