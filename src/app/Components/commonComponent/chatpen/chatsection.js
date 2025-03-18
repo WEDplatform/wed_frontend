@@ -36,6 +36,11 @@ const ChatSection=({user})=>{
         }
         </div>
         </div>
+        {
+            searchParam.get('cs')=='1' && <div className="md:hidden absolute top-0 left-0 block w-[100%] h-[100%] bg-white">
+            text spaces here
+            </div>
+        }
         </>
     )
 }
