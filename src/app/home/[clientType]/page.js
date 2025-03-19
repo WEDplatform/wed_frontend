@@ -17,7 +17,6 @@ async function page({ params, searchParams }) {
   console.log(clientParam);
   let rsp = await profileFetch()
   // console.log(rsp);
-
   return (
     <>
       <div id="mainPost" className='flex md:flex-row w-[100%]  h-[85vh] md:h-[100vh] overflow-y-auto flex-col'>
