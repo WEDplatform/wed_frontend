@@ -4,7 +4,6 @@ import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMai
 export default async function HomePageLayout({ children,params, searchParams }) {
   const navParams = await params
   console.log(navParams);
-  
   const tbparams=await searchParams
   return <>
     <>
