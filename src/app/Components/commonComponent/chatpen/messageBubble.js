@@ -1,7 +1,6 @@
 import profpic from "../../../../../public/profPic.png"
 import Image from "next/image"
 const MessageBubble = ({ message,isSender ,sentAt}) => {
-    
     return (
         <div className={`flex w-[100%] mt-1 ${isSender ? "justify-end" : "justify-start"}`}>
             <div className={`md:max-w-[40%] max-w-[90%] flex items-center  ${isSender ? "flex-row-reverse " : ""}`}>
