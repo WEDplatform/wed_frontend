@@ -3,7 +3,6 @@ import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar";
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain";
 export default async function HomePageLayout({ children,params, searchParams }) {
   const navParams = await params
-  console.log(navParams);
   const tbparams=await searchParams
   return <>
     <>
