@@ -3,7 +3,6 @@ import SignUp from "../Components/commonComponent/SignUp"
 import { Suspense } from "react"
 async function page(props) {
   const {usertype,compIndex}=await props.searchParams
-  //console.log(compIndex);
   return (
     <div className="w-[100%] flex flex-col items-center">
     <div className="mt-4">
