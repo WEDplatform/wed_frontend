@@ -9,5 +9,4 @@ async function page({searchParams}) {
     </div>
   )
 }
-
 export default page
