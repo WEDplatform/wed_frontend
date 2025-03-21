@@ -5,8 +5,7 @@ import Link from "next/link";
 import { SwitchAccount } from "../Components/ui/SwitchAccountButton";
 export default function AuthStruct({usertype}) {
     const params = useParams()
-    //console.log(params);
-    
+    //console.log(params);  
     return (
         <div className="w-full flex flex-col  h-[80%] justify-between items-center ">
            <div className="w-[100%] flex flex-col items-center">
