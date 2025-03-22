@@ -8,7 +8,6 @@ const message=async(vendorData)=>{
         return response
     } catch (error) {
         console.log(error);
-        
     }
 }
 export {message}
