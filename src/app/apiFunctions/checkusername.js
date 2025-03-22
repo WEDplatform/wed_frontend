@@ -8,7 +8,6 @@ export const checkusername=async(username)=>{
         });
         return resp
     } catch (error) {
-        
         throw error
     }
     
