@@ -15,7 +15,6 @@ const followVendor=async(data)=>{
         return response
     } catch (error) {
         console.log(error);
-        
     }
 }
 export {followVendor}
