@@ -19,5 +19,4 @@ async function page(props) {
     </main>
   )
 }
-
 export default page
