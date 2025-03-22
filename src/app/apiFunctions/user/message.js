@@ -5,7 +5,6 @@ const message=async(vendorData)=>{
     try {
         const response=await axiosInstance.post(`/user/handleUserMessage`,vendorData,{headers:{'wedoraCredentials':refreshToken}})
         console.log(response);
-        
         return response
     } catch (error) {
         console.log(error);
