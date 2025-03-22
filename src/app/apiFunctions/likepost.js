@@ -19,7 +19,6 @@ const likePost=async(dt)=>{
         console.log(response.data);
         
     } catch (error) {
-        
     }
 }
 export {likePost}
