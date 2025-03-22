@@ -5,7 +5,6 @@ import React from 'react'
 import Logo from '@/app/Components/logo.js'
 import AuthPage from '@/app/authPageStructure/authStruct.js'
 import Link from 'next/link'
-
 async function page(props) {
   let {usertype}= await props.params
   return (
