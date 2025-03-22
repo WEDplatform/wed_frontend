@@ -11,7 +11,6 @@ const followVendor=async(data)=>{
                 }
             })
         }
-        console.log(response?.data?.data);
         return response
     } catch (error) {
         console.log(error);
