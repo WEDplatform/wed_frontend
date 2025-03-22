@@ -6,7 +6,6 @@ export const checkusername=async(username)=>{
                 "Authorization":`Bearer ${process.env.openapikey}`
             }
         });
-       
         return resp
     } catch (error) {
         
