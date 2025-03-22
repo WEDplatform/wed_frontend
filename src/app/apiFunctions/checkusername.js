@@ -11,5 +11,4 @@ export const checkusername=async(username)=>{
         throw error
     }
     
-    
 }
