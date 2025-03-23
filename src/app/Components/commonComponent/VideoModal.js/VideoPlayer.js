@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
-const VideoPlayer = ({PostUrl}) => {
+import Image from 'next/image';
+const VideoPlayer = ({PostUrl,thumbnail}) => {
   return (
     <>
       <ReactPlayer
         width="100%"
         height="100%"
-        url={PostUrl?.url}
+        url={PostUrl}
         controls={true}
-        light={PostUrl?.thumbnail}
+        light={<Image  style={{objectFit:"cover"}} priority fill={true} layout="fill" src={thumbnail} alt="thumbnail"/>}
        
       />
     </>
