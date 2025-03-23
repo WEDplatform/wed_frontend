@@ -65,7 +65,7 @@ export function VideoModal({ VideoModalOpen, setVideoModal, postCollection }) {
                   <SplideSlide className="w-[100%]" key={index}>
                     <div className='flex relative h-[90vh] md:h-[80vh] bg-white'>
                       <div className='md:w-[40%] w-[100%] relative bg-black h-[100%]'>
-                        <VideoPlayer PostUrl={item?.videos?.large} />
+                        <VideoPlayer PostUrl={item?.videoUrl} thumbnail={item?.displayUrl} />
                         <button onClick={() => { setVideoModal(false);router.back() }} className=' bg-white px-2 absolute top-3 right-3'><IoMdArrowRoundBack/></button>
 
                       </div>
