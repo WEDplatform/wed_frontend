@@ -17,7 +17,6 @@ const SelectPostPage=({id,vendorName,dataSet})=>{
     const fetchVendorPosts=async()=>{
         let postsResponse=await fetchVendorMediaPosts(vendorMediaData.postIndex,6,vendorName)
         console.log(postsResponse);
-        
         if(!postsResponse?.hasMore){
             setData((prev)=>({...prev,hasMorePost:false}));
             return
