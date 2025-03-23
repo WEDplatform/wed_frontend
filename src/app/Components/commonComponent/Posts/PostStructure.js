@@ -146,14 +146,14 @@ const VideoPost = ({videoContent,videoItem}) => {
         <>
             <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
                 <div className="flex items-center justify-between gap-2 py-1 pl-2">
-                    <VendorDetails user={videoItem?.vendorName} vid={videoItem?.id}/>
+                    <VendorDetails user={videoItem?.ownerUsername} vid={videoItem?._id}/>
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?.id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?.id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.videos?.large?.thumbnail} alt="Image"/>:"Unable to preview video"
+                    videoItem?._id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?._id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.displayUrl} alt="Image"/>:"Unable to preview video"
                   }
 
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
@@ -165,7 +165,7 @@ const VideoPost = ({videoContent,videoItem}) => {
                         <MdSaveAlt />
                     </div>
                     <div className="w-[40%] flex justify-end md:mr-0 mr-1 items-center">
-                        <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">{videoItem?.views} reviews</p>
+                        <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">{videoItem?.likesCount} likes</p>
                     </div>
                 </div>
             </div>
