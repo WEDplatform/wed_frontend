@@ -25,7 +25,6 @@ export default function AuthStruct({usertype}) {
                 <div className='w-[100%] text-center text-gray-500'>Are you a user?<Link className='ml-3 text-white bg-[#C94C73] py-3 px-4 rounded-lg' href="/authPage/user">User Sign In</Link></div>
                 </>
             } */}
-
         </div>
     )
 }
