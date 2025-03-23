@@ -139,7 +139,6 @@ const CouplePost=({images})=>{
 const VideoPost = ({videoContent,videoItem}) => {
     const params=useParams()
     // console.log(params?.clientType);
-    
     const router=useRouter()
     const [open,setOpen]=useState(false)
     return (
