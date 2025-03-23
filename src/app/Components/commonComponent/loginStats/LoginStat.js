@@ -73,7 +73,6 @@ export function LoginStat({ lgs }) {
                 <Line type="monotone" dataKey="loginCount" stroke="#9A2143" />
             </LineChart>
         </ResponsiveContainer>
-      
         </>
     )
 }
