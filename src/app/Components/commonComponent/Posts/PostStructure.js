@@ -155,7 +155,6 @@ const VideoPost = ({videoContent,videoItem}) => {
                   {
                     videoItem?._id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?._id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.displayUrl} alt="Image"/>:"Unable to preview video"
                   }
-
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
                 <div className="bg-white flex justify-between w-[100%] py-2">
