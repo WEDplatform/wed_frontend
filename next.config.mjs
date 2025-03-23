@@ -36,6 +36,14 @@ const nextConfig = {
             hostname: 'image.wedmegood.com', // The correct hostname for Pexels images
             pathname: '/resized/**',       // Matches Pexels image paths
           },
+          {
+            protocol: "https",
+            hostname: "**.cdninstagram.com",
+          },
+          {
+            protocol: "https",
+            hostname: "**.fna.fbcdn.net",
+          }
         ],
       },
 };
