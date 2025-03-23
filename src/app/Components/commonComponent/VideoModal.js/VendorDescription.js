@@ -14,8 +14,8 @@ function VendorDescription({description}) {
                     <h1 className="flex items-center">
                         <Image alt="vendorPostpic" src={ICO} width={60} height={60} className="rounded-full" />
                         <span className="font-semibold flex flex-col ml-3">
-                            <span>{description?.vendorName}</span>
-                            <span className="font-normal text-gray-500">{description?.vendorName}</span>
+                            <span>{description?.ownerUsername}</span>
+                            <span className="font-normal text-gray-500">{description?.ownerUsername}</span>
                             <span className="font-normal text-gray-500">IIT BHU near Hyderabd gate</span>
                         </span>
                     </h1>
@@ -28,13 +28,19 @@ function VendorDescription({description}) {
                 <span></span>
             </main>
             <main className="w-[95%] bg-white flex justify-evenly mt-3 px-3 rounded-lg py-3">
-                        <span className="flex items-center"> <AiOutlineLike className="mr-2  text-[20px]"/>{description?.likes} Like</span>
-                        <span className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/>{description?.downloads} Share</span>
-                        <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/>{description?.views} Save</span>
+                        <span className="flex items-center"> <AiOutlineLike className="mr-2  text-[20px]"/>{description?.likesCount} Like</span>
+                        <span className="flex items-center"> <IoShareSocial className="mr-2  text-[20px]"/>{description?.commentsCount} Share</span>
+                        <span className="flex items-center"> <HiOutlineSave className="mr-2  text-[20px]"/>{description?.videoViewCount} Save</span>
             </main>
             <main className="w-[95%] mt-3 px-3 rounded-lg py-3">
                 <p>Tags</p>
-                <span>{description?.tags} </span>
+                <p className="flex flex-wrap gap-1">
+                {
+                    description?.hashtags?.map((item, pos) => (
+                        pos <10 && <span key={pos} className="bg-[#fce9e9] text-[#9A2143] py-1 px-2 rounded-md mr-2">{`# `}{item}</span>
+                    ))
+                }
+                </p>
             </main>
             <main className="w-[95%] bg-white mt-3 px-3 rounded-lg py-3">
                 <p>Review</p>
