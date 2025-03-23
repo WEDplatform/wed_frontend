@@ -11,7 +11,7 @@ function VendorDetails({vid,user}) {
                 <Image alt="pic" src={ICO} width={40} height={40} />
                 <span className="flex flex-col">
                     <span className="font-semibold">{user}</span>
-                    <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span>
+                    {/* <span className="font-normal text-[12px] text-gray-600">Dubai (UAE)</span> */}
                 </span>
             </main>
         </>
