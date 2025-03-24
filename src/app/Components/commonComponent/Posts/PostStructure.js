@@ -91,7 +91,7 @@ const CouplePost=({images})=>{
         if(text.includes("&")){
             return text.replace(" & ", " weds ");  
         }
-        // Return original text if "&" is not found
+    // Return original text if "&" is not found
         if(text.includes("and")){
             return text.replace(" and ", " weds ");  
         }
