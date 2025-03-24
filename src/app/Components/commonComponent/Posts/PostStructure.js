@@ -99,6 +99,7 @@ const CouplePost=({images})=>{
     };
     return(
         <>
+        
             <div className="aspect-[4/3] my-1 w-[100%] ">
                 <div className="flex items-center justify-between gap-2 py-1">
                     <main  onClick={()=>{router.push(`/home/user?tab=coupleProfile&cpid=${images?._id}&coupleName=${encodeURIComponent(images?.coupleName)}`)}} className="flex cursor-pointer items-center gap-2">
