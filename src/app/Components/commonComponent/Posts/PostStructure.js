@@ -96,6 +96,7 @@ const CouplePost=({images})=>{
             return text.replace(" and ", " weds ");  
         }
         return text;
+        
     };
     return(
         <>
