@@ -143,8 +143,8 @@ const VideoPost = ({videoContent,videoItem}) => {
     const [open,setOpen]=useState(false)
     return (
         <>
-            <div className="md:aspect-[3/4] my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
-                <div className="flex items-center justify-between gap-2 py-1 pl-2">
+            <div className="md:aspect-[3/4] relative my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
+                <div className="flex absolute bottom-0 left-0 z-10 text-white w-[100%] bg-gradient-to-t from-black to-transparent items-center justify-between gap-2 py-3 pl-2">
                     <VendorDetails user={videoItem?.ownerUsername} vid={videoItem?._id}/>
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
@@ -156,16 +156,17 @@ const VideoPost = ({videoContent,videoItem}) => {
                   }
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
-                <div className="bg-white flex justify-between w-[100%] py-2">
+                {/* <div className="bg-white flex justify-between w-[100%] py-2">
                     <div className="w-[40%] text-2xl justify-evenly flex items-center">
                         <FaRegHeart />
                         <TbLocation />
                         <MdSaveAlt />
                     </div>
-                    <div className="w-[40%] flex justify-end md:mr-0 mr-1 items-center">
-                        <p className="text-[12px] mr-3 bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">{videoItem?.likesCount} likes</p>
+                    
+                </div> */}
+                <div className=" absolute top-2 left-2  flex justify-end  items-center">
+                        <p className="text-[12px]  bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">{videoItem?.likesCount} likes</p>
                     </div>
-                </div>
             </div>
         </>
     )
