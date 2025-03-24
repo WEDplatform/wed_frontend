@@ -27,7 +27,6 @@ const SelectPostPage=({id,vendorName,dataSet})=>{
             }));
         }
     }
-
     const fetchVendorReels=async()=>{
         // let postsResponse=await fetchVendorMediaReels(vendorMediaData.reelIndex,6,vendorName)
         // console.log(postsResponse);
