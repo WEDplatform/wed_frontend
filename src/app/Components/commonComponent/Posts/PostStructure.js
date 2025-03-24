@@ -170,14 +170,14 @@ const VideoPost = ({videoContent,videoItem}) => {
                   }
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
-                {/* <div className="bg-white flex justify-between w-[100%] py-2">
-                    <div className="w-[40%] text-2xl justify-evenly flex items-center">
+                <div className="bg-[#ffffffcb] absolute top-3 right-3 rounded-lg  py-2">
+                    <div className=" text-2xl justify-evenly flex flex-col px-2 py-1">
                         <FaRegHeart />
-                        <TbLocation />
+                        <TbLocation className="my-2" />
                         <MdSaveAlt />
                     </div>
                     
-                </div> */}
+                </div>
                 <div className=" absolute top-2 left-2  flex justify-end  items-center">
                         <p className="text-[12px]  bg-[#FFECEC] px-3 font-semibold py-1 text-nowrap rounded-[25px]">{videoItem?.likesCount} likes</p>
                     </div>
