@@ -144,11 +144,14 @@ const VideoPost = ({videoContent,videoItem}) => {
     return (
         <>
             <div className="md:aspect-[3/4] relative my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
-                <div className="flex absolute bottom-0 left-0 z-10 text-white w-[100%] bg-gradient-to-t from-black to-transparent items-center justify-between gap-2 py-3 pl-2">
+                <div className=" absolute bottom-0 left-0 z-10 text-white w-[100%] bg-gradient-to-t from-black to-transparent ">
+                    <main className={`flex items-center justify-between gap-2 py-3 pl-2`}>
                     <VendorDetails user={videoItem?.ownerUsername} vid={videoItem?._id}/>
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
+                    </main>
+                    <p className={`w-[90%]`}>the captionplacement</p>
                 </div>
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
