@@ -137,13 +137,21 @@ const CouplePost=({images})=>{
     )
 }
 const VideoPost = ({videoContent,videoItem}) => {
+    const [showCaption, setShowCaption] = useState(false);
     const params=useParams()
     // console.log(params?.clientType);
     const router=useRouter()
     const [open,setOpen]=useState(false)
+    function getFirst20Words(text) {
+        let words = text.split(/\s+/); // Split by spaces
+        if (words.length > 20) {
+            return words.slice(0, 20).join(" ") + " ...";
+        }
+        return text;
+    }
     return (
         <>
-            <div className="md:aspect-[3/4] relative my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
+            <div className="md:aspect-[3/4] overflow-hidden relative my-1 aspect-[3/4] row-span-3 border-2 rounded-xl md:col-span-2 w-[100%] ">
                 <div className=" absolute bottom-0 left-0 z-10 text-white w-[100%] bg-gradient-to-t from-black to-transparent ">
                     <main className={`flex items-center justify-between gap-2 py-3 pl-2`}>
                     <VendorDetails user={videoItem?.ownerUsername} vid={videoItem?._id}/>
@@ -151,11 +159,15 @@ const VideoPost = ({videoContent,videoItem}) => {
                         <BsThreeDots />
                     </nav>
                     </main>
-                    <p className={`w-[90%]`}>the captionplacement</p>
+                    
                 </div>
+                {
+                    videoItem?.caption &&<p className={`w-[100%] mx-auto absolute ${showCaption ? "bottom-10" : "bottom-[-500px]"} transition-all bg-gradient-to-t py-3 to-[#0000005f] from-transparent duration-500  text-white z-30  text-center`}>{getFirst20Words(videoItem?.caption)}</p>
+
+                }
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?._id ?<Image onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?._id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.displayUrl} alt="Image"/>:"Unable to preview video"
+                    videoItem?._id ?<Image onMouseEnter={() => setShowCaption(true)} onMouseLeave={() => setShowCaption(false)}  onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?._id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.displayUrl} alt="Image"/>:"Unable to preview video"
                   }
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
