@@ -159,7 +159,6 @@ const VideoPost = ({videoContent,videoItem}) => {
                         <BsThreeDots />
                     </nav>
                     </main>
-                    
                 </div>
                 {
                     videoItem?.caption &&<p className={`w-[100%] mx-auto absolute ${showCaption ? "bottom-10" : "bottom-[-500px]"} transition-all bg-gradient-to-t py-3 to-[#0000005f] from-transparent duration-500  text-white z-30  text-center`}>{getFirst20Words(videoItem?.caption)}</p>
