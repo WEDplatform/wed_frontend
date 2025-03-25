@@ -38,7 +38,7 @@ const ImagePost =  ({ images }) => {
         <>
             <div className="aspect-[4/3] my-1 border-2  rounded-xl w-[100%] ">
                 <div className="flex items-center justify-between gap-2 py-1 pl-2">
-                    <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&vendorName=${images?.name}`)}} className="flex cursor-pointer items-center gap-2">
+                    <main  onClick={()=>{router.push(`/home/user?tab=profile&vid=${images?._id}&vendorName=${images?.name}&type=post`)}} className="flex cursor-pointer items-center gap-2">
                         <Image alt="pic" src={ICO} width={40} height={40} />
                         <span className="flex flex-col ">
                             <h1 className="font-semibold ">{ images?.name}</h1>
@@ -154,7 +154,7 @@ const VideoPost = ({videoContent,videoItem}) => {
             <div className="md:aspect-[3/4] overflow-hidden relative my-1 aspect-[3/4] row-span-3 border-2 rounded-2xl md:col-span-2 w-[100%] ">
                 <div className=" absolute bottom-0 left-0 z-10 text-white w-[100%] bg-gradient-to-t from-black to-transparent ">
                     <main className={`flex items-center justify-between gap-2 py-3 pl-2`}>
-                    <VendorDetails user={videoItem?.ownerUsername} vid={videoItem?._id}/>
+                    <VendorDetails locationName={videoItem?.locationName} user={videoItem?.ownerUsername} vid={videoItem?._id} type={`reel`}/>
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
@@ -169,7 +169,7 @@ const VideoPost = ({videoContent,videoItem}) => {
                   }
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
-                <div className="bg-[#ffffffcb] absolute top-3 right-3 rounded-lg  py-2">
+                <div className="bg-[#ffffffcb] absolute top-2 right-2 rounded-lg  py-2">
                     <div className=" text-2xl justify-evenly flex flex-col px-2 py-1">
                         <FaRegHeart />
                         <TbLocation className="my-2" />
