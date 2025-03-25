@@ -78,8 +78,8 @@ const VendorProfile = ({vendorName}) => {
                     </div>
                     <span className="font-semibold  mt-2 md:mt-0 flex flex-col ml-3">
                         <span>{profileData.name}</span>
-                        <span className="font-normal text-gray-500">{profileData.address[0]}</span>
-                        <span className="font-normal text-gray-500">{profileData.address[1]}</span>
+                        <span className="font-normal text-gray-500">{profileData?.address[0]}</span>
+                        <span className="font-normal text-gray-500">{profileData?.address[1]}</span>
                     </span>
                 </div>
                 <div className="flex mt-3 md:mt-0 w-[100%]  items-center">
@@ -87,7 +87,8 @@ const VendorProfile = ({vendorName}) => {
                     <button disabled={!isSuccess} onClick={()=>{followVendorMutate({name:profileData?.name,followStatus:!isUserfollowing});setFollowing(!isUserfollowing)}} className="bg-[#9A2143] border-2 border-[#9A2143] w-[50%] text-white px-3 rounded-lg text-sm py-2 ml-2">{isUserfollowing?"Following":"Follow"}</button>
                 </div>
             </div>
-            <div className="flex md:w-[80%] w-[95%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
+            {
+                prm.get('type')=='post' && <div className="flex md:w-[80%] w-[95%] justify-between mx-auto mt-3 py-2 rounded-md bg-gray-100">
                 <div className="w-[50%] border-r-2 border-[#9A2143] flex justify-center items-center text-center py-1 font-light text-gray-500">
                     <span className="font-semibold  text-gray-700">{profileData?.rating} </span><FaStar className="ml-2"/>
                 </div>
@@ -95,6 +96,7 @@ const VendorProfile = ({vendorName}) => {
                     <span className="font-semibold text-gray-700">{profileData?.review?.length} </span>reviews
                 </div>
             </div>
+            }
             <p className="flex justify-center mt-6 ">
                       {
                         vendorSocialHandle.map((item,pos)=>
@@ -122,7 +124,8 @@ const VendorProfile = ({vendorName}) => {
                     }
                 </div>
             </div> */}
-            <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
+            {
+                prm.get('type')=='post' && <div className="md:w-[80%] w-[95%] mt-3  mx-auto">
                 <p className="text-sm font-medium text-gray-500">Services offered</p>
                 <div className="flex flex-wrap gap-2 text-sm mt-1">
                     {
@@ -132,15 +135,18 @@ const VendorProfile = ({vendorName}) => {
                     }
                 </div>
             </div>
+            }
             <SelectPostPage dataSet={profileData?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
             <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
-            <div className="w-[80%] mx-auto">
+            {
+                prm.get('type')=='post' && <div className="w-[80%] mx-auto">
                 {
                     profileData?.review?.map((item,pos)=>
                         <Review reviewData={item} key={pos}/>
                     )
                 }
             </div>
+            }
         </main>
         }
         </>
