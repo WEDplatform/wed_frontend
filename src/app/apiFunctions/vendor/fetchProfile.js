@@ -1,6 +1,6 @@
 import { getCookies } from "@/app/action";
 import { axiosInstance } from "@/app/axios/axios";
-const fetchProfileData=async(vendorName)=>{
+const fetchProfileData=async({vendorName,type})=>{
     try {
         const data= await axiosInstance.get(`/cmn/getVendorProfile?vendorName=${vendorName}`,{
             headers:{
