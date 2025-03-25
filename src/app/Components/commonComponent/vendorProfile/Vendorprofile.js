@@ -36,7 +36,9 @@ const VendorProfile = ({vendorName}) => {
     let [shareModal,setModa]=useState(false);
     useEffect(()=>{
         if(prm.get('type')=='post'){
-            mutate(prm.get('vendorName'))
+            mutate({vendorName:prm.get('vendorName'),type:'post'});
+        }{
+            mutate({vendorName:prm.get('vendorName'),type:'reel'});
         }
     },[])
      let [isUserfollowing,setFollowing]=useState(profileData?.isFollowed);
