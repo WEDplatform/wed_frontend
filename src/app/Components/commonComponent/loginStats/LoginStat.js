@@ -50,7 +50,7 @@ export function LoginStat({ lgs }) {
         { dateLogin: '2025-01-02T00:00:00.000Z', loginCount: 4, _id: '6776e7bbb966b837603234b8' },
         { dateLogin: '2025-01-03T00:00:00.000Z', loginCount: 2, _id: '677753d49dd0cba9e7727f2b' }
     ];
-    // Transform data
+    // Transform da
     const formattedData = lgs?.map(item => ({
         loginDate: new Date(item.dateLogin).toLocaleDateString(), // Format date
         loginCount: item.loginCount
