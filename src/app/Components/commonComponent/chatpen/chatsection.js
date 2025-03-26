@@ -19,7 +19,6 @@ const ChatSection=({user})=>{
         router.back()
     }
     console.log(window.innerWidth);
-    
     return( 
         <>
         {
