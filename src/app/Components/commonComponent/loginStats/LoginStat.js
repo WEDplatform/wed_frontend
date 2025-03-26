@@ -75,5 +75,4 @@ export function LoginStat({ lgs }) {
         </ResponsiveContainer>
         </>
     )
-}
-            
+}          
