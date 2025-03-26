@@ -16,7 +16,6 @@ const NotifyBar=({user,orgName,uid,senderId,recieverId,lastMessage,num})=>{
                {num}
                 </p>
             }
-           
         </div>
     )
 }
