@@ -6,7 +6,7 @@ import { socket } from "./socket";
 import { useMutation } from "@tanstack/react-query";
 import { formatMessageData, getMessages } from "@/app/apiFunctions/getMessages";
 const Chatspace = ({uid,messageList,setMessages,s,r}) => {
-    //console.log(messageList);
+    //console.log(messageList
     const chatRef = useRef(null);
     const [isSocketCon, setCon] = useState(false);
     const [pid,setPid]=useState('')
