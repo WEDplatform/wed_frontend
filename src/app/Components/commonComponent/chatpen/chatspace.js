@@ -107,7 +107,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
                         <input value={message} onChange={(e)=>{modifyPayload(e.target.value)}} autoFocus type="text" placeholder="type here..." className="w-[100%] text-md px-4 py-3 tracking-wider text-md outline-none border-none "/>
                     {
                         message && <MdSend onClick={sendMessage} className=" absolute text-[#C94C73] right-2 top-3 text-[25px]"/>
-
                     }
                     </div>
                 </div>
