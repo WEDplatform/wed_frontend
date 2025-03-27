@@ -136,7 +136,7 @@ const VendorProfile = ({vendorName}) => {
                 </div>
             </div>
             }
-            <SelectPostPage dataSet={profileData?.images || []} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
+            <SelectPostPage type={prm.get('type')} dataSet={profileData?.images || []} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
             {
                 prm.get('type')=='post' && <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
             }
