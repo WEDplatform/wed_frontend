@@ -154,7 +154,7 @@ const VideoPost = ({videoContent,videoItem}) => {
             <div className="md:aspect-[3/4] overflow-hidden relative my-1 aspect-[3/4] row-span-3 border-2 rounded-2xl md:col-span-2 w-[100%] ">
                 <div className=" absolute bottom-0 left-0 z-10 text-white w-[100%] bg-gradient-to-t from-black to-transparent ">
                     <main className={`flex items-center justify-between gap-2 py-3 pl-2`}>
-                    <VendorDetails locationName={videoItem?.locationName} user={videoItem?.ownerUsername} vid={videoItem?._id} type={`reel`}/>
+                    <VendorDetails locationName={videoItem?.locationName} user={videoItem?.ownerUsername} vid={videoItem?._id} type={`reels`}/>
                     <nav className="mr-3 ml-2">
                         <BsThreeDots />
                     </nav>
