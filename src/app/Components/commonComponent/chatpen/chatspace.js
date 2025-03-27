@@ -10,11 +10,16 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
     const [isSocketCon, setCon] = useState(false);
     const [pid,setPid]=useState('')
     const [message, setMessage] = useState("");
+    ;(()=>{
+        if (chatRef.current) {
+            chatRef.current.scrollTop = chatRef.current.scrollHeight;
+        }
+    })()
     useEffect(() => {
         if (chatRef.current) {
             chatRef.current.scrollTop = chatRef.current.scrollHeight;
         }
-    }, [message]);
+    }, [messageList]);
     useEffect(() => {
         console.log("🔹 Initial socket connection status:", socket.connected); // ✅ Check before connecting
         if (!socket.connected) {
