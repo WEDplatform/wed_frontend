@@ -4,8 +4,8 @@ import { fetchReels } from "@/app/apiFunctions/fetchPosts";
 import { fetchPosts } from "@/app/apiFunctions/fetchPosts";
 import { fetchVendorMediaPosts, fetchVendorMediaReels } from "./fetchVendorPosts";
 import { VendorReelGrid } from "./VendorReelDisplay";
-const SelectPostPage=({id,vendorName,dataSet})=>{
-    let [postIndex,setIndex]=useState('post')
+const SelectPostPage=({id,vendorName,dataSet,type})=>{
+    let [postIndex,setIndex]=useState(type)
     let [vendorMediaData,setData]=useState({
         postsData:[...dataSet],
         reelData:[],
@@ -28,29 +28,41 @@ const SelectPostPage=({id,vendorName,dataSet})=>{
         }
     }
     const fetchVendorReels=async()=>{
-        // let postsResponse=await fetchVendorMediaReels(vendorMediaData.reelIndex,6,vendorName)
-        // console.log(postsResponse);
+        let postsResponse=await fetchVendorMediaReels(vendorMediaData.reelIndex,6,vendorName)
+        console.log(postsResponse);
         
-        // if(!postsResponse?.hasMore){
-        //     setData((prev)=>({...prev,hasMoreReel:false}));
-        //     return
-        // }else{
-        //     setData((prevState) => ({
-        //         ...prevState,
-        //         reelData: [...prevState.reelData, ...postsResponse?.reels], // Append new data to the existing array
-        //         reelIndex: prevState.reelIndex + 1,           // Increment the pageIndex
-        //     }));
-        // }
+        if(!postsResponse?.hasMore){
+            setData((prev)=>({...prev,hasMoreReel:false}));
+            return
+        }else{
+            setData((prevState) => ({
+                ...prevState,
+                reelData: [...prevState.reelData, ...postsResponse?.reels], // Append new data to the existing array
+                reelIndex: prevState.reelIndex + 1,           // Increment the pageIndex
+            }));
+        }
     }
     // useEffect(()=>{
-    //     fetchVendorPosts()
-    //     fetchVendorReels()
+    //     if(type=='reels'){
+    //         fetchVendorReels()
+    //     }
     // },[])
+    useEffect(()=>{
+    
+        fetchVendorReels()
+    },[])
     return (
         <>
         <div className="md:w-[80%] w-[100%] mx-auto flex justify-center mt-6 ">
-            <button onClick={()=>setIndex('post')} className={`px-7 font-semibold ${postIndex=='post'?'bg-[#e9ced68e] text-[#9A2143]':""} py-2 `}>Posts</button>
-            <button onClick={()=>setIndex('reels')} className={`px-7 font-semibold ${postIndex=='reels'?'bg-[#e9ced68e] text-[#9A2143]':""} py-2`}>Reels</button>
+            {
+                type=='post'? <>
+                <button onClick={()=>setIndex('post')} className={`px-7 font-semibold ${postIndex=='post'?'bg-[#e9ced68e] text-[#9A2143]':""} py-2 `}>Posts</button>
+
+                </> : <>
+                <button onClick={()=>setIndex('reels')} className={`px-7 font-semibold ${postIndex=='reels'?'bg-[#e9ced68e] text-[#9A2143]':""} py-2`}>Reels</button>
+
+                </>
+            }
         </div>
         {
             postIndex=='post' && <VendorPostsGrid id={id} vendorMediaData={vendorMediaData} fetchVendorPosts={fetchVendorPosts} setData={setData}/>
