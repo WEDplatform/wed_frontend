@@ -37,7 +37,7 @@ const VendorProfile = ({vendorName}) => {
     useEffect(()=>{
         if(prm.get('type')=='post'){
             mutate({vendorName:prm.get('vendorName'),type:'post'});
-        }{
+        }else{
             mutate({vendorName:prm.get('vendorName'),type:'reel'});
         }
     },[])
