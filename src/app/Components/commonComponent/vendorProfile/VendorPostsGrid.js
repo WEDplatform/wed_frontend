@@ -7,7 +7,7 @@ const VendorPostsGrid=({fetchVendorPosts,vendorMediaData,setData,id})=>{
         className="md:w-[80%] w-[100%] mx-auto grid grid-cols-3 gap-1 mt-1"
         dataLength={vendorMediaData?.postsData?.length}
         next={fetchVendorPosts}
-        loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
+        loader={<h1 style={{ textAlign: 'center',width:"100%"}}>Loading</h1>}
         scrollThreshold={0}
         scrollableTarget={id}
         hasMore={vendorMediaData?.hasMorePost}
