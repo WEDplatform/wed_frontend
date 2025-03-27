@@ -19,7 +19,7 @@ const VendorReelGrid=({id,vendorMediaData,fetchVendorReels,setData})=>{
    {
     vendorMediaData?.reelData?.map((item,pos)=>
     <div key={pos} className=" relative h-[30vh]">
-        <VideoPlayer PostUrl={item?.videos?.medium}/>
+        <VideoPlayer PostUrl={item?.videoUrl} thumbnail={item?.displayUrl}/>
     </div>
     )
    }
