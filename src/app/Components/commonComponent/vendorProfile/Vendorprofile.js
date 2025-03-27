@@ -50,7 +50,7 @@ const VendorProfile = ({vendorName}) => {
     console.log(profileData);
     const messageVendor=()=>
     {
-        messVendorMutate({vendorName:profileData.name,vendorId:profileData.vid})
+        messVendorMutate({vendorName:profileData.name || profileData?.businessName,vendorId:profileData.vid})
     }
     useEffect(()=>{
         if(messVendorSuccess){
@@ -77,9 +77,9 @@ const VendorProfile = ({vendorName}) => {
                         <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
                     </div>
                     <span className="font-semibold  mt-2 md:mt-0 flex flex-col ml-3">
-                        <span>{profileData.name}</span>
-                        <span className="font-normal text-gray-500">{profileData?.address[0]}</span>
-                        <span className="font-normal text-gray-500">{profileData?.address[1]}</span>
+                        <span>{profileData?.name || profileData?.businessName}</span>
+                        <span className="font-normal text-gray-500">{profileData?.address?.[0]}</span>
+                        <span className="font-normal text-gray-500">{profileData?.address?.[1]}</span>
                     </span>
                 </div>
                 <div className="flex mt-3 md:mt-0 w-[100%]  items-center">
@@ -136,8 +136,10 @@ const VendorProfile = ({vendorName}) => {
                 </div>
             </div>
             }
-            <SelectPostPage dataSet={profileData?.images} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
-            <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
+            <SelectPostPage dataSet={profileData?.images || []} vendorName={prm.get('vendorName')} id={'vendorProfile'}/>
+            {
+                prm.get('type')=='post' && <p className="w-[80%] mt-3 text-gray-400 mx-auto mb-3">Reviews</p>
+            }
             {
                 prm.get('type')=='post' && <div className="w-[80%] mx-auto">
                 {
