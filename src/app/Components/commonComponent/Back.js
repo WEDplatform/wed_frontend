@@ -7,4 +7,13 @@ const Back = () => {
         <button className="flex items-center py-2 text-[14px] font-semibold text-gray-400 justify-center" onClick={()=>{router.back()}}><IoMdArrowRoundBack/>{" "}<span className="ml-2">Back</span></button>
     )
 }
-export {Back}
+const Verify = () => {
+    return(
+        <>
+        <button className="w-[95%] py-3 text-[14px] font-semibold text-white rounded-lg mt-5 bg-[#9A2143]">Verify</button>
+        </>
+    )
+}
+    
+
+export {Back,Verify}
