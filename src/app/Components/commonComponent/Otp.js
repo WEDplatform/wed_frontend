@@ -9,7 +9,7 @@ const Otp = () => {
   const handleChange = (otp) => setOtp(otp);
 
   return (
-    <OtpInput inputStyle={{border:'1px solid #C94C73',padding:'5px',margin:'5px',width:'50px',borderRadius:'5px',height:'50px'}} value={otp} onChange={handleChange} numInputs={6} separator={<span>-</span>} />
+    <OtpInput shouldAutoFocus inputStyle={{border:'1px solid #C94C73',padding:'5px',margin:'5px',width:'50px',borderRadius:'5px',height:'50px'}} value={otp} onChange={handleChange} numInputs={6} separator={<span>-</span>} />
   )
 };
 export {Otp}
