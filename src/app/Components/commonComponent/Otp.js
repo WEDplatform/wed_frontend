@@ -2,7 +2,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { OtpInput } from 'reactjs-otp-input';
-
 const Otp = () => {
   const [otp, setOtp] = useState('');
 
