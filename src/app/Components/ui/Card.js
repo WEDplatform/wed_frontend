@@ -3,7 +3,6 @@ import { cn } from "@/app/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 const ModalContext = createContext(undefined);
-
 export const ModalProvider = ({
   children
 }) => {
