@@ -110,7 +110,6 @@ export const ModalBody = ({
     </AnimatePresence>)
   );
 };
-
 export const ModalContent = ({
   children,
   className
