@@ -10,10 +10,9 @@ const Back = () => {
 const Verify = () => {
     return(
         <>
-        <button className="w-[95%] py-3 text-[14px] font-semibold text-white rounded-lg mt-5 bg-[#9A2143]">Verify</button>
+        <button className="w-[95%] py-3 text-[14px] font-semibold text-white rounded-lg mt-5 bg-[#C94C73]">Verify</button>
         </>
     )
 }
-    
 
 export {Back,Verify}
