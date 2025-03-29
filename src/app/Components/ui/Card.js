@@ -46,7 +46,6 @@ export const ModalBody = ({
   className
 }) => {
   const { open } = useModal();
-
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
