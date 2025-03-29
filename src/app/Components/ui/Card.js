@@ -13,7 +13,6 @@ export const ModalProvider = ({
     </ModalContext.Provider>)
   );
 };
-
 export const useModal = () => {
   const context = useContext(ModalContext); 
   if (!context) {
