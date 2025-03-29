@@ -106,7 +106,6 @@ const ImageSWR = ({ data }) => {
                          : 
                             <ImagePost key={pos} images={item} />
                       )
-                      
                 }
             </InfiniteScroll>
             }
