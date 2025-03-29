@@ -53,7 +53,6 @@ export const ModalBody = ({
       document.body.style.overflow = "auto";
     }
   }, [open]);
-
   const modalRef = useRef(null);
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
