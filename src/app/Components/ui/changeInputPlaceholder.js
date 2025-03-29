@@ -80,7 +80,6 @@ export function PlaceholdersAndVanishInput({
         }
       }
     }
-
     newDataRef.current = newData.map(({ x, y, color }) => ({
       x,
       y,
