@@ -131,7 +131,6 @@ export const ModalFooter = ({
     </div>)
   );
 };
-
 const Overlay = ({
   className
 }) => {
