@@ -25,7 +25,6 @@ export function Modal({
 }) {
   return <ModalProvider>{children}</ModalProvider>;
 }
-
 export const ModalTrigger = ({
   children,
   className
