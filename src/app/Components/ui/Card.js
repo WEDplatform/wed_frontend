@@ -41,7 +41,6 @@ export const ModalTrigger = ({
     </button>)
   );
 };
-
 export const ModalBody = ({
   children,
   className
