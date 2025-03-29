@@ -8,7 +8,7 @@ export default function page(){
         <div className="w-[25%] flex flex-col items-center h-[50%] ">
             <span className="w-[90%] "> <Back/></span>
             <Otp/>
-            <Image src={authPic} width={300} height={300} className="mt-5" alt="authPic"/>
+            <Image src={authPic} width={300} height={300} className="mt-10 mb-5" alt="authPic"/>
             <Verify/>
         </div>
         </div>
