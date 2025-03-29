@@ -120,7 +120,6 @@ export const ModalContent = ({
     </div>)
   );
 };
-
 export const ModalFooter = ({
   children,
   className
