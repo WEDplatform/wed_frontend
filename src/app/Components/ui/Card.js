@@ -150,7 +150,6 @@ const Overlay = ({
       className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}></motion.div>)
   );
 };
-
 const CloseIcon = () => {
   const { setOpen } = useModal();
   return (
