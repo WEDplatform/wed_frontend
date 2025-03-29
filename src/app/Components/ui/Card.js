@@ -20,7 +20,6 @@ export const useModal = () => {
   }
   return context;
 };
-
 export function Modal({
   children
 }) {
