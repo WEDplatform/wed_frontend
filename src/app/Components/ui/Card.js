@@ -187,7 +187,6 @@ export const useOutsideClick = (
       }
       callback(event);
     };
-
     document.addEventListener("mousedown", listener);
     document.addEventListener("touchstart", listener);
 
