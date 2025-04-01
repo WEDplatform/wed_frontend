@@ -92,5 +92,4 @@ function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
     </>
   )
 }
-
 export { Userlocation }
