@@ -49,8 +49,7 @@ function UserLogin() {
   const onSubmit = (e) => {
     setErr([])
    let validatedSchema=loginSchema.safeParse(userCredentials)
-   console.log(validatedSchema);
-   
+   console.log(validatedSchema); 
    if(!(validatedSchema?.success)){
     setErr(validatedSchema?.error?.errors)
     return
