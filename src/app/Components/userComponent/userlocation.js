@@ -43,7 +43,6 @@ function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
     return (
     <>
     <div className='w-[100%] flex flex-col items-center md:px-0 h-[55vh]  md:h-[60vh]'>
-
     <input
     type="text"
     name="locationCity"
