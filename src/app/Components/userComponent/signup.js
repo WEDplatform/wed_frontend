@@ -77,8 +77,7 @@ const [pageTracker,updateTracker]=useState({
     }
   };
   useEffect(() => {
-    // Add the popstate listener when the component mounts
-
+    // Add the popstate listener when the component mount
     window.addEventListener("popstate", handlePopState);
     // Clean up the event listener when the component unmounts
     return () => {
