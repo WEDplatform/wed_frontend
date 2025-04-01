@@ -194,4 +194,4 @@ export const useOutsideClick = (
       document.removeEventListener("touchstart", listener);
     };
   }, [ref, callback]);
-};
+}
