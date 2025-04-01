@@ -1,8 +1,7 @@
 'use client'
 import Image from "next/image"
 const VendorLiked=({dt,isFollowed})=>{
-    console.log(dt);
-    
+    console.log(dt); 
     return(
         <div className=" w-[100%] relative h-[30vh] bg-gray-200">
             <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  priority style={{ objectFit: 'cover' }} fill={true} src={dt?.images?.[0] || dt?.couplecover?.[0]} alt='pics'/>
