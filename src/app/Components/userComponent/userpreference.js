@@ -42,7 +42,6 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
             setDetails((prev) => ({ ...prev, userPreference: [...userDetails.userPreference, { title, value: [value] }] }))
         }
     }
-   
     const WindowHistoryStack = (pageIndex, replace = false) => {
         const params = new URLSearchParams(queryParams)
         params.set('compIndex', pageIndex)
