@@ -126,5 +126,4 @@ const [pageTracker,updateTracker]=useState({
     </>
   )
 }
-
 export default UserSignUp
