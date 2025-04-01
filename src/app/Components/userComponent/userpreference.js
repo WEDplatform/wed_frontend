@@ -7,7 +7,7 @@ import { useEffect } from "react";
 function Userpreference({ prev, next, userDetails, setDetails, index, queryParams }) {
     const router = useRouter()
     // const { mutate, data, isError, error, isPending } = useMutation({
-    //     mutationFn: signup
+    //     mutationFn: signu
     // })
     const { mutate: updatePref, data: prefData, isError: prefError, error: prefErr, isPending: prefPending } = useMutation({
         mutationFn: updatePreference
