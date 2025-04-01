@@ -13,7 +13,6 @@ import Logo from "@/app/Components/logo"
 import Linkbutton from "../linkbutton";
 import Link from "next/link";
 export function SwitchAccount() {
-  
   return (
    <>
    <Modal>
