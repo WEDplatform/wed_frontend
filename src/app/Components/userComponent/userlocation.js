@@ -51,8 +51,7 @@ function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
     placeholder="Search location"
     value={locVal}
     onChange={(e)=>{searchCity(e)}}/>
-     <div className='w-[100%] relative'>
-     
+     <div className='w-[100%] relative'>  
     {/* <div className='w-[98%] ml-1 py-3 recommenerbody h-[30vh] md:min-h-[1vh] md:max-h-[20vh] overflow-auto absolute top-1 bg-[#ffffff] rounded-lg border-2 border-gray-500'>
       {
         availableServiceCities.map((item,pos)=>
