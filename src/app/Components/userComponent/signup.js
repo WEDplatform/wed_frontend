@@ -122,7 +122,6 @@ const [pageTracker,updateTracker]=useState({
        queryParams={queryParams}
        />
       </Slider>
-  
     </>
   )
 }
