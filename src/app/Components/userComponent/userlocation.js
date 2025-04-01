@@ -24,7 +24,6 @@ function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
       })
      }
     },1000)
-
     let searchCity=async(e)=>{
       //setDetails((prev)=>({...prev,[e.target.name]:e.target.value}))
       //setCityArr(availableServiceCities.filter((item)=>item.toLowerCase().includes(e.target.value.toLowerCase())))
