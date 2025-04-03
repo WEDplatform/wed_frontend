@@ -27,7 +27,7 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
         router:router
     })
     }
-    
+  
   }
   const checkErr=(name)=>{
     let resp= validationError.filter((item)=>(item.path)[0]==name)
