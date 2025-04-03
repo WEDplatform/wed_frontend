@@ -21,7 +21,6 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                 return item.title === title
             })
             //console.log(index);
-
             let updatedPref = userDetails.userPreference.map((item, pos) => {
                 if (pos === index) {
                     if (!item.value.includes(value)) {
