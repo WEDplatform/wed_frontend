@@ -30,7 +30,6 @@ function Userpreference({ prev, next, userDetails, setDetails, index, queryParam
                     else {
                         return { ...item, value: item.value.filter((item2) => item2 !== value) }
                     }
-
                 }
                 return item
             })
