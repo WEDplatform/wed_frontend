@@ -78,7 +78,6 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
         <div className="grid grid-cols-2 w-[100%] gap-1">
          <button className="border-2 col-span-1 border-[#C94C73] p-1 rounded-md text-[#C94C73]" onClick={()=>{setCitiesOpen(!citiesOpen)}}>Select Cities</button>
          <button className="border-2 col-span-1 border-[#C94C73] p-1 rounded-md text-[#C94C73]" onClick={()=>{setServicesOpen(!servicesOpen)}}>Select services</button>
-
         </div>
         {
           validationError?.length>0 && (validationError?.filter((item)=>(item.path)[0]=="servicesProvided" || (item.path)[0]=="citiesActive")).length>0 &&  <h1 className="text-red-400 text-[12px] ml-2 mb-1 w-[100%]">Choose minimum 1 from above</h1>
