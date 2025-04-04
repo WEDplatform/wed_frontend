@@ -42,7 +42,7 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
     <CitiesActive open={citiesOpen} setOpen={setCitiesOpen} vendorDetails={vendorDetails} setvendorDetails={setvendorDetails}/>
     <ServicesModal open={servicesOpen} setOpen={setServicesOpen} vendorDetails={vendorDetails} setvendorDetails={setvendorDetails}/>
     <div className="md:w-[25vw] mb-5 w-[85vw] mt-10 flex flex-col items-center">
-        
+     
         {
           vendorDetails_p1.map((item,pos)=>
           <main key={pos}>
