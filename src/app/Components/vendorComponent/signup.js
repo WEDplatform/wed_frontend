@@ -84,7 +84,6 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
          }
         <div className="relative w-[100%] mt-3">
         <h1 className="w-[100%] ml-2 text-sm text-gray-500 font-normal">GST</h1>
-
                   <input
                   value={vendorDetails['gstNumber']}
                   type="text"
