@@ -115,5 +115,4 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
     </>
   )
 }
-
 export default VendorSignup
