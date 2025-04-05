@@ -91,9 +91,8 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
                   }}
                   className="md:w-[100%] w-[100%] mt-0 md:mt-0 outline-2 pl-2 sm:pl-3 border-[1px] focus:outline-[#C94C73] pr-20 relative dark:bg-zinc-800 h-[6vh] rounded-lg overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
                   placeholder="GST"
-                  name="gstnumber"
-             
-                  />
+                  name="gstnumber"           
+                 />
                   {/* {
                     isPending &&<Image src={spinner} alt="loading" width={20} height={20} className="absolute top-[55%] right-0 transform -translate-x-1/2 -translate-y-1/2" />
         
