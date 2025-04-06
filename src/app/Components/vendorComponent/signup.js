@@ -107,6 +107,7 @@ function VendorSignup({vendorDetails,setvendorDetails}) {
          }
         <button disabled={isPending} className="w-[100%] bg-[#C94C73] font-semibold text-white py-3 mt-4 rounded-md" onClick={submit
         }>
+          
           {
             isPending ?"Signing you in":"Sign up"
           }
