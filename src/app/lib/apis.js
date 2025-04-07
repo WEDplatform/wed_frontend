@@ -6,7 +6,6 @@ let fetchCity=async(cityName)=>{
             headers: {
                 'X-Api-Key': '3Wlk1z/7EUfZob9p9l06Kg==014ARTIKUfZ9q2Jn',
             },
-        
         })
         let data=await resp.json()
         return data
