@@ -12,7 +12,6 @@ async function page({ params }) {
     const {userProfile}=prf?.data
     console.log(prf.data); 
     // console.log(prf.data);
-    
     let { clientType } = await params
     return (
         <>
