@@ -11,7 +11,6 @@ async function page({ params }) {
     const prf = await profileFetch()
     const {userProfile}=prf?.data
     console.log(prf.data); 
-    
     let { clientType } = await params
     return (
         <>
