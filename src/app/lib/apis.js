@@ -9,7 +9,6 @@ let fetchCity=async(cityName)=>{
         })
         let data=await resp.json()
         return data
-    } 
-    
+    }     
 }
 export {fetchCity}
