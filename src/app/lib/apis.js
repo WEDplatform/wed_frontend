@@ -1,5 +1,4 @@
 let fetchCity=async(cityName)=>{
-   
     if(cityName!=""){
         let resp=await fetch(`https://api.api-ninjas.com/v1/city?name=${cityName}&limit=30`,{
             method: 'GET',
