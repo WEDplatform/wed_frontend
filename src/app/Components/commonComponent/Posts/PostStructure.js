@@ -184,4 +184,5 @@ const VideoPost = ({videoContent,videoItem}) => {
         </>
     )
 }
+
 export { ImagePost, VideoPost,CouplePost }
