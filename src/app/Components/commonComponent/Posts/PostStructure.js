@@ -165,7 +165,7 @@ const VideoPost = ({videoContent,videoItem}) => {
                 }
                 <div className="w-[100%] relative h-[100%] rounded-xl bg-gray-200">
                   {
-                    videoItem?._id ?<Image onMouseEnter={() => setShowCaption(true)} onMouseLeave={() => setShowCaption(false)}  onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?._id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.displayUrl} alt="Image"/>:"Unable to preview video"
+                    videoItem?.id ?<Image onMouseEnter={() => setShowCaption(true)} onMouseLeave={() => setShowCaption(false)}  onClick={()=>{setOpen(true);router.push(`/home/${params?.clientType}?tab=home&view=video&vid=${videoItem?._id}`)} } style={{objectFit:"cover"}} priority fill={true} layout="fill" src={videoItem?.displayUrl} alt="Image"/>:"Unable to preview video"
                   }
                   <VideoModal postCollection={videoContent} VideoModalOpen={open} setVideoModal={setOpen}/>
                 </div> 
