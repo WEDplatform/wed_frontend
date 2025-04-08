@@ -41,5 +41,4 @@ function StorySection() {
         </>
     );
 }
-
 export { StorySection }
