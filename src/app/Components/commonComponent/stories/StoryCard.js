@@ -18,5 +18,4 @@ function StoryCard() {
         </>
     )
 }
-
 export { StoryCard }
