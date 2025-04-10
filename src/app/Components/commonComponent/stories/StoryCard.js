@@ -11,7 +11,6 @@ function StoryCard() {
                 <span className='absolute top-[100%] text-center flex justify-center items-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 aspect-auto rounded-full w-[1.9rem] h-[1.9rem] md:w-[1.7rem] md:h-[1.7rem] text-white text-[1rem]'>
                     <Image src={Cat} objectFit='cover' className='h-[100%] rounded-full' alt="cat" fill={true} />
                 </span>
-
             </div>
             <h1 className='text-center mt-2 mb-2 font-medium'>elysa</h1>
         </>
