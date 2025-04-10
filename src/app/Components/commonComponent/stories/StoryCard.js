@@ -12,7 +12,6 @@ function StoryCard() {
                     <Image src={Cat} objectFit='cover' className='h-[100%] rounded-full' alt="cat" fill={true} />
                 </span>
 
-
             </div>
             <h1 className='text-center mt-2 mb-2 font-medium'>elysa</h1>
         </>
