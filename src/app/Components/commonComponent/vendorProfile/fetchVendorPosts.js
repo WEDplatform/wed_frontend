@@ -6,7 +6,7 @@ export const fetchVendorMediaPosts=async(index,per_page,vendorName)=>{
         // console.log(resp?.data?.data); 
         return resp?.data?.data
     } catch (error) {
-        // console.log(error);   
+        // console.log(e 
     }
 }
 export const fetchVendorMediaReels=async(index,per_page,vendorName)=>{
