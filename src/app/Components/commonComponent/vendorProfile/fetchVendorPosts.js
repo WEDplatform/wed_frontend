@@ -3,7 +3,7 @@ export const fetchVendorMediaPosts=async(index,per_page,vendorName)=>{
     try {
         let resp=await axiosInstance.get(`/cmn/getVendorPosts?searchIndex=${index}&per_page=${per_page}&vendorName=${vendorName}`)
         //resp?.data?.data?.pics.map((i,p)=>i.p_type='post')
-        // console.log(resp?.data?. 
+        // consolp?.data?. 
         return resp?.data?.data
     } catch (error) {
         // console.l
