@@ -12,7 +12,8 @@ function SideBarMain({tabParams}) {
    const router=useRouter()
    const srch=useSearchParams()
    tabParams={tab:srch.get('tab')}
-  return (
+  
+   return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
         <div>
             {
