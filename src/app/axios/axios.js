@@ -8,7 +8,7 @@ const axiosInstance=axios.create(
 )
 const pseudoAxios=axios.create({
     baseURL:process.env.backend_api,
-        timeout:40000,
+       
         withCredentials:true
 })
 export {axiosInstance,pseudoAxios}
