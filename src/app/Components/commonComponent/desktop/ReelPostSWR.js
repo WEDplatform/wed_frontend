@@ -36,7 +36,7 @@ const VideoSWR=()=>{
                 loader={<h1 style={{ textAlign: 'center'}}>Loading</h1>}
                 scrollableTarget="VideoPost"
                 hasMore={hasMoreTrack}
-                scrollThreshold={0.5}
+                scrollThreshold={0.7}
                 endMessage={
                     <p style={{ textAlign: 'center',width:"100%" }}>
                       <b>Yay! You have seen it all</b>
