@@ -8,7 +8,6 @@ const axiosInstance=axios.create(
 )
 const pseudoAxios=axios.create({
     baseURL:process.env.backend_api,
-       
         withCredentials:true
 })
 export {axiosInstance,pseudoAxios}
