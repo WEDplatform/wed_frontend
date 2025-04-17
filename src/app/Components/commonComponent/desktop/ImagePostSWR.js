@@ -20,8 +20,7 @@ const ImageSWR = ({ data }) => {
         pageIndex:0,
         coupleData:[],
         coupleIndex:0
-    })
-   
+    }) 
     const fetchVendorPosts=async(SearchFilter=[])=>{
         SearchFilter=filters
         function shuffleArray(arr=[]) {
