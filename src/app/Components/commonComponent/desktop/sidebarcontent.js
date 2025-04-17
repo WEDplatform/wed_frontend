@@ -24,5 +24,4 @@ const NavigatorList = [
         icon:<TbReplaceFilled />
     }
 ]
-
 export {NavigatorList}
