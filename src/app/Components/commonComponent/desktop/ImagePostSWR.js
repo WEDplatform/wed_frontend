@@ -111,5 +111,4 @@ const ImageSWR = ({ data }) => {
         </main>
     </>)
 }
-
 export { ImageSWR }
