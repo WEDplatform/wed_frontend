@@ -93,7 +93,6 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         ))
     ]) || []
 }
-
 {
                     messageList?.map((message, index) => 
                         <MessageBubble 
