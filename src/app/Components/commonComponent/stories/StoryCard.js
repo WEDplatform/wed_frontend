@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Cat from "../../../../../public/cat.jpg"
 import Image from 'next/image'
 
