@@ -14,7 +14,7 @@ const VendorPostsGrid=({fetchVendorPosts,vendorMediaData,setData,id})=>{
         endMessage={
             <p style={{ textAlign: 'center',width:"100%" }}>
               <b></b>
-       
+    
             </p>
           }
         >
