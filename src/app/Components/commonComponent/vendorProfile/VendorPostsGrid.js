@@ -1,8 +1,7 @@
 import InfiniteScroll from "react-infinite-scroll-component";
 import Image from "next/image";
 const VendorPostsGrid=({fetchVendorPosts,vendorMediaData,setData,id})=>{
-    return(
-      
+    return(   
         <>
         <InfiniteScroll
         className="md:w-[80%] w-[100%] mx-auto grid grid-cols-3 gap-1 mt-1"
