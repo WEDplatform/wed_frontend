@@ -31,5 +31,4 @@ const VendorPostsGrid=({fetchVendorPosts,vendorMediaData,setData,id})=>{
 
 
 
-
 export {VendorPostsGrid}
