@@ -4,7 +4,7 @@ export default async function checkAuth() {
     const cookieStore = await cookies()
     const refreshToken = cookieStore.get('refreshToken')?.value;
     try {
-        let rftResp=await fetch(`${process.env.backend_api}/cmn/checkClientAuth`,{
+        let rftResp=await fetch(`${process.env.backend_api}/common/checkClientAuth`,{
             cache:"no-cache",
             headers:{
               "wedoraCredentials":cookieStore?.get("refreshToken")?.value
