@@ -1,6 +1,6 @@
 // HomeLayout.js
 import { Suspense } from "react";
-import { LoadingPage } from "../Components/commonComponent/loadingPage";
+import { LoadingPage } from "../../Components/commonComponent/loadingPage";
 import Logo from "@/app/Components/logo"
 import checkAuth from "./checkAuth";
 import Link from "next/link";

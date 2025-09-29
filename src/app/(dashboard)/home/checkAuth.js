@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { axiosInstance } from "../axios/axios";
+import { axiosInstance } from "../../axios/axios";
 export default async function checkAuth() {
     const cookieStore = await cookies()
     const refreshToken = cookieStore.get('refreshToken')?.value;
