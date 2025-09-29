@@ -1,5 +1,5 @@
 import Logo from "@/app/Components/logo"
-import SignUp from "../Components/commonComponent/SignUp"
+import SignUp from "../../Components/commonComponent/SignUp"
 import { Suspense } from "react"
 async function page(props) {
   const {usertype,compIndex}=await props.searchParams

@@ -8,10 +8,12 @@ import { LogoutButton } from '../logoutButton'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-function SideBarMain({tabParams}) {
+function SideBarMain({tabParams,client}) {
    const router=useRouter()
    const srch=useSearchParams()
    tabParams={tab:srch.get('tab')}
+   console.log(client);
+   
    return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>
         <div>
@@ -27,7 +29,7 @@ function SideBarMain({tabParams}) {
             } 
             <LogoutButton/>
         </div>
-        <Link href={"/profile/user"}  className='flex cursor-pointer items-center m-4'>
+        <Link href={`/profile/${client}`}  className='flex cursor-pointer items-center m-4'>
             <Image className='mr-2' alt='profile' src={ICO} width={30} height={30} />
             <p>Profile</p>
         </Link>
