@@ -1,5 +1,3 @@
-import Logo from "@/app/Components/logo"
-import Link from "next/link"
 import { VendorInput } from "../commonComponent/vendorInput"
 import { vendorDetails_p1 } from "@/app/lib/constants"
 import {CitiesActive} from "@/app/Components/vendorComponent/CitiesActive"
