@@ -2,7 +2,7 @@
 import React, { use, useEffect, useState } from 'react'
 import GoogleLogo from "../../../../public/google-icon.svg"
 import Image from 'next/image'
-import { userschema } from '@/app/schema/userSchema'
+import { userschema } from '@/schema/userSchema'
 import { Authinput } from '../commonComponent/input'
 import { LoginViaGoogle } from '@/lib/googleAuth'
 import spinner from "../../../../public/spinner.svg"

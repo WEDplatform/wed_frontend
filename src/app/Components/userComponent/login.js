@@ -8,7 +8,7 @@ import Image from "next/image";
 import { FaEyeSlash,FaEye } from "react-icons/fa";
 import { loginUser } from "@/app/apiFunctions/user/login";
 import {  logViaGoogle } from "@/lib/googleAuth";
-import { loginSchema } from "@/app/schema/userSchema";
+import { loginSchema } from "@/schema/userSchema";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 function UserLogin() {
