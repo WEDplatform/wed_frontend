@@ -6,11 +6,15 @@ import Usersignup from "@/app/Components/userComponent/signup"
 import { vendorDetails as vnd } from '@/app/lib/vendorDetails'
 function SignUp({usertype,compIndex}) {
   const searchParams = useSearchParams()
+  console.log(searchParams.toString());
+  
   const [vendorDetails,setvendorDetails]=useState(vnd)
   return (
     <>
     {
-        usertype=="user"?<Usersignup queryParams={searchParams.toString()} index={compIndex}/>:<Vendorsignup vendorDetails={vendorDetails} setvendorDetails={setvendorDetails}/>
+        usertype=="user"?
+        <Usersignup queryParams={searchParams.toString()} index={compIndex}/>:
+        <Vendorsignup queryParams={searchParams.toString()} vendorDetails={vendorDetails} setvendorDetails={setvendorDetails}/>
     }
     </>
   )
