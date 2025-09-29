@@ -1,4 +1,4 @@
-import profilePic from "../../../../public/profile.svg"
+import profilePic from "../../../../../public/profile.svg"
 import { MdCameraswitch } from "react-icons/md";
 import { MdNotificationsActive } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
