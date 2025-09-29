@@ -1,5 +1,5 @@
 import { create } from "@/app/action";
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 const loginUser=async({data,router})=>{
     try {
         let resp=await axiosInstance.post("/user/login",data,

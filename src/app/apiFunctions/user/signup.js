@@ -1,5 +1,5 @@
 import { create, getCookies } from "@/app/action";
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 const signup=async({cred})=>{
     try {
         let response = await axiosInstance.post('/user/signup', cred, {

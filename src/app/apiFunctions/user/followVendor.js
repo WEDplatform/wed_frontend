@@ -1,5 +1,5 @@
 import { getCookies } from "@/app/action";
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 const followVendor=async(data)=>{
     try {
         const refreshToken=await getCookies()

@@ -1,5 +1,5 @@
 import { create } from "@/app/action";
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 const signup=async({cred,router})=>{
     try {
         let response = await axiosInstance.post('/vendor/signup', cred, {

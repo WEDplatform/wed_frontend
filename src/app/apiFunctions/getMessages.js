@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 import { getCookies } from "@/app/action";
 const formatMessages = (messageData) => {
     const formattedDate = new Date(messageData.chatDate).toLocaleString("en-US", {

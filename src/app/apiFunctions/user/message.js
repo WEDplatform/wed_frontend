@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 import { getCookies } from "@/app/action";
 const message=async(vendorData)=>{
     const refreshToken=await getCookies()

@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/app/axios/axios"
+import { axiosInstance } from "@/axios/axios"
 
  const fetchCoupleDetails=async(query)=>{
     console.log(query);

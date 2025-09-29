@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 export const fetchVendorMediaPosts=async(index,per_page,vendorName)=>{
     try {
         let resp=await axiosInstance.get(`/cmn/getVendorPosts?searchIndex=${index}&per_page=${per_page}&vendorName=${vendorName}`)

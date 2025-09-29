@@ -1,4 +1,4 @@
-import { axiosInstance } from "../axios/axios";
+import { axiosInstance } from "../../axios/axios";
 import { getCookies } from "../action";
 const getSbscribers = async (user) => {
     const refreshToken = await getCookies();

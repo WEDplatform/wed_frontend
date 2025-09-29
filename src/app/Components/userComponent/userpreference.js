@@ -1,5 +1,5 @@
 import { signup, updatePreference } from "@/app/apiFunctions/user/signup";
-import { axiosInstance } from "@/app/axios/axios";
+import { axiosInstance } from "@/axios/axios";
 import { userPreferences } from "@/lib/constants"
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
