@@ -1,7 +1,7 @@
 'use client'
 import { RiSearch2Line } from "react-icons/ri";
 import { SearchSectionScroll } from "./SearchSectionScroll";
-import { searchSection } from "@/app/lib/constants";
+import { searchSection } from "@/lib/constants";
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 function Search() {

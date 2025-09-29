@@ -1,5 +1,5 @@
 import { VendorInput } from "../commonComponent/vendorInput"
-import { vendorDetails_p1 } from "@/app/lib/constants"
+import { vendorDetails_p1 } from "@/lib/constants"
 import {CitiesActive} from "@/app/Components/vendorComponent/CitiesActive"
 import { ServicesModal } from "./services"
 import { useState } from "react"

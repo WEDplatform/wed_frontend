@@ -4,7 +4,7 @@ import GoogleLogo from "../../../../public/google-icon.svg"
 import Image from 'next/image'
 import { userschema } from '@/app/schema/userSchema'
 import { Authinput } from '../commonComponent/input'
-import { LoginViaGoogle } from '@/app/lib/googleAuth'
+import { LoginViaGoogle } from '@/lib/googleAuth'
 import spinner from "../../../../public/spinner.svg"
 import { checkusername } from '@/app/apiFunctions/checkusername'
 import { useMutation } from '@tanstack/react-query'

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Vendorsignup from "@/app/Components/vendorComponent/signup"
 import Usersignup from "@/app/Components/userComponent/signup"
-import { vendorDetails as vnd } from '@/app/lib/vendorDetails'
+import { vendorDetails as vnd } from '@/lib/vendorDetails'
 function SignUp({usertype,compIndex}) {
   const searchParams = useSearchParams()
   console.log(searchParams.toString());

@@ -2,7 +2,7 @@
 import profile from "../../../../../public/profile.svg"
 import Image from "next/image"
 import { MdCameraswitch } from "react-icons/md";
-import { vendorSocialHandle } from "@/app/lib/constants";
+import { vendorSocialHandle } from "@/lib/constants";
 import { LuDot } from "react-icons/lu";
 import { HiOutlineSave } from "react-icons/hi";
 import { IoShareSocial } from "react-icons/io5";

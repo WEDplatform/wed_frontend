@@ -5,7 +5,7 @@ import { MdNotificationsActive } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { BackButton, FollowButton, VendorBackButton } from "./FollowButton";
-import { vendorSocialHandle } from "@/app/lib/constants";
+import { vendorSocialHandle } from "@/lib/constants";
 import { LuDot } from "react-icons/lu";
 function Profile() {
   return (

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Modal } from "../commonComponent/modal";
 import { VendorInput } from "../commonComponent/vendorInput";
 import { useDebouncedCallback } from "use-debounce";
-import { fetchCity } from "@/app/lib/apis";
+import { fetchCity } from "@/lib/apis";
 import { useMutation } from "@tanstack/react-query";
 import spinner from "../../../../public/spinner.svg"
 import Image from "next/image";

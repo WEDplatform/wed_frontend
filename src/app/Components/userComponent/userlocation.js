@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React, { use, useState } from 'react'
 import locationLogo from "../../../../public/location.svg"
 import { useDebouncedCallback } from 'use-debounce';
-import { fetchCity } from '@/app/lib/apis';
+import { fetchCity } from '@/lib/apis';
 import fadeLoader from "../../../../public/fadeLoader.svg"
 function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
     let famousCityList=["Mumbai","Delhi","Jaipur","Chennai","Kolkata","Hugli","Telangana"]

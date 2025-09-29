@@ -2,7 +2,7 @@
 import Image from "next/image";
 import errorPage from "../../../public/errorPage.svg"
 import Logo from "@/app/Components/logo.js"
-import useNetworkStatus from "../lib/networkStatus";
+import useNetworkStatus from "../../lib/networkStatus";
  const metadata = {
   title: "Erros Occured",
   description:"Errors occured"

@@ -1,6 +1,6 @@
 import { Modal } from "../commonComponent/modal";
 import { useState } from "react";
-import { userPreferences } from "@/app/lib/constants";
+import { userPreferences } from "@/lib/constants";
 const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {
     const [services, setServices] = useState("");
     const [servicesList, setServicesList] = useState([]);
