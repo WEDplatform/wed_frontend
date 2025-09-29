@@ -21,7 +21,7 @@ async function page({ params, searchParams }) {
           <NavBar />
           <SideBarMain client={clientParam} tabParams={searchprm} />
         </div> */}
-        <div className="md:hidden w-[100vw] ">
+        <div className="md:hidden w-[100vw]">
           <NavBar user={clientParam.clientType} />
           <div className="w-[100%] block md:hidden">
             <div className="w-[100%]  flex justify-center"><StorySection /></div>
@@ -51,7 +51,6 @@ async function page({ params, searchParams }) {
             <div className="w-[100%] h-[100%] flex items-center justify-center">
             </div>
         </div> */}
-       
         {
           searchprm?.tab == 'coupleProfile' && <div className="w-[100%] flex justify-center items-center">
             <CoupleProfile />
