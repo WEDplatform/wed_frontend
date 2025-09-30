@@ -11,13 +11,14 @@ import {  logViaGoogle } from "@/lib/googleAuth";
 import { loginSchema } from "@/schema/userSchema";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
+import { loginClient } from "@/apiFunctions/auth/clientLogin";
 function UserLogin() {
   const searchParams = useSearchParams()
   const searchKey = searchParams.get('usertype')
   const router=useRouter()
   let [credError,setErr]=useState([])
   const {mutate,error,isPending,data,isError,isSuccess}=useMutation({
-    mutationFn:loginUser
+    mutationFn:loginClient
   })  
     const placeholders = [
         "Enter Username or", 

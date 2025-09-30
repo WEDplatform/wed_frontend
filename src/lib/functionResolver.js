@@ -1,12 +1,9 @@
-const tryCatchWrapper = (fn) => async (req, res, next) => {
+const tryCatchWrapper = (fn) => async (...args) => {
     try {
-      await fn(req, res, next); // Execute the wrapped function
+      await fn(...args); // Execute the wrapped function
     } catch (error) {
       // Handle error here (log it, send response, etc.)
-      console.error('Error:', error?.message);
-  
-      // Send a standard error response
-      res.status(500).json({ error: 'Something went wrong', details: error?.message });
+      console.log('Error:', error?.message);
     }
   };
   export {tryCatchWrapper}
