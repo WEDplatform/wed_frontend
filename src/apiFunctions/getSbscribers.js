@@ -1,5 +1,5 @@
-import { axiosInstance } from "../../axios/axios";
-import { getCookies } from "../action";
+import { axiosInstance } from "@/axios/axios.js";
+import { getCookies } from "@/app/action.js";
 const getSbscribers = async (user) => {
     const refreshToken = await getCookies();
     try {
