@@ -1,4 +1,4 @@
-import { signup, updatePreference } from "@/app/apiFunctions/user/signup";
+import { signup, updatePreference } from "@/apiFunctions/user/signup";
 import { axiosInstance } from "@/axios/axios";
 import { userPreferences } from "@/lib/constants"
 import { useQuery, useMutation } from "@tanstack/react-query";

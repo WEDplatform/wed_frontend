@@ -6,7 +6,7 @@ import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar"
 import { StorySection } from "@/app/Components/commonComponent/stories/StorySection"
 import { Posts } from "@/app/Components/commonComponent/Posts/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
-import { profileFetch } from "@/app/apiFunctions/profile"
+import { profileFetch } from "@/apiFunctions/profile"
 import { VendorProfile } from "@/app/Components/commonComponent/vendorProfile/Vendorprofile"
 import { CoupleProfile } from "@/app/Components/commonComponent/CoupleProfile/CoupleProfile"
 async function page({ params, searchParams }) {

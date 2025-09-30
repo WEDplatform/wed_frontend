@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { VendorPostsGrid } from "./VendorPostsGrid";
-import { fetchReels } from "@/app/apiFunctions/fetchPosts";
-import { fetchPosts } from "@/app/apiFunctions/fetchPosts";
+import { fetchReels } from "@/apiFunctions/fetchPosts";
+import { fetchPosts } from "@/apiFunctions/fetchPosts";
 import { fetchVendorMediaPosts, fetchVendorMediaReels } from "./fetchVendorPosts";
 import { VendorReelGrid } from "./VendorReelDisplay";
 const SelectPostPage=({id,vendorName,dataSet,type})=>{

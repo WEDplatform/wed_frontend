@@ -3,7 +3,7 @@ import React from 'react'
 import { NavigatorList } from './sidebarcontent'
 import Image from 'next/image'
 import ICO from "@/app/favicon.ico"
-import { logout } from '@/app/apiFunctions/logout'
+import { logout } from '@/apiFunctions/logout'
 import { LogoutButton } from '../logoutButton'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'

@@ -6,7 +6,7 @@ import Link from "next/link";
 import GoogleLogo from "../../../../public/google-icon.svg"
 import Image from "next/image";
 import { FaEyeSlash,FaEye } from "react-icons/fa";
-import { loginUser } from "@/app/apiFunctions/user/login";
+import { loginUser } from "@/apiFunctions/user/login";
 import {  logViaGoogle } from "@/lib/googleAuth";
 import { loginSchema } from "@/schema/userSchema";
 import { useRouter } from "next/navigation";

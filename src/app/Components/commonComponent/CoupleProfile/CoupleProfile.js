@@ -2,7 +2,7 @@
 import wedImage from "../CoupleProfile/wed.jpg"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
-import { fetchCoupleDetails } from "@/app/apiFunctions/couple/fetchCoupleProfile"
+import { fetchCoupleDetails } from "@/apiFunctions/couple/fetchCoupleProfile"
 import { useEffect } from "react"
 import Image from "next/image"
 const CoupleProfile=()=>{

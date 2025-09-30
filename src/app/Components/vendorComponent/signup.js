@@ -5,7 +5,7 @@ import { ServicesModal } from "./services"
 import { useState } from "react"
 import { vendorSchema } from "@/schema/vendorSchema"
 import { useMutation } from "@tanstack/react-query"
-import { signup } from "@/app/apiFunctions/vendor/signup"
+import { signup } from "@/apiFunctions/vendor/signup"
 import { useRouter } from "next/navigation"
 function VendorSignup({vendorDetails,setvendorDetails}) {
   const router=useRouter()

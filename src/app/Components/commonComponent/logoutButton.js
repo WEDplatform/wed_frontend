@@ -1,5 +1,5 @@
 "use client"
-import { logout } from "@/app/apiFunctions/logout"
+import { logout } from "@/apiFunctions/logout"
 import { TbLogout2 } from "react-icons/tb"
 function LogoutButton() {
   return (

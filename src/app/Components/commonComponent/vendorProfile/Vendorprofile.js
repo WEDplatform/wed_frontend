@@ -11,15 +11,15 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa6";
 import { useMutation } from "@tanstack/react-query";
 import { SelectPostPage } from "./VendorPostDisplay";
-import { fetchProfileData } from "@/app/apiFunctions/vendor/fetchProfile";
+import { fetchProfileData } from "@/apiFunctions/vendor/fetchProfile";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { LuLoaderCircle } from "react-icons/lu";
 import { VendorShare } from "./VendorShare";
 import { Review } from "./Review";
 import { BiSolidLike } from "react-icons/bi";
-import { followVendor } from "@/app/apiFunctions/user/followVendor";
-import { message } from "@/app/apiFunctions/user/message";
+import { followVendor } from "@/apiFunctions/user/followVendor";
+import { message } from "@/apiFunctions/user/message";
 import { useRouter } from "next/navigation";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();

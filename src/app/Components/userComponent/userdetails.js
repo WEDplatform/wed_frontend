@@ -9,7 +9,7 @@ import spinner from "../../../../public/spinner.svg"
 import { checkusername } from '@/app/apiFunctions/checkusername'
 import { useMutation } from '@tanstack/react-query'
 import { useDebouncedCallback } from 'use-debounce'
-import { signup } from '@/app/apiFunctions/user/signup'
+import { signup } from '@/apiFunctions/user/signup'
 import Link from 'next/link'
 function Userdetailspage1({
     userDetails,
