@@ -6,7 +6,7 @@ import { userschema } from '@/schema/userSchema'
 import { Authinput } from '../commonComponent/input'
 import { LoginViaGoogle } from '@/lib/googleAuth'
 import spinner from "../../../../public/spinner.svg"
-import { checkusername } from '@/app/apiFunctions/checkusername'
+import { checkusername } from '@/apiFunctions/checkusername'
 import { useMutation } from '@tanstack/react-query'
 import { useDebouncedCallback } from 'use-debounce'
 import { signup } from '@/apiFunctions/user/signup'

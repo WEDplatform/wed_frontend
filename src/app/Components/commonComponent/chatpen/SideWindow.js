@@ -2,7 +2,7 @@
 import { FiBell } from "react-icons/fi";
 import { NotifyBar } from "./notifyBar";
 import { useMutation } from "@tanstack/react-query";
-import { getSbscribers } from "@/app/apiFunctions/getSbscribers";
+import { getSbscribers } from "@/apiFunctions/getSbscribers.js";
 import { useEffect,useState } from "react";
 import { LuLoaderCircle } from "react-icons/lu";
 import { useSearchParams } from "next/navigation";
