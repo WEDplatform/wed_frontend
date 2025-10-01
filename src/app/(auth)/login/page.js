@@ -3,7 +3,7 @@ export const metadata={
 }
 import Logo from "@/app/Components/logo"
 import { Suspense } from "react"
-import { UserLogin } from "../../Components/userComponent/login"
+import { UserLogin } from "../../Components/commonComponent/login"
 function page() {
   return (
     <div className="w-screen flex flex-col items-center">
