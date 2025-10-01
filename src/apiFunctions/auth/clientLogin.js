@@ -2,7 +2,7 @@ import { axiosInstance } from "@/axios/axios";
 import { create } from "@/app/action";
 import { tryCatchWrapper } from "@/lib/functionResolver";
 const loginClient = tryCatchWrapper(async({data,router,client}) => {
-    let loginResponse = await axiosInstance.post(`/${client}/login`,data,
+    let loginResponse = await axiosInstance.post(`/${client}/loginn`,data,
                 {
                     headers: {
                         "Content-Type": "application/json"
