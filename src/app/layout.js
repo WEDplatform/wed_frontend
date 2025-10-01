@@ -6,7 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/app/theme.js"
 import {AppRouterCacheProvider} from "@mui/material-nextjs/v15-appRouter"
 import "./globals.css";
-import { TanstackProvider } from "./Components/provider/tanstackprovider";
+import { TanstackProvider } from "../lib/provider/tanstackprovider";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
