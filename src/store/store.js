@@ -7,7 +7,7 @@ export const useAuthStore = create((set) => ({
 
   setUser: (data) =>
     set({
-      client: data,
+      user: data,
       isAuthenticated: true,
     }),
 
