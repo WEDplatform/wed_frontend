@@ -11,6 +11,7 @@ import { useMutation } from '@tanstack/react-query'
 import { useDebouncedCallback } from 'use-debounce'
 import { signup } from '@/apiFunctions/user/signup'
 import Link from 'next/link'
+
 function Userdetailspage1({
     userDetails,
     setDetails,
