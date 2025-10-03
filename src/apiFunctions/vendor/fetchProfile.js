@@ -7,10 +7,8 @@ const fetchProfileData=async({vendorName,type})=>{
                 'wedoraCredentials':await getCookies()
             }
         })
-        //console.log(data?.data?.data);
         return data?.data?.data
     } catch (error) {
-        //console.log(error);
     }
 }
 export {fetchProfileData}
