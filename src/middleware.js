@@ -34,7 +34,6 @@ export async function middleware(request) {
 
       // Otherwise continue as normal
       return NextResponse.next();
-
     }
 
   } catch (error) {
