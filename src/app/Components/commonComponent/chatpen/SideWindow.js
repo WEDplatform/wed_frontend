@@ -16,7 +16,7 @@ const SideWindow = ({ user }) => {
         getSubMutate(user)
     }, [user])
     useEffect(() => {
-        console.log(getSubData);
+        //console.log(getSubData);
     },[getSubData])
     return (
         <div className="md:w-[30%] md:bg-[#f9efef] w-[100%] flex flex-col items-center border-2 h-[100%]">

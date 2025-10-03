@@ -17,7 +17,7 @@ export default async function checkAuth() {
           //console.log(rftResp);
          return 1 
     } catch (error) {
-        console.log(error);        
+        //console.log(error);        
         return -1
     }
 }

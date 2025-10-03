@@ -8,10 +8,10 @@ const saveUserPost=async(data)=>{
                 "wedoraCredentials":await getCookies()
         }
            })
-           console.log(response.data);
+           //console.log(response.data);
            
     } catch (error) {
-        console.log(error);
+        //(error);
     }
 }
 export {saveUserPost}

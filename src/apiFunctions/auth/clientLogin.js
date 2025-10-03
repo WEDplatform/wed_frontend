@@ -12,7 +12,7 @@ const loginClient = tryCatchWrapper(async ({ data, router, client }) => {
     )
     await create(loginResponse?.data)
     const { setUser } = useAuthStore.getState();
-    console.log(loginResponse?.data);
+    //console.log(loginResponse?.data);
     setUser(loginResponse?.data);
     if (loginResponse.status == 203) {
         router.push(`/home/${client}?tab=home`)

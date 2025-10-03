@@ -48,7 +48,7 @@ function Userdetailspage1({
         }
     }
     const loginViaGoole=async()=>{
-        console.log(userDetails);
+        //console.log(userDetails);
         let data=LoginViaGoogle(userDetails,setDetails,false)
         //console.log(data);
     }

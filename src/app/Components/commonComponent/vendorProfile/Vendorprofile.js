@@ -47,7 +47,7 @@ const VendorProfile = ({vendorName}) => {
             setFollowing(profileData.isFollowed); // ✅ Update state when profileData is available
         }
     }, [profileData]);
-    console.log(profileData);
+    //console.log(profileData);
     const messageVendor=()=>
     {
         messVendorMutate({vendorName:profileData.name || profileData?.businessName,vendorId:profileData.vid})

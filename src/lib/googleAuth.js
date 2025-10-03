@@ -9,7 +9,7 @@ const LoginViaGoogle=(userDetails,setDetails)=>{
         let {phoneNumber}=user
         let {email,firstName}=_tokenResponse
         setDetails({...userDetails,password:"",email:email,username:firstName,phoneNumber:phoneNumber || userDetails.phoneNumber,isGoogleAuthenticated:true})
-        console.log(email,firstName,phoneNumber);
+        //console.log(email,firstName,phoneNumber);
         
         return {email,firstName,phoneNumber}
         // The signed-in user info.
@@ -17,7 +17,7 @@ const LoginViaGoogle=(userDetails,setDetails)=>{
         // ...
       }).catch((error) => {
         // Handle Errors here.
-        console.log(error);
+        //console.log(error);
         
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -37,10 +37,10 @@ const logViaGoogle = async () => {
     const { firstName } = _tokenResponse;
 
     const data = { email, firstName, phoneNumber };
-    console.log("User Data:", data); // Logs inside logViaGoogle
+    //console.log("User Data:", data); // Logs inside logViaGoogle
     return data; // Return resolved data
   } catch (error) {
-    console.error("Error during sign-in:", error);
+    //console.error("Error during sign-in:", error);
     throw error; // Rethrow error for outer handling
   }
 };

@@ -12,11 +12,11 @@ import { useAuthStore } from '@/store/store'
 function SideBarMain({tabParams,client}) {
    const router=useRouter()
    const { user:clientData } = useAuthStore.getState()
-   console.log(clientData);
+   //console.log(clientData);
    
    const srch=useSearchParams()
    tabParams={tab:srch.get('tab')}
-   console.log(client);
+   //console.log(client);
    
    return (
     <div className='w-[100%] h-[75%] flex flex-col justify-between mt-[15vh]'>

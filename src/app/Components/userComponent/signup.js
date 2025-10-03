@@ -67,13 +67,13 @@ const [pageTracker,updateTracker]=useState({
   const handlePopState = (event) => {
     if(sliderRef.current){
       let querySearchIndex=window?.location?.search?.split("compIndex=")[1].split("&")[0]
-    console.log("Current rout is ",window?.location?.pathname);
-    console.log(querySearchIndex);
+    //console.log("Current rout is ",window?.location?.pathname);
+    //console.log(querySearchIndex);
    
     sliderRef.current.slickGoTo(querySearchIndex-1);
     }
     else{
-      console.log("no sliderref");
+      //console.log("no sliderref");
     }
   };
   useEffect(() => {

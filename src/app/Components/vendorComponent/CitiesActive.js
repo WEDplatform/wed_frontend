@@ -16,7 +16,7 @@ function CitiesActive({open,setOpen,vendorDetails,setvendorDetails}) {
     }  
   },1000)
   useEffect(()=>{
-    console.log(data); 
+    //console.log(data); 
   },[data])
   return (
     <>

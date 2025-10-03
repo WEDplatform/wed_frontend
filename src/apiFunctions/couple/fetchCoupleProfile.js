@@ -5,10 +5,10 @@ import { axiosInstance } from "@/axios/axios"
     
     try {
         const response=await axiosInstance.get(`/cmn/getCoupleDetails?coupleName=${encodeURIComponent(query.trim())}`)
-        console.log(response.data);
+        //console.log(response.data);
         return response.data.data
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         
     }
 

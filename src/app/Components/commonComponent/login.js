@@ -36,7 +36,7 @@ function UserLogin() {
    const loginViaGoole=async()=>{
            //console.log(userDetails);
            let data=await logViaGoogle()
-           console.log(data);
+           //console.log(data);
            //setCredentials((prev)=>({...prev,userid:data.email,isGoogleAuthenticated:true}))
            mutate({
             data:{userid:data.email},
@@ -50,12 +50,12 @@ function UserLogin() {
   const onSubmit = (e) => {
     setErr([])
    let validatedSchema=loginSchema.safeParse(userCredentials)
-   console.log(validatedSchema); 
+   //console.log(validatedSchema); 
    if(!(validatedSchema?.success)){
     setErr(validatedSchema?.error?.errors)
     return
    }
-   console.log(userCredentials);  
+   //console.log(userCredentials);  
    mutate({
     data:userCredentials,
     router:router,

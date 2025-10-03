@@ -29,7 +29,7 @@ const SelectPostPage=({id,vendorName,dataSet,type})=>{
     }
     const fetchVendorReels=async()=>{
         let postsResponse=await fetchVendorMediaReels(vendorMediaData.reelIndex,6,vendorName)
-        console.log(postsResponse);
+        //(postsResponse);
         
         if(!postsResponse?.hasMore){
             setData((prev)=>({...prev,hasMoreReel:false}));

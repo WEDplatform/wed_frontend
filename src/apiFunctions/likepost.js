@@ -16,7 +16,7 @@ const likePost=async(dt)=>{
             },
             signal:controller.signal
         })
-        console.log(response.data);
+        //console.log(response.data);
         
     } catch (error) {
     }

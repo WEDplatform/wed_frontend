@@ -15,7 +15,7 @@ const loginUser=async({data,router,client})=>{
         }
         return resp
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         throw error       
     }    
 }

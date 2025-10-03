@@ -19,7 +19,7 @@ export async function middleware(request) {
       }
     })
     clientAuthTokenCheck = await clientAuthTokenCheck.json();
-    console.log(clientAuthTokenCheck,"i got here");
+    //console.log(clientAuthTokenCheck,"i got here");
 
     if (clientAuthTokenCheck.statusCode >= 400) {
       return NextResponse.redirect(redirectLoginUrl);

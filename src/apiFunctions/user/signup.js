@@ -10,13 +10,13 @@ const signup=async({cred})=>{
          await create(response?.data)
         return response
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         throw error       
     }
 }
 const updatePreference=async({cred})=>{
     const refreshToken=await getCookies()
-    console.log(cred);
+    //console.log(cred);
     try {
         let resp=await axiosInstance.post('/user/updatePreferences',cred,{
             headers: {
@@ -25,7 +25,7 @@ const updatePreference=async({cred})=>{
         })
         return resp
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         return error
     }
 }

@@ -68,7 +68,7 @@ const PostSWR = ({ id_ }) => {
             index:0,
             coupleIndex:0
         }))
-        console.log(filterValues);
+        //console.log(filterValues);
       },[searchParam])
     return (
         <>

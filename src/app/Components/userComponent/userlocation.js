@@ -15,7 +15,7 @@ function Userlocation({prev,next,userDetails,setDetails,queryParams,index}) {
      {
       setLoader(true)
       fetchCity(val.toLowerCase()).then((res)=>{
-        console.log(res);
+        //console.log(res);
         setCityArr(res.length>0?res.filter((item)=>item.country==="IN"):[])
         setLoader(false)
       }).catch((err)=>{

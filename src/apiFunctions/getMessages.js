@@ -55,7 +55,7 @@ let pseudoPayload = {
     sender: "67c8a1b8166df9be2214ebcd",
     receiver: "67c8a1c9166df9be2214ece2"
 };
-console.log(formatMessageData(pseudoPayload));
+//console.log(formatMessageData(pseudoPayload));
 // Example Usage:
 const messageData = {
     chatDate: "2025-03-05T18:30:00.000Z",
@@ -69,7 +69,7 @@ const messageData = {
         }
     ]
 };
-console.log(formatMessages(messageData));
+//console.log(formatMessages(messageData));
 export const getMessages=async(roomId)=>{
     try {
         let resp=await axiosInstance.post(`/cmn/getMessages`,{roomID:roomId},{
@@ -78,7 +78,7 @@ export const getMessages=async(roomId)=>{
             }
         })
         let messData=resp?.data?.data.map((i)=>formatMessages(i))
-        console.log(messData);
+        //console.log(messData);
         return messData;
     } catch (error) {
     }

@@ -1,5 +1,5 @@
 let fetchCity=async(cityName)=>{
-    console.log(cityName);
+    //console.log(cityName);
     
     if(cityName!=""){
         let resp=await fetch(`https://api.api-ninjas.com/v1/city?name=${cityName}`,{
@@ -9,7 +9,7 @@ let fetchCity=async(cityName)=>{
             },
         })
         let data=await resp.json()
-        console.log(data);
+        //console.log(data);
         
         return data
     }     

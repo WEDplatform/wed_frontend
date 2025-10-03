@@ -6,7 +6,7 @@ import Usersignup from "@/app/Components/userComponent/SignUp.js"
 import { vendorDetails as vnd } from '@/lib/vendorDetails'
 function SignUp({usertype,compIndex}) {
   const searchParams = useSearchParams()
-  console.log(searchParams.toString());
+  //console.log(searchParams.toString());
   
   const [vendorDetails,setvendorDetails]=useState(vnd)
   return (

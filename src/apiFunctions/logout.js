@@ -16,7 +16,7 @@ export async function logout() {
          }
      }) 
     const readableLogoutResponse=await logoutResponse.json()
-    console.log(readableLogoutResponse);
+    //console.log(readableLogoutResponse);
     cookieStore.delete('refreshToken')
     NextResponse.redirect(loginUrl)
    } catch (error) {

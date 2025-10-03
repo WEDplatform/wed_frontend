@@ -10,7 +10,7 @@ const ChatSection=({user})=>{
     const searchParam=useSearchParams();
     const router=useRouter();
     useEffect(()=>{
-        console.log(searchParam.get('cs'))
+        //console.log(searchParam.get('cs'))
     },[searchParam])
     const [messages, setMessages] = useState([ ]);
     const cleanupChat=()=>{
@@ -18,7 +18,7 @@ const ChatSection=({user})=>{
         setMessages([])
         router.back()
     }
-    console.log(window.innerWidth);
+    //console.log(window.innerWidth);
     return( 
         <>
         {

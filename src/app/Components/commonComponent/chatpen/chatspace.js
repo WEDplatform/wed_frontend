@@ -21,32 +21,32 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         }
     }, [messageList]);
     useEffect(() => {
-        console.log("🔹 Initial socket connection status:", socket.connected); // ✅ Check before connecting
+        //console.log("🔹 Initial socket connection status:", socket.connected); // ✅ Check before connecting
         if (!socket.connected) {
             socket.connect();
-            console.log("✅ Attempting to connect socket...");
+            //console.log("✅ Attempting to connect socket...");
         }
         const handleConnect = () => {
-            console.log("✅ Connected with ID:", socket.id);
+            //console.log("✅ Connected with ID:", socket.id);
             socket.emit("join_room", uid,s);
             setPid(socket.id);
             setCon(true);
         };
         const handleDisconnect = () => {
-            console.log("❌ Disconnected:", socket.id);
+            //console.log("❌ Disconnected:", socket.id);
             socket.emit("leave_room", uid,s);
             setPid('');
             setCon(false);
         };
         const handleMessageReceive = (payload) => {
-            console.log("📩 Received message:", payload);
+            //console.log("📩 Received message:", payload);
             setMessages((prevMessages) => [...prevMessages, formatMessageData(payload)]);
         };
         socket.on("connect", handleConnect);
         socket.on("disconnect", handleDisconnect);
         socket.on("recieveMessage", handleMessageReceive);
         return () => {
-            console.log("🔻 Cleaning up socket connection...");
+            //console.log("🔻 Cleaning up socket connection...");
             socket.emit("leave_room", uid,s);
             socket.off("connect", handleConnect);
             socket.off("disconnect", handleDisconnect);
@@ -58,9 +58,9 @@ const Chatspace = ({uid,messageList,setMessages,s,r}) => {
         setMessage(mess)
     }
     const sendMessage = async () => {
-        console.log(socket.connected);
+        //console.log(socket.connected);
         let pseudoPayload={text:message,sender:s,receiver:r}
-        console.log(formatMessageData(pseudoPayload));
+        //console.log(formatMessageData(pseudoPayload));
         let packet={
             roomID:uid,
             payload:pseudoPayload

@@ -18,7 +18,7 @@ export  async function AuthenticatedContent({ children }) {
   }
 export default async function Layout({ children,params }) {
   const data = await params
-  console.log(data);
+  //console.log(data);
   
   return (
     <Suspense fallback={<LoadingPage />}>
