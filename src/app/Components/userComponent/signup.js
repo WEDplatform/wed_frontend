@@ -3,9 +3,9 @@ import React, { useEffect, useRef,useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Userdetailspage1 } from "./userdetails";
-import { Userlocation } from "./userlocation";
-import { Userpreference } from "./userpreference";
+import { Userdetailspage1 } from "./UserDetails";
+import { Userlocation } from "./UserLocation";
+import { Userpreference } from "./UserPreference";
 import { SlickNav } from "./SlickNav";
 function UserSignUp({queryParams,index}) {
   const [userDetails, setDetails] = useState({
