@@ -11,7 +11,7 @@ const UserFollowStat = ({ userData }) => {
                 <button onClick={() => { setView("saved") }} className={`px-2 py-1 ${userView == "saved" ? "bg-gray-300" : ""}`}>Saved</button>
                 <button onClick={() => { setView("ideas") }} className={`px-2 py-1 ${userView == "ideas" ? "bg-gray-300" : ""}`}>Ideas</button>
             </div>
-            <div className="grid mt-3 md:w-[80%] w-[90%] pb-[13vh]  mx-auto grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+            <div className="grid mt-3 md:w-[80%] w-[90%] pb-[13vh] mx-auto grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2">
                 {
                     userData.map((item, pos) => {
                         if (item.type === 'likedVendors' && userView === "likes") {
