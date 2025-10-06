@@ -11,6 +11,8 @@ import { cookies } from 'next/headers'
         profileResponse=await profileResponse.json()
         return profileResponse
     } catch (error) {
+        console.log(error);
+        
     }
 } 
 export {profileFetch} 

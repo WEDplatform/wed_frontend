@@ -21,7 +21,7 @@ const userschema=z.union([
 const loginSchema=z.union([
     z.object({
         userid:z.string().min(1,"Empty field"),
-        password:z.string().min(8,"Passowrd length has to to minimun 8"),
+        password:z.string().min(4,"Passowrd length has to to minimun 8"),
         isGoogleAuthenticated:z.literal(false),
     }),
     z.object({
