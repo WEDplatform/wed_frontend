@@ -8,6 +8,8 @@ import { UserFollowStat } from "@/apiFunctions/user/UserFollowings";
 const UserProfile = async ({ }) => {
     const prf = await profileFetch()
     const {userProfile}=prf?.data
+    console.log(userProfile);
+    
     return(
         <>
             <div className="md:w-[80%] w-[95%] mt-5 flex md:flex-col flex-col  mx-auto">
