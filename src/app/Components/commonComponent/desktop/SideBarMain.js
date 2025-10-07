@@ -33,7 +33,7 @@ function SideBarMain({tabParams,client}) {
             } 
             <LogoutButton/>
         </div>
-        <Link href={`/profile/${client}`}  className='flex cursor-pointer items-center m-4'>
+        <Link href={client=="user" ? `/profile/${client}` : `/profile/${client}/1`}  className='flex cursor-pointer items-center m-4'>
             <Image className='mr-2' alt='profile' src={ICO} width={30} height={30} />
             <p>Profile</p>
         </Link>
