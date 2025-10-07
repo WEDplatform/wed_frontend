@@ -11,7 +11,6 @@ const VendorSideBar = () => {
     const sideBarCurrent = sideBarRef.current;
     const buttonCurrent = buttonRef.current;
     if (!sideBarCurrent) return;
-
     if (!isCollapsed) {
       // 🔹 Collapse (hide)
       anime({
@@ -33,7 +32,6 @@ const VendorSideBar = () => {
         easing: "easeInOutQuad",
       });
     }
-
     setIsCollapsed((prev) => !prev);
   };
 
