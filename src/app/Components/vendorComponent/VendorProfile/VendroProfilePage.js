@@ -6,7 +6,7 @@ const VendorProfileP1 = () => {
             <div className="h-[20%] w-[80%] bg-red-200">
                 Div1
             </div>
-            <button className="w-[80%]">Edit profile</button>
+            <button className="w-[80%] py-2 bg-[#9A2143] rounded-md font-semibold text-white">Edit profile</button>
             <div className="h-[60%] w-[80%]">
             Calender
             </div>
