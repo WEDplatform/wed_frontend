@@ -2,9 +2,14 @@
 
 const VendorProfileP1 = () => {
     return(
-        <div className="w-[100%] bg-gray-400">
-           Main COntent1
-
+        <div className="w-[100%] flex flex-col justify-evenly items-center">
+            <div className="h-[20%] w-[80%] bg-red-200">
+                Div1
+            </div>
+            <button className="w-[80%]">Edit profile</button>
+            <div className="h-[60%] w-[80%]">
+            Calender
+            </div>
         </div>
     )
 }
