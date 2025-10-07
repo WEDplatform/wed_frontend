@@ -17,7 +17,7 @@ async function page({ params }) {
     return (
         <>
         {
-            clientRole == "user" ? <UserProfile/> : <>Vendor</>
+            clientRole == "user" ? <UserProfile/> : <></>
         }
         </>
     )
