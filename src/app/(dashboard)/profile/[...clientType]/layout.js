@@ -8,7 +8,8 @@ export default async function ProfilePageLayout({searchParams,params,children}){
     const { clientType } = await params;
     const clientRole = clientType[0];
     return(
-        <div className="w-[100vw] flex">
+        <div className="w-[100vw] h-[100vh] flex">
+          
         <VendorSideBar/>
         {children} 
         </div>

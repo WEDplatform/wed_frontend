@@ -8,6 +8,7 @@ import { profileFetch } from "@/apiFunctions/profile";
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar";
 import { UserFollowStat } from "@/apiFunctions/user/UserFollowings";
 import { UserProfile } from "@/app/Components/userComponent/profile/UserProfilePage";
+import { VendorProfileP1 } from "@/app/Components/vendorComponent/VendorProfile/VendroProfilePage";
 async function page({ params }) {
     //console.log(prf.data); 
     let { clientType } = await params;
@@ -17,7 +18,11 @@ async function page({ params }) {
     return (
         <>
         {
-            clientRole == "user" ? <UserProfile/> : <></>
+            clientRole == "user" ? <UserProfile/> : <>
+            {
+                clientType[1]=="1" && <VendorProfileP1/>
+            }
+            </>
         }
         </>
     )
