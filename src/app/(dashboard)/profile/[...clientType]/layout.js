@@ -7,11 +7,7 @@ export default async function ProfilePageLayout({searchParams,params,children}){
     const clientRole = clientType[0];
     return(
         <>
-        {
-            clientRole == "user" ? {children} : <div>
-                
-            </div>
-        }
+        {children} 
         </>
     )
 }
