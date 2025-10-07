@@ -25,14 +25,14 @@ const VendorSideBar = () => {
         url: "http://localhost:3000/home/user?tab=home"
     }]
     const upcomingEvents = [{
-        eventInfo : "Ria weds Chaddha",
-        dateSheduled : "27-03-2025"
-    },{
-        eventInfo : "Hudda wedding",
-        dateSheduled : "12-10-2005"
-    },{
-        eventInfo : "Shona weds Shoni",
-        dateSheduled : "03-12-2012"
+        eventInfo: "Ria weds Chaddha",
+        dateSheduled: "27-03-2025"
+    }, {
+        eventInfo: "Hudda wedding",
+        dateSheduled: "12-10-2005"
+    }, {
+        eventInfo: "Shona weds Shoni",
+        dateSheduled: "03-12-2012"
     }]
     const handleCollapse = () => {
         const sideBarCurrent = sideBarRef.current;
@@ -57,6 +57,7 @@ const VendorSideBar = () => {
             anime({
                 targets: [sideBarCurrent, buttonCurrent],
                 translateX: "0vw",
+                width: "0vw",
                 duration: 500,
                 easing: "easeInOutQuad",
             });
@@ -70,7 +71,8 @@ const VendorSideBar = () => {
             {/* Sidebar */}
             <div
                 ref={sideBarRef}
-                className="w-[25vw] border-r-2  h-[100vh] fixed top-0 left-0 flex flex-col items-center justify-center"
+                className={`${isCollapsed ? "translate-x-[-25vw] w-[0vw]" : "translate-x-[0vw] w-[25vw]"} ease-in-out relative transition-all duration-800  border-r-2  h-[100vh]  flex flex-col items-center justify-center`}
+
             >
                 <div className="w-full flex flex-col items-center">
                     <div className="w-[10vw] h-[10vw] bg-white-200 relative rounded-full">
@@ -94,9 +96,9 @@ const VendorSideBar = () => {
                 }
                 <p className="w-[80%] mt-6 text-[12px] font-semibold text-gray-500">Upcoming Events</p>
                 {
-                    upcomingEvents?.map((item,pos)=>{
+                    upcomingEvents?.map((item, pos) => {
                         return <div key={pos} className="w-[80%] mt-4 border py-1 px-1 bg-gray-300 rounded-lg relative flex items-center">
-                            <Image alt="profilePic" className="rounded-full border-[2px] border-[#9A2143]" width={40} height={40} style={{ objectFit: "cover" }} src={eventPic}/>
+                            <Image alt="profilePic" className="rounded-full border-[2px] border-[#9A2143]" width={40} height={40} style={{ objectFit: "cover" }} src={eventPic} />
                             <p className="ml-2 w-[90%] flex justify-between">
                                 <span className="text-[12px] text-gray-600">{item.eventInfo}</span>
                                 <button className="text-[#9A2143] mr-2 font-semibold text-[12px]">View</button>
@@ -110,10 +112,10 @@ const VendorSideBar = () => {
             {/* Toggle Button */}
             <button
                 ref={buttonRef}
-                onClick={handleCollapse}
-                className="fixed top-2 left-[26vw] text-[#9A2143] rounded-md w-[2vw] h-[2vw]  transition"
-            >
-                {isCollapsed ? <CiCircleChevLeft className="text-[30px]"/> : <CiCircleChevRight className="text-[30px]"/>}
+                onClick={()=>{setIsCollapsed(!isCollapsed)}}
+                className={`top-2 absolute ${isCollapsed ? "left-1vw" : "left-[26vw]"} text-[#9A2143] duration-800 rounded-md w-[2vw] h-[2vw]  transition-all`}
+            > 
+                {isCollapsed ? <CiCircleChevLeft className="text-[30px]" /> : <CiCircleChevRight className="text-[30px]" />}
             </button>
         </>
     );
