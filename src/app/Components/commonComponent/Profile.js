@@ -7,6 +7,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { BackButton, FollowButton, VendorBackButton } from "./FollowButton";
 import { vendorSocialHandle } from "@/lib/constants";
 import { LuDot } from "react-icons/lu";
+import { ProfilePicture } from "./ProfilePicture";
 function Profile() {
   return (
     <div className="w-[90%] md:overflow-y-auto h-[100vh]  md:h-[95%] flex flex-col items-center">
@@ -16,9 +17,7 @@ function Profile() {
         <FollowButton />
       </div>
       <div className="w-[10vw] h-[10vw] bg-gray-200 relative mt-3 rounded-full">
-        <input type="file" className="hidden" />
-        <Image alt="profilePic" style={{ objectFit: "cover" }} src={profile} />
-        <MdCameraswitch className="absolute top-[75%] bg-white w-[1.6vw] rounded-full border-2 border-gray-600 h-[1.6vw] p-1 right-[5%]" />
+        <ProfilePicture/>
       </div>
       <main className="flex flex-col items-center justify-center">
         <p className="text-md font-semibold">Eventsmore events</p>
