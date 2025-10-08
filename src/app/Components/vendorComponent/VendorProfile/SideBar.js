@@ -65,7 +65,6 @@ const VendorSideBar = () => {
 
         setIsCollapsed((prev) => !prev);
     };
-
     return (
         <>
             {/* Sidebar */}
