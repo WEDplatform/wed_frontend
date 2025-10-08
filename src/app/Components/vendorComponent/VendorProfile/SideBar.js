@@ -106,7 +106,6 @@ const VendorSideBar = () => {
                     })
                 }
             </div>
-
             {/* Toggle Button */}
             <button
                 ref={buttonRef}
