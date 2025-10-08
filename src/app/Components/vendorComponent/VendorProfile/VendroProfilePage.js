@@ -1,5 +1,4 @@
 import { FaStar } from "react-icons/fa6";
-
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",
