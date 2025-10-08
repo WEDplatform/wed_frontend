@@ -30,6 +30,7 @@ const VendorProfileP1 = () => {
         </div>
     )
 }
+
 const VendorProfileP2 = () => {
     return (
         <div className="w-[100%] bg-gray-400">
