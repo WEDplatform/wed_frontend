@@ -71,7 +71,6 @@ const VendorSideBar = () => {
             <div
                 ref={sideBarRef}
                 className={`${isCollapsed ? "translate-x-[-25vw] w-[0vw]" : "translate-x-[0vw] w-[25vw]"} ease-in-out relative transition-all duration-800  border-r-2  h-[100vh]  flex flex-col items-center justify-center`}
-
             >
                 <div className="w-full flex flex-col items-center">
                     <div className="w-[10vw] h-[10vw] bg-white-200 relative rounded-full">
