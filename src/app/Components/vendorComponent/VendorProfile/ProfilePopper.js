@@ -1,7 +1,8 @@
 'use client';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
-
+import { HiMiniBars3BottomRight } from "react-icons/hi2";
 function ProfilePopper() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
@@ -11,13 +12,11 @@ function ProfilePopper() {
   const id = open ? 'simple-popper' : undefined;
   return (
     <div>
-      <button aria-describedby={id} type="button" onClick={handleClick}>
-        Toggle Popper
-      </button>
+        <button aria-describedby={id} type="button" onClick={handleClick} className="absolute top-3 right-6 text-[#9A2143] flex items-center"><HiMiniBars3BottomRight className="mr-1"/> More</button>
       <Popper id={id} open={open} anchorEl={anchorEl}>
-        <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
-          The content of the Popper.
-        </Box>
+        <div className='w-[14vw]  min-h-[10vh] border shadow-md rounded-md mr-2'>
+        
+        </div>
       </Popper>
     </div>
   );
