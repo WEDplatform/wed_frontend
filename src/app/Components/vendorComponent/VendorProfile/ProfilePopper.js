@@ -3,12 +3,25 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
+import { MdEventNote } from "react-icons/md";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { MdAppSettingsAlt } from "react-icons/md";
 function ProfilePopper() {
     const profileOptions = [
         {
             mode:"2",
             info:"Add event",
-            icon:""
+            icon:<MdEventNote/>
+        },
+        {
+            mode:"3",
+            info:"Dashboard",
+            icon:<LuLayoutDashboard/>
+        },
+        {
+            mode:"3",
+            info:"Settings",
+            icon:<MdAppSettingsAlt/>
         }
 
     ]
