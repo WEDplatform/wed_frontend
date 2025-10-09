@@ -11,6 +11,11 @@ import { IoPersonRemove } from "react-icons/io5";
 function ProfilePopper() {
     const profileOptions = [
         {
+            mode:"1",
+            info:"Profile",
+            icon:<IoPersonRemove/>
+        },
+        {
             mode:"2",
             info:"Add event",
             icon:<MdEventNote/>
