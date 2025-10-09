@@ -56,5 +56,4 @@ function ProfilePopper() {
     </div>
   );
 }
-
 export { ProfilePopper }
