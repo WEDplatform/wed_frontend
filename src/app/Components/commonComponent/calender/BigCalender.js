@@ -14,3 +14,4 @@ const BigCalender = () => {
         </>
     )
 }
+export { BigCalender }

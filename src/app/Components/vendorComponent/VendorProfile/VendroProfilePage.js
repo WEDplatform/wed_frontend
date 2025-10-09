@@ -25,7 +25,7 @@ const VendorProfileP1 = () => {
             </div>
             <button className="w-[80%] py-2 bg-[#9A2143] rounded-lg font-medium text-white">Edit profile</button>
             <div className="h-[70%] w-[80%]">
-                Calender
+                
             </div>
         </div>
     )
