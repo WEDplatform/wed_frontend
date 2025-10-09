@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa6";
+import { BigCalender } from "../../commonComponent/calender/BigCalender";
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",
@@ -25,7 +26,7 @@ const VendorProfileP1 = () => {
             </div>
             <button className="w-[80%] py-2 bg-[#9A2143] rounded-lg font-medium text-white">Edit profile</button>
             <div className="h-[70%] w-[80%]">
-                
+                <BigCalender/>
             </div>
         </div>
     )
