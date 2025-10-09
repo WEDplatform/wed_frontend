@@ -6,6 +6,7 @@ import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { MdEventNote } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdAppSettingsAlt } from "react-icons/md";
+import Link from 'next/link';
 function ProfilePopper() {
     const profileOptions = [
         {
@@ -36,6 +37,14 @@ function ProfilePopper() {
         <button aria-describedby={id} type="button" onClick={handleClick} className="absolute top-3 right-6 text-[#9A2143] flex items-center"><HiMiniBars3BottomRight className="mr-1"/> More</button>
       <Popper id={id} open={open} anchorEl={anchorEl}>
         <div className='w-[14vw]  min-h-[10vh] border shadow-md rounded-md mr-2'>
+            {
+                profileOptions.map((item,pos)=>{
+                    return <span key={pos} className='w-[95%] py-2 flex items-center text-center'>
+                        <span className=''>{item.icon}</span>
+                        <Link href={"/"} >{item.info}</Link>
+                    </span>
+                })
+            }
         </div>
       </Popper>
     </div>
