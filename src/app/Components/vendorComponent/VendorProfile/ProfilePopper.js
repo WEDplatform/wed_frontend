@@ -7,10 +7,8 @@ export default function SimplePopper() {
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
-
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popper' : undefined;
-
   return (
     <div>
       <button aria-describedby={id} type="button" onClick={handleClick}>
