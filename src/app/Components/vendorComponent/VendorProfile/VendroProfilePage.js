@@ -41,5 +41,6 @@ const VendorProfileP2 = () => {
 
         </div>
     )
+    
 }
 export { VendorProfileP1, VendorProfileP2 }
