@@ -11,6 +11,7 @@ const VendorProfileP1 = () => {
     }]
     return (
         <div className="w-[100%] flex flex-col justify-evenly items-center">
+            <button className="absolute top-3 right-6 text-[#9A2143] flex items-center"><HiMiniBars3BottomRight className="mr-1"/> More</button>
             <div className="h-[20%] w-[80%] flex ">
                 {
                     vendorStat.map((item, pos) => {
