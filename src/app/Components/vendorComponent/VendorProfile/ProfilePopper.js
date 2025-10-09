@@ -2,7 +2,7 @@
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 
-function SimplePopper() {
+function ProfilePopper() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
@@ -22,3 +22,4 @@ function SimplePopper() {
     </div>
   );
 }
+export { ProfilePopper }
