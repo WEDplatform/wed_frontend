@@ -16,6 +16,8 @@ const BigCalender = () => {
         startAccessor="start"
         endAccessor="end"
         events={event}
+        onSelectSlot={() => {alert('slot selected')}}
+        onSelectEvent={() => {}}
         />
         </>
     )
