@@ -4,6 +4,14 @@ import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 function ProfilePopper() {
+    const profileOptions = [
+        {
+            mode:"2",
+            info:"Add event",
+            icon:""
+        }
+
+    ]
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
@@ -15,7 +23,6 @@ function ProfilePopper() {
         <button aria-describedby={id} type="button" onClick={handleClick} className="absolute top-3 right-6 text-[#9A2143] flex items-center"><HiMiniBars3BottomRight className="mr-1"/> More</button>
       <Popper id={id} open={open} anchorEl={anchorEl}>
         <div className='w-[14vw]  min-h-[10vh] border shadow-md rounded-md mr-2'>
-        
         </div>
       </Popper>
     </div>
