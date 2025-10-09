@@ -2,7 +2,7 @@
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 
-export default function SimplePopper() {
+function SimplePopper() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
