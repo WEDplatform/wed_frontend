@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa6";
 import { BigCalender } from "../../commonComponent/calender/BigCalender";
+import { HiMiniBars3BottomRight } from "react-icons/hi2";
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",
