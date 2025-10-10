@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-
 import { QueryClientProvider,QueryClient } from "@tanstack/react-query";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/app/theme.js"
