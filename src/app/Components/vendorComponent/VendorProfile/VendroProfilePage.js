@@ -40,7 +40,6 @@ const VendorProfileP2 = () => {
             Main COntent2
 
         </div>
-    )
-    
+    )   
 }
 export { VendorProfileP1, VendorProfileP2 }
