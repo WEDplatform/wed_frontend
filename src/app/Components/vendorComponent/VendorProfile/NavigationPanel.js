@@ -7,24 +7,32 @@ import Link from 'next/link';
 import { IoPersonRemove } from "react-icons/io5";
 const NavigationPanel = () => {
     const navigators = [{
-        icon : "",
+        icon : <IoPersonRemove/>,
         info : "Profile",
         node : 1
     },{
-        icon : "",
+        icon : <LuLayoutDashboard/>,
         info : "Dashboard",
         node : 2
     },{
-        icon : "",
+        icon : <MdAppSettingsAlt/>,
         info : "Settings",
         node : 3
     },{
-        icon : "",
-        info : "Logout",
+        icon : <MdEventNote/>,
+        info : "Add event",
         node : 4
     }]
     return (
-        <div className="flex ">
+        <div className="flex w-[80%] justify-around">
+            {
+                navigators.map((item,pos)=>{
+                    return <button className={`flex items-center py-2 justify-center w-[24%]`}>
+                        <span className="mr-2">{item.icon}</span>
+                        <span>{item.info}</span>
+                    </button>
+                })
+            }
         </div>
     )
 }
