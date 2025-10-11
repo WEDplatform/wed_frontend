@@ -1,5 +1,5 @@
 'use client'
-import { HiMiniBars3BottomRight } from "react-icons/hi2";
+
 import { MdEventNote } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdAppSettingsAlt } from "react-icons/md";
