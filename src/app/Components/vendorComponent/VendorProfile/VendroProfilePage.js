@@ -15,6 +15,7 @@ const VendorProfileP1 = () => {
         <div className="w-[100%] flex flex-col justify-evenly items-center">
             <ProfilePopper/>
             <div className="h-[20%] w-[80%] flex ">
+                
                 {
                     vendorStat.map((item, pos) => {
                         return <span key={pos} className="w-[33%] border-r-2 justify-center items-center flex flex-col">
