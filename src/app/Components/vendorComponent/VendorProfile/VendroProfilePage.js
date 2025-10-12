@@ -18,7 +18,7 @@ const VendorProfileP1 = () => {
             <div className="h-[20%] w-[80%] flex justify-items-center">
                 <div className="w-[10vw] h-[10vw] bg-white-200 relative rounded-full">
                         <ProfilePicture />
-                    </div>
+                </div>
                 {
                     vendorStat.map((item, pos) => {
                         return <span key={pos} className="w-[33%] border-r-2 justify-center items-center flex flex-col">
