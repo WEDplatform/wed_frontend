@@ -15,7 +15,7 @@ const VendorProfileP1 = () => {
     return (
         <div className="w-[100%] flex flex-col justify-evenly items-center">
             <ProfilePopper/>
-            <div className="h-[20%] w-[80%] flex ">
+            <div className="h-[20%] w-[80%] flex justify-items-center">
                 <div className="w-[10vw] h-[10vw] bg-white-200 relative rounded-full">
                         <ProfilePicture />
                     </div>
