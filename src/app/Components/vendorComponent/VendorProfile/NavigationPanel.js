@@ -27,7 +27,7 @@ const NavigationPanel = () => {
         <div className="flex w-[80%] justify-around">
             {
                 navigators.map((item,pos)=>{
-                    return <button className={`flex items-center py-2 justify-center w-[24%]`}>
+                    return <button key={pos} className={`flex items-center py-2 justify-center w-[24%]`}>
                         <span className="mr-2">{item.icon}</span>
                         <span>{item.info}</span>
                     </button>
