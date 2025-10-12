@@ -3,6 +3,7 @@ import { BigCalender } from "../../commonComponent/calender/BigCalender";
 
 import { ProfilePopper } from "./ProfilePopper";
 import { NavigationPanel } from "./NavigationPanel";
+import { ProfilePicture } from "../../commonComponent/ProfilePicture";
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",
@@ -15,7 +16,9 @@ const VendorProfileP1 = () => {
         <div className="w-[100%] flex flex-col justify-evenly items-center">
             <ProfilePopper/>
             <div className="h-[20%] w-[80%] flex ">
-                
+                <div className="w-[10vw] h-[10vw] bg-white-200 relative rounded-full">
+                        <ProfilePicture />
+                    </div>
                 {
                     vendorStat.map((item, pos) => {
                         return <span key={pos} className="w-[33%] border-r-2 justify-center items-center flex flex-col">
