@@ -2,6 +2,7 @@ import { FaStar } from "react-icons/fa6";
 import { BigCalender } from "../../commonComponent/calender/BigCalender";
 
 import { ProfilePopper } from "./ProfilePopper";
+import { NavigationPanel } from "./NavigationPanel";
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",
@@ -27,7 +28,7 @@ const VendorProfileP1 = () => {
                     <span className="text-[20px]"><FaStar/></span>
                 </span>
             </div>
-            <button className="w-[80%] py-2 bg-[#9A2143] rounded-lg font-medium text-white">Edit profile</button>
+            <NavigationPanel/>
             <div className="h-[70%] w-[80%] border-2">
                 
             </div>
