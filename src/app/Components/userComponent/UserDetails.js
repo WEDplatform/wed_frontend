@@ -3,7 +3,7 @@ import React, { use, useEffect, useState } from 'react'
 import GoogleLogo from "../../../../public/google-icon.svg"
 import Image from 'next/image'
 import { userschema } from '@/schema/userSchema'
-import { Authinput } from '../commonComponent/input'
+import { Authinput } from '../ui/input'
 import { LoginViaGoogle } from '@/lib/googleAuth'
 import spinner from "../../../../public/spinner.svg"
 import { checkusername } from '@/apiFunctions/checkusername'
