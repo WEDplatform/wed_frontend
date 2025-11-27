@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa6";
-import { BigCalender } from "../../commonComponent/calender/BigCalender";
+import { BigCalender } from "../calender/BigCalender";
 
 import { ProfilePopper } from "./ProfilePopper";
 import { NavigationPanel } from "./NavigationPanel";
