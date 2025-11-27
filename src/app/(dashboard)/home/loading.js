@@ -1,5 +1,5 @@
 import React from 'react'
-import { LoadingPage } from '../../Components/commonComponent/loadingPage'
+import { LoadingPage } from '../../Components/ui/loadingPage'
 function Loading() {
   return (
     <LoadingPage/>
