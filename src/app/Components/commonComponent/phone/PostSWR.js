@@ -8,7 +8,7 @@ import { fetchPosts, fetchReels } from "@/apiFunctions/fetchPosts"
 import { fetchCouple } from "@/apiFunctions/couple/fetchCouples"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
-import { Loader } from "../Loader"
+import { Loader } from "../../ui/Loader"
 const PostSWR = ({ id_ }) => {
     const searchParam=useSearchParams();
     const [index, setIndex] = useState(1);
