@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Modal } from "../commonComponent/modal";
+import { Modal } from "../ui/modal";
 import { VendorInput } from "../commonComponent/vendorInput";
 import { useDebouncedCallback } from "use-debounce";
 import { fetchCity } from "@/lib/apis";
