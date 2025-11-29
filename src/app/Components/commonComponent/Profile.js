@@ -4,7 +4,7 @@ import { MdCameraswitch } from "react-icons/md";
 import { MdNotificationsActive } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { BackButton, FollowButton, VendorBackButton } from "./FollowButton";
+import { BackButton, FollowButton, VendorBackButton } from "../ui/FollowButton";
 import { vendorSocialHandle } from "@/lib/constants";
 import { LuDot } from "react-icons/lu";
 import { ProfilePicture } from "./ProfilePicture";
