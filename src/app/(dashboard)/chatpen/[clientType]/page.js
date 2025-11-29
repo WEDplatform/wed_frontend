@@ -1,5 +1,5 @@
-import { ChatSection } from "@/app/Components/commonComponent/chatpen/chatsection"
-import { SideWindow } from "@/app/Components/commonComponent/chatpen/SideWindow"
+import { ChatSection } from "@/app/Components/commonComponent/chat-pen/chatsection"
+import { SideWindow } from "@/app/Components/commonComponent/chat-pen/SideWindow"
 async function page(props,searchParam) {
     const src=await searchParam
     const params=await props.params
