@@ -1,4 +1,4 @@
-import { Back, Verify } from "@/app/Components/commonComponent/Back";
+import { Back, Verify } from "@/app/Components/ui/Back";
 import { Otp } from "@/app/Components/commonComponent/Otp";
 import Image from "next/image";
 import authPic from "@/../public/auth.svg"
