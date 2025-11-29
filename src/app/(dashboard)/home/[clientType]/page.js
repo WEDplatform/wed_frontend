@@ -2,13 +2,13 @@ export const metadata = {
   title: "Home",
 }
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
-import { NavBar } from "@/app/Components/commonComponent/Navbar/NavBar"
+import { NavBar } from "@/app/Components/commonComponent/navbar/NavBar"
 import { StorySection } from "@/app/Components/commonComponent/stories/StorySection"
-import { Posts } from "@/app/Components/commonComponent/Posts/Posts"
+import { Posts } from "@/app/Components/commonComponent/posts/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { profileFetch } from "@/apiFunctions/profile"
 import { VendorProfile } from "@/app/Components/commonComponent/vendorProfile/Vendorprofile"
-import { CoupleProfile } from "@/app/Components/commonComponent/CoupleProfile/CoupleProfile"
+import { CoupleProfile } from "@/app/Components/commonComponent/couple-profile/CoupleProfile"
 async function page({ params, searchParams }) {
   const clientParam = await params;
   const searchprm = await searchParams

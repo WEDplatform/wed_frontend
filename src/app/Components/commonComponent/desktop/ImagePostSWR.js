@@ -1,5 +1,5 @@
 'use client'
-import { CouplePost, ImagePost } from "../Posts/PostStructure"
+import { CouplePost, ImagePost } from "../posts/PostStructure"
 import { getImageUrl } from "@/apiFunctions/pexel"
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"

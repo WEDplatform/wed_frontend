@@ -2,7 +2,7 @@
 import { useEffect,useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { fetchReels } from "@/apiFunctions/fetchPosts.js"
-import { VideoPost } from "../Posts/PostStructure"
+import { VideoPost } from "../posts/PostStructure"
 const VideoSWR=()=>{
     const [reelTracker,setTracker]=useState({
         reelData:[],

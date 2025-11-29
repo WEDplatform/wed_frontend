@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/apiFunctions/pexel"
-import { CouplePost, ImagePost, VideoPost } from "../Posts/PostStructure"
+import { CouplePost, ImagePost, VideoPost } from "../posts/PostStructure"
 import { fetchVendorMediaPosts } from "../vendorProfile/fetchVendorPosts"
 import { fetchPosts, fetchReels } from "@/apiFunctions/fetchPosts"
 import { fetchCouple } from "@/apiFunctions/couple/fetchCouples"

@@ -4,7 +4,7 @@ import { NavigatorList } from './sidebarcontent'
 import Image from 'next/image'
 import ICO from "@/app/favicon.ico"
 import { logout } from '@/apiFunctions/logout'
-import { LogoutButton } from '../logoutButton'
+import { LogoutButton } from '../../ui/logoutButton'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
