@@ -11,7 +11,7 @@ import {  logViaGoogle } from "@/lib/googleAuth";
 import { loginSchema } from "@/schema/userSchema";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import { loginClient } from "@/features/auth/clientLogin";
+import { loginClient } from "@/features/auth/api/clientLogin";
 function UserLogin() {
   const searchParams = useSearchParams()
   const searchKey = searchParams.get('usertype')
