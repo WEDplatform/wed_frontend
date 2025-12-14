@@ -1,4 +1,4 @@
-import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar";
+import { BottomNavBar } from "@/shared/phone/BottomNavBar";
 import { NavBar } from "@/shared/components/navbar/NavBar";
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain";
 export default async function HomePageLayout({ children,params, searchParams }) {

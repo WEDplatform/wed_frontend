@@ -8,7 +8,7 @@ import { fetchPosts } from "@/features/feed/api/fetchPosts.js"
 import { fetchCouple } from "@/features/couple/api/fetchCouples"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
-import { Loader } from "../../app/Components/ui/Loader"
+import { Loader } from "../ui/Loader"
 const ImageSWR = ({ data }) => {
     const searchParam=useSearchParams();
     const [filters, setFilters] = useState([]);   

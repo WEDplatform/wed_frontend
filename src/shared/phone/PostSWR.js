@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { getImageUrl } from "@/features/feed/api/pexel"
-import { CouplePost, ImagePost, VideoPost } from "../../../../features/feed/components/PostStructure"
-import { fetchVendorMediaPosts } from "../../../../features/vendor/api/fetchVendorPosts"
+import { CouplePost, ImagePost, VideoPost } from "../../features/feed/components/PostStructure"
+import { fetchVendorMediaPosts } from "../../features/vendor/api/fetchVendorPosts"
 import { fetchPosts, fetchReels } from "@/features/feed/api/fetchPosts"
 import { fetchCouple } from "@/features/couple/api/fetchCouples"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
-import { Loader } from "../../ui/Loader"
+import { Loader } from "../ui/Loader"
 const PostSWR = ({ id_ }) => {
     const searchParam=useSearchParams();
     const [index, setIndex] = useState(1);

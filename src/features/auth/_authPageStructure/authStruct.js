@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation"
 import LinkButton from "@/app/Components/linkbutton";
 import Link from "next/link";
-import { SwitchAccount } from "../../../app/Components/ui/SwitchAccountButton";
+import { SwitchAccount } from "../../../shared/ui/SwitchAccountButton";
 export default function AuthStruct({usertype}) {
     const params = useParams()
     return (

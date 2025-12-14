@@ -2,7 +2,7 @@ import profilePic from "@/../public/profile.svg";
 import { MdCameraswitch } from "react-icons/md";
 import Image from "next/image";
 import { profileFetch } from "@/apiFunctions/profile";
-import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar";
+import { BottomNavBar } from "@/shared/phone/BottomNavBar";
 import { UserFollowStat } from "@/apiFunctions/user/UserFollowings";
 
 const UserProfile = async ({ }) => {

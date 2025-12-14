@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Logo from "@/app/Components/logo"
-import Linkbutton from "../linkbutton";
+import Linkbutton from "../../app/Components/linkbutton";
 import Link from "next/link";
 export function SwitchAccount() {
   return (

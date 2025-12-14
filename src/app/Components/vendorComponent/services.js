@@ -1,4 +1,4 @@
-import { Modal } from "../ui/modal";
+import { Modal } from "../../../shared/ui/modal";
 import { useState } from "react";
 import { userPreferences } from "@/lib/constants";
 const ServicesModal = ({ open, setOpen, vendorDetails, setvendorDetails }) => {

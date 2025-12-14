@@ -10,7 +10,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { useRouter } from 'next/navigation';
 import '@splidejs/react-splide/css/core';
-import { BackButton } from '../../ui/FollowButton';
+import { BackButton } from '../../../../shared/ui/FollowButton';
 import { VendorDescription } from './VendorDescription';
 import { IoMdArrowRoundBack } from "react-icons/io";
 
