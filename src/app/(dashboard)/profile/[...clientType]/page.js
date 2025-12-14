@@ -8,7 +8,7 @@ import { profileFetch } from "@/apiFunctions/profile";
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar";
 import { UserFollowStat } from "@/apiFunctions/user/UserFollowings";
 import { UserProfile } from "@/features/user/components/UserProfilePage";
-import { VendorProfileP1 } from "@/app/Components/vendorComponent/VendorProfile/VendroProfilePage";
+import { VendorProfileP1 } from "@/features/vendor/profile/VendroProfilePage";
 async function page({ params }) {
     //console.log(prf.data); 
     let { clientType } = await params;

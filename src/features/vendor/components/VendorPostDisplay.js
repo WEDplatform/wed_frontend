@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { VendorPostsGrid } from "./VendorPostsGrid";
 import { fetchReels } from "@/apiFunctions/fetchPosts";
 import { fetchPosts } from "@/apiFunctions/fetchPosts";
-import { fetchVendorMediaPosts, fetchVendorMediaReels } from "../../../../features/vendor/api/fetchVendorPosts";
-import { VendorReelGrid } from "./VendorReelDisplay";
+import { fetchVendorMediaPosts, fetchVendorMediaReels } from "../api/fetchVendorPosts";
+import { VendorReelGrid } from "../../../app/Components/commonComponent/vendorProfile/VendorReelDisplay";
 const SelectPostPage=({id,vendorName,dataSet,type})=>{
     let [postIndex,setIndex]=useState(type)
     let [vendorMediaData,setData]=useState({

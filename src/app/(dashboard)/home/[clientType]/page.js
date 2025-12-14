@@ -7,8 +7,8 @@ import { StorySection } from "@/app/Components/commonComponent/stories/StorySect
 import { Posts } from "@/app/Components/commonComponent/posts/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { profileFetch } from "@/apiFunctions/profile"
-import { VendorProfile } from "@/app/Components/commonComponent/vendorProfile/Vendorprofile"
-import { CoupleProfile } from "@/app/Components/commonComponent/couple-profile/CoupleProfile"
+import { VendorProfile } from "@/features/vendor/components/Vendorprofile"
+import { CoupleProfile } from "@/features/couple/components/CoupleProfile"
 async function page({ params, searchParams }) {
   const clientParam = await params;
   const searchprm = await searchParams

@@ -1,9 +1,9 @@
 import { FaStar } from "react-icons/fa6";
-import { BigCalender } from "../calender/BigCalender";
+import { BigCalender } from "../../../app/Components/vendorComponent/calender/BigCalender";
 
 import { ProfilePopper } from "./ProfilePopper";
 import { NavigationPanel } from "./NavigationPanel";
-import { ProfilePicture } from "../../commonComponent/ProfilePicture";
+import { ProfilePicture } from "../../../app/Components/commonComponent/ProfilePicture";
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",
