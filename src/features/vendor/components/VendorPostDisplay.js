@@ -3,7 +3,7 @@ import { VendorPostsGrid } from "./VendorPostsGrid";
 import { fetchReels } from "@/features/feed/api/fetchPosts";
 import { fetchPosts } from "@/features/feed/api/fetchPosts";
 import { fetchVendorMediaPosts, fetchVendorMediaReels } from "../api/fetchVendorPosts";
-import { VendorReelGrid } from "../../../app/Components/commonComponent/vendorProfile/VendorReelDisplay";
+import { VendorReelGrid } from "./VendorReelDisplay.js";
 const SelectPostPage=({id,vendorName,dataSet,type})=>{
     let [postIndex,setIndex]=useState(type)
     let [vendorMediaData,setData]=useState({

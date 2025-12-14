@@ -1,5 +1,5 @@
 'use client'
-import profile from "../../../../../public/profile.svg"
+import profile from "@/../public/profile.svg"
 import Image from "next/image"
 import { MdCameraswitch } from "react-icons/md";
 import { vendorSocialHandle } from "@/lib/constants";
