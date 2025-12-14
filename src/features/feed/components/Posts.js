@@ -2,11 +2,12 @@ import { getVideoUrl } from "@/features/feed/api/pexel"
 import { ImagePost, VideoPost } from "./PostStructure"
 import { StorySection } from "./StorySection"
 import { getImageUrl } from "@/features/feed/api/pexel"
-import { ImageSWR } from "../../../shared/components/desktop/ImagePostSWR"
-import { PostSWR } from "../../../shared/components/phone/PostSWR"
-import { VideoSWR } from "../../../app/Components/commonComponent/desktop/ReelPostSWR"
+import { ImageSWR } from "@/shared/components/desktop/ImagePostSWR.js"
+import { PostSWR } from "@/shared/components/phone/PostSWR.js"
+import { VideoSWR } from "@/shared/components/desktop/ReelPostSWR.js"
+
 async function Posts({id_}) {
-  return (
+  return ( 
     <>
       <div className="md:w-[95%] md:pt-2 hidden md:block  w-[100%] h-[90%] md:h-[73vh] md:ml-4">
         <div className="w-[100%] h-[100%] flex justify-between">
