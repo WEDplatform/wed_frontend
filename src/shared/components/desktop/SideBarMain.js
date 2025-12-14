@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import { NavigatorList } from '../../../../shared/desktop/sidebarcontent'
+import { NavigatorList } from './sidebarcontent.js'
 import Image from 'next/image'
 import ICO from "@/app/favicon.ico"
 import { logout } from '@/apiFunctions/logout'
-import { LogoutButton } from '../logoutButton'
+import { LogoutButton } from '../../common/logoutButton.js'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'

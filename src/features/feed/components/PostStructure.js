@@ -9,7 +9,7 @@ import { MdSaveAlt } from "react-icons/md";
 import { PostImageSlider } from "../../../app/Components/ui/PostImageSlider";
 import { VendorDetails } from "../../../app/Components/vendorComponent/VendorDetails";
 import { useState } from "react";
-import { VideoModal } from "../../../app/Components/commonComponent/VideoModal.js/VideoModal";
+import { VideoModal } from "@/shared/components/VideoModal/VideoModal.js";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { useMutation } from "@tanstack/react-query";

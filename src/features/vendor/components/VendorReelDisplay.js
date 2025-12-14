@@ -1,5 +1,5 @@
 import InfiniteScroll from "react-infinite-scroll-component";
-import { VideoPlayer } from "../VideoModal.js/VideoPlayer";
+import { VideoPlayer } from "@/shared/components/VideoModal/VideoPlayer.js";
 const VendorReelGrid=({id,vendorMediaData,fetchVendorReels,setData})=>{
     return(<>
     <InfiniteScroll
