@@ -3,7 +3,7 @@ import { BigCalender } from "../../../app/Components/vendorComponent/calender/Bi
 
 import { ProfilePopper } from "./ProfilePopper";
 import { NavigationPanel } from "./NavigationPanel";
-import { ProfilePicture } from "../../../app/Components/commonComponent/ProfilePicture";
+import { ProfilePicture } from "../../../shared/common/ProfilePicture";
 const VendorProfileP1 = () => {
     const vendorStat = [{
         type: "Following",

@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import errorPage from "../../../public/errorPage.svg"
-import Logo from "@/app/Components/logo.js"
+import Logo from "@/shared/common/logo.js"
 import useNetworkStatus from "../../lib/networkStatus";
  const metadata = {
   title: "Erros Occured",

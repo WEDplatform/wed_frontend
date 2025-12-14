@@ -1,7 +1,7 @@
 // HomeLayout.js
 import { Suspense } from "react";
 import { LoadingPage } from "../../Components/ui/loadingPage";
-import Logo from "@/app/Components/logo"
+import Logo from "@/shared/common/logo"
 import checkAuth from "./checkAuth";
 import Link from "next/link";
 export  async function AuthenticatedContent({ children }) {

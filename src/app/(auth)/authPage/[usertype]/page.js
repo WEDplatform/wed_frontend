@@ -2,7 +2,7 @@ export const metadata={
   title:"Authpage"
 }
 import React from 'react'
-import Logo from '@/app/Components/logo.js'
+import Logo from '@/shared/common/logo.js'
 import AuthPage from '@/features/auth/_authPageStructure/authStruct.js'
 async function page(props) {
   let {usertype}= await props.params

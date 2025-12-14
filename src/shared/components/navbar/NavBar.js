@@ -1,4 +1,4 @@
-import Logo from "@/app/Components/logo"
+import Logo from "@/shared/common/logo"
 import SelectPage from "./SelectPage";
 import { FiBell } from "react-icons/fi";
 import { TbNotification } from "react-icons/tb";

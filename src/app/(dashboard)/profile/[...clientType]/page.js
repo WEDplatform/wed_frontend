@@ -5,7 +5,7 @@ import { RiMessage3Fill } from "react-icons/ri";
 import Image from "next/image"
 import { LoginStat } from "@/app/Components/commonComponent/loginStats/LoginStat";
 import { profileFetch } from "@/apiFunctions/profile";
-import { BottomNavBar } from "@/shared/phone/BottomNavBar";
+import { BottomNavBar } from "@/shared/components/phone/BottomNavBar";
 import { UserFollowStat } from "@/apiFunctions/user/UserFollowings";
 import { UserProfile } from "@/features/user/components/UserProfilePage";
 import { VendorProfileP1 } from "@/features/vendor/profile/VendroProfilePage";

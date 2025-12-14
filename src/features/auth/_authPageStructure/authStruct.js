@@ -1,8 +1,8 @@
 'use client'
 import { useParams } from "next/navigation"
-import LinkButton from "@/app/Components/linkbutton";
+import LinkButton from "@/shared/common/linkbutton";
 import Link from "next/link";
-import { SwitchAccount } from "../../../shared/ui/SwitchAccountButton";
+import { SwitchAccount } from "../../../shared/components/ui/SwitchAccountButton";
 export default function AuthStruct({usertype}) {
     const params = useParams()
     return (

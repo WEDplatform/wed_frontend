@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Home",
 }
-import { SideBarMain } from "@/shared/desktop/SideBarMain.js"
+import { SideBarMain } from "@/shared/components/desktop/SideBarMain.js"
 import { NavBar } from "@/shared/components/navbar/NavBar"
 import { StorySection } from "@/features/feed/components/StorySection"
 import { Posts } from "@/features/feed/components/Posts"

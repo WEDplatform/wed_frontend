@@ -4,10 +4,10 @@ import { MdCameraswitch } from "react-icons/md";
 import { MdNotificationsActive } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { BackButton, FollowButton, VendorBackButton } from "../../../shared/ui/FollowButton";
+import { BackButton, FollowButton, VendorBackButton } from "../../../shared/components/ui/FollowButton";
 import { vendorSocialHandle } from "@/lib/constants";
 import { LuDot } from "react-icons/lu";
-import { ProfilePicture } from "./ProfilePicture";
+import { ProfilePicture } from "../../../shared/common/ProfilePicture";
 function Profile() {
   return (
     <div className="w-[90%] md:overflow-y-auto h-[100vh]  md:h-[95%] flex flex-col items-center">

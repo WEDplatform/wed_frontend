@@ -1,7 +1,7 @@
 export const metadata={
     title:"Login"
 }
-import Logo from "@/app/Components/logo"
+import Logo from "@/shared/common/logo"
 import { Suspense } from "react"
 import { UserLogin } from "../../../features/auth/components/Login"
 function page() {

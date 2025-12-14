@@ -9,8 +9,8 @@ import {
 } from "@/app/Components/ui/Card";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Logo from "@/app/Components/logo"
-import Linkbutton from "../../app/Components/linkbutton";
+import Logo from "@/shared/common/logo"
+import Linkbutton from "../../common/linkbutton";
 import Link from "next/link";
 export function SwitchAccount() {
   return (

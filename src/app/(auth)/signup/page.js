@@ -1,4 +1,4 @@
-import Logo from "@/app/Components/logo"
+import Logo from "@/shared/common/logo"
 import SignUp from "../../../features/auth/components/SignUp"
 import { Suspense } from "react"
 async function page(props) {

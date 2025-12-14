@@ -2,8 +2,8 @@ import { getVideoUrl } from "@/features/feed/api/pexel"
 import { ImagePost, VideoPost } from "./PostStructure"
 import { StorySection } from "./StorySection"
 import { getImageUrl } from "@/features/feed/api/pexel"
-import { ImageSWR } from "../../../shared/desktop/ImagePostSWR"
-import { PostSWR } from "../../../shared/phone/PostSWR"
+import { ImageSWR } from "../../../shared/components/desktop/ImagePostSWR"
+import { PostSWR } from "../../../shared/components/phone/PostSWR"
 import { VideoSWR } from "../../../app/Components/commonComponent/desktop/ReelPostSWR"
 async function Posts({id_}) {
   return (
