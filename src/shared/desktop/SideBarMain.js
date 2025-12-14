@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { NavigatorList } from './sidebarcontent'
+import { NavigatorList } from '../../../../shared/desktop/sidebarcontent'
 import Image from 'next/image'
 import ICO from "@/app/favicon.ico"
 import { logout } from '@/apiFunctions/logout'

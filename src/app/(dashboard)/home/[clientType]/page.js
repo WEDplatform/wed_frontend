@@ -2,9 +2,9 @@ export const metadata = {
   title: "Home",
 }
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain"
-import { NavBar } from "@/app/Components/commonComponent/navbar/NavBar"
-import { StorySection } from "@/app/Components/commonComponent/stories/StorySection"
-import { Posts } from "@/app/Components/commonComponent/posts/Posts"
+import { NavBar } from "@/shared/components/navbar/NavBar"
+import { StorySection } from "@/features/feed/components/StorySection"
+import { Posts } from "@/features/feed/components/Posts"
 import { Search } from "@/app/Components/commonComponent/desktop/Search"
 import { profileFetch } from "@/apiFunctions/profile"
 import { VendorProfile } from "@/features/vendor/components/Vendorprofile"

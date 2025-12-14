@@ -1,14 +1,14 @@
 'use client'
-import { CouplePost, ImagePost } from "../posts/PostStructure"
-import { getImageUrl } from "@/apiFunctions/pexel"
+import { CouplePost, ImagePost } from "../../features/feed/components/PostStructure"
+import { getImageUrl } from "@/features/feed/api/pexel"
 import { useEffect, useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
-import { getVideoUrl } from "@/apiFunctions/pexel"
-import { fetchPosts } from "@/apiFunctions/fetchPosts.js"
+import { getVideoUrl } from "@/features/feed/api/pexel"
+import { fetchPosts } from "@/features/feed/api/fetchPosts.js"
 import { fetchCouple } from "@/features/couple/api/fetchCouples"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
-import { Loader } from "../../ui/Loader"
+import { Loader } from "../../app/Components/ui/Loader"
 const ImageSWR = ({ data }) => {
     const searchParam=useSearchParams();
     const [filters, setFilters] = useState([]);   

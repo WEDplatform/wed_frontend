@@ -4,7 +4,7 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { CgOptions } from "react-icons/cg";
-import { LogoutButton } from '../logoutButton';
+import { LogoutButton } from '../../../app/Components/commonComponent/logoutButton';
 export default function SelectPage() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {

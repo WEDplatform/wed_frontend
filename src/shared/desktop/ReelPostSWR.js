@@ -1,8 +1,8 @@
 'use client'
 import { useEffect,useState } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
-import { fetchReels } from "@/apiFunctions/fetchPosts.js"
-import { VideoPost } from "../posts/PostStructure"
+import { fetchReels } from "@/features/feed/api/fetchPosts.js"
+import { VideoPost } from "../../../../features/feed/components/PostStructure"
 const VideoSWR=()=>{
     const [reelTracker,setTracker]=useState({
         reelData:[],

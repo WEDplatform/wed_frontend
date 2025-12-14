@@ -5,7 +5,7 @@ import { useEffect, useState,useRef } from "react";
 import profpic from "../../../../../public/profPic.png"
 import { IoReturnDownBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
-import { Chatspace } from "./chatspace";
+import { Chatspace } from "../../../app/Components/commonComponent/chat-pen/chatspace";
 const ChatSection=({user})=>{
     const searchParam=useSearchParams();
     const router=useRouter();

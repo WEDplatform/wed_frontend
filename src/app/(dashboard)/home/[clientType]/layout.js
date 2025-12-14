@@ -1,5 +1,5 @@
 import { BottomNavBar } from "@/app/Components/commonComponent/phone/BottomNavBar";
-import { NavBar } from "@/app/Components/commonComponent/navbar/NavBar";
+import { NavBar } from "@/shared/components/navbar/NavBar";
 import { SideBarMain } from "@/app/Components/commonComponent/desktop/SideBarMain";
 export default async function HomePageLayout({ children,params, searchParams }) {
   const navParams = await params
