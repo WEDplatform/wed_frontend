@@ -11,7 +11,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa6";
 import { useMutation } from "@tanstack/react-query";
 import { SelectPostPage } from "./VendorPostDisplay";
-import { fetchProfileData } from "@/apiFunctions/vendor/fetchProfile";
+import { fetchProfileData } from "@/features/vendor/api/fetchProfile";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { LuLoaderCircle } from "react-icons/lu";

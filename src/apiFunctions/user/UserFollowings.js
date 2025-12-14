@@ -1,5 +1,5 @@
 'use client'
-import { CoupleLiked, VendorIdea, VendorLiked, VendorSaved } from "@/app/Components/userComponent/UserLikedFollowed";
+import { CoupleLiked, VendorIdea, VendorLiked, VendorSaved } from "@/features/user/components/UserLikedFollowed";
 import { useState } from "react"
 const UserFollowStat = ({ userData }) => {
     const [userView, setView] = useState('likes')

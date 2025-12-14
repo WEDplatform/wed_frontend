@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Userdetailspage1 } from "@/features/user/components/UserDetails.js";
-import { Userlocation } from "@/app/Components/userComponent/UserLocation.js";
-import { Userpreference } from "@/app/Components/userComponent/UserPreference.js";
+import { Userlocation } from "@/features/user/components/UserLocation.js";
+import { Userpreference } from "@/features/user/components/UserPreference.js";
 import { SlickNav } from "@/app/Components/userComponent/SlickNav.js";
 function UserSignUp({queryParams,index}) {
   const [userDetails, setDetails] = useState({
