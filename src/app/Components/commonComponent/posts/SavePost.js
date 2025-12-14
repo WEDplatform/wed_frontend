@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import { FaRegBookmark } from "react-icons/fa6";
 import { useState } from 'react';
 import { FaBookmark } from "react-icons/fa6";
-import { saveUserPost } from '@/apiFunctions/user/savePost';
+import { saveUserPost } from '@/features/user/api/savePost';
  function Save({savePayLoad,isSavedByUser}) {
   let [isSaved,setSave]=useState(isSavedByUser)
   const [anchorEl, setAnchorEl] = React.useState(null);

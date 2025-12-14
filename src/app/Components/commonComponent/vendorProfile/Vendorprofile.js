@@ -18,8 +18,8 @@ import { LuLoaderCircle } from "react-icons/lu";
 import { VendorShare } from "./VendorShare";
 import { Review } from "./Review";
 import { BiSolidLike } from "react-icons/bi";
-import { followVendor } from "@/apiFunctions/user/followVendor";
-import { message } from "@/apiFunctions/user/message";
+import { followVendor } from "@/features/user/api/followVendor";
+import { message } from "@/features/user/api/message";
 import { useRouter } from "next/navigation";
 const VendorProfile = ({vendorName}) => {
     let prm=useSearchParams();
