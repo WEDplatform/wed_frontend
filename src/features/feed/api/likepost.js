@@ -1,5 +1,5 @@
 import { getCookies } from "@/app/action";
-import { axiosInstance } from "@/axios/axios/js"
+import { axiosInstance } from "@/axios/axios.js"
 let controller = null; 
 const likePost=async(dt)=>{ 
     const refreshToken=await getCookies()

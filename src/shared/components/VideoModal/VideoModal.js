@@ -4,13 +4,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { VideoPlayer } from '../../../../shared/VideoModal/VideoPlayer';
+import { VideoPlayer } from './VideoPlayer.js';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { useRouter } from 'next/navigation';
 import '@splidejs/react-splide/css/core';
-import { BackButton } from '../../../../shared/ui/FollowButton';
+import { BackButton } from '../ui/FollowButton.js';
 import { VendorDescription } from './VendorDescription';
 import { IoMdArrowRoundBack } from "react-icons/io";
 

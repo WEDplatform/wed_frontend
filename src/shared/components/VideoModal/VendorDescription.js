@@ -5,7 +5,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa6";
 import { HiOutlineSave } from "react-icons/hi";
 import { IoShareSocial } from "react-icons/io5";
-import { VendorButton } from "./VendorButton";
+import { VendorButton } from "@/features/vendor/components/VendorButton.js";
 function VendorDescription({description}) {
     return (
         <div className="w-[100%] h-[100%] flex flex-col items-center">
