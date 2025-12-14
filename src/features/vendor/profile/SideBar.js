@@ -1,7 +1,7 @@
 'use client'
 import anime from "animejs";
 import { useRef, useState } from "react";
-import { ProfilePicture } from "../../commonComponent/ProfilePicture";
+import { ProfilePicture } from "@/shared/common/ProfilePicture.js";
 import Link from "next/link";
 import Image from "next/image";
 import eventPic from "@/../public/event.svg"
