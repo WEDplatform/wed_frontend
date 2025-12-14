@@ -1,5 +1,5 @@
 'use client'
-import wedImage from "./wed.jpg"
+import wedImage from "@/../public/wed.jpg"
 import { useSearchParams } from "next/navigation"
 import { useMutation } from "@tanstack/react-query"
 import { fetchCoupleDetails } from "@/features/couple/api/fetchCoupleProfile"

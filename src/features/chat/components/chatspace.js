@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react"
 import { MessageBubble } from "./messageBubble";
 import { io } from "socket.io-client"
 import { MdSend } from "react-icons/md";
-import { socket } from "../../../../features/chat/socket/socket";
+import { socket } from "../socket/socket.js";
 import { useMutation } from "@tanstack/react-query";
 import { formatMessageData, getMessages } from "@/features/chat/api/getMessages";
 const Chatspace = ({uid,messageList,setMessages,s,r}) => {

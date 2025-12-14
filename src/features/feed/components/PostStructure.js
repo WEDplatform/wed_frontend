@@ -13,7 +13,7 @@ import { VideoModal } from "../../../app/Components/commonComponent/VideoModal.j
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { useMutation } from "@tanstack/react-query";
-import { likePost } from "@/apiFunctions/likepost.js";
+import { likePost } from "../api/likepost.js"
 import { FaRegBookmark } from "react-icons/fa6";
 import { FaBookmark } from "react-icons/fa6";
 import { Save } from "./SavePost";

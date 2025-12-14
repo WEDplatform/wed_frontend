@@ -1,4 +1,4 @@
-import profpic from "../../../../../public/profPic.png"
+import profpic from "@/../public/profPic.png"
 import Image from "next/image"
 const MessageBubble = ({ message,isSender ,sentAt}) => {
     return (
