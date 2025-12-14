@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import profpic from "../../../../../public/profPic.png"
+import profpic from "@/../public/profPic.png"
 import { useRouter } from "next/navigation"
 const NotifyBar=({user,orgName,uid,senderId,recieverId,lastMessage,num})=>{
     const router=useRouter()

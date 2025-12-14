@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState,useRef } from "react";
-import profpic from "../../../../../public/profPic.png"
+import profpic from "@/../public/profPic.png"
 import { IoReturnDownBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
-import { Chatspace } from "../../../app/Components/commonComponent/chat-pen/chatspace";
+import { Chatspace } from "@/features/chat/components/chatspace.js";
 const ChatSection=({user})=>{
     const searchParam=useSearchParams();
     const router=useRouter();
