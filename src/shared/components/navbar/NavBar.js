@@ -3,6 +3,7 @@ import SelectPage from "./SelectPage";
 import { FiBell } from "react-icons/fi";
 import { TbNotification } from "react-icons/tb";
 import Link from "next/link";
+import { TbMessageChatbot } from "react-icons/tb";
 function NavBar({user}) {
   return (
     <div className="flex justify-between p-2 py-4 items-center md:border-0">
