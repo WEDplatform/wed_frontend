@@ -14,6 +14,7 @@ function NavBar({user}) {
         <div className="text-[20px] font-bold flex ">
             <Link href={`/chatpen/${user}?cs=0`}><FiBell className="mr-2"/></Link>
             <Link href={`/chatpen/${user}?cs=0`}><TbNotification className="mr-4"/></Link>
+            <Link href={`/chatbot`}><TbMessageChatbot/></Link>
         </div>
     </div>
   )
