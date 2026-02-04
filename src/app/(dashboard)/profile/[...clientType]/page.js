@@ -13,8 +13,6 @@ async function page({ params }) {
     //console.log(prf.data); 
     let { clientType } = await params;
     const clientRole = clientType[0];
-    console.log(clientRole);
-    
     return (
         <>
         {
