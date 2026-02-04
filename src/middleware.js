@@ -4,6 +4,8 @@ export async function middleware(request) {
   const clientRefreshToken = request.cookies.get("refreshToken")?.value;
   const publicUrl = process.env.NEXT_PUBLIC_FRNT;
   const url = request.nextUrl;
+  console.log(request);
+  
   if (!publicUrl) {
     throw new Error("Missing frontendUrl env");
   }
@@ -37,6 +39,8 @@ export async function middleware(request) {
     }
 
   } catch (error) {
+    console.log(error);
+    
     const redirectErrorPage = new URL("/unavailable", publicUrl);
     return NextResponse.redirect(redirectErrorPage);
   }

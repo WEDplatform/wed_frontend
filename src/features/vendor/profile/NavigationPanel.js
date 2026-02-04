@@ -8,21 +8,22 @@ import { IoPersonRemove } from "react-icons/io5";
 const NavigationPanel = () => {
     const navigators = [{
         icon : <IoPersonRemove/>,
-        info : "Profile",
+        info : "Posts",
         node : 1
     },{
         icon : <LuLayoutDashboard/>,
-        info : "Dashboard",
+        info : "Reels",
         node : 2
     },{
         icon : <MdAppSettingsAlt/>,
-        info : "Settings",
+        info : "Stories",
         node : 3
     },{
         icon : <MdEventNote/>,
         info : "Add event",
         node : 4
-    }]
+    }
+]
     return (
         <div className="flex w-[80%] justify-around">
             {
